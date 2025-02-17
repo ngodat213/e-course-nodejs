@@ -1,0 +1,22 @@
+e-course-nodejs/
+├── src/
+│   ├── config/
+│   │   └── db.config.js
+│   ├── controllers/
+│   │   ├── auth.controller.js
+│   │   ├── course.controller.js
+│   │   └── user.controller.js
+│   ├── middleware/
+│   │   ├── auth.middleware.js
+│   │   └── validate.middleware.js
+│   ├── models/
+│   │   ├── course.model.js
+│   │   └── user.model.js
+│   ├── routes/
+│   │   ├── auth.routes.js
+│   │   ├── course.routes.js
+│   │   └── user.routes.js
+│   └── server.js
+├── .env
+├── .gitignore
+└── package.json 

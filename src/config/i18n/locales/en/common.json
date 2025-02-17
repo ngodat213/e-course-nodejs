@@ -1,0 +1,8 @@
+{
+    "welcome": "Welcome to our API",
+    "success": {
+        "created": "Created successfully",
+        "updated": "Updated successfully",
+        "deleted": "Deleted successfully"
+    }
+} 

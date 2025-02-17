@@ -1,0 +1,8 @@
+{
+    "welcome": "Chào mừng đến với API của chúng tôi",
+    "success": {
+        "created": "Tạo mới thành công",
+        "updated": "Cập nhật thành công",
+        "deleted": "Xóa thành công"
+    }
+} 
