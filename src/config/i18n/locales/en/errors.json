@@ -1,0 +1,50 @@
+{
+    "auth": {
+        "invalidCredentials": "Invalid email or password",
+        "emailExists": "Email already exists",
+        "accountBlocked": "Your account has been blocked",
+        "accountPending": "Your account is pending verification",
+        "invalidToken": "Invalid or expired token",
+        "unauthorized": "Unauthorized access",
+        "forbidden": "You don't have permission to perform this action"
+    },
+    "user": {
+        "notFound": "User not found",
+        "invalidPassword": "Invalid password",
+        "invalidEmail": "Invalid email format",
+        "invalidRole": "Invalid role"
+    },
+    "course": {
+        "notFound": "Course not found",
+        "alreadyEnrolled": "You are already enrolled in this course",
+        "notEnrolled": "You are not enrolled in this course",
+        "hasStudents": "Cannot delete course with enrolled students",
+        "missingInfo": "Missing required course information",
+        "invalidPrice": "Invalid course price"
+    },
+    "lesson": {
+        "notFound": "Lesson not found",
+        "invalidType": "Invalid lesson type",
+        "missingContent": "Lesson content is required",
+        "invalidOrder": "Invalid lesson order"
+    },
+    "file": {
+        "notFound": "File not found",
+        "invalidType": "Invalid file type",
+        "tooLarge": "File size exceeds limit",
+        "uploadFailed": "File upload failed"
+    },
+    "otp": {
+        "invalid": "Invalid OTP code",
+        "expired": "OTP has expired",
+        "notFound": "No OTP found",
+        "alreadyVerified": "Account already verified"
+    },
+    "validation": {
+        "required": "{{field}} is required",
+        "minLength": "{{field}} must be at least {{min}} characters",
+        "maxLength": "{{field}} cannot exceed {{max}} characters",
+        "email": "Invalid email format",
+        "password": "Password must be at least 6 characters"
+    }
+} 

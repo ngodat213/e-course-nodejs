@@ -1,68 +1,53 @@
+const { success } = require('../utils/logger');
+
 class BaseController {
-    constructor(service) {
-        this.service = service;
+    // Response helpers
+    successResponse(res, data, message = 'Success') {
+        res.success({
+            data,
+            message
+        });
     }
 
-    getResponseMessage(key) {
-        return req.i18n.t(key);
+    createdResponse(res, data, message = 'Created successfully') {
+        res.created({
+            data,
+            message
+        });
     }
 
-    async getAll(req, res, next) {
-        try {
-            const { page = 1, limit = 10, sort, search } = req.query;
-            const options = {
-                page: parseInt(page),
-                limit: parseInt(limit),
-                sort: sort || { createdAt: -1 },
-                search
-            };
-
-            const data = await this.service.getAll(options);
-            return res.success(data);
-        } catch (error) {
-            next(error);
-        }
+    errorResponse(res, error) {
+        res.error({
+            message: error.message,
+            code: error.code
+        });
     }
 
-    async getById(req, res, next) {
-        try {
-            const { id } = req.params;
-            const data = await this.service.getById(id);
-            return res.success(data);
-        } catch (error) {
-            next(error);
-        }
+    // Logging helpers
+    logInfo(message, meta = {}) {
+        success.info(message, meta);
     }
 
-    async create(req, res, next) {
-        try {
-            const data = await this.service.create(req.body);
-            return res.success(data);
-        } catch (error) {
-            next(error);
-        }
+    logError(message, meta = {}) {
+        success.error(message, meta);
     }
 
-    async update(req, res, next) {
-        try {
-            const { id } = req.params;
-            const data = await this.service.update(id, req.body);
-            return res.success(data);
-        } catch (error) {
-            next(error);
-        }
+    // Error handling helper
+    handleError(error, next) {
+        this.logError(error.message, {
+            code: error.code
+        });
+        next(error);
     }
 
-    async delete(req, res, next) {
-        try {
-            const { id } = req.params;
-            await this.service.delete(id);
-            res.success({ 
-                message: this.getResponseMessage('success.deleted')
-            });
-        } catch (error) {
-            next(error);
-        }
+    // Pagination helper
+    getPaginationData(total, page, limit) {
+        return {
+            total,
+            page: parseInt(page),
+            limit: parseInt(limit),
+            totalPages: Math.ceil(total / limit)
+        };
     }
 }
 

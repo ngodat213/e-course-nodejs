@@ -6,13 +6,17 @@ i18next
     .use(Backend)
     .init({
         backend: {
-            loadPath: path.join(__dirname, '/locales/{{lng}}/{{ns}}.json')
+            loadPath: path.join(__dirname, 'locales/{{lng}}/{{ns}}.json')
         },
         fallbackLng: 'en',
         preload: ['en', 'vi'],
-        ns: ['common', 'errors'],
+        ns: ['common', 'errors', 'email'],
         defaultNS: 'common',
-        debug: process.env.NODE_ENV === 'development'
+        saveMissing: true,
+        debug: process.env.NODE_ENV === 'development',
+        interpolation: {
+            escapeValue: false
+        }
     });
 
 module.exports = i18next; 

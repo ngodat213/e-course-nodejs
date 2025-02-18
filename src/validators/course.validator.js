@@ -14,6 +14,22 @@ const courseSchema = Joi.object({
     )
 });
 
+const createCourseSchema = Joi.object({
+    title: Joi.string().required().min(5).max(100),
+    description: Joi.string().required().min(20),
+    price: Joi.number().required().min(0),
+    status: Joi.string().valid('draft', 'published').default('draft')
+});
+
+const updateCourseSchema = Joi.object({
+    title: Joi.string().min(5).max(100),
+    description: Joi.string().min(20),
+    price: Joi.number().min(0),
+    status: Joi.string().valid('draft', 'published')
+}).min(1);
+
 module.exports = {
-    courseSchema
+    courseSchema,
+    createCourseSchema,
+    updateCourseSchema
 }; 
