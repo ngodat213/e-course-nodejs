@@ -1,0 +1,81 @@
+{
+    "welcome": {
+        "subject": "Welcome to E-Course, {{name}}!",
+        "header": "Welcome to E-Course",
+        "greeting": "Hi {{name}},",
+        "message": "Thank you for joining E-Course! We're excited to have you as part of our learning community. Here are some things you can do to get started:",
+        "feature1": "Browse our extensive course catalog",
+        "feature2": "Track your learning progress",
+        "feature3": "Connect with instructors and other learners",
+        "cta": "Start Learning Now",
+        "support": "If you need any help, feel free to contact our support team.",
+        "closing": "Best regards,\nThe E-Course Team"
+    },
+    "verification": {
+        "subject": "Verify Your Account",
+        "title": "Hello {{name}}!",
+        "message": "Thank you for registering. Please click the link below to verify your email:",
+        "button": "Verify Email",
+        "expiry": "This link will expire in 24 hours."
+    },
+    "resetPassword": {
+        "subject": "Reset Your Password",
+        "title": "Hello {{name}}!",
+        "message": "You have requested to reset your password. Click the link below to continue:",
+        "button": "Reset Password",
+        "expiry": "This link will expire in 1 hour.",
+        "ignore": "If you didn't request a password reset, please ignore this email."
+    },
+    "courseEnrollment": {
+        "subject": "Welcome to {{courseName}}",
+        "title": "Hello {{name}}!",
+        "message": "Thank you for enrolling in \"{{courseName}}\".",
+        "button": "Start Learning"
+    },
+    "studyReminder": {
+        "subject": "Study Reminder",
+        "title": "Hello {{name}}!",
+        "message": "We noticed you haven't accessed \"{{courseName}}\" for {{days}} days.",
+        "motivation": "Maintain regular study habits to achieve the best results!",
+        "button": "Continue Learning"
+    },
+    "newMessage": {
+        "subject": "New Message",
+        "title": "Hello {{name}}!",
+        "message": "You have a new message from {{sender}} in \"{{chatRoom}}\"",
+        "button": "View Message"
+    },
+    "verificationOTP": {
+        "subject": "Account Verification",
+        "title": "Hello {{name}}!",
+        "message": "Your OTP for account verification is:",
+        "expiry": "This code will expire in 5 minutes.",
+        "ignore": "If you didn't request this code, please ignore this email."
+    },
+    "resetPasswordOTP": {
+        "subject": "Password Reset OTP",
+        "title": "Hello {{name}}!",
+        "message": "Your OTP code for password reset is: {{otp}}",
+        "warning": "This code will expire in 5 minutes.",
+        "footer": "If you did not request this, please ignore this email."
+    },
+    "verificationReminder": {
+        "subject": "Reminder: Verify Your Account",
+        "title": "Hello {{name}},",
+        "message": "We noticed you haven't verified your account yet.",
+        "action": "Please click the link below to verify:",
+        "expiry": "Note: The link will expire 48 hours after registration."
+    },
+    "otpReminder": {
+        "subject": "Reminder: OTP Verification",
+        "title": "Hello {{name}},",
+        "message": "We noticed you haven't verified your OTP yet.",
+        "action": "Please enter the OTP sent earlier to complete registration.",
+        "resend": "If you haven't received the code, you can request a new one.",
+        "expiry": "Note: OTP will expire 24 hours after registration."
+    },
+    "footer": {
+        "contact": "Contact us: support@ecourse.com",
+        "copyright": "© {{year}} E-Course. All rights reserved."
+    }
+} 

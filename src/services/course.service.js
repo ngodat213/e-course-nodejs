@@ -2,39 +2,46 @@ const Course = require('../models/course.model');
 const UserProgress = require('../models/user_progress.model');
 const { NotFoundError, BadRequestError } = require('../utils/errors');
 const EmailService = require('./email_template.service');
+const CloudinaryService = require('./cloudinary.service');
 const i18next = require('i18next');
+const CourseDeleteRequest = require('../models/course_delete_request.model');
+const Lesson = require('../models/lesson.model');
+const LessonService = require('./lesson.service');
 
-class CourseService extends require('./base.service') {
-    constructor() {
-        super(Course);
-    }
-
-    async getAllCourses(query) {
-        const { search, minPrice, maxPrice, instructor, ...paginationQuery } = query;
+class CourseService {
+    async getAll(options = {}) {
+        const { page = 1, limit = 10, sort = '-createdAt', search, filter = {} } = options;
         
-        let filter = {};
-        
+        let queryFilter = { ...filter };
         if (search) {
-            filter.$or = [
-                { title: new RegExp(search, 'i') },
-                { description: new RegExp(search, 'i') }
+            queryFilter.$or = [
+                { title: { $regex: search, $options: 'i' } },
+                { description: { $regex: search, $options: 'i' } }
             ];
         }
 
-        if (minPrice !== undefined) filter.price = { $gte: Number(minPrice) };
-        if (maxPrice !== undefined) filter.price = { ...filter.price, $lte: Number(maxPrice) };
-        if (instructor) filter.instructor_id = instructor;
+        const skip = (page - 1) * limit;
+        const [data, total] = await Promise.all([
+            Course.find(queryFilter)
+                .sort(sort)
+                .skip(skip)
+                .limit(limit),
+            Course.countDocuments(queryFilter)
+        ]);
 
-        const courses = await super.getAll({ ...paginationQuery, filter });
-
-        // Populate instructor information
-        await Course.populate(courses.data, { path: 'instructor_id', select: 'name email' });
-
-        return courses;
+        return {
+            data,
+            pagination: {
+                page: parseInt(page),
+                limit: parseInt(limit),
+                total,
+                totalPages: Math.ceil(total / limit)
+            }
+        };
     }
 
     async getCourseById(id) {
-        const course = await this.model.findById(id)
+        const course = await Course.findById(id)
             .populate('instructor_id', 'name email')
             .populate({
                 path: 'lessons',
@@ -48,17 +55,40 @@ class CourseService extends require('./base.service') {
         return course;
     }
 
-    async createCourse(courseData) {
+    async createCourse(courseData, thumbnailFile) {
         if (!courseData.title || !courseData.description || !courseData.price) {
             throw new BadRequestError(i18next.t('course.missingInfo'));
         }
 
-        const course = await this.model.create(courseData);
+        // Upload thumbnail to Cloudinary if provided
+        if (thumbnailFile) {
+            const uploadResult = await CloudinaryService.uploadImage(thumbnailFile, {
+                folder: 'course-thumbnails',
+                allowed_formats: ['jpg', 'jpeg', 'png', 'webp'],
+                transformation: [
+                    { width: 720, height: 480, crop: 'fill' },
+                    { quality: 'auto' }
+                ]
+            });
+
+            courseData.thumbnail = uploadResult.secure_url;
+            courseData.thumbnail_id = uploadResult.public_id;
+        }
+
+        const course = await Course.create(courseData);
         return course;
     }
 
     async updateCourse(id, updateData) {
-        const course = await this.model.findByIdAndUpdate(
+        // Nếu có thumbnail mới, xóa thumbnail cũ
+        if (updateData.thumbnail && updateData.thumbnail_id) {
+            const course = await Course.findById(id);
+            if (course && course.thumbnail_id) {
+                await CloudinaryService.deleteImage(course.thumbnail_id);
+            }
+        }
+
+        const course = await Course.findByIdAndUpdate(
             id,
             updateData,
             { new: true, runValidators: true }
@@ -72,25 +102,34 @@ class CourseService extends require('./base.service') {
     }
 
     async deleteCourse(id) {
+        const course = await Course.findById(id);
+        if (!course) {
+            throw new NotFoundError(i18next.t('course.notFound'));
+        }
+
         // Check if there are any enrolled students
         const enrollments = await UserProgress.find({ course_id: id });
         if (enrollments.length > 0) {
             throw new BadRequestError(i18next.t('course.hasStudents'));
         }
 
-        const course = await this.model.findByIdAndDelete(id);
-        if (!course) {
-            throw new NotFoundError(i18next.t('course.notFound'));
+        // Xóa thumbnail từ Cloudinary
+        if (course.thumbnail_id) {
+            await CloudinaryService.deleteImage(course.thumbnail_id);
         }
 
-        // Delete related data (lessons, materials, etc.)
-        // TODO: Implement cleanup logic
+        // Xóa tất cả bài học và tài nguyên liên quan
+        const lessons = await Lesson.find({ course_id: id });
+        for (const lesson of lessons) {
+            await LessonService.deleteLesson(lesson._id);
+        }
 
+        await course.remove();
         return true;
     }
 
     async enrollCourse(courseId, userId) {
-        const course = await this.model.findById(courseId);
+        const course = await Course.findById(courseId);
         if (!course) {
             throw new NotFoundError(i18next.t('course.notFound'));
         }
@@ -106,7 +145,7 @@ class CourseService extends require('./base.service') {
         }
 
         // Create progress record for first lesson
-        const firstLesson = await this.model.findOne({ course_id: courseId })
+        const firstLesson = await Course.findOne({ course_id: courseId })
             .sort('createdAt')
             .select('_id');
 
@@ -130,7 +169,7 @@ class CourseService extends require('./base.service') {
         const enrollments = await UserProgress.find({ user_id: userId })
             .distinct('course_id');
 
-        const courses = await this.model.find({
+        const courses = await Course.find({
             _id: { $in: enrollments }
         }).populate('instructor_id', 'name email');
 
@@ -138,12 +177,86 @@ class CourseService extends require('./base.service') {
     }
 
     buildSearchQuery(search) {
+        if (!search) return {};
         return {
             $or: [
-                { title: new RegExp(search, 'i') },
-                { description: new RegExp(search, 'i') }
+                { title: { $regex: search, $options: 'i' } },
+                { description: { $regex: search, $options: 'i' } }
             ]
         };
+    }
+
+    async createDeleteRequest(courseId, userId, reason) {
+        const course = await Course.findById(courseId);
+        
+        if (course.instructor.toString() !== userId.toString()) {
+            throw new BadRequestError(i18next.t('course.notInstructor'));
+        }
+
+        return await CourseDeleteRequest.create({
+            course_id: courseId,
+            instructor_id: userId,
+            reason
+        });
+    }
+
+    async getDeleteRequests(query) {
+        const { status, page = 1, limit = 10 } = query;
+        
+        let filter = {};
+        if (status) {
+            filter.status = status;
+        }
+
+        const requests = await CourseDeleteRequest.find(filter)
+            .populate('course_id', 'title')
+            .populate('instructor_id', 'name email')
+            .populate('admin_response.admin_id', 'name')
+            .sort('-created_at')
+            .skip((page - 1) * limit)
+            .limit(limit);
+
+        const total = await CourseDeleteRequest.countDocuments(filter);
+
+        return {
+            data: requests,
+            pagination: {
+                total,
+                page: Number(page),
+                limit: Number(limit),
+                pages: Math.ceil(total / limit)
+            }
+        };
+    }
+
+    async handleDeleteRequest(requestId, adminId, { status, message }) {
+        const request = await CourseDeleteRequest.findById(requestId);
+        if (!request) {
+            throw new NotFoundError('Delete request not found');
+        }
+
+        if (request.status !== 'pending') {
+            throw new BadRequestError('This request has already been handled');
+        }
+
+        request.status = status;
+        request.admin_response = {
+            admin_id: adminId,
+            message,
+            action_date: new Date()
+        };
+
+        await request.save();
+
+        // Nếu approved thì xóa khóa học
+        if (status === 'approved') {
+            await this.deleteCourse(request.course_id);
+        }
+
+        // Gửi email thông báo cho instructor
+        // TODO: Implement email notification
+
+        return request;
     }
 }
 

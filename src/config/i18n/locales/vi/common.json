@@ -38,7 +38,12 @@
         "passwordReset": "Đặt lại mật khẩu thành công",
         "otpSent": "Mã OTP đã được gửi đến email của bạn",
         "otpResent": "Mã OTP mới đã được gửi",
-        "verified": "Xác thực tài khoản thành công"
+        "verified": "Xác thực tài khoản thành công",
+        "otpVerified": "Xác thực OTP thành công",
+        "otpInvalid": "Mã OTP không hợp lệ",
+        "otpExpired": "Mã OTP đã hết hạn",
+        "passwordResetOtpSuccess": "Đặt lại mật khẩu thành công",
+        "mobileResetSuccess": "Hướng dẫn đặt lại mật khẩu đã được gửi đến điện thoại của bạn"
     },
     "otp": {
         "notFound": "Không tìm thấy mã OTP",

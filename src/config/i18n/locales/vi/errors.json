@@ -1,0 +1,50 @@
+{
+    "auth": {
+        "invalidCredentials": "Email hoặc mật khẩu không đúng",
+        "emailExists": "Email đã tồn tại trong hệ thống",
+        "accountBlocked": "Tài khoản của bạn đã bị khóa",
+        "accountPending": "Tài khoản đang chờ xác thực",
+        "invalidToken": "Token không hợp lệ hoặc đã hết hạn",
+        "unauthorized": "Chưa đăng nhập",
+        "forbidden": "Bạn không có quyền thực hiện hành động này"
+    },
+    "user": {
+        "notFound": "Không tìm thấy người dùng",
+        "invalidPassword": "Mật khẩu không đúng",
+        "invalidEmail": "Email không đúng định dạng",
+        "invalidRole": "Vai trò không hợp lệ"
+    },
+    "course": {
+        "notFound": "Không tìm thấy khóa học",
+        "alreadyEnrolled": "Bạn đã đăng ký khóa học này",
+        "notEnrolled": "Bạn chưa đăng ký khóa học này",
+        "hasStudents": "Không thể xóa khóa học đã có học viên",
+        "missingInfo": "Thiếu thông tin khóa học",
+        "invalidPrice": "Giá khóa học không hợp lệ"
+    },
+    "lesson": {
+        "notFound": "Không tìm thấy bài học",
+        "invalidType": "Loại bài học không hợp lệ",
+        "missingContent": "Thiếu nội dung bài học",
+        "invalidOrder": "Thứ tự bài học không hợp lệ"
+    },
+    "file": {
+        "notFound": "Không tìm thấy file",
+        "invalidType": "Định dạng file không hợp lệ",
+        "tooLarge": "Kích thước file vượt quá giới hạn",
+        "uploadFailed": "Tải file lên thất bại"
+    },
+    "otp": {
+        "invalid": "Mã OTP không đúng",
+        "expired": "Mã OTP đã hết hạn",
+        "notFound": "Không tìm thấy mã OTP",
+        "alreadyVerified": "Tài khoản đã được xác thực"
+    },
+    "validation": {
+        "required": "{{field}} là bắt buộc",
+        "minLength": "{{field}} phải có ít nhất {{min}} ký tự",
+        "maxLength": "{{field}} không được vượt quá {{max}} ký tự",
+        "email": "Email không đúng định dạng",
+        "password": "Mật khẩu phải có ít nhất 6 ký tự"
+    }
+} 

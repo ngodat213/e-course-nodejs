@@ -1,0 +1,577 @@
+2025-02-18 17:14:37 [INFO]: Server is running on port 3000 
+2025-02-18 17:14:42 [INFO]: Server is running on port 3000 
+2025-02-18 17:14:42 [INFO]: Environment: development 
+2025-02-18 17:14:42 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:14:50 [INFO]: Server is running on port 3000 
+2025-02-18 17:14:50 [INFO]: Environment: development 
+2025-02-18 17:14:50 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:14:54 [INFO]: Server is running on port 3000 
+2025-02-18 17:14:54 [INFO]: Environment: development 
+2025-02-18 17:14:54 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:15:00 [INFO]: Server is running on port 3000 
+2025-02-18 17:15:00 [INFO]: Environment: development 
+2025-02-18 17:15:00 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:15:00 [INFO]: Connected to MongoDB 
+2025-02-18 17:15:03 [INFO]: Server is running on port 3000 
+2025-02-18 17:15:03 [INFO]: Environment: development 
+2025-02-18 17:15:03 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:15:03 [INFO]: Connected to MongoDB 
+2025-02-18 17:15:07 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15"
+}
+2025-02-18 17:15:24 [INFO]: Server is running on port 3000 
+2025-02-18 17:15:24 [INFO]: Environment: development 
+2025-02-18 17:15:24 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:15:24 [INFO]: Connected to MongoDB 
+2025-02-18 17:15:37 [INFO]: Server is running on port 3000 
+2025-02-18 17:15:37 [INFO]: Environment: development 
+2025-02-18 17:15:37 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:15:37 [INFO]: Connected to MongoDB 
+2025-02-18 17:15:40 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15"
+}
+2025-02-18 17:15:57 [INFO]: Server is running on port 3000 
+2025-02-18 17:15:57 [INFO]: Environment: development 
+2025-02-18 17:15:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:15:57 [INFO]: Connected to MongoDB 
+2025-02-18 17:15:59 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15"
+}
+2025-02-18 17:15:59 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "string",
+    "email": "user@example.com",
+    "password": "string",
+    "dev_secret_key": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:16:25 [ERROR]: Email already exists {
+  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:83:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)"
+}
+2025-02-18 17:16:25 [ERROR]: Email already exists {
+  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:83:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:16:53 [INFO]: Server is running on port 3000 
+2025-02-18 17:16:53 [INFO]: Environment: development 
+2025-02-18 17:16:53 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:16:53 [INFO]: Connected to MongoDB 
+2025-02-18 17:17:30 [INFO]: Server is running on port 3000 
+2025-02-18 17:17:30 [INFO]: Environment: development 
+2025-02-18 17:17:30 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:17:30 [INFO]: Connected to MongoDB 
+2025-02-18 17:17:33 [INFO]: Server is running on port 3000 
+2025-02-18 17:17:33 [INFO]: Environment: development 
+2025-02-18 17:17:33 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:17:33 [INFO]: Connected to MongoDB 
+2025-02-18 17:17:41 [INFO]: Server is running on port 3000 
+2025-02-18 17:17:41 [INFO]: Environment: development 
+2025-02-18 17:17:41 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:17:41 [INFO]: Connected to MongoDB 
+2025-02-18 17:17:42 [INFO]: Dev admin created {
+  "adminId": "67b45e46236970796c68985e",
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 17:18:24 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
+  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:59:18)"
+}
+2025-02-18 17:19:18 [INFO]: Server is running on port 3000 
+2025-02-18 17:19:18 [INFO]: Environment: development 
+2025-02-18 17:19:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:19:18 [INFO]: Connected to MongoDB 
+2025-02-18 17:19:21 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 17:20:39 [INFO]: Server is running on port 3000 
+2025-02-18 17:20:39 [INFO]: Environment: development 
+2025-02-18 17:20:39 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:20:39 [INFO]: Connected to MongoDB 
+2025-02-18 17:21:36 [INFO]: Server is running on port 3000 
+2025-02-18 17:21:36 [INFO]: Environment: development 
+2025-02-18 17:21:36 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:21:36 [INFO]: Connected to MongoDB 
+2025-02-18 17:23:13 [INFO]: Server is running on port 3000 
+2025-02-18 17:23:13 [INFO]: Environment: development 
+2025-02-18 17:23:13 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:23:13 [INFO]: Connected to MongoDB 
+2025-02-18 17:23:24 [INFO]: Server is running on port 3000 
+2025-02-18 17:23:24 [INFO]: Environment: development 
+2025-02-18 17:23:24 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:23:24 [INFO]: Connected to MongoDB 
+2025-02-18 17:23:25 [INFO]: Server is running on port 3000 
+2025-02-18 17:23:25 [INFO]: Environment: development 
+2025-02-18 17:23:25 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:23:25 [INFO]: Connected to MongoDB 
+2025-02-18 17:23:26 [INFO]: Server is running on port 3000 
+2025-02-18 17:23:26 [INFO]: Environment: development 
+2025-02-18 17:23:26 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:23:26 [INFO]: Connected to MongoDB 
+2025-02-18 17:24:06 [INFO]: Reset password email sent {
+  "userId": "67b45e46236970796c68985e"
+}
+2025-02-18 17:24:06 [INFO]: Password reset requested {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 17:31:31 [INFO]: Server is running on port 3000 
+2025-02-18 17:31:31 [INFO]: Environment: development 
+2025-02-18 17:31:31 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:31:31 [INFO]: Connected to MongoDB 
+2025-02-18 17:37:06 [INFO]: Server is running on port 3000 
+2025-02-18 17:37:06 [INFO]: Environment: development 
+2025-02-18 17:37:06 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:37:06 [INFO]: Connected to MongoDB 
+2025-02-18 17:37:33 [INFO]: Reset password email sent {
+  "userId": "67b45e46236970796c68985e"
+}
+2025-02-18 17:37:33 [INFO]: Password reset requested {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 17:38:45 [INFO]: Server is running on port 3000 
+2025-02-18 17:38:45 [INFO]: Environment: development 
+2025-02-18 17:38:45 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:38:45 [INFO]: Connected to MongoDB 
+2025-02-18 17:39:02 [INFO]: Reset password email sent {
+  "userId": "67b45e46236970796c68985e"
+}
+2025-02-18 17:39:02 [INFO]: Password reset requested {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 17:40:24 [INFO]: Mobile user registered {
+  "userId": "67b46394404940a4ce4b8880"
+}
+2025-02-18 17:40:24 [INFO]: Mobile user registered {
+  "email": "gangal.dat@gmail.com"
+}
+2025-02-18 17:40:24 [ERROR]: res.created is not a function {
+  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-18 17:40:24 [ERROR]: res.created is not a function {
+  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "name": "NgoVanTienDat",
+    "email": "gangal.dat@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:43:07 [INFO]: Server is running on port 3000 
+2025-02-18 17:43:07 [INFO]: Environment: development 
+2025-02-18 17:43:07 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:43:07 [INFO]: Connected to MongoDB 
+2025-02-18 17:43:21 [INFO]: Mobile user registered {
+  "userId": "67b46445a26adb83470780f7"
+}
+2025-02-18 17:43:21 [INFO]: Mobile user registered {
+  "email": "gangal.dat@gmail.com"
+}
+2025-02-18 17:43:21 [ERROR]: res.created is not a function {
+  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-18 17:43:21 [ERROR]: res.created is not a function {
+  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "name": "NgoVanTienDat",
+    "email": "gangal.dat@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:46:26 [INFO]: Server is running on port 3000 
+2025-02-18 17:46:26 [INFO]: Environment: development 
+2025-02-18 17:46:26 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:46:26 [INFO]: Connected to MongoDB 
+2025-02-18 17:46:35 [INFO]: Mobile user registered {
+  "userId": "67b46507bdfebb2a1ff8c00e"
+}
+2025-02-18 17:46:35 [INFO]: Mobile user registered {
+  "email": "gangal.dat@gmail.com"
+}
+2025-02-18 17:48:21 [ERROR]: Dữ liệu không hợp lệ {
+  "stack": "Error: Dữ liệu không hợp lệ\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:16:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:47:12)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "302896"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:56:52 [INFO]: Server is running on port 3000 
+2025-02-18 17:56:52 [INFO]: Environment: development 
+2025-02-18 17:56:52 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:56:52 [INFO]: Connected to MongoDB 
+2025-02-18 17:56:56 [INFO]: Server is running on port 3000 
+2025-02-18 17:56:56 [INFO]: Environment: development 
+2025-02-18 17:56:56 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:56:56 [INFO]: Connected to MongoDB 
+2025-02-18 17:57:58 [INFO]: Server is running on port 3000 
+2025-02-18 17:57:58 [INFO]: Environment: development 
+2025-02-18 17:57:58 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:57:58 [INFO]: Connected to MongoDB 
+2025-02-18 17:58:06 [INFO]: Server is running on port 3000 
+2025-02-18 17:58:06 [INFO]: Environment: development 
+2025-02-18 17:58:06 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:58:06 [INFO]: Connected to MongoDB 
+2025-02-18 17:58:07 [INFO]: Server is running on port 3000 
+2025-02-18 17:58:07 [INFO]: Environment: development 
+2025-02-18 17:58:07 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:58:07 [INFO]: Connected to MongoDB 
+2025-02-18 17:58:08 [INFO]: Server is running on port 3000 
+2025-02-18 17:58:08 [INFO]: Environment: development 
+2025-02-18 17:58:08 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 17:58:08 [INFO]: Connected to MongoDB 
+2025-02-18 17:58:11 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 17:58:11 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "302896"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:58:30 [INFO]: Mobile user registered {
+  "userId": "67b467d2930761488f779a17"
+}
+2025-02-18 17:58:30 [INFO]: Mobile user registered {
+  "email": "gangal.dat@gmail.com"
+}
+2025-02-18 17:58:48 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 17:58:48 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "970739"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:58:51 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 17:58:51 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "970739"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 18:06:23 [INFO]: Server is running on port 3000 
+2025-02-18 18:06:23 [INFO]: Environment: development 
+2025-02-18 18:06:23 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 18:06:23 [INFO]: Connected to MongoDB 
+2025-02-18 18:06:39 [INFO]: Dev fetched all users {
+  "totalUsers": 6,
+  "page": 1,
+  "limit": 10
+}
+2025-02-18 19:31:05 [INFO]: MongoDB disconnected 
+2025-02-18 20:05:10 [INFO]: Mobile user registered {
+  "userId": "67b485839489112649a9948d"
+}
+2025-02-18 20:05:10 [INFO]: Mobile user registered {
+  "email": "haha@example.com"
+}
+2025-02-18 20:05:14 [INFO]: Dev fetched all users {
+  "totalUsers": 7,
+  "page": 1,
+  "limit": 10
+}
+2025-02-18 20:38:03 [INFO]: Server is running on port 3000 
+2025-02-18 20:38:03 [INFO]: Environment: development 
+2025-02-18 20:38:03 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:38:03 [INFO]: Connected to MongoDB 
+2025-02-18 20:38:31 [INFO]: Server is running on port 3000 
+2025-02-18 20:38:31 [INFO]: Environment: development 
+2025-02-18 20:38:31 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:38:31 [INFO]: Connected to MongoDB 
+2025-02-18 20:38:47 [INFO]: Server is running on port 3000 
+2025-02-18 20:38:47 [INFO]: Environment: development 
+2025-02-18 20:38:47 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:38:47 [INFO]: Connected to MongoDB 
+2025-02-18 20:40:38 [INFO]: Server is running on port 3000 
+2025-02-18 20:40:38 [INFO]: Environment: development 
+2025-02-18 20:40:38 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:40:38 [INFO]: Connected to MongoDB 
+2025-02-18 20:40:49 [INFO]: Server is running on port 3000 
+2025-02-18 20:40:49 [INFO]: Environment: development 
+2025-02-18 20:40:49 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:40:49 [INFO]: Connected to MongoDB 
+2025-02-18 20:40:54 [INFO]: Server is running on port 3000 
+2025-02-18 20:40:54 [INFO]: Environment: development 
+2025-02-18 20:40:54 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:40:54 [INFO]: Connected to MongoDB 
+2025-02-18 20:41:04 [INFO]: Server is running on port 3000 
+2025-02-18 20:41:04 [INFO]: Environment: development 
+2025-02-18 20:41:04 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:41:04 [INFO]: Connected to MongoDB 
+2025-02-18 20:41:08 [INFO]: Server is running on port 3000 
+2025-02-18 20:41:08 [INFO]: Environment: development 
+2025-02-18 20:41:08 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:41:08 [INFO]: Connected to MongoDB 
+2025-02-18 20:42:05 [INFO]: Server is running on port 3000 
+2025-02-18 20:42:05 [INFO]: Environment: development 
+2025-02-18 20:42:05 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:42:05 [INFO]: Connected to MongoDB 
+2025-02-18 20:42:16 [INFO]: Server is running on port 3000 
+2025-02-18 20:42:16 [INFO]: Environment: development 
+2025-02-18 20:42:16 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:42:16 [INFO]: Connected to MongoDB 
+2025-02-18 20:42:32 [INFO]: Server is running on port 3000 
+2025-02-18 20:42:32 [INFO]: Environment: development 
+2025-02-18 20:42:32 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:42:32 [INFO]: Connected to MongoDB 
+2025-02-18 20:42:45 [ERROR]: bcrypt is not defined {
+  "stack": "ReferenceError: bcrypt is not defined\n    at HashService.hashData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/hash.service.js:3:9)\n    at OTPService.saveOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:23:36)\n    at OTPService.generateAndSendOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:67:20)\n    at AuthService.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:176:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:22:28)"
+}
+2025-02-18 20:42:45 [ERROR]: bcrypt is not defined {
+  "stack": "ReferenceError: bcrypt is not defined\n    at HashService.hashData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/hash.service.js:3:9)\n    at OTPService.saveOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:23:36)\n    at OTPService.generateAndSendOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:67:20)\n    at AuthService.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:176:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:22:28)",
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "name": "string",
+    "email": "haha@example.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 20:43:35 [INFO]: Server is running on port 3000 
+2025-02-18 20:43:35 [INFO]: Environment: development 
+2025-02-18 20:43:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:43:35 [INFO]: Connected to MongoDB 
+2025-02-18 20:43:37 [INFO]: Server is running on port 3000 
+2025-02-18 20:43:37 [INFO]: Environment: development 
+2025-02-18 20:43:37 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:43:37 [INFO]: Connected to MongoDB 
+2025-02-18 20:43:51 [INFO]: Mobile user registered {
+  "userId": "67b48e94cab365627a8b03dd"
+}
+2025-02-18 20:43:51 [INFO]: Mobile user registered {
+  "email": "haha@example.com"
+}
+2025-02-18 20:44:14 [INFO]: Dev fetched all users {
+  "totalUsers": 7,
+  "page": 1,
+  "limit": 10
+}
+2025-02-18 20:45:16 [INFO]: Server is running on port 3000 
+2025-02-18 20:45:16 [INFO]: Environment: development 
+2025-02-18 20:45:16 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:45:16 [INFO]: Connected to MongoDB 
+2025-02-18 20:45:26 [INFO]: Server is running on port 3000 
+2025-02-18 20:45:26 [INFO]: Environment: development 
+2025-02-18 20:45:26 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:45:26 [INFO]: Connected to MongoDB 
+2025-02-18 20:45:47 [INFO]: Server is running on port 3000 
+2025-02-18 20:45:47 [INFO]: Environment: development 
+2025-02-18 20:45:47 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 20:45:47 [INFO]: Connected to MongoDB 
+2025-02-18 21:09:59 [INFO]: Server is running on port 3000 
+2025-02-18 21:09:59 [INFO]: Environment: development 
+2025-02-18 21:09:59 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:10:04 [INFO]: Connected to MongoDB 
+2025-02-18 21:11:27 [INFO]: Server is running on port 3000 
+2025-02-18 21:11:27 [INFO]: Environment: development 
+2025-02-18 21:11:27 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:11:32 [INFO]: Connected to MongoDB 
+2025-02-18 21:13:25 [INFO]: Mobile user registered {
+  "userId": "67b495809d35c758607e27c7"
+}
+2025-02-18 21:13:25 [INFO]: Mobile user registered {
+  "email": "haha@example.com"
+}
+2025-02-18 21:14:38 [INFO]: Mobile user registered {
+  "userId": "67b495ca9d35c758607e27cc"
+}
+2025-02-18 21:14:38 [INFO]: Mobile user registered {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 21:15:07 [ERROR]: otp.invalid {
+  "stack": "Error: otp.invalid\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 21:15:07 [ERROR]: otp.invalid {
+  "stack": "Error: otp.invalid\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "773164"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:15:53 [INFO]: Server is running on port 3000 
+2025-02-18 21:15:53 [INFO]: Environment: development 
+2025-02-18 21:15:53 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:15:58 [INFO]: Connected to MongoDB 
+2025-02-18 21:16:02 [ERROR]: user.notActive {
+  "stack": "Error: user.notActive\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 21:16:02 [ERROR]: user.notActive {
+  "stack": "Error: user.notActive\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "773164"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:16:12 [INFO]: Server is running on port 3000 
+2025-02-18 21:16:12 [INFO]: Environment: development 
+2025-02-18 21:16:12 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:16:16 [INFO]: Connected to MongoDB 
+2025-02-18 21:16:20 [INFO]: OTP verified successfully {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 21:16:20 [INFO]: OTP verified {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 21:17:14 [ERROR]: Invalid email or password {
+  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)"
+}
+2025-02-18 21:17:14 [ERROR]: Invalid email or password {
+  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)",
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:17:46 [INFO]: Server is running on port 3000 
+2025-02-18 21:17:46 [INFO]: Environment: development 
+2025-02-18 21:17:46 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:17:51 [INFO]: Connected to MongoDB 
+2025-02-18 21:17:54 [ERROR]: Invalid email or password {}
+2025-02-18 21:17:54 [ERROR]: Invalid email or password {
+  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)",
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:18:15 [ERROR]: Invalid email or password {}
+2025-02-18 21:18:15 [ERROR]: Invalid email or password {
+  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)",
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:18:51 [INFO]: Server is running on port 3000 
+2025-02-18 21:18:51 [INFO]: Environment: development 
+2025-02-18 21:18:51 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:18:57 [INFO]: Connected to MongoDB 
+2025-02-18 21:19:02 [ERROR]: Invalid email or password {}
+2025-02-18 21:19:02 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:19:13 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 21:20:21 [INFO]: Server is running on port 3000 
+2025-02-18 21:20:21 [INFO]: Environment: development 
+2025-02-18 21:20:21 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:20:26 [INFO]: Connected to MongoDB 
+2025-02-18 21:20:31 [INFO]: Server is running on port 3000 
+2025-02-18 21:20:31 [INFO]: Environment: development 
+2025-02-18 21:20:31 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:20:34 [INFO]: Connected to MongoDB 
+2025-02-18 21:21:14 [INFO]: Server is running on port 3000 
+2025-02-18 21:21:14 [INFO]: Environment: development 
+2025-02-18 21:21:14 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:21:16 [INFO]: Server is running on port 3000 
+2025-02-18 21:21:16 [INFO]: Environment: development 
+2025-02-18 21:21:16 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:21:20 [INFO]: Connected to MongoDB 
+2025-02-18 21:21:35 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 21:22:31 [INFO]: Server is running on port 3000 
+2025-02-18 21:22:31 [INFO]: Environment: development 
+2025-02-18 21:22:31 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:22:36 [INFO]: Connected to MongoDB 
+2025-02-18 21:24:51 [INFO]: Reset password email sent {
+  "userId": "67b495ca9d35c758607e27cc"
+}
+2025-02-18 21:24:51 [INFO]: Password reset requested {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 21:25:38 [INFO]: Forgot password mobile initiated {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-18 21:27:28 [INFO]: Server is running on port 3000 
+2025-02-18 21:27:28 [INFO]: Environment: development 
+2025-02-18 21:27:28 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:27:32 [INFO]: Connected to MongoDB 
+2025-02-18 21:27:40 [INFO]: Forgot password mobile initiated {
+  "email": "ngodat.it213@gmail.com"
+}

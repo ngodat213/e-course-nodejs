@@ -1,101 +1,55 @@
 const winston = require('winston');
-const path = require('path');
+const { format } = winston;
 
-// Định nghĩa format chung
-const commonFormat = winston.format.combine(
-    winston.format.timestamp({
-        format: 'YYYY-MM-DD HH:mm:ss'
-    }),
-    winston.format.errors({ stack: true }),
-    winston.format.splat(),
-    winston.format.json()
-);
+// Custom format cho log
+const logFormat = format.printf(({ level, message, timestamp, ...meta }) => {
+    return `${timestamp} [${level.toUpperCase()}]: ${message} ${
+        Object.keys(meta).length ? JSON.stringify(meta, null, 2) : ''
+    }`;
+});
 
-// Logger cho success cases
-const successLogger = winston.createLogger({
-    level: 'info',
-    format: commonFormat,
-    defaultMeta: { 
-        service: 'e-course-api',
-        type: 'success'
-    },
+// Cấu hình winston logger
+const logger = winston.createLogger({
+    format: format.combine(
+        format.timestamp({
+            format: 'YYYY-MM-DD HH:mm:ss'
+        }),
+        format.errors({ stack: true }),
+        format.splat(),
+        format.json()
+    ),
     transports: [
+        // Log thông tin vào console
+        new winston.transports.Console({
+            format: format.combine(
+                format.colorize(),
+                logFormat
+            )
+        }),
+        // Log errors vào file
         new winston.transports.File({ 
-            filename: path.join('logs', 'success', 'success.log'),
-            maxsize: 5242880, // 5MB
-            maxFiles: 5
+            filename: 'logs/error.log', 
+            level: 'error',
+            format: logFormat
+        }),
+        // Log tất cả vào file
+        new winston.transports.File({ 
+            filename: 'logs/combined.log',
+            format: logFormat
         })
     ]
 });
 
-// Logger cho error cases
-const errorLogger = winston.createLogger({
-    level: 'error',
-    format: commonFormat,
-    defaultMeta: { 
-        service: 'e-course-api',
-        type: 'error'
-    },
-    transports: [
-        new winston.transports.File({ 
-            filename: path.join('logs', 'error', 'error.log'),
-            maxsize: 5242880, // 5MB
-            maxFiles: 5
-        })
-    ]
-});
-
-// Thêm console transport trong môi trường development
-if (process.env.NODE_ENV !== 'production') {
-    const consoleFormat = winston.format.combine(
-        winston.format.colorize(),
-        winston.format.simple()
-    );
-
-    successLogger.add(new winston.transports.Console({
-        format: consoleFormat
-    }));
-
-    errorLogger.add(new winston.transports.Console({
-        format: consoleFormat
-    }));
-}
-
-// Tạo stream để sử dụng với morgan
-const morganStream = {
-    write: (message) => {
-        if (message.includes('ERROR')) {
-            errorLogger.error(message.trim());
-        } else {
-            successLogger.info(message.trim());
-        }
-    }
-};
-
-// Helper functions
-const success = {
-    info: (message, meta = {}) => {
-        successLogger.info(message, { ...meta, timestamp: new Date() });
-    },
-    debug: (message, meta = {}) => {
-        successLogger.debug(message, { ...meta, timestamp: new Date() });
-    },
-    http: (message, meta = {}) => {
-        successLogger.http(message, { ...meta, timestamp: new Date() });
-    }
-};
-
-const error = {
-    error: (message, meta = {}) => {
-        errorLogger.error(message, { ...meta, timestamp: new Date() });
-    },
-    warn: (message, meta = {}) => {
-        errorLogger.warn(message, { ...meta, timestamp: new Date() });
-    }
-};
-
+// Export các methods cần thiết
 module.exports = {
-    success,
-    error,
-    stream: morganStream
+    error: logger.error.bind(logger),
+    warn: logger.warn.bind(logger),
+    info: logger.info.bind(logger),
+    debug: logger.debug.bind(logger),
+    success: {
+        error: (message, meta = {}) => logger.error(message, meta),
+        warn: (message, meta = {}) => logger.warn(message, meta),
+        info: (message, meta = {}) => logger.info(message, meta),
+        debug: (message, meta = {}) => logger.debug(message, meta)
+    }
 }; 

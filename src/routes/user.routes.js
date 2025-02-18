@@ -1,31 +1,74 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const UserController = require('../controllers/user.controller');
-const { verifyToken, restrictTo } = require('../middleware/auth.middleware');
-const { validateRequest } = require('../middleware/validate.middleware');
-const { updateUserSchema, changePasswordSchema, setRoleSchema } = require('../validators/user.validator');
-const upload = require('../middleware/upload.middleware');
+const UserController = require("../controllers/user.controller");
+const { verifyToken, restrictTo } = require("../middleware/auth.middleware");
+const { validateRequest } = require("../middleware/validate.middleware");
+const {
+  updateUserSchema,
+  changePasswordSchema,
+  setRoleSchema,
+} = require("../validators/user.validator");
+const upload = require("../middleware/upload.middleware");
 
 // Protected routes
 router.use(verifyToken);
 
-// User routes
-router.get('/info', UserController.getUserInfo);
-router.get('/profile', UserController.getProfile);
-router.put('/profile', validateRequest(updateUserSchema), UserController.updateProfile);
-router.put('/change-password', validateRequest(changePasswordSchema), UserController.changePassword);
+/**
+ * @route GET /api/users/profile
+ * @desc Lấy thông tin profile người dùng
+ * @access Private
+ */
+router.get("/profile", UserController.getProfile);
 
-// Upload avatar
-router.post('/avatar', upload.single('avatar'), UserController.uploadAvatar);
+/**
+ * @route PUT /api/users/profile
+ * @desc Cập nhật thông tin profile
+ * @access Private
+ */
+router.put(
+  "/profile",
+  validateRequest(updateUserSchema),
+  UserController.updateProfile
+);
+
+/**
+ * @route PUT /api/users/change-password
+ * @desc Đổi mật khẩu
+ * @access Private
+ * @validate {currentPassword, newPassword}
+ */
+router.put(
+  "/change-password",
+  validateRequest(changePasswordSchema),
+  UserController.changePassword
+);
+
+/**
+ * @route POST /api/users/avatar
+ * @desc Upload avatar
+ * @access Private
+ */
+router.post("/avatar", upload.single("avatar"), UserController.uploadAvatar);
 
 // Admin only routes
-router.use(restrictTo('admin', 'super_admin'));
-router.get('/', UserController.getAllUsers);
-router.get('/:id', UserController.getUserById);
-router.put('/:id', validateRequest(updateUserSchema), UserController.updateUser);
-router.delete('/:id', UserController.deleteUser);
+router.use(restrictTo("admin", "super_admin"));
+router.get("/", UserController.getAllUsers);
+router.get("/:id", UserController.getUserById);
+router.put(
+  "/:id",
+  validateRequest(updateUserSchema),
+  UserController.updateUser
+);
+router.delete("/:id", UserController.deleteUser);
 
-// Role management
-router.post('/set-role', validateRequest(setRoleSchema), UserController.setUserRole);
+/**
+ * @route PUT /api/users/role
+ * @desc Thay đổi role người dùng (Admin only)
+ * @access Private (Admin)
+ * @validate {userId, role}
+ */
+router.put("/role", restrictTo(["admin"]), (req, res, next) => {
+  UserController.setUserRole(req, res, next);
+});
 
-module.exports = router; 
+module.exports = router;
