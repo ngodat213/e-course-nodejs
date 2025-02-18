@@ -23,6 +23,24 @@ const courseSchema = new mongoose.Schema({
     thumbnail: {
         type: String,
         default: null
+    },
+    student_count: {
+        type: Number,
+        default: 0
+    },
+    rating: {
+        type: Number,
+        default: 0,
+        min: 0,
+        max: 5
+    },
+    review_count: {
+        type: Number,
+        default: 0
+    },
+    total_revenue: {
+        type: Number,
+        default: 0
     }
 }, {
     timestamps: true

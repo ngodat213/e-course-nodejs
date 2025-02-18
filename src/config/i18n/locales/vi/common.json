@@ -4,5 +4,51 @@
         "created": "Tạo mới thành công",
         "updated": "Cập nhật thành công",
         "deleted": "Xóa thành công"
+    },
+    "course": {
+        "notFound": "Không tìm thấy khóa học",
+        "missingInfo": "Thiếu thông tin khóa học",
+        "enrolled": "Đăng ký khóa học thành công",
+        "alreadyEnrolled": "Bạn đã đăng ký khóa học này",
+        "hasStudents": "Không thể xóa khóa học đã có học viên đăng ký",
+        "deleted": "Xóa khóa học thành công"
+    },
+    "user": {
+        "notFound": "Không tìm thấy người dùng",
+        "emailExists": "Email đã được sử dụng",
+        "invalidPassword": "Mật khẩu hiện tại không đúng",
+        "passwordChanged": "Đổi mật khẩu thành công",
+        "deleted": "Xóa người dùng thành công",
+        "cannotSetSuperAdmin": "Không thể set quyền super admin",
+        "onlySuperAdminCanSetAdmin": "Chỉ super admin mới có thể set quyền admin",
+        "onlyAdminCanSetInstructor": "Chỉ admin mới có thể set quyền instructor",
+        "cannotModifySuperAdmin": "Không thể thay đổi quyền của super admin",
+        "onlySuperAdminCanModifyAdmin": "Chỉ super admin mới có thể thay đổi quyền của admin",
+        "roleUpdated": "Cập nhật quyền thành công"
+    },
+    "auth": {
+        "emailExists": "Email đã được sử dụng",
+        "registerSuccess": "Đăng ký thành công. Vui lòng kiểm tra email để xác nhận tài khoản",
+        "invalidToken": "Token không hợp lệ hoặc đã hết hạn",
+        "emailVerified": "Xác nhận email thành công",
+        "invalidCredentials": "Email hoặc mật khẩu không đúng",
+        "accountInactive": "Tài khoản chưa được kích hoạt",
+        "emailNotFound": "Email không tồn tại",
+        "resetEmailSent": "Email đặt lại mật khẩu đã được gửi",
+        "passwordReset": "Đặt lại mật khẩu thành công",
+        "otpSent": "Mã OTP đã được gửi đến email của bạn",
+        "otpResent": "Mã OTP mới đã được gửi",
+        "verified": "Xác thực tài khoản thành công"
+    },
+    "otp": {
+        "notFound": "Không tìm thấy mã OTP",
+        "expired": "Mã OTP đã hết hạn",
+        "invalid": "Mã OTP không đúng"
+    },
+    "upload": {
+        "success": "Upload ảnh thành công",
+        "failed": "Upload ảnh thất bại",
+        "invalidFormat": "Định dạng file không hợp lệ. Chỉ chấp nhận ảnh",
+        "tooLarge": "Kích thước file quá lớn. Tối đa 5MB"
     }
 } 
