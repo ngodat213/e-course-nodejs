@@ -1,92 +1,119 @@
+const BaseController = require('./base.controller');
 const CourseService = require('../services/course.service');
-const { success } = require('../utils/logger');
+const { success } = require("../utils/logger");
+const CloudinaryService = require("../services/cloudinary.service");
+const CourseDeleteRequest = require("../models/course_delete_request.model");
 
-class CourseController {
-    // Public endpoints
-    async getAllCourses(req, res, next) {
-        try {
-            const courses = await CourseService.getAllCourses(req.query);
-            res.success(courses);
-        } catch (error) {
-            next(error);
-        }
-    }
+class CourseController extends BaseController {
+  constructor() {
+    super();
+  }
 
-    async getCourseById(req, res, next) {
-        try {
-            const course = await CourseService.getCourseById(req.params.id);
-            res.success(course);
-        } catch (error) {
-            next(error);
-        }
+  async getAll(req, res, next) {
+    try {
+      const courses = await CourseService.getAll(req.query);
+      this.successResponse(res, courses);
+    } catch (error) {
+      this.handleError(error, next);
     }
+  }
 
-    // Student endpoints
-    async enrollCourse(req, res, next) {
-        try {
-            const result = await CourseService.enrollCourse(req.params.id, req.user._id);
-            success.info('Course enrolled', { 
-                userId: req.user._id,
-                courseId: req.params.id 
-            });
-            res.success(result);
-        } catch (error) {
-            next(error);
-        }
+  async getById(req, res, next) {
+    try {
+      const course = await CourseService.getById(req.params.id);
+      this.successResponse(res, course);
+    } catch (error) {
+      this.handleError(error, next);
     }
+  }
 
-    async getMyCourses(req, res, next) {
-        try {
-            const courses = await CourseService.getUserCourses(req.user._id);
-            res.success(courses);
-        } catch (error) {
-            next(error);
-        }
+  async update(req, res, next) {
+    try {
+      const course = await CourseService.update(req.params.id, req.body);
+      this.successResponse(res, course);
+    } catch (error) {
+      this.handleError(error, next);  
     }
+  }
 
-    // Instructor endpoints
-    async createCourse(req, res, next) {
-        try {
-            const courseData = {
-                ...req.body,
-                instructor_id: req.user._id
-            };
-            const course = await CourseService.createCourse(courseData);
-            success.info('Course created', { 
-                instructorId: req.user._id,
-                courseId: course._id 
-            });
-            res.created(course);
-        } catch (error) {
-            next(error);
-        }
+  async create(req, res, next) {
+    try {
+      const course = await CourseService.create(req.body);
+      this.logInfo('Course created', { id: course._id });
+      this.createdResponse(res, course);
+    } catch (error) {
+      this.handleError(error, next);
     }
+  }
 
-    async updateCourse(req, res, next) {
-        try {
-            const course = await CourseService.updateCourse(req.params.id, req.body);
-            success.info('Course updated', { 
-                instructorId: req.user._id,
-                courseId: req.params.id 
-            });
-            res.success(course);
-        } catch (error) {
-            next(error);
-        }
+  async enrollCourse(req, res, next) {
+    try {
+      const result = await CourseService.enrollCourse(
+        req.params.id,
+        req.user._id
+      );
+      this.logInfo('Course enrolled', {
+        courseId: req.params.id,
+        userId: req.user._id
+      });
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
     }
+  }
 
-    async deleteCourse(req, res, next) {
-        try {
-            await CourseService.deleteCourse(req.params.id);
-            success.info('Course deleted', { 
-                instructorId: req.user._id,
-                courseId: req.params.id 
-            });
-            res.success({ message: 'Xóa khóa học thành công' });
-        } catch (error) {
-            next(error);
-        }
+  async getMyCourses(req, res, next) {
+    try {
+      const courses = await CourseService.getUserCourses(req.user._id);
+      this.successResponse(res, courses);
+    } catch (error) {
+      this.handleError(error, next);
     }
+  }
+
+  async requestDelete(req, res, next) {
+    try {
+      const result = await CourseService.createDeleteRequest(
+        req.params.id,
+        req.user._id,
+        req.body.reason
+      );
+      this.logInfo("Course delete requested", {
+        courseId: req.params.id,
+        userId: req.user._id,
+      });
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async getDeleteRequests(req, res, next) {
+    try {
+      const requests = await CourseService.getDeleteRequests(req.query);
+      this.successResponse(res, requests);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async handleDeleteRequest(req, res, next) {
+    try {
+      const result = await CourseService.handleDeleteRequest(
+        req.params.requestId,
+        req.user._id,
+        req.body
+      );
+      success.info("Delete request handled", {
+        requestId: req.params.requestId,
+        adminId: req.user._id,
+        status: req.body.status,
+      });
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
 }
 
-module.exports = new CourseController(); 
+module.exports = new CourseController();
