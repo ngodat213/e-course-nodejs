@@ -21,7 +21,50 @@ const userSchema = new mongoose.Schema({
     },
     profile_picture: {
         type: String,
+        default: process.env.DEFAULT_AVATAR_URL
+    },
+    profile_picture_id: {
+        type: String,
         default: null
+    },
+    role: {
+        type: String,
+        enum: ['student', 'instructor', 'admin', 'super_admin'],
+        default: 'student',
+        immutable: true
+    },
+    status: {
+        type: String,
+        enum: ['pending', 'active', 'blocked'],
+        default: 'pending'
+    },
+    verification_token: String,
+    verification_token_expires: Date,
+    otp: String,
+    otp_expires: Date,
+    reminder_sent: Boolean,
+    reset_password_token: String,
+    reset_password_expires: Date,
+    last_login: Date,
+    certificate_count: {
+        type: Number,
+        default: 0
+    },
+    enrolled_courses: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Course'
+    }],
+    teaching_courses: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Course'
+    }],
+    notifications: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Notification'
+    }],
+    unread_notifications: {
+        type: Number,
+        default: 0
     }
 }, {
     timestamps: { 

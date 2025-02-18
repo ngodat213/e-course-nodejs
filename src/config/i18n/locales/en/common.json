@@ -4,5 +4,34 @@
         "created": "Created successfully",
         "updated": "Updated successfully",
         "deleted": "Deleted successfully"
+    },
+    "course": {
+        "notFound": "Course not found",
+        "missingInfo": "Missing course information",
+        "enrolled": "Course enrolled successfully",
+        "alreadyEnrolled": "You are already enrolled in this course",
+        "hasStudents": "Cannot delete course with enrolled students",
+        "deleted": "Course deleted successfully"
+    },
+    "user": {
+        "notFound": "User not found",
+        "emailExists": "Email already exists",
+        "invalidPassword": "Current password is incorrect",
+        "passwordChanged": "Password changed successfully",
+        "deleted": "User deleted successfully"
+    },
+    "auth": {
+        "emailExists": "Email already exists",
+        "registerSuccess": "Registration successful. Please check your email to verify your account",
+        "invalidToken": "Invalid or expired token",
+        "emailVerified": "Email verified successfully",
+        "invalidCredentials": "Invalid email or password",
+        "accountInactive": "Account is not activated",
+        "emailNotFound": "Email not found",
+        "resetEmailSent": "Password reset email has been sent",
+        "passwordReset": "Password reset successfully",
+        "otpSent": "OTP has been sent to your email",
+        "otpResent": "New OTP has been sent",
+        "verified": "Account verified successfully"
     }
 } 

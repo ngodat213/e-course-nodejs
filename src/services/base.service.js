@@ -6,12 +6,14 @@ class BaseService {
     }
 
     async getAll(options) {
-        const { page, limit, sort, search } = options;
+        const { page, limit, sort, search, filter = {} } = options;
         const skip = (page - 1) * limit;
 
         let query = {};
         if (search) {
-            query = this.buildSearchQuery(search);
+            query = { ...this.buildSearchQuery(search), ...filter };
+        } else {
+            query = filter;
         }
 
         const [data, total] = await Promise.all([

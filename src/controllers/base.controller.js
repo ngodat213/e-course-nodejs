@@ -3,6 +3,10 @@ class BaseController {
         this.service = service;
     }
 
+    getResponseMessage(key) {
+        return req.i18n.t(key);
+    }
+
     async getAll(req, res, next) {
         try {
             const { page = 1, limit = 10, sort, search } = req.query;
@@ -53,7 +57,9 @@ class BaseController {
         try {
             const { id } = req.params;
             await this.service.delete(id);
-            return res.success({ message: 'Deleted successfully' });
+            res.success({ 
+                message: this.getResponseMessage('success.deleted')
+            });
         } catch (error) {
             next(error);
         }
