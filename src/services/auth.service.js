@@ -7,12 +7,12 @@ const { BadRequestError, UnauthorizedError } = require('../utils/errors');
 const { success } = require('../utils/logger');
 const i18next = require('i18next');
 const OTPService = require('./otp.service');
+const TokenService = require('./token.service');
 
 class AuthService {
     async register(userData) {
         const { email } = userData;
 
-        // Chỉ kiểm tra user đã active
         const existingUser = await User.findOne({ 
             email,
             status: 'active'
@@ -56,23 +56,18 @@ class AuthService {
     }
 
     async verifyEmail(token) {
-        const user = await User.findOne({
-            verification_token: token,
-            verification_token_expires: { $gt: Date.now() }
-        });
+        try {
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            const user = await User.findById(decoded.id);
 
-        if (!user) {
+            user.status = 'active';
+            user.email_verified = true;
+            await user.save();
+
+            return { message: i18next.t('auth.verified') };
+        } catch (error) {
             throw new BadRequestError(i18next.t('auth.invalidToken'));
         }
-
-        user.status = 'active';
-        user.verification_token = undefined;
-        user.verification_token_expires = undefined;
-        await user.save();
-
-        success.info('Email verified successfully', { userId: user._id });
-
-        return { message: i18next.t('auth.emailVerified') };
     }
 
     async login(email, password) {
@@ -81,24 +76,30 @@ class AuthService {
             throw new UnauthorizedError(i18next.t('auth.invalidCredentials'));
         }
 
-        if (user.status !== 'active') {
-            throw new UnauthorizedError(i18next.t('auth.accountInactive'));
-        }
+        const accessToken = TokenService.generateAccessToken(user);
+        const refreshToken = await TokenService.generateRefreshToken(user);
 
-        // Cập nhật last_login
-        user.last_login = new Date();
-        await user.save();
+        return {
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                role: user.role
+            },
+            tokens: {
+                access_token: accessToken,
+                refresh_token: refreshToken
+            }
+        };
+    }
 
-        // Tạo JWT token
-        const token = jwt.sign(
-            { id: user._id, role: user.role },
-            process.env.JWT_SECRET,
-            { expiresIn: '1d' }
-        );
+    async logout(refreshToken) {
+        await TokenService.revokeRefreshToken(refreshToken);
+        return { message: i18next.t('auth.logoutSuccess') };
+    }
 
-        success.info('User logged in successfully', { userId: user._id });
-
-        return { token, user: this._sanitizeUser(user) };
+    async refreshToken(refreshToken) {
+        return await TokenService.refreshAccessToken(refreshToken);
     }
 
     async forgotPassword(email) {
@@ -191,14 +192,14 @@ class AuthService {
         };
     }
 
-    async verifyOTP(userId, otp) {
-        await OTPService.verifyOTP(userId, otp);
+    async verifyOTP(email, otp) {
+        await OTPService.verifyOTP(email, otp);
 
-        const user = await User.findById(userId);
+        const user = await User.findOne({ email });
         user.status = 'active';
         await user.save();
 
-        success.info('OTP verified successfully', { userId });
+        success.info('OTP verified successfully', { email });
 
         // Tạo JWT token
         const token = jwt.sign(
@@ -228,14 +229,14 @@ class AuthService {
     async forgotPasswordMobile(email) {
         const user = await User.findOne({ email });
         if (!user) {
-            throw new BadRequestError(i18next.t('auth.emailNotFound'));
+            throw new BadRequestError(i18next.t('errors:auth.emailNotFound'));
         }
 
         await OTPService.generateAndSendOTP(user, 'reset');
 
         return { 
-            message: i18next.t('auth.otpSent'),
-            userId: user._id 
+            message: i18next.t('common:auth.otpSent'),
+            userId: user.email, 
         };
     }
 
@@ -246,9 +247,7 @@ class AuthService {
         user.password = newPassword;
         await user.save();
 
-        success.info('Password reset with OTP', { userId });
-
-        return { message: i18next.t('auth.passwordReset') };
+        return { message: i18next.t('auth.passwordResetOtpSuccess') };
     }
 }
 

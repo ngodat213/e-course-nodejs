@@ -27,6 +27,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: null
     },
+    avatar_file: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'CloudinaryFile',
+        default: null
+    },
     role: {
         type: String,
         enum: ['student', 'instructor', 'admin', 'super_admin'],

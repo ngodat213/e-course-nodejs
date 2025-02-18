@@ -1,0 +1,411 @@
+2025-02-18 13:04:34 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:11:23)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:04:34 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:11:23)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:04:56 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:11:23)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:04:56 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:11:23)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:05:04 [ERROR]: UserService.createUser is not a function {
+  "stack": "TypeError: UserService.createUser is not a function\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:21:45)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:05:04 [ERROR]: UserService.createUser is not a function {
+  "stack": "TypeError: UserService.createUser is not a function\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:21:45)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:08:41 [ERROR]: EmailService.sendWelcomeEmail is not a function {
+  "stack": "TypeError: EmailService.sendWelcomeEmail is not a function\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:329:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:22:27)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:08:41 [ERROR]: EmailService.sendWelcomeEmail is not a function {
+  "stack": "TypeError: EmailService.sendWelcomeEmail is not a function\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:329:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:22:27)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:17:30 [ERROR]: Email already exists {
+  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:323:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:22:27)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:17:30 [ERROR]: Email already exists {
+  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:323:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:22:27)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:18:26 [ERROR]: Cannot read properties of undefined (reading 'info') {
+  "stack": "TypeError: Cannot read properties of undefined (reading 'info')\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 13:18:26 [ERROR]: Cannot read properties of undefined (reading 'info') {
+  "stack": "TypeError: Cannot read properties of undefined (reading 'info')\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:14:37 [ERROR]: Uncaught Exception: error.error is not a function {
+  "stack": "TypeError: error.error is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/server.js:72:11)\n    at process.emit (node:events:507:28)\n    at emitUnhandledRejection (node:internal/process/promises:252:13)\n    at throwUnhandledRejectionsMode (node:internal/process/promises:388:19)\n    at processPromiseRejections (node:internal/process/promises:475:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:106:32)"
+}
+2025-02-18 17:14:42 [ERROR]: Unhandled Rejection: error.error is not a function {
+  "stack": "TypeError: error.error is not a function\n    at connectDB (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:12:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-18 17:14:50 [ERROR]: MongoDB connection error: info.info is not a function {
+  "stack": "TypeError: info.info is not a function\n    at connectDB (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:10:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-18 17:14:54 [ERROR]: MongoDB connection error: info.info is not a function {
+  "stack": "TypeError: info.info is not a function\n    at connectDB (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:10:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-18 17:15:07 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15"
+}
+2025-02-18 17:15:40 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15"
+}
+2025-02-18 17:15:59 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15"
+}
+2025-02-18 17:15:59 [ERROR]: Invalid dev secret key {
+  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "string",
+    "email": "user@example.com",
+    "password": "string",
+    "dev_secret_key": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:16:25 [ERROR]: Email already exists {
+  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:83:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)"
+}
+2025-02-18 17:16:25 [ERROR]: Email already exists {
+  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:83:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)",
+  "path": "/api/dev/register-admin",
+  "method": "POST",
+  "body": {
+    "name": "Admin",
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003",
+    "dev_secret_key": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:18:24 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
+  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:59:18)"
+}
+2025-02-18 17:40:24 [ERROR]: res.created is not a function {
+  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-18 17:40:24 [ERROR]: res.created is not a function {
+  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "name": "NgoVanTienDat",
+    "email": "gangal.dat@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:43:21 [ERROR]: res.created is not a function {
+  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-18 17:43:21 [ERROR]: res.created is not a function {
+  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "name": "NgoVanTienDat",
+    "email": "gangal.dat@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:48:21 [ERROR]: Dữ liệu không hợp lệ {
+  "stack": "Error: Dữ liệu không hợp lệ\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:16:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:47:12)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "302896"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:58:11 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 17:58:11 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "302896"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:58:48 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 17:58:48 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "970739"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 17:58:51 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 17:58:51 [ERROR]: otp.notFound {
+  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "970739"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 20:42:45 [ERROR]: bcrypt is not defined {
+  "stack": "ReferenceError: bcrypt is not defined\n    at HashService.hashData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/hash.service.js:3:9)\n    at OTPService.saveOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:23:36)\n    at OTPService.generateAndSendOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:67:20)\n    at AuthService.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:176:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:22:28)"
+}
+2025-02-18 20:42:45 [ERROR]: bcrypt is not defined {
+  "stack": "ReferenceError: bcrypt is not defined\n    at HashService.hashData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/hash.service.js:3:9)\n    at OTPService.saveOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:23:36)\n    at OTPService.generateAndSendOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:67:20)\n    at AuthService.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:176:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:22:28)",
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "name": "string",
+    "email": "haha@example.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:15:07 [ERROR]: otp.invalid {
+  "stack": "Error: otp.invalid\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 21:15:07 [ERROR]: otp.invalid {
+  "stack": "Error: otp.invalid\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "773164"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:16:02 [ERROR]: user.notActive {
+  "stack": "Error: user.notActive\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
+}
+2025-02-18 21:16:02 [ERROR]: user.notActive {
+  "stack": "Error: user.notActive\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "otp": "773164"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:17:14 [ERROR]: Invalid email or password {
+  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)"
+}
+2025-02-18 21:17:14 [ERROR]: Invalid email or password {
+  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)",
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:17:54 [ERROR]: Invalid email or password {}
+2025-02-18 21:17:54 [ERROR]: Invalid email or password {
+  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)",
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:18:15 [ERROR]: Invalid email or password {}
+2025-02-18 21:18:15 [ERROR]: Invalid email or password {
+  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)",
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-18 21:19:02 [ERROR]: Invalid email or password {}
+2025-02-18 21:19:02 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
