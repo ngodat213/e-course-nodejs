@@ -409,3 +409,18 @@
   "query": {},
   "user": null
 }
+2025-02-18 21:35:08 [ERROR]: Unhandled Rejection: error.error is not a function {
+  "stack": "TypeError: error.error is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:31:15)"
+}
+2025-02-19 13:19:41 [ERROR]: Invalid email or password {}
+2025-02-19 13:19:41 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}

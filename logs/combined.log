@@ -575,3 +575,94 @@
 2025-02-18 21:27:40 [INFO]: Forgot password mobile initiated {
   "email": "ngodat.it213@gmail.com"
 }
+2025-02-18 21:32:02 [INFO]: Server is running on port 3000 
+2025-02-18 21:32:02 [INFO]: Environment: development 
+2025-02-18 21:32:02 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-18 21:32:06 [INFO]: Connected to MongoDB 
+2025-02-18 21:35:08 [INFO]: MongoDB disconnected 
+2025-02-19 13:03:14 [INFO]: Server is running on port 3000 
+2025-02-19 13:03:14 [INFO]: Environment: development 
+2025-02-19 13:03:14 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:03:17 [INFO]: Connected to MongoDB 
+2025-02-19 13:08:45 [INFO]: Server is running on port 3000 
+2025-02-19 13:08:45 [INFO]: Environment: development 
+2025-02-19 13:08:45 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:08:48 [INFO]: Connected to MongoDB 
+2025-02-19 13:09:09 [INFO]: Server is running on port 3000 
+2025-02-19 13:09:09 [INFO]: Environment: development 
+2025-02-19 13:09:09 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:09:13 [INFO]: Connected to MongoDB 
+2025-02-19 13:11:49 [INFO]: Reset password email sent {
+  "userId": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 13:11:49 [INFO]: Password reset requested {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 13:13:40 [INFO]: Server is running on port 3000 
+2025-02-19 13:13:40 [INFO]: Environment: development 
+2025-02-19 13:13:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:13:43 [INFO]: Connected to MongoDB 
+2025-02-19 13:13:44 [INFO]: Server is running on port 3000 
+2025-02-19 13:13:44 [INFO]: Environment: development 
+2025-02-19 13:13:44 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:13:47 [INFO]: Connected to MongoDB 
+2025-02-19 13:13:55 [INFO]: Server is running on port 3000 
+2025-02-19 13:13:55 [INFO]: Environment: development 
+2025-02-19 13:13:55 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:13:58 [INFO]: Connected to MongoDB 
+2025-02-19 13:14:18 [INFO]: Server is running on port 3000 
+2025-02-19 13:14:18 [INFO]: Environment: development 
+2025-02-19 13:14:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:14:21 [INFO]: Connected to MongoDB 
+2025-02-19 13:14:42 [INFO]: Server is running on port 3000 
+2025-02-19 13:14:42 [INFO]: Environment: development 
+2025-02-19 13:14:42 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:14:46 [INFO]: Connected to MongoDB 
+2025-02-19 13:15:32 [INFO]: Reset password email sent {
+  "userId": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 13:15:32 [INFO]: Password reset requested {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 13:17:08 [INFO]: Server is running on port 3000 
+2025-02-19 13:17:08 [INFO]: Environment: development 
+2025-02-19 13:17:08 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:17:10 [INFO]: Server is running on port 3000 
+2025-02-19 13:17:10 [INFO]: Environment: development 
+2025-02-19 13:17:10 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:17:13 [INFO]: Connected to MongoDB 
+2025-02-19 13:17:21 [INFO]: Password reset requested {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 13:18:26 [INFO]: Server is running on port 3000 
+2025-02-19 13:18:26 [INFO]: Environment: development 
+2025-02-19 13:18:26 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:18:27 [INFO]: Server is running on port 3000 
+2025-02-19 13:18:27 [INFO]: Environment: development 
+2025-02-19 13:18:27 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:18:30 [INFO]: Connected to MongoDB 
+2025-02-19 13:18:36 [INFO]: Password reset requested {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 13:19:17 [INFO]: Password reset completed {
+  "token": "47f0774ea5c23941d2c986995d7e773ac7bc84ce9efef17e982745025ad01d06"
+}
+2025-02-19 13:19:41 [ERROR]: Invalid email or password {}
+2025-02-19 13:19:41 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:19:48 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 13:20:18 [INFO]: Server is running on port 3000 
+2025-02-19 13:20:18 [INFO]: Environment: development 
+2025-02-19 13:20:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:20:21 [INFO]: Connected to MongoDB 

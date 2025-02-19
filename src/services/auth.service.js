@@ -105,13 +105,14 @@ class AuthService {
     async forgotPassword(email) {
         const user = await User.findOne({ email });
         if (!user) {
-            throw new BadRequestError('Email không tồn tại');
+            throw new BadRequestError(i18next.t('auth.emailNotFound'));
         }
 
         // Tạo reset token
         const resetToken = crypto.randomBytes(32).toString('hex');
-        const resetTokenExpires = new Date(Date.now() + 60 * 60 * 1000); // 1 giờ
+        const resetTokenExpires = new Date(Date.now() + 5 * 60 * 1000); // 5 phút
 
+        // Lưu token vào database
         user.reset_password_token = resetToken;
         user.reset_password_expires = resetTokenExpires;
         await user.save();
@@ -126,9 +127,7 @@ class AuthService {
             ...emailTemplate
         });
 
-        success.info('Reset password email sent', { userId: user._id });
-
-        return { message: 'Email đặt lại mật khẩu đã được gửi' };
+        return { message: i18next.t('auth.resetEmailSent') };
     }
 
     async resetPassword(token, newPassword) {
@@ -138,17 +137,19 @@ class AuthService {
         });
 
         if (!user) {
-            throw new BadRequestError('Token không hợp lệ hoặc đã hết hạn');
+            throw new BadRequestError(i18next.t('auth.invalidToken'));
         }
 
+        // Cập nhật mật khẩu mới
         user.password = newPassword;
         user.reset_password_token = undefined;
         user.reset_password_expires = undefined;
         await user.save();
 
-        success.info('Password reset successfully', { userId: user._id });
+        // Vô hiệu hóa tất cả refresh tokens
+        await TokenService.revokeAllUserTokens(user._id);
 
-        return { message: 'Đặt lại mật khẩu thành công' };
+        return { message: i18next.t('auth.passwordReset') };
     }
 
     _sanitizeUser(user) {

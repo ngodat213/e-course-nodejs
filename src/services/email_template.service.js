@@ -17,15 +17,35 @@ class EmailTemplateService {
 
     getResetPasswordEmail(user, resetUrl) {
         return {
-            subject: i18next.t('email.resetPassword.subject'),
+            subject: i18next.t('email:resetPassword.subject'),
             html: `
-                <h2>${i18next.t('email.resetPassword.title', { name: user.name })}</h2>
-                <p>${i18next.t('email.resetPassword.message')}</p>
-                <a href="${resetUrl}" style="padding: 10px 20px; background: #2196F3; color: white; text-decoration: none; border-radius: 5px;">
-                    ${i18next.t('email.resetPassword.button')}
-                </a>
-                <p>${i18next.t('email.resetPassword.expiry')}</p>
-                <p>${i18next.t('email.resetPassword.ignore')}</p>
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                    <div style="background: #f8f9fa; padding: 20px; text-align: center;">
+                        <h1 style="color: #0d6efd;">${i18next.t('email:resetPassword.title')}</h1>
+                    </div>
+                    
+                    <div style="padding: 20px; background: white;">
+                        <p>${i18next.t('email:resetPassword.greeting', { name: user.name })}</p>
+                        <p>${i18next.t('email:resetPassword.message')}</p>
+                        
+                        <div style="text-align: center; margin: 30px 0;">
+                            <a href="${resetUrl}" 
+                               style="background: #0d6efd; color: white; padding: 12px 25px; 
+                                      text-decoration: none; border-radius: 5px;">
+                                ${i18next.t('email:resetPassword.button')}
+                            </a>
+                        </div>
+                        
+                        <p style="color: #dc3545;">${i18next.t('email:resetPassword.warning')}</p>
+                        <p>${i18next.t('email:resetPassword.ignore')}</p>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 20px; text-align: center; 
+                                font-size: 12px; color: #6c757d;">
+                        <p>${i18next.t('email:footer.contact')}</p>
+                        <p>${i18next.t('email:footer.copyright', { year: new Date().getFullYear() })}</p>
+                    </div>
+                </div>
             `
         };
     }
@@ -105,18 +125,18 @@ class EmailTemplateService {
 
     getResetPasswordOTPEmail(user, otp) {
         return {
-            subject: i18next.t('email:resetPasswordOTP.subject'),
+            subject: i18next.t('email:resetPassword.subject'),
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                    <h2>${i18next.t('email:resetPasswordOTP.title', { name: user.name })}</h2>
-                    <p>${i18next.t('email:resetPasswordOTP.message')}</p>
+                    <h2>${i18next.t('email:resetPassword.title', { name: user.name })}</h2>
+                    <p>${i18next.t('email:resetPassword.message')}</p>
                     
                     <div style="background: #f5f5f5; padding: 20px; text-align: center; margin: 20px 0;">
                         <h1 style="color: #2196F3; font-size: 32px; letter-spacing: 2px;">${otp}</h1>
                     </div>
                     
-                    <p style="color: #f44336;">${i18next.t('email:resetPasswordOTP.warning')}</p>
-                    <p style="color: #666;">${i18next.t('email:resetPasswordOTP.footer')}</p>
+                    <p style="color: #f44336;">${i18next.t('email:resetPassword.warning')}</p>
+                    <p style="color: #666;">${i18next.t('email:resetPassword.footer')}</p>
                     
                     <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 12px;">
                         <p>${i18next.t('email:footer.contact')}</p>
