@@ -1293,3 +1293,127 @@ Use mongoose.model(name, schema) {
   "query": {},
   "user": "67b495ca9d35c758607e27cc"
 }
+2025-02-19 15:46:24 [ERROR]: upload.failed {}
+2025-02-19 15:46:24 [ERROR]: upload.failed {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:50:49 [ERROR]: upload.failed {}
+2025-02-19 15:50:49 [ERROR]: upload.failed {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:54:02 [INFO]: Server is running on port 3000 
+2025-02-19 15:54:02 [INFO]: Environment: development 
+2025-02-19 15:54:02 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:54:06 [INFO]: Connected to MongoDB 
+2025-02-19 15:58:30 [ERROR]: Invalid token {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:58:44 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 16:00:41 [INFO]: Server is running on port 3000 
+2025-02-19 16:00:41 [INFO]: Environment: development 
+2025-02-19 16:00:41 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 16:00:47 [INFO]: Connected to MongoDB 
+2025-02-19 16:24:23 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 16:25:08 [INFO]: Server is running on port 3000 
+2025-02-19 16:25:08 [INFO]: Environment: development 
+2025-02-19 16:25:08 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 16:25:11 [INFO]: Connected to MongoDB 
+2025-02-19 16:29:36 [INFO]: Server is running on port 3000 
+2025-02-19 16:29:36 [INFO]: Environment: development 
+2025-02-19 16:29:36 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 16:29:40 [INFO]: Connected to MongoDB 
+2025-02-19 17:41:48 [INFO]: MongoDB disconnected 
+2025-02-19 17:59:11 [INFO]: MongoDB disconnected 
+2025-02-19 18:09:57 [INFO]: Server is running on port 3000 
+2025-02-19 18:09:57 [INFO]: Environment: development 
+2025-02-19 18:09:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 18:10:01 [INFO]: Connected to MongoDB 
+2025-02-19 18:10:05 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:10:14 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
+2025-02-19 18:10:14 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:11:38 [INFO]: Server is running on port 3000 
+2025-02-19 18:11:38 [INFO]: Environment: development 
+2025-02-19 18:11:38 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 18:11:41 [INFO]: Connected to MongoDB 
+2025-02-19 18:11:44 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
+2025-02-19 18:11:44 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:12:24 [INFO]: Server is running on port 3000 
+2025-02-19 18:12:24 [INFO]: Environment: development 
+2025-02-19 18:12:24 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 18:12:27 [INFO]: Connected to MongoDB 
+2025-02-19 18:12:30 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
+2025-02-19 18:12:30 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:13:11 [INFO]: Server is running on port 3000 
+2025-02-19 18:13:11 [INFO]: Environment: development 
+2025-02-19 18:13:11 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 18:13:14 [INFO]: Connected to MongoDB 
+2025-02-19 18:13:20 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 18:14:57 [INFO]: Server is running on port 3000 
+2025-02-19 18:14:57 [INFO]: Environment: development 
+2025-02-19 18:14:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 18:15:01 [INFO]: Connected to MongoDB 
+2025-02-19 18:15:06 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 18:16:13 [INFO]: Server is running on port 3000 
+2025-02-19 18:16:13 [INFO]: Environment: development 
+2025-02-19 18:16:13 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 18:16:17 [INFO]: Connected to MongoDB 

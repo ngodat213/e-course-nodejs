@@ -34,12 +34,26 @@ class UserService {
             .sort(sort)
             .skip((page - 1) * limit)
             .limit(limit)
-            .populate('profile_picture', 'file_url');
+            .populate('profile_picture', 'public_id');
 
         const total = await this.model.countDocuments(query);
 
+        // Generate signed URLs for all users' profile pictures
+        const usersWithSignedUrls = await Promise.all(
+            users.map(async (user) => {
+                const sanitizedUser = this._sanitizeUser(user);
+                if (sanitizedUser.profile_picture) {
+                    sanitizedUser.profile_picture = await CloudinaryService.generateSignedUrl(
+                        sanitizedUser.profile_picture.public_id,
+                        { expires_in: parseInt(process.env.SIGN_URL_EXPIRES) }
+                    );
+                }
+                return sanitizedUser;
+            })
+        );
+
         return {
-            data: users,
+            data: usersWithSignedUrls,
             pagination: {
                 page: parseInt(page),
                 limit: parseInt(limit),
@@ -246,9 +260,6 @@ class UserService {
             throw new NotFoundError("Không tìm thấy người dùng");
         }
 
-        // Có thể thêm logic kiểm tra các ràng buộc trước khi xóa
-        // Ví dụ: kiểm tra user có khóa học đang dạy không
-
         await user.remove();
         return true;
     }
@@ -284,6 +295,10 @@ class UserService {
             .select("-password")
             .populate([
                 {
+                    path: "profile_picture",
+                    select: "public_id",
+                },
+                {
                     path: "enrolled_courses",
                     select: "title description thumbnail progress_percent",
                     populate: {
@@ -313,8 +328,17 @@ class UserService {
         // Thêm thống kê
         const stats = await this.getUserStats(userId);
 
+        // Generate signed URL for profile picture
+        const sanitizedUser = this._sanitizeUser(user);
+        if (sanitizedUser.profile_picture) {
+            sanitizedUser.profile_picture = await CloudinaryService.generateSignedUrl(
+                sanitizedUser.profile_picture.public_id,
+                { expires_in: parseInt(process.env.SIGN_URL_EXPIRES) }
+            );
+        }
+
         return {
-            user: this._sanitizeUser(user),
+            user: sanitizedUser,
             stats,
         };
     }

@@ -39,6 +39,7 @@ const cloudinaryFileSchema = new mongoose.Schema({
     file_url: {
         type: String,
         required: true,
+        select: false // Không trả về trong response mặc định
     },
 
     // Public ID của file trên Cloudinary

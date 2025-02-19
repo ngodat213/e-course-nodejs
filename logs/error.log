@@ -910,3 +910,73 @@ Use mongoose.model(name, schema) {
   "query": {},
   "user": "67b495ca9d35c758607e27cc"
 }
+2025-02-19 15:46:24 [ERROR]: upload.failed {}
+2025-02-19 15:46:24 [ERROR]: upload.failed {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:50:49 [ERROR]: upload.failed {}
+2025-02-19 15:50:49 [ERROR]: upload.failed {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:58:30 [ERROR]: Invalid token {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:10:05 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:10:14 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
+2025-02-19 18:10:14 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:11:44 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
+2025-02-19 18:11:44 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:12:30 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
+2025-02-19 18:12:30 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
