@@ -409,3 +409,723 @@
   "query": {},
   "user": null
 }
+2025-02-18 21:35:08 [ERROR]: Unhandled Rejection: error.error is not a function {
+  "stack": "TypeError: error.error is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:31:15)"
+}
+2025-02-19 13:19:41 [ERROR]: Invalid email or password {}
+2025-02-19 13:19:41 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:22:21 [ERROR]: User is not defined {}
+2025-02-19 13:22:21 [ERROR]: User is not defined {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:22:39 [ERROR]: User is not defined {}
+2025-02-19 13:22:39 [ERROR]: User is not defined {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:25:16 [ERROR]: User is not defined {}
+2025-02-19 13:25:16 [ERROR]: User is not defined {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:25:42 [ERROR]: auth.invalidRefreshToken {}
+2025-02-19 13:25:42 [ERROR]: auth.invalidRefreshToken {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:27:45 [ERROR]: Invalid refresh token {}
+2025-02-19 13:27:45 [ERROR]: Invalid refresh token {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:30:20 [ERROR]: Invalid refresh token {}
+2025-02-19 13:30:20 [ERROR]: Invalid refresh token {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 14:42:15 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 14:42:34 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:43:50 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:43:52 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:44:19 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:45:21 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:46:57 [ERROR]: Unhandled Rejection: error.error is not a function {
+  "stack": "TypeError: error.error is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:31:15)"
+}
+2025-02-19 14:47:14 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:47:44 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:48:18 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:50:17 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:50:55 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:53:49 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:53:54 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:54:43 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:55:22 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:55:52 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:55:59 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:56:30 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:56:55 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:57:13 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "price": "",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:57:39 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {}
+2025-02-19 14:57:39 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "price": "111111",
+    "status": "draft",
+    "thumbnail_id": "ecourse/[object Object]/sbbl2u8b3yiwwzrmbckk"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:59:07 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter ",
+    "price": "111111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:04:43 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:05:08 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter ",
+    "price": "111111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:05:42 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter ",
+    "price": "111111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:06:37 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {}
+2025-02-19 15:06:37 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter for beginner hahahahahaha",
+    "price": "111111",
+    "status": "draft",
+    "thumbnail_id": "ecourse/[object Object]/xs7kvykgvtpemlcn6tmy"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:07:48 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {}
+2025-02-19 15:07:48 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter for beginner hahahahahaha",
+    "price": "111111",
+    "status": "draft",
+    "thumbnail_id": "ecourse/[object Object]/tyuibfrqbun1tbp8uu5y"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:25:03 [ERROR]: Invalid email or password {}
+2025-02-19 15:25:03 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "john@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:27:17 [ERROR]: Invalid token {
+  "path": "/api/users/info",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:27:34 [ERROR]: Invalid email or password {}
+2025-02-19 15:27:34 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:27:56 [ERROR]: UserController.getUserById is not a function {
+  "path": "/api/users/info",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:29:34 [ERROR]: UserController.getUserById is not a function {
+  "path": "/api/users/info",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:29:54 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
+2025-02-19 15:29:54 [ERROR]: Cannot read properties of undefined (reading 'findById') {
+  "path": "/api/users/info",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:34:17 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
+2025-02-19 15:34:17 [ERROR]: Cannot read properties of undefined (reading 'findById') {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:34:20 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
+2025-02-19 15:34:20 [ERROR]: Cannot read properties of undefined (reading 'findById') {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:36:01 [ERROR]: Invalid email or password {}
+2025-02-19 15:36:01 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:36:19 [ERROR]: User not found {}
+2025-02-19 15:36:19 [ERROR]: User not found {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:36:51 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 15:36:51 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:41:30 [ERROR]: CloudinaryService.upload is not a function {}
+2025-02-19 15:41:30 [ERROR]: CloudinaryService.upload is not a function {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:42:04 [ERROR]: upload.failed {}
+2025-02-19 15:42:04 [ERROR]: upload.failed {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:46:24 [ERROR]: upload.failed {}
+2025-02-19 15:46:24 [ERROR]: upload.failed {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:50:49 [ERROR]: upload.failed {}
+2025-02-19 15:50:49 [ERROR]: upload.failed {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:58:30 [ERROR]: Invalid token {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:10:05 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:10:14 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
+2025-02-19 18:10:14 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:11:44 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
+2025-02-19 18:11:44 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:12:30 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
+2025-02-19 18:12:30 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 18:25:06 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {}
+2025-02-19 18:25:06 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {
+  "path": "/api/users",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 18:25:09 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {}
+2025-02-19 18:25:09 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {
+  "path": "/api/users",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:02:34 [ERROR]: User not found {
+  "path": "/api/users/change-password",
+  "method": "PUT",
+  "body": {
+    "currentPassword": "Code26102003#!@",
+    "newPassword": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:03:17 [ERROR]: User not found {
+  "path": "/api/users/change-password",
+  "method": "PUT",
+  "body": {
+    "currentPassword": "Code26102003#!@",
+    "newPassword": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:03:55 [ERROR]: User not found {
+  "path": "/api/users/change-password",
+  "method": "PUT",
+  "body": {
+    "currentPassword": "Code26102003#!@",
+    "newPassword": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:04:19 [ERROR]: Invalid email or password {}
+2025-02-19 19:04:19 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 19:06:57 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {}
+2025-02-19 19:06:57 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {
+  "path": "/api/users",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:38:15 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
+2025-02-19 19:38:15 [ERROR]: Cannot read properties of undefined (reading 'findById') {
+  "path": "/api/users/67b495ca9d35c758607e27cc",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:40:13 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:40:13 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:40:30 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:40:30 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:41:26 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:41:26 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:42:17 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:42:17 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:50:07 [ERROR]: Invalid token {
+  "path": "/api/users/admin",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-createdAt"
+  },
+  "user": null
+}
+2025-02-19 19:50:10 [ERROR]: Invalid token {
+  "path": "/api/users/admin",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-createdAt"
+  },
+  "user": null
+}

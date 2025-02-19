@@ -43,7 +43,9 @@
         "otpInvalid": "Mã OTP không hợp lệ",
         "otpExpired": "Mã OTP đã hết hạn",
         "passwordResetOtpSuccess": "Đặt lại mật khẩu thành công",
-        "mobileResetSuccess": "Hướng dẫn đặt lại mật khẩu đã được gửi đến điện thoại của bạn"
+        "mobileResetSuccess": "Hướng dẫn đặt lại mật khẩu đã được gửi đến điện thoại của bạn",
+        "invalidRefreshToken": "Token không hợp lệ",
+        "logoutSuccess": "Đăng xuất thành công"
     },
     "otp": {
         "notFound": "Không tìm thấy mã OTP",

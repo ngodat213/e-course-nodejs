@@ -19,12 +19,14 @@
         "expiry": "Liên kết này sẽ hết hạn sau 24 giờ."
     },
     "resetPassword": {
-        "subject": "Đặt lại mật khẩu",
-        "title": "Xin chào {{name}}!",
-        "message": "Bạn đã yêu cầu đặt lại mật khẩu. Nhấp vào liên kết bên dưới để tiếp tục:",
+        "subject": "Yêu cầu đặt lại mật khẩu",
+        "title": "Đặt lại mật khẩu",
+        "greeting": "Xin chào {{name}},",
+        "message": "Chúng tôi nhận được yêu cầu đặt lại mật khẩu cho tài khoản của bạn. Nhấp vào nút bên dưới để tiếp tục:",
         "button": "Đặt lại mật khẩu",
-        "expiry": "Liên kết này sẽ hết hạn sau 1 giờ.",
-        "ignore": "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này."
+        "warning": "Lưu ý: Liên kết này sẽ hết hạn sau 5 phút.",
+        "ignore": "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và đảm bảo tài khoản của bạn an toàn.",
+        "footer": "Email này được gửi tự động, vui lòng không trả lời."
     },
     "courseEnrollment": {
         "subject": "Chào mừng đến với khóa học {{courseName}}",

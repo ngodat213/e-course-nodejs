@@ -1,47 +1,40 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema(
+  {
     name: {
-        type: String,
-        required: true,
-        trim: true
+      type: String,
+      required: true,
+      trim: true,
     },
     email: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
-        lowercase: true
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+      lowercase: true,
     },
     password: {
-        type: String,
-        required: true,
-        minlength: 6
+      type: String,
+      required: true,
+      minlength: 6,
     },
     profile_picture: {
-        type: String,
-        default: process.env.DEFAULT_AVATAR_URL
-    },
-    profile_picture_id: {
-        type: String,
-        default: null
-    },
-    avatar_file: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'CloudinaryFile',
-        default: null
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "CloudinaryFile",
+      default: null,
     },
     role: {
-        type: String,
-        enum: ['student', 'instructor', 'admin', 'super_admin'],
-        default: 'student',
-        immutable: true
+      type: String,
+      enum: ["student", "instructor", "admin", "super_admin"],
+      default: "student",
+      immutable: true,
     },
     status: {
-        type: String,
-        enum: ['pending', 'active', 'blocked'],
-        default: 'pending'
+      type: String,
+      enum: ["pending", "active", "blocked"],
+      default: "pending",
     },
     verification_token: String,
     verification_token_expires: Date,
@@ -52,42 +45,66 @@ const userSchema = new mongoose.Schema({
     reset_password_expires: Date,
     last_login: Date,
     certificate_count: {
-        type: Number,
-        default: 0
+      type: Number,
+      default: 0,
     },
-    enrolled_courses: [{
+    enrolled_courses: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Course'
-    }],
-    teaching_courses: [{
+        ref: "Course",
+      },
+    ],
+    teaching_courses: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Course'
-    }],
-    notifications: [{
+        ref: "Course",
+      },
+    ],
+    notifications: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Notification'
-    }],
+        ref: "Notification",
+        default: [],
+      },
+    ],
     unread_notifications: {
-        type: Number,
-        default: 0
-    }
-}, {
-    timestamps: { 
-        createdAt: 'created_at',
-        updatedAt: 'updated_at'
-    }
-});
+      type: Number,
+      default: 0,
+    },
+  },
+  {
+    timestamps: {
+      createdAt: "created_at",
+      updatedAt: "updated_at",
+    },
+    toJSON: {
+      transform: async function (doc, ret) {
+        if (ret.profile_picture) {
+          const CloudinaryService = require('../services/cloudinary.service');
+          ret.profile_picture = await CloudinaryService.generateSignedUrl(
+            ret.profile_picture.public_id,
+            { expires_in: process.env.SIGN_URL_EXPIRES }
+          );
+        }
+        ret.id = ret._id;
+        delete ret._id;
+        delete ret.__v;
+        return ret;
+      },
+    },
+  }
+);
 
 // Hash password trước khi lưu
-userSchema.pre('save', async function(next) {
-    if (!this.isModified('password')) return next();
-    this.password = await bcrypt.hash(this.password, 10);
-    next();
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
+  this.password = await bcrypt.hash(this.password, 10);
+  next();
 });
 
 // Method kiểm tra password
-userSchema.methods.comparePassword = async function(candidatePassword) {
-    return bcrypt.compare(candidatePassword, this.password);
+userSchema.methods.comparePassword = async function (candidatePassword) {
+  return bcrypt.compare(candidatePassword, this.password);
 };
 
-module.exports = mongoose.model('User', userSchema); 
+module.exports = mongoose.model("User", userSchema);

@@ -1,6 +1,5 @@
 const Lesson = require('../models/lesson.model');
 const Course = require('../models/course.model');
-const CloudinaryService = require('./cloudinary.service');
 const { NotFoundError, BadRequestError } = require('../utils/errors');
 const i18next = require('i18next');
 

@@ -37,6 +37,8 @@
         "otpInvalid": "Invalid OTP code",
         "otpExpired": "OTP has expired",
         "passwordResetOtpSuccess": "Password has been reset successfully",
-        "mobileResetSuccess": "Password reset instructions have been sent to your mobile"
+        "mobileResetSuccess": "Password reset instructions have been sent to your mobile",
+        "invalidRefreshToken": "Invalid refresh token",
+        "logoutSuccess": "Logged out successfully"
     }
 } 

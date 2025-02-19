@@ -1,6 +1,5 @@
 const BaseController = require('./base.controller');
 const AuthService = require('../services/auth.service');
-const UserService = require('../services/user.service');
 
 class AuthController extends BaseController {
   constructor() {

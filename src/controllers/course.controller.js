@@ -2,7 +2,6 @@ const BaseController = require('./base.controller');
 const CourseService = require('../services/course.service');
 const { success } = require("../utils/logger");
 const CloudinaryService = require("../services/cloudinary.service");
-const CourseDeleteRequest = require("../models/course_delete_request.model");
 
 class CourseController extends BaseController {
   constructor() {
@@ -38,7 +37,7 @@ class CourseController extends BaseController {
 
   async create(req, res, next) {
     try {
-      const course = await CourseService.create(req.body);
+      const course = await CourseService.create(req.body, req.file, req.user.id);
       this.logInfo('Course created', { id: course._id });
       this.createdResponse(res, course);
     } catch (error) {

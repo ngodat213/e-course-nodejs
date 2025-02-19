@@ -59,7 +59,7 @@ router.post("/:id/enroll", (req, res, next) => {
  */
 router.post(
   "/",
-  restrictTo(["instructor", "admin"]),
+  restrictTo("instructor", "admin"),
   upload.single("thumbnail"),
   validateRequest(createCourseSchema),
   (req, res, next) => {

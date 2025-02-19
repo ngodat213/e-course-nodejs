@@ -1,10 +1,10 @@
 class AppError extends Error {
-    constructor(message, statusCode) {
+    constructor(message, statusCode, errors = []) {
         super(message);
         this.statusCode = statusCode;
         this.status = `${statusCode}`.startsWith('4') ? 'fail' : 'error';
         this.isOperational = true;
-
+        this.errors = errors;
         Error.captureStackTrace(this, this.constructor);
     }
 }
@@ -16,8 +16,8 @@ class NotFoundError extends AppError {
 }
 
 class BadRequestError extends AppError {
-    constructor(message = 'Bad request') {
-        super(message, 400);
+    constructor(message = 'Bad request', errors = []) {
+        super(message, 400, errors);
     }
 }
 

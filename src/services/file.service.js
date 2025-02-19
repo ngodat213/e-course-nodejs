@@ -4,34 +4,38 @@ const { BadRequestError, NotFoundError } = require('../utils/errors');
 const i18next = require('i18next');
 
 class FileService {
-    async uploadFile(file, userId, options = {}) {
+    async uploadFile(file, options = {}) {
         const {
-            file_type = 'image',
-            is_avatar = false,
-            folder = 'uploads'
+            owner_id,
+            owner_type,
+            purpose,
+            file_type = this._detectFileType(file.mimetype),
+            folder = this._getFolderPath(owner_type, purpose)
         } = options;
 
+        // Validate file type
+        if (!this._isValidFileType(file.mimetype, file_type)) {
+            throw new BadRequestError(i18next.t('upload.invalidFormat'));
+        }
+
         // Upload to Cloudinary
-        const uploadResult = await CloudinaryService.upload(file, {
+        const uploadResult = await CloudinaryService.uploadImage(file.path, {
             folder,
             resource_type: this._getResourceType(file_type),
-            ...this._getTransformOptions(file_type, is_avatar)
+            ...this._getTransformOptions(file_type, purpose)
         });
 
-        // Save file info
-        const fileDoc = await CloudinaryFile.create({
-            user_id: userId,
+        // Create file record
+        const cloudinaryFile = await CloudinaryFile.create({
+            owner_id,
+            owner_type,
+            purpose,
             file_type,
             original_name: file.originalname,
-            file_url: uploadResult.url,
+            file_url: uploadResult.secure_url,
             public_id: uploadResult.public_id,
-            secure_url: uploadResult.secure_url,
-            thumbnail_url: uploadResult.thumbnail_url,
-            size: uploadResult.bytes,
+            size: file.size,
             format: uploadResult.format,
-            resource_type: uploadResult.resource_type,
-            folder,
-            is_avatar,
             metadata: {
                 width: uploadResult.width,
                 height: uploadResult.height,
@@ -40,16 +44,7 @@ class FileService {
             }
         });
 
-        // Không trả về URLs trực tiếp
-        const safeFile = fileDoc.toObject();
-        delete safeFile.file_url;
-        delete safeFile.secure_url;
-        delete safeFile.thumbnail_url;
-        
-        return {
-            ...safeFile,
-            signed_url: fileDoc.signed_url
-        };
+        return cloudinaryFile;
     }
 
     async getSignedUrl(fileId, userId) {
@@ -71,25 +66,16 @@ class FileService {
         return signedUrl;
     }
 
-    async deleteFile(fileId, userId) {
-        const file = await CloudinaryFile.findOne({
-            _id: fileId,
-            user_id: userId
-        });
-
-        if (!file) {
-            throw new NotFoundError('File not found');
-        }
+    async deleteFile(fileId) {
+        const file = await CloudinaryFile.findById(fileId);
+        if (!file) return;
 
         // Delete from Cloudinary
-        await CloudinaryService.delete(file.public_id, {
-            resource_type: file.resource_type
-        });
+        await CloudinaryService.delete(file.public_id);
 
-        // Delete from database
-        await file.remove();
-
-        return true;
+        // Mark as deleted in database
+        file.status = 'deleted';
+        await file.save();
     }
 
     _getResourceType(fileType) {
@@ -103,30 +89,46 @@ class FileService {
         }
     }
 
-    _getTransformOptions(fileType, isAvatar) {
-        const options = {};
+    _detectFileType(mimetype) {
+        if (mimetype.startsWith('image/')) return 'image';
+        if (mimetype.startsWith('video/')) return 'video';
+        return 'document';
+    }
+
+    _isValidFileType(mimetype, expectedType) {
+        switch (expectedType) {
+            case 'image':
+                return mimetype.startsWith('image/');
+            case 'video':
+                return mimetype.startsWith('video/');
+            case 'document':
+                return ['application/pdf', 'application/msword'].includes(mimetype);
+            default:
+                return false;
+        }
+    }
+
+    _getFolderPath(ownerType, purpose) {
+        return `${process.env.NODE_ENV}/${ownerType.toLowerCase()}s/${purpose}s`;
+    }
+
+    _getTransformOptions(fileType, purpose) {
+        const options = {
+            quality: 'auto'
+        };
 
         if (fileType === 'image') {
-            options.allowed_formats = ['jpg', 'jpeg', 'png', 'webp'];
-            if (isAvatar) {
+            if (purpose === 'avatar') {
                 options.transformation = [
                     { width: 400, height: 400, crop: 'fill' },
                     { quality: 'auto' }
                 ];
-            } else {
+            } else if (purpose === 'thumbnail') {
                 options.transformation = [
-                    { width: 1920, crop: 'limit' },
+                    { width: 720, height: 480, crop: 'fill' },
                     { quality: 'auto' }
                 ];
             }
-        }
-
-        if (fileType === 'video') {
-            options.allowed_formats = ['mp4', 'webm'];
-            options.transformation = [
-                { quality: 'auto' },
-                { format: 'mp4' }
-            ];
         }
 
         return options;

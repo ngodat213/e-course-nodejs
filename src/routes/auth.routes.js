@@ -145,9 +145,13 @@ router.post(
  * @access Public
  * @validate {refresh_token}
  */
-router.post('/refresh-token', validateRequest(refreshTokenSchema), (req, res, next) => {
+router.post(
+  "/refresh-token",
+  validateRequest(refreshTokenSchema),
+  (req, res, next) => {
     AuthController.refreshToken(req, res, next);
-});
+  }
+);
 
 /**
  * @route POST /api/auth/logout
@@ -155,8 +159,12 @@ router.post('/refresh-token', validateRequest(refreshTokenSchema), (req, res, ne
  * @access Public
  * @validate {refresh_token}
  */
-router.post('/logout', validateRequest(refreshTokenSchema), (req, res, next) => {
+router.post(
+  "/logout",
+  validateRequest(refreshTokenSchema),
+  (req, res, next) => {
     AuthController.logout(req, res, next);
-});
+  }
+);
 
 module.exports = router;
