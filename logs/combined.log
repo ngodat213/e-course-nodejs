@@ -1493,3 +1493,27 @@ Use mongoose.model(name, schema) {
 2025-02-19 19:04:25 [INFO]: User logged in {
   "email": "ngodat.it213@gmail.com"
 }
+2025-02-19 19:06:57 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {}
+2025-02-19 19:06:57 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {
+  "path": "/api/users",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:07:32 [INFO]: Server is running on port 3000 
+2025-02-19 19:07:32 [INFO]: Environment: development 
+2025-02-19 19:07:32 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:07:35 [INFO]: Connected to MongoDB 
+2025-02-19 19:08:03 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 19:13:22 [INFO]: Server is running on port 3000 
+2025-02-19 19:13:22 [INFO]: Environment: development 
+2025-02-19 19:13:22 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:13:25 [INFO]: Connected to MongoDB 
+2025-02-19 19:13:31 [INFO]: Server is running on port 3000 
+2025-02-19 19:13:31 [INFO]: Environment: development 
+2025-02-19 19:13:31 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:13:34 [INFO]: Connected to MongoDB 

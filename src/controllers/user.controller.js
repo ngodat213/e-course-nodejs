@@ -11,7 +11,7 @@ class UserController extends BaseController {
 
   async getAll(req, res, next) {
     try {
-      const users = await UserService.getAllUsers();
+      const users = await UserService.getAllUsers(req.query);
       this.successResponse(res, users);
     } catch (error) {
       this.handleError(error, next);

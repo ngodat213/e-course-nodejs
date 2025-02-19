@@ -189,6 +189,43 @@
  *     summary: Lấy danh sách người dùng (Admin)
  *     security:
  *       - bearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           default: 1
+ *         description: Số trang
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 10
+ *         description: Số lượng item mỗi trang
+ *       - in: query
+ *         name: sort
+ *         schema:
+ *           type: string
+ *           default: -createdAt
+ *           enum: [name, -name, email, -email, role, -role, createdAt, -createdAt]
+ *         description: Sắp xếp kết quả (- là giảm dần)
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *         description: Tìm kiếm theo tên hoặc email
+ *       - in: query
+ *         name: role
+ *         schema:
+ *           type: string
+ *           enum: [student, instructor, admin]
+ *         description: Lọc theo role
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [pending, active, blocked]
+ *         description: Lọc theo trạng thái
  *     responses:
  *       200:
  *         description: Thành công
@@ -197,13 +234,54 @@
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: string
- *                   example: success
  *                 data:
  *                   type: array
  *                   items:
- *                     $ref: '#/components/schemas/User'
+ *                     type: object
+ *                     properties:
+ *                       id:
+ *                         type: string
+ *                         description: ID người dùng
+ *                       name:
+ *                         type: string
+ *                         description: Tên người dùng
+ *                       email:
+ *                         type: string
+ *                         description: Email
+ *                       role:
+ *                         type: string
+ *                         enum: [student, instructor, admin, super_admin]
+ *                         description: Vai trò
+ *                       status:
+ *                         type: string
+ *                         enum: [pending, active, blocked]
+ *                         description: Trạng thái
+ *                       profile_picture:
+ *                         type: string
+ *                         description: URL ảnh đại diện (signed URL)
+ *                       created_at:
+ *                         type: string
+ *                         format: date-time
+ *                         description: Thời gian tạo
+ *                       updated_at:
+ *                         type: string
+ *                         format: date-time
+ *                         description: Thời gian cập nhật
+ *                 pagination:
+ *                   type: object
+ *                   properties:
+ *                     page:
+ *                       type: integer
+ *                       description: Trang hiện tại
+ *                     limit:
+ *                       type: integer  
+ *                       description: Số lượng item mỗi trang
+ *                     total:
+ *                       type: integer
+ *                       description: Tổng số user
+ *                     totalPages:
+ *                       type: integer
+ *                       description: Tổng số trang
  *       401:
  *         description: Chưa đăng nhập
  *       403:
