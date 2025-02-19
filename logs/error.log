@@ -980,3 +980,66 @@ Use mongoose.model(name, schema) {
   "query": {},
   "user": null
 }
+2025-02-19 18:25:06 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {}
+2025-02-19 18:25:06 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {
+  "path": "/api/users",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 18:25:09 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {}
+2025-02-19 18:25:09 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {
+  "path": "/api/users",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:02:34 [ERROR]: User not found {
+  "path": "/api/users/change-password",
+  "method": "PUT",
+  "body": {
+    "currentPassword": "Code26102003#!@",
+    "newPassword": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:03:17 [ERROR]: User not found {
+  "path": "/api/users/change-password",
+  "method": "PUT",
+  "body": {
+    "currentPassword": "Code26102003#!@",
+    "newPassword": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:03:55 [ERROR]: User not found {
+  "path": "/api/users/change-password",
+  "method": "PUT",
+  "body": {
+    "currentPassword": "Code26102003#!@",
+    "newPassword": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:04:19 [ERROR]: Invalid email or password {}
+2025-02-19 19:04:19 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}

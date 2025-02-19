@@ -76,7 +76,7 @@ class UserController extends BaseController {
     try {
       const { currentPassword, newPassword } = req.body;
       const result = await UserService.changePassword(
-        req.user._id,
+        req.user.id,
         currentPassword,
         newPassword
       );
