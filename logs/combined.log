@@ -666,3 +666,108 @@
 2025-02-19 13:20:18 [INFO]: Environment: development 
 2025-02-19 13:20:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
 2025-02-19 13:20:21 [INFO]: Connected to MongoDB 
+2025-02-19 13:21:36 [INFO]: Dev fetched all users {
+  "totalUsers": 2,
+  "page": 1,
+  "limit": 10
+}
+2025-02-19 13:22:21 [ERROR]: User is not defined {}
+2025-02-19 13:22:21 [ERROR]: User is not defined {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:22:39 [ERROR]: User is not defined {}
+2025-02-19 13:22:39 [ERROR]: User is not defined {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:25:16 [ERROR]: User is not defined {}
+2025-02-19 13:25:16 [ERROR]: User is not defined {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:25:42 [ERROR]: auth.invalidRefreshToken {}
+2025-02-19 13:25:42 [ERROR]: auth.invalidRefreshToken {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:27:35 [INFO]: Server is running on port 3000 
+2025-02-19 13:27:35 [INFO]: Environment: development 
+2025-02-19 13:27:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:27:38 [INFO]: Connected to MongoDB 
+2025-02-19 13:27:40 [INFO]: Server is running on port 3000 
+2025-02-19 13:27:40 [INFO]: Environment: development 
+2025-02-19 13:27:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:27:43 [INFO]: Connected to MongoDB 
+2025-02-19 13:27:45 [ERROR]: Invalid refresh token {}
+2025-02-19 13:27:45 [ERROR]: Invalid refresh token {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:30:14 [INFO]: Server is running on port 3000 
+2025-02-19 13:30:14 [INFO]: Environment: development 
+2025-02-19 13:30:14 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:30:17 [INFO]: Connected to MongoDB 
+2025-02-19 13:30:20 [ERROR]: Invalid refresh token {}
+2025-02-19 13:30:20 [ERROR]: Invalid refresh token {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:33:19 [INFO]: Server is running on port 3000 
+2025-02-19 13:33:19 [INFO]: Environment: development 
+2025-02-19 13:33:19 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:33:22 [INFO]: Connected to MongoDB 
+2025-02-19 13:33:24 [INFO]: Server is running on port 3000 
+2025-02-19 13:33:24 [INFO]: Environment: development 
+2025-02-19 13:33:24 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:33:27 [INFO]: Server is running on port 3000 
+2025-02-19 13:33:27 [INFO]: Environment: development 
+2025-02-19 13:33:27 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:33:30 [INFO]: Connected to MongoDB 
+2025-02-19 13:34:38 [INFO]: Server is running on port 3000 
+2025-02-19 13:34:38 [INFO]: Environment: development 
+2025-02-19 13:34:38 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:34:39 [INFO]: Server is running on port 3000 
+2025-02-19 13:34:39 [INFO]: Environment: development 
+2025-02-19 13:34:39 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:34:43 [INFO]: Connected to MongoDB 
+2025-02-19 13:36:49 [INFO]: Server is running on port 3000 
+2025-02-19 13:36:49 [INFO]: Environment: development 
+2025-02-19 13:36:49 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 13:36:53 [INFO]: Connected to MongoDB 

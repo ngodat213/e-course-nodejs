@@ -424,3 +424,69 @@
   "query": {},
   "user": null
 }
+2025-02-19 13:22:21 [ERROR]: User is not defined {}
+2025-02-19 13:22:21 [ERROR]: User is not defined {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:22:39 [ERROR]: User is not defined {}
+2025-02-19 13:22:39 [ERROR]: User is not defined {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:25:16 [ERROR]: User is not defined {}
+2025-02-19 13:25:16 [ERROR]: User is not defined {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:25:42 [ERROR]: auth.invalidRefreshToken {}
+2025-02-19 13:25:42 [ERROR]: auth.invalidRefreshToken {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:27:45 [ERROR]: Invalid refresh token {}
+2025-02-19 13:27:45 [ERROR]: Invalid refresh token {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 13:30:20 [ERROR]: Invalid refresh token {}
+2025-02-19 13:30:20 [ERROR]: Invalid refresh token {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}

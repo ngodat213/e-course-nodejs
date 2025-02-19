@@ -3,6 +3,7 @@ const crypto = require('crypto');
 const RefreshToken = require('../models/refresh_token.model');
 const { UnauthorizedError } = require('../utils/errors');
 const i18next = require('i18next');
+const User = require('../models/user.model');
 
 class TokenService {
     generateAccessToken(user) {
