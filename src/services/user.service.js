@@ -15,7 +15,6 @@ const mongoose = require("mongoose");
 
 class UserService {
   constructor() {
-    this.model = User;
   }
 
   async getAllUsers(options = {}) {
@@ -29,7 +28,7 @@ class UserService {
       ];
     }
 
-    const users = await this.model
+    const users = await User
       .find(query)
       .select("-password")
       .sort(sort)
@@ -37,7 +36,7 @@ class UserService {
       .limit(limit)
       .populate("profile_picture", "public_id");
 
-    const total = await this.model.countDocuments(query);
+    const total = await User.countDocuments(query);
 
     // Generate signed URLs for all users' profile pictures
     const usersWithSignedUrls = await Promise.all(
@@ -66,10 +65,9 @@ class UserService {
   }
 
   async getUserById(id) {
-    const user = await this.model
+    const user = await User
       .findById(id)
-      .select("-password")
-      .populate("profile_picture", "file_url");
+      .select("-password");
 
     if (!user) {
       throw new NotFoundError(i18next.t("user.notFound"));
@@ -78,7 +76,7 @@ class UserService {
   }
 
   async update(id, updateData) {
-    const user = await this.model
+    const user = await User
       .findByIdAndUpdate(id, updateData, { new: true, runValidators: true })
       .select("-password");
 
@@ -90,7 +88,7 @@ class UserService {
   }
 
   async delete(id) {
-    const user = await this.model.findById(id);
+    const user = await User.findById(id);
     if (!user) {
       throw new NotFoundError(i18next.t("user.notFound"));
     }
@@ -105,7 +103,7 @@ class UserService {
   }
 
   async changePassword(userId, currentPassword, newPassword) {
-    const user = await this.model.findById(userId);
+    const user = await User.findById(userId);
     if (!user) {
       throw new NotFoundError(i18next.t("user.notFound"));
     }
@@ -122,7 +120,7 @@ class UserService {
   }
 
   async setRole(userId, newRole, currentUser) {
-    const user = await this.model.findById(userId);
+    const user = await User.findById(userId);
     if (!user) {
       throw new NotFoundError(i18next.t("user.notFound"));
     }
@@ -187,8 +185,8 @@ class UserService {
 
     const skip = (page - 1) * limit;
     const [data, total] = await Promise.all([
-      this.model.find(queryFilter).sort(sort).skip(skip).limit(limit),
-      this.model.countDocuments(queryFilter),
+      User.find(queryFilter).sort(sort).skip(skip).limit(limit),
+      User.countDocuments(queryFilter),
     ]);
 
     return {
@@ -203,13 +201,13 @@ class UserService {
   }
 
   async create(userData) {
-    return await this.model.create(userData);
+    return await User.create(userData);
   }
 
   async createUser(userData) {
-    const existingUser = await this.model.findOne({ email: userData.email });
+    const existingUser = await User.findOne({ email: userData.email });
     if (existingUser) {
-      await this.model.findByIdAndDelete(existingUser._id);
+      await User.findByIdAndDelete(existingUser._id);
     }
     return await this.create(userData);
   }
@@ -222,14 +220,14 @@ class UserService {
   }
 
   async updateUser(id, updateData) {
-    const user = await this.model.findById(id);
+    const user = await User.findById(id);
     if (!user) {
       throw new NotFoundError("Không tìm thấy người dùng");
     }
 
     // Nếu cập nhật email, kiểm tra email đã tồn tại chưa
     if (updateData.email && updateData.email !== user.email) {
-      const existingUser = await this.model.findOne({
+      const existingUser = await User.findOne({
         email: updateData.email,
       });
       if (existingUser) {
@@ -244,7 +242,7 @@ class UserService {
   }
 
   async deleteUser(id) {
-    const user = await this.model.findById(id);
+    const user = await User.findById(id);
     if (!user) {
       throw new NotFoundError("Không tìm thấy người dùng");
     }
@@ -254,7 +252,7 @@ class UserService {
   }
 
   async uploadAvatar(userId, file) {
-    const user = await this.model.findById(userId);
+    const user = await User.findById(userId);
     if (!user) {
       throw new NotFoundError(i18next.t("user.notFound"));
     }
@@ -279,7 +277,7 @@ class UserService {
   }
 
   async getUserInfo(userId) {
-    const user = await this.model
+    const user = await User
       .findById(userId)
       .select("-password")
       .populate([
@@ -299,15 +297,16 @@ class UserService {
           path: "teaching_courses",
           select: "title description thumbnail student_count",
           match: { instructor_id: userId },
-        },
-        {
-          path: "notifications",
-          select: "type message read created_at",
-          options: {
-            sort: { created_at: -1 },
-            limit: 10,
-          },
-        },
+        }
+        // ,
+        // {
+        //   path: "notifications",
+        //   select: "type message read created_at",
+        //   options: {
+        //     sort: { created_at: -1 },
+        //     limit: 10,
+        //   },
+        // },
       ]);
 
     if (!user) {
@@ -333,7 +332,7 @@ class UserService {
   }
 
   async getUserStats(userId) {
-    const user = await this.model.findById(userId);
+    const user = await User.findById(userId);
 
     if (user.role === "instructor") {
       const [courseStats, studentStats, ratingStats] = await Promise.all([
@@ -434,11 +433,11 @@ class UserService {
   }
 
   async findByEmail(email) {
-    return this.model.findOne({ email });
+    return User.findOne({ email });
   }
 
   async updateAvatar(userId, file) {
-    const user = await this.model.findById(userId);
+    const user = await User.findById(userId);
 
     if (user.profile_picture_id) {
       await CloudinaryService.deleteImage(user.profile_picture_id);

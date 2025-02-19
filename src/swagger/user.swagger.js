@@ -1,5 +1,9 @@
 /**
  * @swagger
+ * tags:
+ *   name: Users
+ *   description: Quản lý người dùng
+ * 
  * components:
  *   schemas:
  *     User:
@@ -35,17 +39,17 @@
  *           type: string
  *           format: date-time
  * 
- *     UpdateUserInput:
+ *     UpdateProfileInput:
  *       type: object
  *       properties:
  *         name:
  *           type: string
- *           minLength: 2
- *           maxLength: 50
+ *           description: Tên người dùng
  *         email:
  *           type: string
  *           format: email
- * 
+ *           description: Email
+ *
  *     ChangePasswordInput:
  *       type: object
  *       required:
@@ -54,11 +58,11 @@
  *       properties:
  *         currentPassword:
  *           type: string
- *           minLength: 6
+ *           description: Mật khẩu hiện tại
  *         newPassword:
  *           type: string
- *           minLength: 6
- * 
+ *           description: Mật khẩu mới
+ *
  *     SetRoleInput:
  *       type: object
  *       required:
@@ -67,17 +71,16 @@
  *       properties:
  *         userId:
  *           type: string
+ *           description: ID người dùng
  *         role:
  *           type: string
  *           enum: [student, instructor, admin]
- */
-
-/**
- * @swagger
+ *           description: Role mới
+ *
  * /api/users/profile:
  *   get:
  *     tags: [Users]
- *     summary: Lấy thông tin profile người dùng
+ *     summary: Lấy thông tin profile
  *     security:
  *       - bearerAuth: []
  *     responses:
@@ -88,17 +91,36 @@
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: string
- *                   example: success
- *                 data:
- *                   $ref: '#/components/schemas/User'
+ *                 user:
+ *                   type: object
+ *                   properties:
+ *                     id:
+ *                       type: string
+ *                     name:
+ *                       type: string  
+ *                     email:
+ *                       type: string
+ *                     role:
+ *                       type: string
+ *                     profile_picture:
+ *                       type: string
+ *                     enrolled_courses:
+ *                       type: array
+ *                       items:
+ *                         type: object
+ *                     teaching_courses:
+ *                       type: array
+ *                       items:
+ *                         type: object
+ *                 stats:
+ *                   type: object
+ *                   description: Thống kê người dùng
  *       401:
  *         description: Chưa đăng nhập
- * 
+ *
  *   put:
- *     tags: [Users]
- *     summary: Cập nhật thông tin profile
+ *     tags: [Users] 
+ *     summary: Cập nhật profile
  *     security:
  *       - bearerAuth: []
  *     requestBody:
@@ -106,25 +128,15 @@
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/UpdateUserInput'
+ *             $ref: '#/components/schemas/UpdateProfileInput'
  *     responses:
  *       200:
  *         description: Cập nhật thành công
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 status:
- *                   type: string
- *                   example: success
- *                 data:
- *                   $ref: '#/components/schemas/User'
  *       400:
  *         description: Dữ liệu không hợp lệ
  *       401:
  *         description: Chưa đăng nhập
- * 
+ *
  * /api/users/change-password:
  *   put:
  *     tags: [Users]
@@ -141,10 +153,10 @@
  *       200:
  *         description: Đổi mật khẩu thành công
  *       400:
- *         description: Mật khẩu hiện tại không đúng
+ *         description: Mật khẩu không đúng
  *       401:
  *         description: Chưa đăng nhập
- * 
+ *
  * /api/users/avatar:
  *   post:
  *     tags: [Users]
@@ -164,29 +176,16 @@
  *     responses:
  *       200:
  *         description: Upload thành công
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *                 file:
- *                   type: object
- *                   properties:
- *                     _id:
- *                       type: string
- *                     file_url:
- *                       type: string
  *       400:
  *         description: File không hợp lệ
  *       401:
  *         description: Chưa đăng nhập
- * 
- * /api/users:
+ *
+ * /api/users/admin:
  *   get:
  *     tags: [Users]
  *     summary: Lấy danh sách người dùng (Admin)
+ *     description: API dành cho admin để quản lý danh sách người dùng
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -241,56 +240,46 @@
  *                     properties:
  *                       id:
  *                         type: string
- *                         description: ID người dùng
  *                       name:
  *                         type: string
- *                         description: Tên người dùng
  *                       email:
  *                         type: string
- *                         description: Email
  *                       role:
  *                         type: string
  *                         enum: [student, instructor, admin, super_admin]
- *                         description: Vai trò
  *                       status:
  *                         type: string
  *                         enum: [pending, active, blocked]
- *                         description: Trạng thái
  *                       profile_picture:
  *                         type: string
- *                         description: URL ảnh đại diện (signed URL)
+ *                         description: Signed URL của avatar
  *                       created_at:
  *                         type: string
  *                         format: date-time
- *                         description: Thời gian tạo
  *                       updated_at:
  *                         type: string
  *                         format: date-time
- *                         description: Thời gian cập nhật
  *                 pagination:
  *                   type: object
  *                   properties:
  *                     page:
  *                       type: integer
- *                       description: Trang hiện tại
  *                     limit:
- *                       type: integer  
- *                       description: Số lượng item mỗi trang
+ *                       type: integer
  *                     total:
  *                       type: integer
- *                       description: Tổng số user
  *                     totalPages:
  *                       type: integer
- *                       description: Tổng số trang
  *       401:
  *         description: Chưa đăng nhập
  *       403:
  *         description: Không có quyền truy cập
- * 
- * /api/users/{id}:
+ *
+ * /api/users/admin/{id}:
  *   get:
  *     tags: [Users]
- *     summary: Lấy thông tin người dùng theo ID (Admin)
+ *     summary: Lấy thông tin chi tiết người dùng (Admin)
+ *     description: API dành cho admin để xem thông tin chi tiết của một người dùng
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -299,6 +288,7 @@
  *         required: true
  *         schema:
  *           type: string
+ *         description: ID của người dùng
  *     responses:
  *       200:
  *         description: Thành công
@@ -307,21 +297,55 @@
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: string
- *                   example: success
- *                 data:
- *                   $ref: '#/components/schemas/User'
+ *                 user:
+ *                   type: object
+ *                   properties:
+ *                     id:
+ *                       type: string
+ *                     name:
+ *                       type: string
+ *                     email:
+ *                       type: string
+ *                     role:
+ *                       type: string
+ *                     profile_picture:
+ *                       type: string
+ *                     enrolled_courses:
+ *                       type: array
+ *                       items:
+ *                         type: object
+ *                         properties:
+ *                           id:
+ *                             type: string
+ *                           title:
+ *                             type: string
+ *                           progress_percent:
+ *                             type: number
+ *                     teaching_courses:
+ *                       type: array
+ *                       items:
+ *                         type: object
+ *                         properties:
+ *                           id:
+ *                             type: string
+ *                           title:
+ *                             type: string
+ *                           student_count:
+ *                             type: number
+ *                 stats:
+ *                   type: object
+ *                   description: Thống kê người dùng
  *       401:
  *         description: Chưa đăng nhập
  *       403:
  *         description: Không có quyền truy cập
  *       404:
  *         description: Không tìm thấy người dùng
- * 
+ *
  *   put:
  *     tags: [Users]
  *     summary: Cập nhật thông tin người dùng (Admin)
+ *     description: API dành cho admin để cập nhật thông tin của một người dùng
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -330,25 +354,41 @@
  *         required: true
  *         schema:
  *           type: string
+ *         description: ID của người dùng
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/UpdateUserInput'
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *                 format: email
+ *               role:
+ *                 type: string
+ *                 enum: [student, instructor, admin]
+ *               status:
+ *                 type: string
+ *                 enum: [pending, active, blocked]
  *     responses:
  *       200:
  *         description: Cập nhật thành công
+ *       400:
+ *         description: Dữ liệu không hợp lệ
  *       401:
  *         description: Chưa đăng nhập
  *       403:
  *         description: Không có quyền truy cập
  *       404:
  *         description: Không tìm thấy người dùng
- * 
+ *
  *   delete:
  *     tags: [Users]
  *     summary: Xóa người dùng (Admin)
+ *     description: API dành cho admin để xóa một người dùng
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -357,31 +397,18 @@
  *         required: true
  *         schema:
  *           type: string
+ *         description: ID của người dùng
  *     responses:
  *       200:
  *         description: Xóa thành công
- *       401:
- *         description: Chưa đăng nhập
- *       403:
- *         description: Không có quyền truy cập
- *       404:
- *         description: Không tìm thấy người dùng
- * 
- * /api/users/role:
- *   put:
- *     tags: [Users]
- *     summary: Thay đổi role người dùng (Admin)
- *     security:
- *       - bearerAuth: []
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/SetRoleInput'
- *     responses:
- *       200:
- *         description: Cập nhật role thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Xóa người dùng thành công
  *       401:
  *         description: Chưa đăng nhập
  *       403:

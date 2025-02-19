@@ -1052,3 +1052,80 @@ Use mongoose.model(name, schema) {
   "query": {},
   "user": "67b495ca9d35c758607e27cc"
 }
+2025-02-19 19:38:15 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
+2025-02-19 19:38:15 [ERROR]: Cannot read properties of undefined (reading 'findById') {
+  "path": "/api/users/67b495ca9d35c758607e27cc",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:40:13 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:40:13 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:40:30 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:40:30 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:41:26 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:41:26 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:42:17 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:42:17 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:50:07 [ERROR]: Invalid token {
+  "path": "/api/users/admin",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-createdAt"
+  },
+  "user": null
+}
+2025-02-19 19:50:10 [ERROR]: Invalid token {
+  "path": "/api/users/admin",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-createdAt"
+  },
+  "user": null
+}

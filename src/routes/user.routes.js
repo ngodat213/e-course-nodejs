@@ -56,16 +56,16 @@ router.post("/avatar", upload.single("avatar"), (req, res, next) => {
 
 // Admin only routes
 router.use(restrictTo("admin", "super_admin"));
-router.get("/", (req, res, next) => {
+router.get("/admin/", (req, res, next) => {
   UserController.getAll(req, res, next);
 });
-router.get("/:id", (req, res, next) => {
-  UserController.getById(req, res, next);
+router.get("/admin/:id", (req, res, next) => {
+   UserController.getById(req, res, next);
 });
-router.put("/:id", validateRequest(updateUserSchema), (req, res, next) => {
+router.put("/admin/:id", validateRequest(updateUserSchema), (req, res, next) => {
   UserController.update(req, res, next);
 });
-router.delete("/:id", (req, res, next) => {
+router.delete("/admin/:id", (req, res, next) => {
   UserController.delete(req, res, next);
 });
 

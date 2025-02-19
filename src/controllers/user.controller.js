@@ -20,7 +20,7 @@ class UserController extends BaseController {
 
   async getById(req, res, next) {
     try {
-      const user = await UserService.getUserById(req.params.id);
+      const user = await UserService.getUserInfo(req.params.id);
       this.successResponse(res, user);
     } catch (error) {
       this.handleError(error, next);

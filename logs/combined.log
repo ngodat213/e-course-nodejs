@@ -1517,3 +1517,142 @@ Use mongoose.model(name, schema) {
 2025-02-19 19:13:31 [INFO]: Environment: development 
 2025-02-19 19:13:31 [INFO]: API Documentation: http://localhost:3000/api-docs 
 2025-02-19 19:13:34 [INFO]: Connected to MongoDB 
+2025-02-19 19:22:39 [INFO]: Server is running on port 3000 
+2025-02-19 19:22:39 [INFO]: Environment: development 
+2025-02-19 19:22:39 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:22:45 [INFO]: Connected to MongoDB 
+2025-02-19 19:31:35 [INFO]: Server is running on port 3000 
+2025-02-19 19:31:35 [INFO]: Environment: development 
+2025-02-19 19:31:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:31:39 [INFO]: Connected to MongoDB 
+2025-02-19 19:32:58 [INFO]: Server is running on port 3000 
+2025-02-19 19:32:58 [INFO]: Environment: development 
+2025-02-19 19:32:58 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:33:02 [INFO]: Connected to MongoDB 
+2025-02-19 19:34:55 [INFO]: Server is running on port 3000 
+2025-02-19 19:34:55 [INFO]: Environment: development 
+2025-02-19 19:34:55 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:34:59 [INFO]: Connected to MongoDB 
+2025-02-19 19:35:18 [INFO]: Server is running on port 3000 
+2025-02-19 19:35:18 [INFO]: Environment: development 
+2025-02-19 19:35:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:35:21 [INFO]: Connected to MongoDB 
+2025-02-19 19:35:43 [INFO]: Server is running on port 3000 
+2025-02-19 19:35:43 [INFO]: Environment: development 
+2025-02-19 19:35:43 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:35:46 [INFO]: Connected to MongoDB 
+2025-02-19 19:36:30 [INFO]: Server is running on port 3000 
+2025-02-19 19:36:30 [INFO]: Environment: development 
+2025-02-19 19:36:30 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:36:34 [INFO]: Connected to MongoDB 
+2025-02-19 19:38:12 [INFO]: Server is running on port 3000 
+2025-02-19 19:38:12 [INFO]: Environment: development 
+2025-02-19 19:38:12 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:38:15 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
+2025-02-19 19:38:15 [ERROR]: Cannot read properties of undefined (reading 'findById') {
+  "path": "/api/users/67b495ca9d35c758607e27cc",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:38:16 [INFO]: Connected to MongoDB 
+2025-02-19 19:39:07 [INFO]: Server is running on port 3000 
+2025-02-19 19:39:07 [INFO]: Environment: development 
+2025-02-19 19:39:07 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:39:10 [INFO]: Connected to MongoDB 
+2025-02-19 19:40:13 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:40:13 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:40:30 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:40:30 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:41:15 [INFO]: Server is running on port 3000 
+2025-02-19 19:41:15 [INFO]: Environment: development 
+2025-02-19 19:41:15 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:41:18 [INFO]: Server is running on port 3000 
+2025-02-19 19:41:18 [INFO]: Environment: development 
+2025-02-19 19:41:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:41:22 [INFO]: Connected to MongoDB 
+2025-02-19 19:41:26 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:41:26 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:42:17 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 19:42:17 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 19:43:51 [INFO]: Server is running on port 3000 
+2025-02-19 19:43:51 [INFO]: Environment: development 
+2025-02-19 19:43:51 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:43:54 [INFO]: Connected to MongoDB 
+2025-02-19 19:45:17 [INFO]: Server is running on port 3000 
+2025-02-19 19:45:17 [INFO]: Environment: development 
+2025-02-19 19:45:17 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:45:20 [INFO]: Connected to MongoDB 
+2025-02-19 19:49:39 [INFO]: Server is running on port 3000 
+2025-02-19 19:49:39 [INFO]: Environment: development 
+2025-02-19 19:49:39 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:49:42 [INFO]: Connected to MongoDB 
+2025-02-19 19:50:07 [ERROR]: Invalid token {
+  "path": "/api/users/admin",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-createdAt"
+  },
+  "user": null
+}
+2025-02-19 19:50:10 [ERROR]: Invalid token {
+  "path": "/api/users/admin",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-createdAt"
+  },
+  "user": null
+}
+2025-02-19 19:50:32 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 19:51:29 [INFO]: Server is running on port 3000 
+2025-02-19 19:51:29 [INFO]: Environment: development 
+2025-02-19 19:51:29 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 19:51:32 [INFO]: Connected to MongoDB 
