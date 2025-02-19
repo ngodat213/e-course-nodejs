@@ -55,7 +55,7 @@ class CourseService {
         return course;
     }
 
-    async createCourse(courseData, thumbnailFile) {
+    async create(courseData, thumbnailFile, instructorId) {
         if (!courseData.title || !courseData.description || !courseData.price) {
             throw new BadRequestError(i18next.t('course.missingInfo'));
         }
@@ -75,11 +75,13 @@ class CourseService {
             courseData.thumbnail_id = uploadResult.public_id;
         }
 
+        courseData.instructor_id = instructorId;
+
         const course = await Course.create(courseData);
         return course;
     }
 
-    async updateCourse(id, updateData) {
+    async update(id, updateData) {
         // Nếu có thumbnail mới, xóa thumbnail cũ
         if (updateData.thumbnail && updateData.thumbnail_id) {
             const course = await Course.findById(id);
@@ -101,7 +103,7 @@ class CourseService {
         return course;
     }
 
-    async deleteCourse(id) {
+    async delete(id) {
         const course = await Course.findById(id);
         if (!course) {
             throw new NotFoundError(i18next.t('course.notFound'));

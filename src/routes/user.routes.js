@@ -18,18 +18,18 @@ router.use(verifyToken);
  * @desc Lấy thông tin profile người dùng
  * @access Private
  */
-router.get("/profile", UserController.getProfile);
+router.get("/profile", (req, res, next) => {
+  UserController.getProfile(req, res, next);
+});
 
 /**
  * @route PUT /api/users/profile
  * @desc Cập nhật thông tin profile
  * @access Private
  */
-router.put(
-  "/profile",
-  validateRequest(updateUserSchema),
-  UserController.updateProfile
-);
+router.put("/profile", validateRequest(updateUserSchema), (req, res, next) => {
+  UserController.updateProfile(req, res, next);
+});
 
 /**
  * @route PUT /api/users/change-password
@@ -40,7 +40,9 @@ router.put(
 router.put(
   "/change-password",
   validateRequest(changePasswordSchema),
-  UserController.changePassword
+  (req, res, next) => {
+    UserController.changePassword(req, res, next);
+  }
 );
 
 /**
@@ -48,18 +50,24 @@ router.put(
  * @desc Upload avatar
  * @access Private
  */
-router.post("/avatar", upload.single("avatar"), UserController.uploadAvatar);
+router.post("/avatar", upload.single("avatar"), (req, res, next) => {
+  UserController.uploadAvatar(req, res, next);
+});
 
 // Admin only routes
 router.use(restrictTo("admin", "super_admin"));
-router.get("/", UserController.getAllUsers);
-router.get("/:id", UserController.getUserById);
-router.put(
-  "/:id",
-  validateRequest(updateUserSchema),
-  UserController.updateUser
-);
-router.delete("/:id", UserController.deleteUser);
+router.get("/", (req, res, next) => {
+  UserController.getAll(req, res, next);
+});
+router.get("/:id", (req, res, next) => {
+  UserController.getById(req, res, next);
+});
+router.put("/:id", validateRequest(updateUserSchema), (req, res, next) => {
+  UserController.update(req, res, next);
+});
+router.delete("/:id", (req, res, next) => {
+  UserController.delete(req, res, next);
+});
 
 /**
  * @route PUT /api/users/role

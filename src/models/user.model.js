@@ -20,14 +20,6 @@ const userSchema = new mongoose.Schema({
         minlength: 6
     },
     profile_picture: {
-        type: String,
-        default: process.env.DEFAULT_AVATAR_URL
-    },
-    profile_picture_id: {
-        type: String,
-        default: null
-    },
-    avatar_file: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'CloudinaryFile',
         default: null

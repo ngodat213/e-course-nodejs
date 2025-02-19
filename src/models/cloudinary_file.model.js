@@ -1,93 +1,123 @@
 const mongoose = require('mongoose');
 
 const cloudinaryFileSchema = new mongoose.Schema({
-    user_id: {
+    // ID của đối tượng sở hữu file (user_id, course_id, exam_id...)
+    owner_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
+        required: true,
+        refPath: "owner_type",
     },
+
+    // Loại đối tượng sở hữu file
+    owner_type: {
+        type: String,
+        required: true,
+        enum: ["User", "Course", "Exam", "Lesson"],
+    },
+
+    // Loại file
     file_type: {
         type: String,
-        enum: ['image', 'video', 'document'],
-        required: true
+        required: true,
+        enum: ["image", "video", "document"],
     },
+
+    // Mục đích sử dụng của file
+    purpose: {
+        type: String,
+        required: true,
+        enum: ["avatar", "thumbnail", "content", "attachment"],
+    },
+
+    // Tên gốc của file
     original_name: {
         type: String,
-        required: true
+        required: true,
     },
+
+    // URL của file trên Cloudinary
     file_url: {
         type: String,
         required: true,
-        select: false // Không trả về URL trong queries mặc định
     },
+
+    // Public ID của file trên Cloudinary
     public_id: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
     },
-    secure_url: {
-        type: String,
-        required: true,
-        select: false
-    },
-    thumbnail_url: {
-        type: String,
-        select: false
-    },
+
+    // Kích thước file (bytes)
     size: {
         type: Number,
-        required: true
+        required: true,
     },
+
+    // Định dạng file
     format: {
         type: String,
-        required: true
+        required: true,
     },
-    resource_type: {
-        type: String,
-        required: true
-    },
-    folder: {
-        type: String,
-        required: true
-    },
-    is_avatar: {
-        type: Boolean,
-        default: false
-    },
+
+    // Metadata bổ sung
     metadata: {
-        width: Number,
-        height: Number,
-        duration: Number, // For videos
-        pages: Number // For documents
-    }
+        width: Number, // Cho ảnh
+        height: Number, // Cho ảnh
+        duration: Number, // Cho video
+        pages: Number, // Cho document
+    },
+
+    // Trạng thái
+    status: {
+        type: String,
+        enum: ["active", "deleted"],
+        default: "active",
+    },
 }, {
-    timestamps: {
-        createdAt: 'created_at',
-        updatedAt: 'updated_at'
-    }
+    timestamps: true,
 });
 
-// Index để tìm kiếm nhanh
-cloudinaryFileSchema.index({ user_id: 1, file_type: 1 });
+// Indexes
+cloudinaryFileSchema.index({ owner_id: 1, owner_type: 1, purpose: 1 });
 cloudinaryFileSchema.index({ public_id: 1 }, { unique: true });
 
-// Virtual để tạo signed URL an toàn
-cloudinaryFileSchema.virtual('signed_url').get(function() {
-    // Tạo signed URL với thời hạn
+// Đảm bảo mỗi đối tượng chỉ có 1 avatar/thumbnail
+cloudinaryFileSchema.pre("save", async function (next) {
+    if (this.purpose === "avatar" || this.purpose === "thumbnail") {
+        await this.constructor.updateMany(
+            {
+                owner_id: this.owner_id,
+                owner_type: this.owner_type,
+                purpose: this.purpose,
+                _id: { $ne: this._id },
+                status: "active",
+            },
+            { status: "deleted" }
+        );
+    }
+    next();
+});
+
+// Virtual để lấy URL đầy đủ
+cloudinaryFileSchema.virtual("full_url").get(function () {
     return `${process.env.API_URL}/api/files/${this._id}`;
 });
 
-// Middleware để đảm bảo chỉ có 1 avatar
-cloudinaryFileSchema.pre('save', async function(next) {
-    if (this.is_avatar) {
-        await this.constructor.updateMany(
-            { 
-                user_id: this.user_id,
-                is_avatar: true,
-                _id: { $ne: this._id }
-            },
-            { is_avatar: false }
-        );
+// Cập nhật reference khi file bị xóa
+cloudinaryFileSchema.pre("save", async function (next) {
+    if (this.isModified("status") && this.status === "deleted") {
+        const Model = mongoose.model(this.owner_type);
+        
+        if (this.purpose === "avatar") {
+            await Model.findByIdAndUpdate(this.owner_id, {
+                profile_picture: null,
+            });
+        } else if (this.purpose === "thumbnail") {
+            await Model.findByIdAndUpdate(this.owner_id, {
+                thumbnail_file: null,
+            });
+        }
     }
     next();
 });

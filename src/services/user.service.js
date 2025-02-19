@@ -3,15 +3,153 @@ const { NotFoundError, BadRequestError, UnauthorizedError, ForbiddenError } = re
 const bcrypt = require('bcryptjs');
 const i18next = require('i18next');
 const CloudinaryService = require('./cloudinary.service');
+const FileService = require('./file.service');
 const Course = require("../models/course.model");
 const UserProgress = require("../models/user_progress.model");
 const CourseReview = require("../models/course_review.model");
 const Certificate = require("../models/certificate.model");
+const Notification = require("../models/notification.model");
 const mongoose = require("mongoose");
 const EmailTemplateService = require("./email_template.service");
 const transporter = require("../config/mail.config");
 
 class UserService {
+    constructor() {
+        this.model = User;
+    }
+
+    async getAllUsers(options = {}) {
+        const { page = 1, limit = 10, sort = '-createdAt', search } = options;
+        
+        let query = {};
+        if (search) {
+            query.$or = [
+                { name: { $regex: search, $options: 'i' } },
+                { email: { $regex: search, $options: 'i' } }
+            ];
+        }
+
+        const users = await this.model.find(query)
+            .select('-password')
+            .sort(sort)
+            .skip((page - 1) * limit)
+            .limit(limit)
+            .populate('profile_picture', 'file_url');
+
+        const total = await this.model.countDocuments(query);
+
+        return {
+            data: users,
+            pagination: {
+                page: parseInt(page),
+                limit: parseInt(limit),
+                total,
+                totalPages: Math.ceil(total / limit)
+            }
+        };
+    }
+
+    async getUserById(id) {
+        const user = await this.model.findById(id)
+            .select('-password')
+            .populate('profile_picture', 'file_url');
+            
+        if (!user) {
+            throw new NotFoundError(i18next.t('user.notFound'));
+        }
+        return user;
+    }
+
+    async update(id, updateData) {
+        const user = await this.model.findByIdAndUpdate(
+            id,
+            updateData,
+            { new: true, runValidators: true }
+        ).select('-password');
+
+        if (!user) {
+            throw new NotFoundError(i18next.t('user.notFound'));
+        }
+
+        return user;
+    }
+
+    async delete(id) {
+        const user = await this.model.findById(id);
+        if (!user) {
+            throw new NotFoundError(i18next.t('user.notFound'));
+        }
+
+        // Xóa avatar nếu có
+        if (user.profile_picture) {
+            await FileService.deleteFile(user.profile_picture);
+        }
+
+        await user.remove();
+        return { message: i18next.t('user.deleted') };
+    }
+
+    async changePassword(userId, currentPassword, newPassword) {
+        const user = await this.model.findById(userId);
+        if (!user) {
+            throw new NotFoundError(i18next.t('user.notFound'));
+        }
+
+        const isMatch = await user.comparePassword(currentPassword);
+        if (!isMatch) {
+            throw new BadRequestError(i18next.t('user.invalidPassword'));
+        }
+
+        user.password = newPassword;
+        await user.save();
+
+        return { message: i18next.t('user.passwordChanged') };
+    }
+
+    async setRole(userId, newRole, currentUser) {
+        const user = await this.model.findById(userId);
+        if (!user) {
+            throw new NotFoundError(i18next.t('user.notFound'));
+        }
+
+        // Kiểm tra quyền
+        if (newRole === 'super_admin') {
+            throw new ForbiddenError(i18next.t('user.cannotSetSuperAdmin'));
+        }
+
+        if (newRole === 'admin' && currentUser.role !== 'super_admin') {
+            throw new ForbiddenError(i18next.t('user.onlySuperAdminCanSetAdmin'));
+        }
+
+        if (newRole === 'instructor' && !['super_admin', 'admin'].includes(currentUser.role)) {
+            throw new ForbiddenError(i18next.t('user.onlyAdminCanSetInstructor'));
+        }
+
+        // Không cho phép hạ cấp super_admin
+        if (user.role === 'super_admin') {
+            throw new ForbiddenError(i18next.t('user.cannotModifySuperAdmin'));
+        }
+
+        // Không cho phép admin thường sửa role của admin khác
+        if (user.role === 'admin' && currentUser.role !== 'super_admin') {
+            throw new ForbiddenError(i18next.t('user.onlySuperAdminCanModifyAdmin'));
+        }
+
+        user.role = newRole;
+        await user.save();
+
+        return {
+            message: i18next.t('user.roleUpdated'),
+            user: this._sanitizeUser(user)
+        };
+    }
+
+    _sanitizeUser(user) {
+        const sanitized = user.toObject();
+        delete sanitized.password;
+        return sanitized;
+    }
+
     async getAll(options = {}) {
         const { page = 1, limit = 10, sort = '-createdAt', search, filter = {} } = options;
         
@@ -25,11 +163,11 @@ class UserService {
 
         const skip = (page - 1) * limit;
         const [data, total] = await Promise.all([
-            User.find(queryFilter)
+            this.model.find(queryFilter)
                 .sort(sort)
                 .skip(skip)
                 .limit(limit),
-            User.countDocuments(queryFilter)
+            this.model.countDocuments(queryFilter)
         ]);
 
         return {
@@ -43,44 +181,14 @@ class UserService {
         };
     }
 
-    async getById(id) {
-        const user = await User.findById(id);
-        if (!user) {
-            throw new NotFoundError(i18next.t('user.notFound'));
-        }
-        return user;
-    }
-
     async create(userData) {
-        return await User.create(userData);
-    }
-
-    async update(id, updateData) {
-        const user = await User.findByIdAndUpdate(
-            id,
-            updateData,
-            { new: true, runValidators: true }
-        );
-
-        if (!user) {
-            throw new NotFoundError(i18next.t('user.notFound'));
-        }
-
-        return user;
-    }
-
-    async delete(id) {
-        const user = await User.findByIdAndDelete(id);
-        if (!user) {
-            throw new NotFoundError(i18next.t('user.notFound'));
-        }
-        return user;
+        return await this.model.create(userData);
     }
 
     async createUser(userData) {
-        const existingUser = await User.findOne({ email: userData.email });
+        const existingUser = await this.model.findOne({ email: userData.email });
         if (existingUser) {
-          await User.findByIdAndDelete(existingUser._id);
+          await this.model.findByIdAndDelete(existingUser._id);
         }
         return await this.create(userData);
     }
@@ -90,20 +198,6 @@ class UserService {
 
         const user = await this.update(userId, allowedUpdates);
         return user;
-    }
-
-    async changePassword(userId, currentPassword, newPassword) {
-        const user = await this.getById(userId);
-
-        const isValid = await user.comparePassword(currentPassword);
-        if (!isValid) {
-            throw new BadRequestError(i18next.t("auth.invalidPassword"));
-        }
-
-        user.password = newPassword;
-        await user.save();
-
-        return { message: i18next.t("auth.passwordChanged") };
     }
 
     async getAllUsers(query) {
@@ -121,15 +215,7 @@ class UserService {
         if (role) filter.role = role;
         if (status) filter.status = status;
 
-        return await super.getAll({ ...paginationQuery, filter });
-    }
-
-    async getUserById(id) {
-        const user = await this.model.findById(id).select("-password");
-        if (!user) {
-            throw new NotFoundError("Không tìm thấy người dùng");
-        }
-        return user;
+        return await this.getAll({ ...paginationQuery, filter });
     }
 
     async updateUser(id, updateData) {
@@ -167,12 +253,6 @@ class UserService {
         return true;
     }
 
-    _sanitizeUser(user) {
-        const userObject = user.toObject();
-        delete userObject.password;
-        return userObject;
-    }
-
     async uploadAvatar(userId, file) {
         const user = await this.model.findById(userId);
         if (!user) {
@@ -181,7 +261,7 @@ class UserService {
 
         // Xóa avatar cũ nếu có
         if (user.profile_picture_id) {
-            await CloudinaryService.deleteImage(user.profile_picture_id);
+            await FileService.deleteFile(user.profile_picture_id);
         }
 
         // Upload avatar mới
@@ -195,49 +275,6 @@ class UserService {
         return {
             message: i18next.t("upload.success"),
             profile_picture: result.url,
-        };
-    }
-
-    async setUserRole(userId, newRole, currentUser) {
-        const user = await this.model.findById(userId);
-        if (!user) {
-            throw new NotFoundError(i18next.t("user.notFound"));
-        }
-
-        // Kiểm tra quyền
-        if (newRole === "super_admin") {
-            throw new ForbiddenError(i18next.t("user.cannotSetSuperAdmin"));
-        }
-
-        if (newRole === "admin") {
-            if (currentUser.role !== "super_admin") {
-                throw new ForbiddenError(i18next.t("user.onlySuperAdminCanSetAdmin"));
-            }
-        }
-
-        if (newRole === "instructor") {
-            if (!["super_admin", "admin"].includes(currentUser.role)) {
-                throw new ForbiddenError(i18next.t("user.onlyAdminCanSetInstructor"));
-            }
-        }
-
-        // Không cho phép hạ cấp super_admin
-        if (user.role === "super_admin") {
-            throw new ForbiddenError(i18next.t("user.cannotModifySuperAdmin"));
-        }
-
-        // Không cho phép admin thường sửa role của admin khác
-        if (user.role === "admin" && currentUser.role !== "super_admin") {
-            throw new ForbiddenError(i18next.t("user.onlySuperAdminCanModifyAdmin"));
-        }
-
-        // Cập nhật role
-        user.set({ role: newRole }); // Sử dụng set để bypass immutable
-        await user.save();
-
-        return {
-            message: i18next.t("user.roleUpdated"),
-            user: this._sanitizeUser(user),
         };
     }
 
@@ -384,11 +421,11 @@ class UserService {
     }
 
     async findByEmail(email) {
-        return User.findOne({ email });
+        return this.model.findOne({ email });
     }
 
     async updateAvatar(userId, file) {
-        const user = await this.getById(userId);
+        const user = await this.model.findById(userId);
 
         if (user.profile_picture_id) {
             await CloudinaryService.deleteImage(user.profile_picture_id);

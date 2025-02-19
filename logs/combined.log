@@ -771,3 +771,525 @@
 2025-02-19 13:36:49 [INFO]: Environment: development 
 2025-02-19 13:36:49 [INFO]: API Documentation: http://localhost:3000/api-docs 
 2025-02-19 13:36:53 [INFO]: Connected to MongoDB 
+2025-02-19 13:39:26 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 14:31:11 [INFO]: Server is running on port 3000 
+2025-02-19 14:31:11 [INFO]: Environment: development 
+2025-02-19 14:31:11 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 14:31:14 [INFO]: Connected to MongoDB 
+2025-02-19 14:34:24 [INFO]: Server is running on port 3000 
+2025-02-19 14:34:24 [INFO]: Environment: development 
+2025-02-19 14:34:24 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 14:34:27 [INFO]: Connected to MongoDB 
+2025-02-19 14:40:22 [INFO]: Server is running on port 3000 
+2025-02-19 14:40:22 [INFO]: Environment: development 
+2025-02-19 14:40:22 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 14:40:25 [INFO]: Connected to MongoDB 
+2025-02-19 14:40:27 [INFO]: Server is running on port 3000 
+2025-02-19 14:40:27 [INFO]: Environment: development 
+2025-02-19 14:40:27 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 14:40:30 [INFO]: Connected to MongoDB 
+2025-02-19 14:40:32 [INFO]: Server is running on port 3000 
+2025-02-19 14:40:32 [INFO]: Environment: development 
+2025-02-19 14:40:32 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 14:40:35 [INFO]: Connected to MongoDB 
+2025-02-19 14:42:15 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 14:42:21 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 14:42:34 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:43:50 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:43:52 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:44:19 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:45:08 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 14:45:21 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:46:57 [INFO]: MongoDB disconnected 
+2025-02-19 14:47:03 [INFO]: Server is running on port 3000 
+2025-02-19 14:47:03 [INFO]: Environment: development 
+2025-02-19 14:47:03 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 14:47:07 [INFO]: Connected to MongoDB 
+2025-02-19 14:47:14 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:47:44 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:48:18 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:50:17 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:50:42 [INFO]: Server is running on port 3000 
+2025-02-19 14:50:42 [INFO]: Environment: development 
+2025-02-19 14:50:42 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 14:50:46 [INFO]: Connected to MongoDB 
+2025-02-19 14:50:55 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:53:49 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:53:50 [INFO]: Server is running on port 3000 
+2025-02-19 14:53:50 [INFO]: Environment: development 
+2025-02-19 14:53:50 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 14:53:54 [INFO]: Connected to MongoDB 
+2025-02-19 14:53:54 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:54:38 [INFO]: Server is running on port 3000 
+2025-02-19 14:54:38 [INFO]: Environment: development 
+2025-02-19 14:54:38 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 14:54:41 [INFO]: Connected to MongoDB 
+2025-02-19 14:54:43 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:55:22 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:55:52 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:55:59 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:56:30 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "10000",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:56:55 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter",
+    "price": "",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:57:13 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "price": "",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:57:39 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {}
+2025-02-19 14:57:39 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "price": "111111",
+    "status": "draft",
+    "thumbnail_id": "ecourse/[object Object]/sbbl2u8b3yiwwzrmbckk"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 14:59:07 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter ",
+    "price": "111111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:03:25 [INFO]: MongoDB disconnected 
+2025-02-19 15:04:43 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:04:51 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 15:05:08 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter ",
+    "price": "111111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:05:35 [INFO]: Server is running on port 3000 
+2025-02-19 15:05:35 [INFO]: Environment: development 
+2025-02-19 15:05:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:05:42 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter ",
+    "price": "111111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:05:44 [INFO]: Connected to MongoDB 
+2025-02-19 15:06:37 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {}
+2025-02-19 15:06:37 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter for beginner hahahahahaha",
+    "price": "111111",
+    "status": "draft",
+    "thumbnail_id": "ecourse/[object Object]/xs7kvykgvtpemlcn6tmy"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:07:48 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {}
+2025-02-19 15:07:48 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Flutter for beginner hahahahahaha",
+    "price": "111111",
+    "status": "draft",
+    "thumbnail_id": "ecourse/[object Object]/tyuibfrqbun1tbp8uu5y"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:07:55 [INFO]: Server is running on port 3000 
+2025-02-19 15:07:55 [INFO]: Environment: development 
+2025-02-19 15:07:55 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:07:58 [INFO]: Connected to MongoDB 
+2025-02-19 15:08:13 [INFO]: Course created {
+  "id": "67b5916d1222c1d3e8ccfbd2"
+}
+2025-02-19 15:22:18 [INFO]: Server is running on port 3000 
+2025-02-19 15:22:18 [INFO]: Environment: development 
+2025-02-19 15:22:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:22:21 [INFO]: Connected to MongoDB 
+2025-02-19 15:25:03 [ERROR]: Invalid email or password {}
+2025-02-19 15:25:03 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "john@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:27:09 [INFO]: Server is running on port 3000 
+2025-02-19 15:27:09 [INFO]: Environment: development 
+2025-02-19 15:27:09 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:27:13 [INFO]: Connected to MongoDB 
+2025-02-19 15:27:17 [ERROR]: Invalid token {
+  "path": "/api/users/info",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:27:34 [ERROR]: Invalid email or password {}
+2025-02-19 15:27:34 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:27:41 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 15:27:56 [ERROR]: UserController.getUserById is not a function {
+  "path": "/api/users/info",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:29:34 [ERROR]: UserController.getUserById is not a function {
+  "path": "/api/users/info",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:29:53 [INFO]: Server is running on port 3000 
+2025-02-19 15:29:53 [INFO]: Environment: development 
+2025-02-19 15:29:53 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:29:54 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
+2025-02-19 15:29:54 [ERROR]: Cannot read properties of undefined (reading 'findById') {
+  "path": "/api/users/info",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:29:56 [INFO]: Connected to MongoDB 
+2025-02-19 15:33:37 [INFO]: Server is running on port 3000 
+2025-02-19 15:33:37 [INFO]: Environment: development 
+2025-02-19 15:33:37 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:33:41 [INFO]: Connected to MongoDB 
+2025-02-19 15:34:04 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 15:34:17 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
+2025-02-19 15:34:17 [ERROR]: Cannot read properties of undefined (reading 'findById') {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:34:20 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
+2025-02-19 15:34:20 [ERROR]: Cannot read properties of undefined (reading 'findById') {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:35:34 [INFO]: Server is running on port 3000 
+2025-02-19 15:35:34 [INFO]: Environment: development 
+2025-02-19 15:35:34 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:35:37 [INFO]: Connected to MongoDB 
+2025-02-19 15:36:01 [ERROR]: Invalid email or password {}
+2025-02-19 15:36:01 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-19 15:36:07 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 15:36:19 [ERROR]: User not found {}
+2025-02-19 15:36:19 [ERROR]: User not found {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:36:42 [INFO]: Server is running on port 3000 
+2025-02-19 15:36:42 [INFO]: Environment: development 
+2025-02-19 15:36:42 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:36:47 [INFO]: Connected to MongoDB 
+2025-02-19 15:36:51 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {}
+2025-02-19 15:36:51 [ERROR]: Schema hasn't been registered for model "Notification".
+Use mongoose.model(name, schema) {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:39:11 [INFO]: Server is running on port 3000 
+2025-02-19 15:39:11 [INFO]: Environment: development 
+2025-02-19 15:39:11 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:39:14 [INFO]: Connected to MongoDB 
+2025-02-19 15:40:10 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-19 15:41:30 [ERROR]: CloudinaryService.upload is not a function {}
+2025-02-19 15:41:30 [ERROR]: CloudinaryService.upload is not a function {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-19 15:41:56 [INFO]: Server is running on port 3000 
+2025-02-19 15:41:56 [INFO]: Environment: development 
+2025-02-19 15:41:56 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-19 15:42:03 [INFO]: Connected to MongoDB 
+2025-02-19 15:42:04 [ERROR]: upload.failed {}
+2025-02-19 15:42:04 [ERROR]: upload.failed {
+  "path": "/api/users/avatar",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
