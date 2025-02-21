@@ -1501,3 +1501,378 @@ Use mongoose.model(name, schema) {
 2025-02-21 12:02:56 [ERROR]: Unhandled Rejection: courseData is not defined {
   "stack": "ReferenceError: courseData is not defined\n    at CourseService._transformCourseData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:304:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:35:29\n    at Array.map (<anonymous>)\n    at CourseService.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:33:42)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CourseController.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/course.controller.js:13:23)"
 }
+2025-02-21 13:59:51 [ERROR]: Invalid token {
+  "path": "/api/momo/create",
+  "method": "POST",
+  "body": {
+    "amount": 10000,
+    "orderInfo": "Thanh toan khoa hoc ABC"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 14:00:17 [ERROR]: Error creating MoMo payment: Order validation failed: total_price: Path `total_price` is required., user_id: Path `user_id` is required. {
+  "errors": {
+    "total_price": {
+      "name": "ValidatorError",
+      "message": "Path `total_price` is required.",
+      "properties": {
+        "message": "Path `total_price` is required.",
+        "type": "required",
+        "path": "total_price"
+      },
+      "kind": "required",
+      "path": "total_price"
+    },
+    "user_id": {
+      "name": "ValidatorError",
+      "message": "Path `user_id` is required.",
+      "properties": {
+        "message": "Path `user_id` is required.",
+        "type": "required",
+        "path": "user_id"
+      },
+      "kind": "required",
+      "path": "user_id"
+    }
+  },
+  "_message": "Order validation failed",
+  "stack": "ValidationError: Order validation failed: total_price: Path `total_price` is required., user_id: Path `user_id` is required.\n    at Document.invalidate (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3219:32)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3012:17\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)"
+}
+2025-02-21 14:00:17 [ERROR]: Order validation failed: total_price: Path `total_price` is required., user_id: Path `user_id` is required. {}
+2025-02-21 14:00:17 [ERROR]: Order validation failed: total_price: Path `total_price` is required., user_id: Path `user_id` is required. {
+  "path": "/api/momo/create",
+  "method": "POST",
+  "body": {
+    "amount": 10000,
+    "orderInfo": "Thanh toan khoa hoc ABC"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-21 14:02:08 [ERROR]: Error creating MoMo payment: userId is not defined {
+  "stack": "ReferenceError: userId is not defined\n    at MoMoService.createPaymentUrl (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:80:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoController.createPayment (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/momo.controller.js:22:27)"
+}
+2025-02-21 14:02:08 [ERROR]: userId is not defined {}
+2025-02-21 14:02:08 [ERROR]: userId is not defined {
+  "path": "/api/momo/create",
+  "method": "POST",
+  "body": {
+    "amount": 10000,
+    "orderInfo": "Thanh toan khoa hoc ABC"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-21 15:00:13 [ERROR]: Invalid token {
+  "path": "/api/momo/create",
+  "method": "POST",
+  "body": {
+    "amount": 10000,
+    "orderInfo": "Thanh toan khoa hoc ABC"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 17:06:30 [ERROR]: Invalid token {
+  "path": "/api/momo/create",
+  "method": "POST",
+  "body": {
+    "amount": 10000,
+    "orderInfo": "Thanh toan khoa hoc ABC"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 17:06:40 [ERROR]: Invalid email or password {}
+2025-02-21 17:06:40 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "john@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 17:07:06 [ERROR]: Error creating MoMo payment: env is not defined {
+  "stack": "ReferenceError: env is not defined\n    at MoMoService._createRedirectUrl (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:15:5)\n    at MoMoService.createPaymentUrl (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:41:29)\n    at MoMoController.createPayment (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/momo.controller.js:22:45)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/momo.routes.js:12:38\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at verifyToken (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/auth.middleware.js:22:7)"
+}
+2025-02-21 17:07:06 [ERROR]: env is not defined {}
+2025-02-21 17:07:06 [ERROR]: env is not defined {
+  "path": "/api/momo/create",
+  "method": "POST",
+  "body": {
+    "amount": 10000,
+    "orderInfo": "Thanh toan khoa hoc ABC"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-21 17:21:43 [ERROR]: Error processing MoMo payment: Order validation failed: amount: Path `amount` is required., status: `completed` is not a valid enum value for path `status`. {
+  "errors": {
+    "amount": {
+      "name": "ValidatorError",
+      "message": "Path `amount` is required.",
+      "properties": {
+        "message": "Path `amount` is required.",
+        "type": "required",
+        "path": "amount"
+      },
+      "kind": "required",
+      "path": "amount"
+    },
+    "status": {
+      "name": "ValidatorError",
+      "message": "`completed` is not a valid enum value for path `status`.",
+      "properties": {
+        "message": "`completed` is not a valid enum value for path `status`.",
+        "type": "enum",
+        "enumValues": [
+          "pending",
+          "paid",
+          "failed",
+          "refunded"
+        ],
+        "path": "status",
+        "value": "completed"
+      },
+      "kind": "enum",
+      "path": "status",
+      "value": "completed"
+    }
+  },
+  "_message": "Order validation failed",
+  "stack": "ValidationError: Order validation failed: amount: Path `amount` is required., status: `completed` is not a valid enum value for path `status`.\n    at Document.invalidate (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3219:32)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3012:17\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)"
+}
+2025-02-21 17:21:43 [ERROR]: Order validation failed: amount: Path `amount` is required., status: `completed` is not a valid enum value for path `status`. {}
+2025-02-21 17:21:43 [ERROR]: Order validation failed: amount: Path `amount` is required., status: `completed` is not a valid enum value for path `status`. {
+  "path": "/api/momo/ipn/dev",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "orderId": [
+      "1740133143443_67b495ca9d35c758607e27cc",
+      "1740133143443_67b495ca9d35c758607e27cc"
+    ],
+    "partnerCode": "MOMO",
+    "requestId": "1740133143443_67b495ca9d35c758607e27cc",
+    "amount": "10000",
+    "orderInfo": "Payment for order 1740133143443_67b495ca9d35c758607e27cc",
+    "orderType": "momo_wallet",
+    "transId": "3291339912",
+    "resultCode": "0",
+    "message": "Thành công.",
+    "payType": "qr",
+    "responseTime": "1740133185550",
+    "extraData": "",
+    "signature": "2dbe67e93201fa9c39741e47a467b00f5d776414996adde0791ce81ea0fecba1"
+  },
+  "user": null
+}
+2025-02-21 17:23:54 [ERROR]: Error processing MoMo payment: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
+  "stringValue": "\"1740133299786_67b495ca9d35c758607e27cc\"",
+  "kind": "ObjectId",
+  "value": "1740133299786_67b495ca9d35c758607e27cc",
+  "path": "_id",
+  "reason": {},
+  "valueType": "string",
+  "stack": "CastError: Cast to ObjectId failed for value \"1740133299786_67b495ca9d35c758607e27cc\" (type string) at path \"_id\" for model \"Order\"\n    at ObjectId.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schema/objectid.js:250:11)\n    at SchemaType.applySetters (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1219:12)\n    at SchemaType.castForQuery (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1633:15)\n    at cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/cast.js:389:32)\n    at Query.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4927:12)\n    at Query._castConditions (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2237:10)\n    at model.Query._findOne (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2533:8)\n    at model.Query.exec (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4447:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoService.processIPNDev (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:174:21)"
+}
+2025-02-21 17:23:54 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {}
+2025-02-21 17:23:54 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
+  "path": "/api/momo/ipn/dev",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "orderIdResult": "1740133299786_67b495ca9d35c758607e27cc",
+    "partnerCode": "MOMO",
+    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
+    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
+    "amount": "10000",
+    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
+    "orderType": "momo_wallet",
+    "transId": "3291339914",
+    "resultCode": "0",
+    "message": "Thành công.",
+    "payType": "qr",
+    "responseTime": "1740133326409",
+    "extraData": "",
+    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
+  },
+  "user": null
+}
+2025-02-21 17:24:52 [ERROR]: Error processing MoMo payment: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
+  "stringValue": "\"1740133299786_67b495ca9d35c758607e27cc\"",
+  "kind": "ObjectId",
+  "value": "1740133299786_67b495ca9d35c758607e27cc",
+  "path": "_id",
+  "reason": {},
+  "valueType": "string",
+  "stack": "CastError: Cast to ObjectId failed for value \"1740133299786_67b495ca9d35c758607e27cc\" (type string) at path \"_id\" for model \"Order\"\n    at ObjectId.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schema/objectid.js:250:11)\n    at SchemaType.applySetters (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1219:12)\n    at SchemaType.castForQuery (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1633:15)\n    at cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/cast.js:389:32)\n    at Query.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4927:12)\n    at Query._castConditions (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2237:10)\n    at model.Query._findOne (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2533:8)\n    at model.Query.exec (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4447:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoService.processIPNDev (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:174:21)"
+}
+2025-02-21 17:24:52 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {}
+2025-02-21 17:24:52 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
+  "path": "/api/momo/ipn/dev",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "orderIdResult": "1740133299786_67b495ca9d35c758607e27cc",
+    "partnerCode": "MOMO",
+    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
+    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
+    "amount": "10000",
+    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
+    "orderType": "momo_wallet",
+    "transId": "3291339914",
+    "resultCode": "0",
+    "message": "Thành công.",
+    "payType": "qr",
+    "responseTime": "1740133326409",
+    "extraData": "",
+    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
+  },
+  "user": null
+}
+2025-02-21 17:26:02 [ERROR]: Error processing MoMo payment: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
+  "stringValue": "\"1740133299786_67b495ca9d35c758607e27cc\"",
+  "kind": "ObjectId",
+  "value": "1740133299786_67b495ca9d35c758607e27cc",
+  "path": "_id",
+  "reason": {},
+  "valueType": "string",
+  "stack": "CastError: Cast to ObjectId failed for value \"1740133299786_67b495ca9d35c758607e27cc\" (type string) at path \"_id\" for model \"Order\"\n    at ObjectId.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schema/objectid.js:250:11)\n    at SchemaType.applySetters (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1219:12)\n    at SchemaType.castForQuery (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1633:15)\n    at cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/cast.js:389:32)\n    at Query.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4927:12)\n    at Query._castConditions (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2237:10)\n    at model.Query._findOne (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2533:8)\n    at model.Query.exec (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4447:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoService.processIPNDev (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:174:21)"
+}
+2025-02-21 17:26:02 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {}
+2025-02-21 17:26:02 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
+  "path": "/api/momo/ipn/dev",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "orderIdResult": "1740133299786_67b495ca9d35c758607e27cc",
+    "partnerCode": "MOMO",
+    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
+    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
+    "amount": "10000",
+    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
+    "orderType": "momo_wallet",
+    "transId": "3291339914",
+    "resultCode": "0",
+    "message": "Thành công.",
+    "payType": "qr",
+    "responseTime": "1740133326409",
+    "extraData": "",
+    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
+  },
+  "user": null
+}
+2025-02-21 17:26:26 [ERROR]: Error processing MoMo payment: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
+  "stringValue": "\"1740133299786_67b495ca9d35c758607e27cc\"",
+  "kind": "ObjectId",
+  "value": "1740133299786_67b495ca9d35c758607e27cc",
+  "path": "_id",
+  "reason": {},
+  "valueType": "string",
+  "stack": "CastError: Cast to ObjectId failed for value \"1740133299786_67b495ca9d35c758607e27cc\" (type string) at path \"_id\" for model \"Order\"\n    at ObjectId.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schema/objectid.js:250:11)\n    at SchemaType.applySetters (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1219:12)\n    at SchemaType.castForQuery (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1633:15)\n    at cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/cast.js:389:32)\n    at Query.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4927:12)\n    at Query._castConditions (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2237:10)\n    at model.Query._findOne (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2533:8)\n    at model.Query.exec (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4447:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoService.processIPNDev (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:174:21)"
+}
+2025-02-21 17:26:26 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {}
+2025-02-21 17:26:26 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
+  "path": "/api/momo/ipn/dev",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "orderIdResult": "1740133299786_67b495ca9d35c758607e27cc",
+    "partnerCode": "MOMO",
+    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
+    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
+    "amount": "10000",
+    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
+    "orderType": "momo_wallet",
+    "transId": "3291339914",
+    "resultCode": "0",
+    "message": "Thành công.",
+    "payType": "qr",
+    "responseTime": "1740133326409",
+    "extraData": "",
+    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
+  },
+  "user": null
+}
+2025-02-21 17:26:42 [ERROR]: Error processing MoMo payment: Order validation failed: status: `completed` is not a valid enum value for path `status`. {
+  "errors": {
+    "status": {
+      "name": "ValidatorError",
+      "message": "`completed` is not a valid enum value for path `status`.",
+      "properties": {
+        "message": "`completed` is not a valid enum value for path `status`.",
+        "type": "enum",
+        "enumValues": [
+          "pending",
+          "paid",
+          "failed",
+          "refunded"
+        ],
+        "path": "status",
+        "value": "completed"
+      },
+      "kind": "enum",
+      "path": "status",
+      "value": "completed"
+    }
+  },
+  "_message": "Order validation failed",
+  "stack": "ValidationError: Order validation failed: status: `completed` is not a valid enum value for path `status`.\n    at Document.invalidate (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3219:32)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3012:17\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)"
+}
+2025-02-21 17:26:42 [ERROR]: Order validation failed: status: `completed` is not a valid enum value for path `status`. {}
+2025-02-21 17:26:42 [ERROR]: Order validation failed: status: `completed` is not a valid enum value for path `status`. {
+  "path": "/api/momo/ipn/dev",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "orderIdResult": "67b853b5b86cf9a233df6f64",
+    "partnerCode": "MOMO",
+    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
+    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
+    "amount": "10000",
+    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
+    "orderType": "momo_wallet",
+    "transId": "3291339914",
+    "resultCode": "0",
+    "message": "Thành công.",
+    "payType": "qr",
+    "responseTime": "1740133326409",
+    "extraData": "",
+    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
+  },
+  "user": null
+}
+2025-02-21 21:58:14 [ERROR]: Error creating MoMo payment: Course is not defined {
+  "stack": "ReferenceError: Course is not defined\n    at model.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/models/order.model.js:39:21)\n    at callMiddlewareFunction (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/kareem/index.js:628:27)\n    at model.next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/kareem/index.js:93:7)\n    at _next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/kareem/index.js:146:10)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/kareem/index.js:653:30\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)"
+}
+2025-02-21 21:58:14 [ERROR]: Course is not defined {}
+2025-02-21 21:58:14 [ERROR]: Course is not defined {
+  "path": "/api/orders",
+  "method": "POST",
+  "body": {
+    "courseIds": [
+      "67b75fd6e2e66f1197d5bec9",
+      "67b7f43fe1eb5507e5a3daf5"
+    ]
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
