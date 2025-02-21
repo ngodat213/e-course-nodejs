@@ -1129,3 +1129,375 @@ Use mongoose.model(name, schema) {
   },
   "user": null
 }
+2025-02-20 21:47:19 [ERROR]: Error closing MongoDB connection: info.info is not a function {
+  "stack": "TypeError: info.info is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:28:10)"
+}
+2025-02-20 21:56:58 [ERROR]: Invalid email or password {}
+2025-02-20 21:56:58 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "john@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-20 23:48:40 [ERROR]: upload.failed {}
+2025-02-20 23:48:40 [ERROR]: upload.failed {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+    "description": "stringstringstringsthhhhhhhhhhhhhhhh",
+    "price": "11111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-20 23:49:31 [ERROR]: Error closing MongoDB connection: info.info is not a function {
+  "stack": "TypeError: info.info is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:28:10)"
+}
+2025-02-20 23:53:58 [ERROR]: Course validation failed: thumbnail_id: Cast to ObjectId failed for value "course-thumbnails/yodo3gccxztnzzhvlsry" (type string) at path "thumbnail_id" because of "BSONError" {}
+2025-02-20 23:53:58 [ERROR]: Course validation failed: thumbnail_id: Cast to ObjectId failed for value "course-thumbnails/yodo3gccxztnzzhvlsry" (type string) at path "thumbnail_id" because of "BSONError" {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+    "description": "stringstringstringsthhhhhhhhhhhhhhhh",
+    "price": "11111",
+    "status": "draft",
+    "thumbnail_id": "course-thumbnails/yodo3gccxztnzzhvlsry",
+    "instructor_id": "67b495ca9d35c758607e27cc"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-21 00:00:04 [ERROR]: CloudinaryFile validation failed: purpose: `course_thumbnail` is not a valid enum value for path `purpose`. {}
+2025-02-21 00:00:04 [ERROR]: CloudinaryFile validation failed: purpose: `course_thumbnail` is not a valid enum value for path `purpose`. {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+    "description": "stringstringstringsthhhhhhhhhhhhhhhh",
+    "price": "11111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-21 00:06:53 [ERROR]: CourseService.getById is not a function {}
+2025-02-21 00:06:53 [ERROR]: CourseService.getById is not a function {
+  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:07:30 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
+Use mongoose.model(name, schema) {}
+2025-02-21 00:07:30 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
+Use mongoose.model(name, schema) {
+  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:09:47 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
+Use mongoose.model(name, schema) {}
+2025-02-21 00:09:47 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
+Use mongoose.model(name, schema) {
+  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:10:27 [ERROR]: Cannot populate path `lessons` because it is not in your schema. Set the `strictPopulate` option to false to override. {}
+2025-02-21 00:10:27 [ERROR]: Cannot populate path `lessons` because it is not in your schema. Set the `strictPopulate` option to false to override. {
+  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:25:20 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:25:23 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:25:31 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:25:50 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:26:08 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 10:08:42 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 10:09:38 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:09:38 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:11:22 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:11:22 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:34:31 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:34:31 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:41:39 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:41:39 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:45:52 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:45:52 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:47:21 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:47:21 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:49:05 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:49:05 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:49:55 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:49:55 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:55:56 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:55:56 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:56:27 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:56:27 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:57:04 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:57:04 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:00:19 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 12:00:19 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:00:26 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 12:00:26 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:00:36 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 12:00:36 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:01:30 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {}
+2025-02-21 12:01:30 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:01:36 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {}
+2025-02-21 12:01:36 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:01:58 [ERROR]: course.fetchError {}
+2025-02-21 12:01:58 [ERROR]: course.fetchError {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:02:20 [ERROR]: course.fetchError {}
+2025-02-21 12:02:20 [ERROR]: course.fetchError {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:02:37 [ERROR]: Unhandled Rejection: courseData is not defined {
+  "stack": "ReferenceError: courseData is not defined\n    at CourseService._transformCourseData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:304:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:35:29\n    at Array.map (<anonymous>)\n    at CourseService.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:33:42)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CourseController.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/course.controller.js:13:23)"
+}
+2025-02-21 12:02:56 [ERROR]: Unhandled Rejection: courseData is not defined {
+  "stack": "ReferenceError: courseData is not defined\n    at CourseService._transformCourseData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:304:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:35:29\n    at Array.map (<anonymous>)\n    at CourseService.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:33:42)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CourseController.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/course.controller.js:13:23)"
+}

@@ -21,7 +21,7 @@ const courseSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    thumbnail_file: {
+    thumbnail_id: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "CloudinaryFile",
       default: null,

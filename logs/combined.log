@@ -1656,3 +1656,722 @@ Use mongoose.model(name, schema) {
 2025-02-19 19:51:29 [INFO]: Environment: development 
 2025-02-19 19:51:29 [INFO]: API Documentation: http://localhost:3000/api-docs 
 2025-02-19 19:51:32 [INFO]: Connected to MongoDB 
+2025-02-20 19:40:57 [INFO]: Server is running on port 3000 
+2025-02-20 19:40:57 [INFO]: Environment: development 
+2025-02-20 19:40:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 19:41:01 [INFO]: Connected to MongoDB 
+2025-02-20 20:15:42 [INFO]: MongoDB disconnected 
+2025-02-20 20:19:18 [INFO]: MongoDB disconnected 
+2025-02-20 20:33:56 [INFO]: MongoDB disconnected 
+2025-02-20 20:39:35 [INFO]: MongoDB disconnected 
+2025-02-20 20:55:40 [INFO]: Server is running on port 3000 
+2025-02-20 20:55:40 [INFO]: Environment: development 
+2025-02-20 20:55:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:55:45 [INFO]: Connected to MongoDB 
+2025-02-20 20:56:07 [INFO]: Server is running on port 3000 
+2025-02-20 20:56:07 [INFO]: Environment: development 
+2025-02-20 20:56:07 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:56:11 [INFO]: Connected to MongoDB 
+2025-02-20 20:56:58 [INFO]: Server is running on port 3000 
+2025-02-20 20:56:58 [INFO]: Environment: development 
+2025-02-20 20:56:58 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:57:02 [INFO]: Connected to MongoDB 
+2025-02-20 20:57:33 [INFO]: Server is running on port 3000 
+2025-02-20 20:57:33 [INFO]: Environment: development 
+2025-02-20 20:57:33 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:57:38 [INFO]: Connected to MongoDB 
+2025-02-20 20:57:39 [INFO]: Server is running on port 3000 
+2025-02-20 20:57:39 [INFO]: Environment: development 
+2025-02-20 20:57:39 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:57:43 [INFO]: Server is running on port 3000 
+2025-02-20 20:57:43 [INFO]: Environment: development 
+2025-02-20 20:57:43 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:57:46 [INFO]: Connected to MongoDB 
+2025-02-20 20:57:57 [INFO]: Server is running on port 3000 
+2025-02-20 20:57:57 [INFO]: Environment: development 
+2025-02-20 20:57:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:58:00 [INFO]: Server is running on port 3000 
+2025-02-20 20:58:00 [INFO]: Environment: development 
+2025-02-20 20:58:00 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:58:04 [INFO]: Connected to MongoDB 
+2025-02-20 20:59:31 [INFO]: Server is running on port 3000 
+2025-02-20 20:59:31 [INFO]: Environment: development 
+2025-02-20 20:59:31 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:59:32 [INFO]: Server is running on port 3000 
+2025-02-20 20:59:32 [INFO]: Environment: development 
+2025-02-20 20:59:32 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 20:59:36 [INFO]: Connected to MongoDB 
+2025-02-20 21:00:35 [INFO]: Server is running on port 3000 
+2025-02-20 21:00:35 [INFO]: Environment: development 
+2025-02-20 21:00:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 21:00:39 [INFO]: Connected to MongoDB 
+2025-02-20 21:01:36 [INFO]: Server is running on port 3000 
+2025-02-20 21:01:36 [INFO]: Environment: development 
+2025-02-20 21:01:36 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 21:01:41 [INFO]: Connected to MongoDB 
+2025-02-20 21:02:20 [INFO]: Server is running on port 3000 
+2025-02-20 21:02:20 [INFO]: Environment: development 
+2025-02-20 21:02:20 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 21:02:25 [INFO]: Connected to MongoDB 
+2025-02-20 21:45:17 [INFO]: Server is running on port 3000 
+2025-02-20 21:45:17 [INFO]: Environment: development 
+2025-02-20 21:45:17 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 21:45:22 [INFO]: Connected to MongoDB 
+2025-02-20 21:47:19 [INFO]: MongoDB disconnected 
+2025-02-20 21:51:27 [INFO]: Server is running on port 3000 
+2025-02-20 21:51:27 [INFO]: Environment: development 
+2025-02-20 21:51:27 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 21:51:33 [INFO]: Connected to MongoDB 
+2025-02-20 21:56:58 [ERROR]: Invalid email or password {}
+2025-02-20 21:56:58 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "john@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-20 22:00:12 [INFO]: MongoDB disconnected 
+2025-02-20 22:13:03 [INFO]: MongoDB disconnected 
+2025-02-20 22:18:02 [INFO]: MongoDB disconnected 
+2025-02-20 23:12:54 [INFO]: Server is running on port 3000 
+2025-02-20 23:12:54 [INFO]: Environment: development 
+2025-02-20 23:12:54 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:12:57 [INFO]: Server is running on port 3000 
+2025-02-20 23:12:57 [INFO]: Environment: development 
+2025-02-20 23:12:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:13:00 [INFO]: Connected to MongoDB 
+2025-02-20 23:37:32 [INFO]: Server is running on port 3000 
+2025-02-20 23:37:32 [INFO]: Environment: development 
+2025-02-20 23:37:32 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:37:35 [INFO]: Connected to MongoDB 
+2025-02-20 23:38:39 [INFO]: Server is running on port 3000 
+2025-02-20 23:38:39 [INFO]: Environment: development 
+2025-02-20 23:38:39 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:38:40 [INFO]: Server is running on port 3000 
+2025-02-20 23:38:40 [INFO]: Environment: development 
+2025-02-20 23:38:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:38:43 [INFO]: Connected to MongoDB 
+2025-02-20 23:38:50 [INFO]: Server is running on port 3000 
+2025-02-20 23:38:50 [INFO]: Environment: development 
+2025-02-20 23:38:50 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:38:52 [INFO]: Connected to MongoDB 
+2025-02-20 23:39:02 [INFO]: Server is running on port 3000 
+2025-02-20 23:39:02 [INFO]: Environment: development 
+2025-02-20 23:39:02 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:39:05 [INFO]: Connected to MongoDB 
+2025-02-20 23:43:14 [INFO]: Server is running on port 3000 
+2025-02-20 23:43:14 [INFO]: Environment: development 
+2025-02-20 23:43:14 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:43:17 [INFO]: Connected to MongoDB 
+2025-02-20 23:43:56 [INFO]: Server is running on port 3000 
+2025-02-20 23:43:56 [INFO]: Environment: development 
+2025-02-20 23:43:56 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:43:59 [INFO]: Connected to MongoDB 
+2025-02-20 23:44:26 [INFO]: Server is running on port 3000 
+2025-02-20 23:44:26 [INFO]: Environment: development 
+2025-02-20 23:44:26 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:44:29 [INFO]: Connected to MongoDB 
+2025-02-20 23:44:30 [INFO]: Server is running on port 3000 
+2025-02-20 23:44:30 [INFO]: Environment: development 
+2025-02-20 23:44:30 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:44:33 [INFO]: Connected to MongoDB 
+2025-02-20 23:44:53 [INFO]: Server is running on port 3000 
+2025-02-20 23:44:53 [INFO]: Environment: development 
+2025-02-20 23:44:53 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:44:56 [INFO]: Connected to MongoDB 
+2025-02-20 23:44:57 [INFO]: Server is running on port 3000 
+2025-02-20 23:44:57 [INFO]: Environment: development 
+2025-02-20 23:44:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:45:00 [INFO]: Connected to MongoDB 
+2025-02-20 23:45:33 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-20 23:48:40 [ERROR]: upload.failed {}
+2025-02-20 23:48:40 [ERROR]: upload.failed {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+    "description": "stringstringstringsthhhhhhhhhhhhhhhh",
+    "price": "11111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-20 23:49:31 [INFO]: MongoDB disconnected 
+2025-02-20 23:49:37 [INFO]: Server is running on port 3000 
+2025-02-20 23:49:37 [INFO]: Environment: development 
+2025-02-20 23:49:37 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:49:40 [INFO]: Connected to MongoDB 
+2025-02-20 23:50:33 [INFO]: Server is running on port 3000 
+2025-02-20 23:50:33 [INFO]: Environment: development 
+2025-02-20 23:50:33 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:50:35 [INFO]: Connected to MongoDB 
+2025-02-20 23:50:39 [INFO]: Course created {
+  "id": "67b75d5fafb6a48541650170"
+}
+2025-02-20 23:52:20 [INFO]: Course created {
+  "id": "67b75dc4afb6a48541650174"
+}
+2025-02-20 23:53:44 [INFO]: Server is running on port 3000 
+2025-02-20 23:53:44 [INFO]: Environment: development 
+2025-02-20 23:53:44 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:53:47 [INFO]: Connected to MongoDB 
+2025-02-20 23:53:58 [ERROR]: Course validation failed: thumbnail_id: Cast to ObjectId failed for value "course-thumbnails/yodo3gccxztnzzhvlsry" (type string) at path "thumbnail_id" because of "BSONError" {}
+2025-02-20 23:53:58 [ERROR]: Course validation failed: thumbnail_id: Cast to ObjectId failed for value "course-thumbnails/yodo3gccxztnzzhvlsry" (type string) at path "thumbnail_id" because of "BSONError" {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+    "description": "stringstringstringsthhhhhhhhhhhhhhhh",
+    "price": "11111",
+    "status": "draft",
+    "thumbnail_id": "course-thumbnails/yodo3gccxztnzzhvlsry",
+    "instructor_id": "67b495ca9d35c758607e27cc"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-20 23:59:55 [INFO]: Server is running on port 3000 
+2025-02-20 23:59:55 [INFO]: Environment: development 
+2025-02-20 23:59:55 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-20 23:59:58 [INFO]: Connected to MongoDB 
+2025-02-21 00:00:04 [ERROR]: CloudinaryFile validation failed: purpose: `course_thumbnail` is not a valid enum value for path `purpose`. {}
+2025-02-21 00:00:04 [ERROR]: CloudinaryFile validation failed: purpose: `course_thumbnail` is not a valid enum value for path `purpose`. {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+    "description": "stringstringstringsthhhhhhhhhhhhhhhh",
+    "price": "11111",
+    "status": "draft"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-21 00:00:58 [INFO]: Server is running on port 3000 
+2025-02-21 00:00:58 [INFO]: Environment: development 
+2025-02-21 00:00:58 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:01:01 [INFO]: Connected to MongoDB 
+2025-02-21 00:01:13 [INFO]: Course created {
+  "id": "67b75fd6e2e66f1197d5bec9"
+}
+2025-02-21 00:06:53 [ERROR]: CourseService.getById is not a function {}
+2025-02-21 00:06:53 [ERROR]: CourseService.getById is not a function {
+  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:07:23 [INFO]: Server is running on port 3000 
+2025-02-21 00:07:23 [INFO]: Environment: development 
+2025-02-21 00:07:23 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:07:26 [INFO]: Connected to MongoDB 
+2025-02-21 00:07:30 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
+Use mongoose.model(name, schema) {}
+2025-02-21 00:07:30 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
+Use mongoose.model(name, schema) {
+  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:09:47 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
+Use mongoose.model(name, schema) {}
+2025-02-21 00:09:47 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
+Use mongoose.model(name, schema) {
+  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:10:22 [INFO]: Server is running on port 3000 
+2025-02-21 00:10:22 [INFO]: Environment: development 
+2025-02-21 00:10:22 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:10:25 [INFO]: Connected to MongoDB 
+2025-02-21 00:10:27 [ERROR]: Cannot populate path `lessons` because it is not in your schema. Set the `strictPopulate` option to false to override. {}
+2025-02-21 00:10:27 [ERROR]: Cannot populate path `lessons` because it is not in your schema. Set the `strictPopulate` option to false to override. {
+  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:10:40 [INFO]: Server is running on port 3000 
+2025-02-21 00:10:40 [INFO]: Environment: development 
+2025-02-21 00:10:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:10:43 [INFO]: Connected to MongoDB 
+2025-02-21 00:13:23 [INFO]: Server is running on port 3000 
+2025-02-21 00:13:23 [INFO]: Environment: development 
+2025-02-21 00:13:23 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:13:26 [INFO]: Connected to MongoDB 
+2025-02-21 00:13:47 [INFO]: Server is running on port 3000 
+2025-02-21 00:13:47 [INFO]: Environment: development 
+2025-02-21 00:13:47 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:13:49 [INFO]: Connected to MongoDB 
+2025-02-21 00:17:57 [INFO]: Server is running on port 3000 
+2025-02-21 00:17:57 [INFO]: Environment: development 
+2025-02-21 00:17:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:18:00 [INFO]: Connected to MongoDB 
+2025-02-21 00:19:07 [INFO]: Server is running on port 3000 
+2025-02-21 00:19:07 [INFO]: Environment: development 
+2025-02-21 00:19:07 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:19:10 [INFO]: Connected to MongoDB 
+2025-02-21 00:20:25 [INFO]: Server is running on port 3000 
+2025-02-21 00:20:25 [INFO]: Environment: development 
+2025-02-21 00:20:25 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:20:28 [INFO]: Connected to MongoDB 
+2025-02-21 00:21:00 [INFO]: Server is running on port 3000 
+2025-02-21 00:21:00 [INFO]: Environment: development 
+2025-02-21 00:21:00 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:21:04 [INFO]: Connected to MongoDB 
+2025-02-21 00:25:18 [INFO]: Server is running on port 3000 
+2025-02-21 00:25:18 [INFO]: Environment: development 
+2025-02-21 00:25:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:25:20 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:25:21 [INFO]: Connected to MongoDB 
+2025-02-21 00:25:23 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:25:31 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:25:50 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:26:08 [ERROR]: Invalid token {
+  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 00:27:40 [INFO]: Server is running on port 3000 
+2025-02-21 00:27:40 [INFO]: Environment: development 
+2025-02-21 00:27:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:27:46 [INFO]: Connected to MongoDB 
+2025-02-21 00:28:27 [INFO]: Server is running on port 3000 
+2025-02-21 00:28:27 [INFO]: Environment: development 
+2025-02-21 00:28:27 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:28:30 [INFO]: Connected to MongoDB 
+2025-02-21 00:29:09 [INFO]: Server is running on port 3000 
+2025-02-21 00:29:09 [INFO]: Environment: development 
+2025-02-21 00:29:09 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:29:13 [INFO]: Connected to MongoDB 
+2025-02-21 00:31:20 [INFO]: Server is running on port 3000 
+2025-02-21 00:31:20 [INFO]: Environment: development 
+2025-02-21 00:31:20 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:31:23 [INFO]: Connected to MongoDB 
+2025-02-21 00:35:40 [INFO]: Server is running on port 3000 
+2025-02-21 00:35:40 [INFO]: Environment: development 
+2025-02-21 00:35:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:35:43 [INFO]: Connected to MongoDB 
+2025-02-21 00:36:13 [INFO]: Server is running on port 3000 
+2025-02-21 00:36:13 [INFO]: Environment: development 
+2025-02-21 00:36:13 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:36:15 [INFO]: Connected to MongoDB 
+2025-02-21 00:39:03 [INFO]: Server is running on port 3000 
+2025-02-21 00:39:03 [INFO]: Environment: development 
+2025-02-21 00:39:03 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:39:06 [INFO]: Connected to MongoDB 
+2025-02-21 00:41:21 [INFO]: Server is running on port 3000 
+2025-02-21 00:41:21 [INFO]: Environment: development 
+2025-02-21 00:41:21 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:41:24 [INFO]: Connected to MongoDB 
+2025-02-21 00:43:08 [INFO]: Server is running on port 3000 
+2025-02-21 00:43:08 [INFO]: Environment: development 
+2025-02-21 00:43:08 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 00:43:11 [INFO]: Connected to MongoDB 
+2025-02-21 00:58:50 [INFO]: MongoDB disconnected 
+2025-02-21 01:14:44 [INFO]: MongoDB disconnected 
+2025-02-21 01:30:15 [INFO]: MongoDB disconnected 
+2025-02-21 01:45:45 [INFO]: MongoDB disconnected 
+2025-02-21 02:01:37 [INFO]: MongoDB disconnected 
+2025-02-21 02:17:29 [INFO]: MongoDB disconnected 
+2025-02-21 02:33:21 [INFO]: MongoDB disconnected 
+2025-02-21 02:44:58 [INFO]: MongoDB disconnected 
+2025-02-21 03:00:28 [INFO]: MongoDB disconnected 
+2025-02-21 03:16:21 [INFO]: MongoDB disconnected 
+2025-02-21 03:32:13 [INFO]: MongoDB disconnected 
+2025-02-21 03:47:43 [INFO]: MongoDB disconnected 
+2025-02-21 04:03:14 [INFO]: MongoDB disconnected 
+2025-02-21 04:19:06 [INFO]: MongoDB disconnected 
+2025-02-21 04:22:20 [INFO]: MongoDB disconnected 
+2025-02-21 04:38:13 [INFO]: MongoDB disconnected 
+2025-02-21 04:54:05 [INFO]: MongoDB disconnected 
+2025-02-21 05:09:36 [INFO]: MongoDB disconnected 
+2025-02-21 05:25:29 [INFO]: MongoDB disconnected 
+2025-02-21 05:41:21 [INFO]: MongoDB disconnected 
+2025-02-21 05:57:14 [INFO]: MongoDB disconnected 
+2025-02-21 06:01:00 [INFO]: MongoDB disconnected 
+2025-02-21 06:17:01 [INFO]: MongoDB disconnected 
+2025-02-21 06:32:53 [INFO]: MongoDB disconnected 
+2025-02-21 06:48:23 [INFO]: MongoDB disconnected 
+2025-02-21 07:04:16 [INFO]: MongoDB disconnected 
+2025-02-21 07:20:07 [INFO]: MongoDB disconnected 
+2025-02-21 07:36:00 [INFO]: MongoDB disconnected 
+2025-02-21 07:52:21 [INFO]: MongoDB disconnected 
+2025-02-21 08:02:13 [INFO]: MongoDB disconnected 
+2025-02-21 08:18:06 [INFO]: MongoDB disconnected 
+2025-02-21 08:33:37 [INFO]: MongoDB disconnected 
+2025-02-21 08:49:29 [INFO]: MongoDB disconnected 
+2025-02-21 09:03:10 [INFO]: MongoDB disconnected 
+2025-02-21 09:19:03 [INFO]: MongoDB disconnected 
+2025-02-21 09:21:11 [INFO]: MongoDB disconnected 
+2025-02-21 09:36:42 [INFO]: MongoDB disconnected 
+2025-02-21 09:42:06 [INFO]: MongoDB disconnected 
+2025-02-21 09:43:33 [INFO]: MongoDB disconnected 
+2025-02-21 09:59:33 [INFO]: MongoDB disconnected 
+2025-02-21 10:02:52 [INFO]: MongoDB disconnected 
+2025-02-21 10:06:11 [INFO]: Server is running on port 3000 
+2025-02-21 10:06:11 [INFO]: Environment: development 
+2025-02-21 10:06:11 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 10:06:14 [INFO]: Connected to MongoDB 
+2025-02-21 10:08:22 [INFO]: Server is running on port 3000 
+2025-02-21 10:08:22 [INFO]: Environment: development 
+2025-02-21 10:08:22 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 10:08:25 [INFO]: Connected to MongoDB 
+2025-02-21 10:08:42 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-21 10:08:55 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-21 10:09:32 [INFO]: Server is running on port 3000 
+2025-02-21 10:09:32 [INFO]: Environment: development 
+2025-02-21 10:09:32 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 10:09:36 [INFO]: Connected to MongoDB 
+2025-02-21 10:09:38 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:09:38 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:11:16 [INFO]: Server is running on port 3000 
+2025-02-21 10:11:16 [INFO]: Environment: development 
+2025-02-21 10:11:16 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 10:11:20 [INFO]: Connected to MongoDB 
+2025-02-21 10:11:22 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:11:22 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:18:27 [INFO]: MongoDB disconnected 
+2025-02-21 10:34:23 [INFO]: Course created {
+  "id": "67b7f43fe1eb5507e5a3daf5"
+}
+2025-02-21 10:34:31 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:34:31 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:41:39 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:41:39 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:45:52 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:45:52 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:47:12 [INFO]: Server is running on port 3000 
+2025-02-21 10:47:12 [INFO]: Environment: development 
+2025-02-21 10:47:12 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 10:47:15 [INFO]: Connected to MongoDB 
+2025-02-21 10:47:21 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:47:21 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:48:48 [INFO]: Server is running on port 3000 
+2025-02-21 10:48:48 [INFO]: Environment: development 
+2025-02-21 10:48:48 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 10:48:51 [INFO]: Connected to MongoDB 
+2025-02-21 10:49:05 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:49:05 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:49:47 [INFO]: Server is running on port 3000 
+2025-02-21 10:49:47 [INFO]: Environment: development 
+2025-02-21 10:49:47 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 10:49:50 [INFO]: Connected to MongoDB 
+2025-02-21 10:49:55 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:49:55 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:55:47 [INFO]: Server is running on port 3000 
+2025-02-21 10:55:47 [INFO]: Environment: development 
+2025-02-21 10:55:47 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 10:55:50 [INFO]: Connected to MongoDB 
+2025-02-21 10:55:56 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:55:56 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:56:15 [INFO]: Server is running on port 3000 
+2025-02-21 10:56:15 [INFO]: Environment: development 
+2025-02-21 10:56:15 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 10:56:17 [INFO]: Connected to MongoDB 
+2025-02-21 10:56:27 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:56:27 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 10:57:04 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 10:57:04 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 11:14:08 [INFO]: MongoDB disconnected 
+2025-02-21 11:59:52 [INFO]: Server is running on port 3000 
+2025-02-21 11:59:52 [INFO]: Environment: development 
+2025-02-21 11:59:52 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 11:59:55 [INFO]: Connected to MongoDB 
+2025-02-21 12:00:19 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 12:00:19 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:00:26 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 12:00:26 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:00:30 [INFO]: Server is running on port 3000 
+2025-02-21 12:00:30 [INFO]: Environment: development 
+2025-02-21 12:00:30 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 12:00:33 [INFO]: Connected to MongoDB 
+2025-02-21 12:00:36 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
+2025-02-21 12:00:36 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:01:27 [INFO]: Server is running on port 3000 
+2025-02-21 12:01:27 [INFO]: Environment: development 
+2025-02-21 12:01:27 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 12:01:30 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {}
+2025-02-21 12:01:30 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:01:31 [INFO]: Connected to MongoDB 
+2025-02-21 12:01:32 [INFO]: Server is running on port 3000 
+2025-02-21 12:01:32 [INFO]: Environment: development 
+2025-02-21 12:01:32 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 12:01:36 [INFO]: Connected to MongoDB 
+2025-02-21 12:01:36 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {}
+2025-02-21 12:01:36 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:01:55 [INFO]: Server is running on port 3000 
+2025-02-21 12:01:55 [INFO]: Environment: development 
+2025-02-21 12:01:55 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 12:01:58 [ERROR]: course.fetchError {}
+2025-02-21 12:01:58 [ERROR]: course.fetchError {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:01:58 [INFO]: Connected to MongoDB 
+2025-02-21 12:02:12 [INFO]: Server is running on port 3000 
+2025-02-21 12:02:12 [INFO]: Environment: development 
+2025-02-21 12:02:12 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 12:02:15 [INFO]: Connected to MongoDB 
+2025-02-21 12:02:20 [ERROR]: course.fetchError {}
+2025-02-21 12:02:20 [ERROR]: course.fetchError {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-21 12:02:29 [INFO]: Server is running on port 3000 
+2025-02-21 12:02:29 [INFO]: Environment: development 
+2025-02-21 12:02:29 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 12:02:32 [INFO]: Connected to MongoDB 
+2025-02-21 12:02:37 [ERROR]: Unhandled Rejection: courseData is not defined {
+  "stack": "ReferenceError: courseData is not defined\n    at CourseService._transformCourseData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:304:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:35:29\n    at Array.map (<anonymous>)\n    at CourseService.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:33:42)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CourseController.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/course.controller.js:13:23)"
+}
+2025-02-21 12:02:48 [INFO]: Server is running on port 3000 
+2025-02-21 12:02:48 [INFO]: Environment: development 
+2025-02-21 12:02:48 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 12:02:52 [INFO]: Connected to MongoDB 
+2025-02-21 12:02:56 [ERROR]: Unhandled Rejection: courseData is not defined {
+  "stack": "ReferenceError: courseData is not defined\n    at CourseService._transformCourseData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:304:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:35:29\n    at Array.map (<anonymous>)\n    at CourseService.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:33:42)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CourseController.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/course.controller.js:13:23)"
+}
+2025-02-21 12:03:43 [INFO]: Server is running on port 3000 
+2025-02-21 12:03:43 [INFO]: Environment: development 
+2025-02-21 12:03:43 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 12:03:47 [INFO]: Connected to MongoDB 
+2025-02-21 12:04:12 [INFO]: Server is running on port 3000 
+2025-02-21 12:04:12 [INFO]: Environment: development 
+2025-02-21 12:04:12 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-21 12:04:15 [INFO]: Connected to MongoDB 

@@ -251,31 +251,6 @@ class UserService {
     return true;
   }
 
-  async uploadAvatar(userId, file) {
-    const user = await User.findById(userId);
-    if (!user) {
-      throw new NotFoundError(i18next.t("user.notFound"));
-    }
-
-    // Xóa avatar cũ nếu có
-    if (user.profile_picture_id) {
-      await FileService.deleteFile(user.profile_picture_id);
-    }
-
-    // Upload avatar mới
-    const result = await CloudinaryService.uploadImage(file);
-
-    // Cập nhật user
-    user.profile_picture = result.url;
-    user.profile_picture_id = result.public_id;
-    await user.save();
-
-    return {
-      message: i18next.t("upload.success"),
-      profile_picture: result.url,
-    };
-  }
-
   async getUserInfo(userId) {
     const user = await User
       .findById(userId)
@@ -434,27 +409,6 @@ class UserService {
 
   async findByEmail(email) {
     return User.findOne({ email });
-  }
-
-  async updateAvatar(userId, file) {
-    const user = await User.findById(userId);
-
-    if (user.profile_picture_id) {
-      await CloudinaryService.deleteImage(user.profile_picture_id);
-    }
-
-    const uploadResult = await CloudinaryService.uploadImage(file, {
-      folder: "avatars",
-      transformation: [
-        { width: 400, height: 400, crop: "fill" },
-        { quality: "auto" },
-      ],
-    });
-
-    return await this.update(userId, {
-      profile_picture: uploadResult.secure_url,
-      profile_picture_id: uploadResult.public_id,
-    });
   }
 }
 
