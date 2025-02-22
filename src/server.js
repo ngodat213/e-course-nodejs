@@ -14,7 +14,11 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -48,18 +52,25 @@ app.use('/api/courses', courseRoutes);
 app.use('/api/momo', momoRoutes);
 app.use('/api/orders', orderRoutes);
 
-// Dev routes & Swagger
+// Swagger UI setup
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./config/swagger.config');
+
+// Swagger UI middleware
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+    explorer: true,
+    customCss: '.swagger-ui .topbar { display: none }',
+    customSiteTitle: "E-Course API Documentation"
+}));
+
+// Dev routes
 if (process.env.NODE_ENV === 'development') {
     const devRoutes = require('./routes/dev.routes');
-    const swaggerUi = require('swagger-ui-express');
-    const swaggerSpec = require('./config/swagger.config');
-    
     app.use('/api/dev', devRoutes);
-    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-    
     debug('Development routes enabled');
-    debug('Swagger documentation enabled');
 }
+
+debug('Swagger documentation enabled');
 
 // Error handling
 app.use(errorMiddleware);
