@@ -66,10 +66,9 @@ app.use(
   swaggerUi.serve,
   swaggerUi.setup(swaggerSpec, {
     explorer: true,
-    customCssUrl: CSS_URL,
-    customSiteTitle: "E-Course API Documentation",
-  })
-);
+    customCss: '.swagger-ui .topbar { display: none }',
+    customSiteTitle: "E-Course API Documentation"
+}));
 
 // Dev routes
 if (process.env.NODE_ENV === "development") {
