@@ -35,7 +35,7 @@ const orderSchema = new mongoose.Schema(
   }
 );
 
-OrderSchema.post("findOneAndUpdate", async function (doc) {
+orderSchema.post("findOneAndUpdate", async function (doc) {
   if (doc && doc.status === "paid") {
     try {
       await Course.updateMany(
