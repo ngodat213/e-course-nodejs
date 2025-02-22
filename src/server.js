@@ -48,11 +48,13 @@ const courseRoutes = require("./routes/course.routes");
 const userRoutes = require("./routes/user.routes");
 const momoRoutes = require("./routes/momo.routes");
 const orderRoutes = require("./routes/order.routes");
+const lessonRoutes = require("./routes/lesson.routes");
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/courses", courseRoutes);
 app.use("/api/momo", momoRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/lessons", lessonRoutes);
 
 // Swagger UI setup
 const swaggerUi = require("swagger-ui-express");

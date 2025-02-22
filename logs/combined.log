@@ -11069,3 +11069,586 @@ Use mongoose.model(name, schema) {
   "amount": 22222,
   "orderId": "1740149949323_67b495ca9d35c758607e27cc"
 }
+2025-02-22 15:16:54 [INFO]: Server is running on port 3000 
+2025-02-22 15:16:54 [INFO]: Environment: development 
+2025-02-22 15:16:54 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 15:16:57 [INFO]: Connected to MongoDB 
+2025-02-22 15:23:03 [INFO]: Server is running on port 3000 
+2025-02-22 15:23:03 [INFO]: Environment: development 
+2025-02-22 15:23:03 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 15:23:07 [INFO]: Connected to MongoDB 
+2025-02-22 15:33:17 [INFO]: Server is running on port 3000 
+2025-02-22 15:33:17 [INFO]: Environment: development 
+2025-02-22 15:33:17 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 15:33:20 [INFO]: Connected to MongoDB 
+2025-02-22 15:34:17 [INFO]: Server is running on port 3000 
+2025-02-22 15:34:17 [INFO]: Environment: development 
+2025-02-22 15:34:17 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 15:34:20 [INFO]: Connected to MongoDB 
+2025-02-22 15:35:28 [INFO]: Server is running on port 3000 
+2025-02-22 15:35:28 [INFO]: Environment: development 
+2025-02-22 15:35:28 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 15:35:31 [INFO]: Connected to MongoDB 
+2025-02-22 15:38:08 [INFO]: Server is running on port 3000 
+2025-02-22 15:38:08 [INFO]: Environment: development 
+2025-02-22 15:38:08 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 15:38:10 [INFO]: Server is running on port 3000 
+2025-02-22 15:38:10 [INFO]: Environment: development 
+2025-02-22 15:38:10 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 15:38:11 [INFO]: Server is running on port 3000 
+2025-02-22 15:38:11 [INFO]: Environment: development 
+2025-02-22 15:38:11 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 15:38:14 [INFO]: Connected to MongoDB 
+2025-02-22 15:59:33 [INFO]: MongoDB disconnected 
+2025-02-22 16:01:29 [INFO]: MongoDB disconnected 
+2025-02-22 16:27:23 [INFO]: Server is running on port 3000 
+2025-02-22 16:27:23 [INFO]: Environment: development 
+2025-02-22 16:27:23 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 16:27:27 [INFO]: Connected to MongoDB 
+2025-02-22 16:27:48 [INFO]: Server is running on port 3000 
+2025-02-22 16:27:48 [INFO]: Environment: development 
+2025-02-22 16:27:48 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 16:27:51 [INFO]: Connected to MongoDB 
+2025-02-22 16:30:58 [INFO]: Server is running on port 3000 
+2025-02-22 16:30:58 [INFO]: Environment: development 
+2025-02-22 16:30:58 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 16:31:01 [INFO]: Connected to MongoDB 
+2025-02-22 16:54:23 [INFO]: Server is running on port 3000 
+2025-02-22 16:54:23 [INFO]: Environment: development 
+2025-02-22 16:54:23 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 16:54:26 [INFO]: Connected to MongoDB 
+2025-02-22 16:54:28 [INFO]: Server is running on port 3000 
+2025-02-22 16:54:28 [INFO]: Environment: development 
+2025-02-22 16:54:28 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 16:54:30 [INFO]: Connected to MongoDB 
+2025-02-22 16:59:22 [INFO]: Server is running on port 3000 
+2025-02-22 16:59:22 [INFO]: Environment: development 
+2025-02-22 16:59:22 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 16:59:25 [INFO]: Connected to MongoDB 
+2025-02-22 17:05:39 [INFO]: MongoDB disconnected 
+2025-02-22 17:14:20 [INFO]: Server is running on port 3000 
+2025-02-22 17:14:20 [INFO]: Environment: development 
+2025-02-22 17:14:20 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:14:24 [INFO]: Connected to MongoDB 
+2025-02-22 17:21:29 [INFO]: Server is running on port 3000 
+2025-02-22 17:21:29 [INFO]: Environment: development 
+2025-02-22 17:21:29 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:21:32 [INFO]: Connected to MongoDB 
+2025-02-22 17:23:31 [INFO]: Server is running on port 3000 
+2025-02-22 17:23:31 [INFO]: Environment: development 
+2025-02-22 17:23:31 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:23:34 [INFO]: Connected to MongoDB 
+2025-02-22 17:24:20 [INFO]: Server is running on port 3000 
+2025-02-22 17:24:20 [INFO]: Environment: development 
+2025-02-22 17:24:20 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:24:23 [INFO]: Connected to MongoDB 
+2025-02-22 17:24:29 [INFO]: Server is running on port 3000 
+2025-02-22 17:24:29 [INFO]: Environment: development 
+2025-02-22 17:24:29 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:24:32 [INFO]: Connected to MongoDB 
+2025-02-22 17:26:28 [INFO]: Server is running on port 3000 
+2025-02-22 17:26:28 [INFO]: Environment: development 
+2025-02-22 17:26:28 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:26:32 [INFO]: Server is running on port 3000 
+2025-02-22 17:26:32 [INFO]: Environment: development 
+2025-02-22 17:26:32 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:26:35 [INFO]: Connected to MongoDB 
+2025-02-22 17:28:18 [INFO]: Server is running on port 3000 
+2025-02-22 17:28:18 [INFO]: Environment: development 
+2025-02-22 17:28:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:28:21 [INFO]: Connected to MongoDB 
+2025-02-22 17:35:06 [ERROR]: Invalid token {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-22 17:35:34 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-22 17:35:47 [ERROR]: Document not found {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 17:36:44 [ERROR]: Document not found {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 17:36:52 [INFO]: MongoDB disconnected 
+2025-02-22 17:36:55 [INFO]: Server is running on port 3000 
+2025-02-22 17:36:55 [INFO]: Environment: development 
+2025-02-22 17:36:55 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:37:16 [INFO]: Server is running on port 3000 
+2025-02-22 17:37:16 [INFO]: Environment: development 
+2025-02-22 17:37:16 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:37:19 [INFO]: Connected to MongoDB 
+2025-02-22 17:37:24 [ERROR]: upload.invalidFormat {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Setup Flutter",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"title\":\"hâhhaa\"}"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 17:53:17 [INFO]: MongoDB disconnected 
+2025-02-22 17:57:57 [INFO]: Server is running on port 3000 
+2025-02-22 17:57:57 [INFO]: Environment: development 
+2025-02-22 17:57:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:58:01 [INFO]: Connected to MongoDB 
+2025-02-22 17:58:06 [ERROR]: upload.invalidFormat {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Setup Flutter",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"title\":\"hâhhaa\"}"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 17:58:25 [ERROR]: upload.invalidFormat {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Setup Flutter",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"title\":\"hâhhaa\"}"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 17:59:28 [INFO]: Server is running on port 3000 
+2025-02-22 17:59:28 [INFO]: Environment: development 
+2025-02-22 17:59:28 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 17:59:31 [INFO]: Connected to MongoDB 
+2025-02-22 17:59:38 [ERROR]: upload.invalidFormat {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Setup Flutter",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"title\":\"hâhhaa\"}"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 17:59:52 [ERROR]: upload.invalidFormat {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Setup Flutter",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"title\":\"hâhhaa\"}"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:00:17 [INFO]: Server is running on port 3000 
+2025-02-22 18:00:17 [INFO]: Environment: development 
+2025-02-22 18:00:17 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:00:19 [INFO]: Connected to MongoDB 
+2025-02-22 18:00:22 [ERROR]: schema.validate is not a function {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Setup Flutter",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"title\":\"hâhhaa\"}",
+    "attachments": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:01:35 [INFO]: Server is running on port 3000 
+2025-02-22 18:01:35 [INFO]: Environment: development 
+2025-02-22 18:01:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:01:38 [INFO]: Connected to MongoDB 
+2025-02-22 18:01:41 [ERROR]: schema.validate is not a function {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Setup Flutter",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"title\":\"hâhhaa\"}",
+    "attachments": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:02:45 [INFO]: Server is running on port 3000 
+2025-02-22 18:02:45 [INFO]: Environment: development 
+2025-02-22 18:02:45 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:02:51 [INFO]: Connected to MongoDB 
+2025-02-22 18:03:03 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-22 18:04:01 [ERROR]: Insufficient permissions {
+  "path": "/api/lessons/67b75fd6e2e66f1197d5bec9",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:04:37 [ERROR]: Insufficient permissions {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:05:06 [INFO]: Server is running on port 3000 
+2025-02-22 18:05:06 [INFO]: Environment: development 
+2025-02-22 18:05:06 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:05:10 [INFO]: Connected to MongoDB 
+2025-02-22 18:05:12 [ERROR]: Document not found {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:05:59 [INFO]: Server is running on port 3000 
+2025-02-22 18:05:59 [INFO]: Environment: development 
+2025-02-22 18:05:59 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:06:02 [INFO]: Connected to MongoDB 
+2025-02-22 18:06:05 [ERROR]: "content" must be of type object {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:06:20 [ERROR]: "content" must be of type object {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:07:32 [INFO]: Server is running on port 3000 
+2025-02-22 18:07:32 [INFO]: Environment: development 
+2025-02-22 18:07:32 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:07:35 [INFO]: Connected to MongoDB 
+2025-02-22 18:07:37 [ERROR]: "content" must be of type object {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:08:35 [INFO]: Server is running on port 3000 
+2025-02-22 18:08:35 [INFO]: Environment: development 
+2025-02-22 18:08:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:08:38 [INFO]: Connected to MongoDB 
+2025-02-22 18:10:26 [INFO]: Server is running on port 3000 
+2025-02-22 18:10:26 [INFO]: Environment: development 
+2025-02-22 18:10:26 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:10:29 [INFO]: Connected to MongoDB 
+2025-02-22 18:10:32 [ERROR]: schema is not defined {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:10:52 [INFO]: Server is running on port 3000 
+2025-02-22 18:10:52 [INFO]: Environment: development 
+2025-02-22 18:10:52 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:10:55 [INFO]: Connected to MongoDB 
+2025-02-22 18:10:57 [ERROR]: error is not defined {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:11:07 [INFO]: Server is running on port 3000 
+2025-02-22 18:11:07 [INFO]: Environment: development 
+2025-02-22 18:11:07 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:11:10 [INFO]: Connected to MongoDB 
+2025-02-22 18:11:15 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
+  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at createLesson (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/lesson.controller.js:19:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-22 18:12:30 [INFO]: Server is running on port 3000 
+2025-02-22 18:12:30 [INFO]: Environment: development 
+2025-02-22 18:12:30 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:12:33 [INFO]: Connected to MongoDB 
+2025-02-22 18:12:39 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
+  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at createLesson (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/lesson.controller.js:19:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-22 18:13:12 [INFO]: Server is running on port 3000 
+2025-02-22 18:13:12 [INFO]: Environment: development 
+2025-02-22 18:13:12 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:13:15 [INFO]: Connected to MongoDB 
+2025-02-22 18:13:20 [ERROR]: Course not found {}
+2025-02-22 18:13:20 [ERROR]: Course not found {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:13:40 [INFO]: Server is running on port 3000 
+2025-02-22 18:13:40 [INFO]: Environment: development 
+2025-02-22 18:13:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:13:43 [INFO]: Connected to MongoDB 
+2025-02-22 18:13:50 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {}
+2025-02-22 18:13:50 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:16:49 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {}
+2025-02-22 18:16:49 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:17:41 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {}
+2025-02-22 18:17:41 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:17:43 [INFO]: Server is running on port 3000 
+2025-02-22 18:17:43 [INFO]: Environment: development 
+2025-02-22 18:17:43 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:17:47 [INFO]: Connected to MongoDB 
+2025-02-22 18:18:15 [INFO]: Server is running on port 3000 
+2025-02-22 18:18:15 [INFO]: Environment: development 
+2025-02-22 18:18:15 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:18:18 [INFO]: Connected to MongoDB 
+2025-02-22 18:18:40 [ERROR]: upload.failed {}
+2025-02-22 18:18:40 [ERROR]: upload.failed {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:21:49 [INFO]: Server is running on port 3000 
+2025-02-22 18:21:49 [INFO]: Environment: development 
+2025-02-22 18:21:49 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:21:52 [INFO]: Connected to MongoDB 
+2025-02-22 18:26:35 [INFO]: Server is running on port 3000 
+2025-02-22 18:26:35 [INFO]: Environment: development 
+2025-02-22 18:26:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:26:39 [INFO]: Connected to MongoDB 
+2025-02-22 18:27:06 [ERROR]: upload.failed {}
+2025-02-22 18:27:06 [ERROR]: upload.failed {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:31:12 [INFO]: Server is running on port 3000 
+2025-02-22 18:31:12 [INFO]: Environment: development 
+2025-02-22 18:31:12 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:31:16 [INFO]: Connected to MongoDB 
+2025-02-22 18:31:31 [ERROR]: CloudinaryFile validation failed: purpose: `lesson_video` is not a valid enum value for path `purpose`. {}
+2025-02-22 18:31:31 [ERROR]: CloudinaryFile validation failed: purpose: `lesson_video` is not a valid enum value for path `purpose`. {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "video",
+    "is_free": "true",
+    "content": "{\"haha\":\"haha\"}",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 18:33:57 [INFO]: Server is running on port 3000 
+2025-02-22 18:33:57 [INFO]: Environment: development 
+2025-02-22 18:33:57 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:34:00 [INFO]: Connected to MongoDB 
+2025-02-22 18:55:53 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
+  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at getLessonsByCourse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/lesson.controller.js:63:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-22 18:56:03 [INFO]: Server is running on port 3000 
+2025-02-22 18:56:03 [INFO]: Environment: development 
+2025-02-22 18:56:03 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:56:06 [INFO]: Connected to MongoDB 
+2025-02-22 18:56:08 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
+  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at getLessonsByCourse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/lesson.controller.js:63:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+2025-02-22 18:57:17 [INFO]: Server is running on port 3000 
+2025-02-22 18:57:17 [INFO]: Environment: development 
+2025-02-22 18:57:17 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 18:57:20 [INFO]: Connected to MongoDB 
+2025-02-22 19:07:15 [INFO]: Server is running on port 3000 
+2025-02-22 19:07:15 [INFO]: Environment: development 
+2025-02-22 19:07:15 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 19:07:18 [INFO]: Connected to MongoDB 
+2025-02-22 19:10:54 [ERROR]: Invalid token {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-22 19:11:03 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-22 19:12:21 [INFO]: Server is running on port 3000 
+2025-02-22 19:12:21 [INFO]: Environment: development 
+2025-02-22 19:12:21 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 19:12:24 [INFO]: Connected to MongoDB 
+2025-02-22 19:22:40 [INFO]: Server is running on port 3000 
+2025-02-22 19:22:40 [INFO]: Environment: development 
+2025-02-22 19:22:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 19:22:43 [INFO]: Connected to MongoDB 
+2025-02-22 19:48:29 [INFO]: Server is running on port 3000 
+2025-02-22 19:48:29 [INFO]: Environment: development 
+2025-02-22 19:48:29 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-22 19:48:32 [INFO]: Connected to MongoDB 
+2025-02-22 19:49:56 [ERROR]: Invalid token {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-22 19:50:20 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}

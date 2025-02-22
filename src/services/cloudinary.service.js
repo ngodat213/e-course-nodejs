@@ -14,8 +14,8 @@ class CloudinaryService {
       }
 
       const uploadResult = await cloudinary.uploader.upload(filePath, {
-        resource_type: "image",
-        ...this._getDefaultOptions(),
+        resource_type: options.resource_type,
+        ...(Object.keys(options).length === 0 ? this._getDefaultOptions() : {}),
         ...options,
       });
 

@@ -1,5 +1,12 @@
 /**
  * @swagger
+ * tags:
+ *   name: Lessons
+ *   description: Quản lý bài học
+ */
+
+/**
+ * @swagger
  * components:
  *   schemas:
  *     Lesson:
@@ -9,66 +16,59 @@
  *           type: string
  *         course_id:
  *           type: string
+ *           description: ID của khóa học
  *         title:
  *           type: string
+ *           description: Tiêu đề bài học
  *         description:
  *           type: string
+ *           description: Mô tả bài học
  *         order:
  *           type: number
+ *           description: Thứ tự bài học trong khóa
  *         type:
  *           type: string
  *           enum: [video, article, quiz]
+ *           description: Loại bài học
  *         duration:
  *           type: number
- *           description: Duration in minutes
+ *           description: Thời lượng (phút)
  *         is_free:
  *           type: boolean
+ *           description: Bài học miễn phí
  *         status:
  *           type: string
  *           enum: [draft, published]
+ *           description: Trạng thái bài học
  *         content:
+ *           type: string
+ *           description: Nội dung HTML cho bài viết
+ *         video:
  *           type: object
  *           properties:
- *             text:
+ *             _id:
  *               type: string
- *             video_url:
+ *             file_url:
  *               type: string
- *             video_id:
- *               type: string
- *             questions:
- *               type: array
- *               items:
- *                 type: object
- *                 properties:
- *                   question:
- *                     type: string
- *                   options:
- *                     type: array
- *                     items:
- *                       type: object
- *                       properties:
- *                         text:
- *                           type: string
- *                         is_correct:
- *                           type: boolean
- *                   explanation:
- *                     type: string
- *                   points:
- *                     type: number
- *         requirements:
- *           type: array
- *           items:
- *             type: string
+ *             metadata:
+ *               type: object
+ *               properties:
+ *                 duration:
+ *                   type: number
+ *                 width:
+ *                   type: number
+ *                 height:
+ *                   type: number
  *         attachments:
  *           type: array
  *           items:
  *             type: object
  *             properties:
- *               name:
+ *               _id:
  *                 type: string
- *               url:
+ *               file_url:
  *                 type: string
- *               file_id:
+ *               original_name:
  *                 type: string
  *         created_at:
  *           type: string
@@ -83,8 +83,7 @@
  * /api/lessons/{courseId}:
  *   post:
  *     tags: [Lessons]
- *     summary: Create a new lesson
- *     description: Only course owner or admins can create lessons
+ *     summary: Tạo bài học mới
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -110,34 +109,13 @@
  *               type:
  *                 type: string
  *                 enum: [video, article, quiz]
- *                 description: |
- *                  - video: Requires video file upload
- *                  - article: Requires text content
- *                  - quiz: Requires questions array
  *               is_free:
  *                 type: boolean
- *               status:
- *                 type: string
- *                 enum: [draft, published]
  *               content:
- *                 type: object
- *                 oneOf:
- *                   - type: object
- *                     properties:
- *                       text:
- *                         type: string
- *                         description: Required for article type
- *                   - type: object
- *                     properties:
- *                       questions:
- *                         type: array
- *                         description: Required for quiz type
- *                         items:
- *                           type: object
+ *                 type: string
  *               video:
  *                 type: string
  *                 format: binary
- *                 description: Required for video type
  *               attachments:
  *                 type: array
  *                 items:
@@ -145,27 +123,89 @@
  *                   format: binary
  *     responses:
  *       201:
- *         description: Lesson created successfully
+ *         description: Tạo bài học thành công
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Lesson'
- *       403:
- *         description: Insufficient permissions
+ *
+ *   get:
+ *     tags: [Lessons]
+ *     summary: Lấy danh sách bài học của khóa học
+ *     parameters:
+ *       - in: path
+ *         name: courseId
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           default: 1
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 10
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [draft, published]
+ *     responses:
+ *       200:
+ *         description: Thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Lesson'
+ *                 pagination:
+ *                   type: object
+ *                   properties:
+ *                     total:
+ *                       type: number
+ *                     page:
+ *                       type: number
+ *                     limit:
+ *                       type: number
+ *                     pages:
+ *                       type: number
  */
 
 /**
  * @swagger
- * /api/lessons/{id}:
+ * /api/lessons/{lessonId}:
+ *   get:
+ *     tags: [Lessons]
+ *     summary: Lấy chi tiết bài học
+ *     parameters:
+ *       - in: path
+ *         name: lessonId
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Lesson'
+ *
  *   put:
  *     tags: [Lessons]
- *     summary: Update a lesson
- *     description: Only course owner or admins can update lessons
+ *     summary: Cập nhật bài học
  *     security:
  *       - bearerAuth: []
  *     parameters:
  *       - in: path
- *         name: id
+ *         name: lessonId
  *         required: true
  *         schema:
  *           type: string
@@ -185,11 +225,8 @@
  *                 enum: [video, article, quiz]
  *               is_free:
  *                 type: boolean
- *               status:
- *                 type: string
- *                 enum: [draft, published]
  *               content:
- *                 type: object
+ *                 type: string
  *               video:
  *                 type: string
  *                 format: binary
@@ -200,76 +237,18 @@
  *                   format: binary
  *     responses:
  *       200:
- *         description: Lesson updated successfully
+ *         description: Cập nhật thành công
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Lesson'
- *       403:
- *         description: Insufficient permissions
- */
-
-/**
- * @swagger
- * /api/lessons/{id}:
+ *
  *   delete:
  *     tags: [Lessons]
- *     summary: Delete a lesson
- *     description: Only course owner or admins can delete lessons
+ *     summary: Xóa bài học
  *     security:
  *       - bearerAuth: []
  *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: Lesson deleted successfully
- *       403:
- *         description: Insufficient permissions
- */
-
-/**
- * @swagger
- * /api/lessons/{courseId}:
- *   get:
- *     tags: [Lessons]
- *     summary: Get all lessons in a course
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: courseId
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: List of lessons
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/components/schemas/Lesson'
- */
-
-/**
- * @swagger
- * /api/lessons/{courseId}/{lessonId}:
- *   get:
- *     tags: [Lessons]
- *     summary: Get lesson details
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: courseId
- *         required: true
- *         schema:
- *           type: string
  *       - in: path
  *         name: lessonId
  *         required: true
@@ -277,9 +256,40 @@
  *           type: string
  *     responses:
  *       200:
- *         description: Lesson details
+ *         description: Xóa thành công
+ */
+
+/**
+ * @swagger
+ * /api/lessons/{lessonId}/order:
+ *   put:
+ *     tags: [Lessons]
+ *     summary: Thay đổi thứ tự bài học
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: lessonId
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - order
+ *             properties:
+ *               order:
+ *                 type: number
+ *                 description: Thứ tự mới của bài học
+ *     responses:
+ *       200:
+ *         description: Cập nhật thứ tự thành công
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Lesson'
- */ 
+ *               $ref: '#/components/schemas/Lesson' 
+ */
