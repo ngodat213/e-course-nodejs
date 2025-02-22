@@ -58,44 +58,33 @@
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/CreateOrder'
+ *             type: object
+ *             required:
+ *               - courseIds
+ *             properties:
+ *               courseIds:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Danh sách ID các khóa học
  *     responses:
- *       200:
- *         description: Tạo đơn hàng thành công
+ *       201:
+ *         description: Đơn hàng được tạo thành công
  *         content:
  *           application/json:
  *             schema:
  *               type: object
  *               properties:
- *                 orderId:
- *                   type: string
- *                 amount:
- *                   type: number
- *                 courses:
- *                   type: array
- *                   items:
- *                     type: object
- *                     properties:
- *                       id:
- *                         type: string
- *                       name:
- *                         type: string
- *                       price:
- *                         type: number
  *                 paymentUrl:
  *                   type: string
+ *                   description: URL thanh toán MoMo
  *
  *   get:
  *     tags: [Orders]
- *     summary: Lấy danh sách đơn hàng
+ *     summary: Lấy danh sách đơn hàng của user
  *     security:
  *       - bearerAuth: []
  *     parameters:
- *       - in: query
- *         name: status
- *         schema:
- *           type: string
- *           enum: [pending, paid, failed, refunded]
  *       - in: query
  *         name: page
  *         schema:
@@ -114,10 +103,10 @@
  *             schema:
  *               type: object
  *               properties:
- *                 orders:
+ *                 data:
  *                   type: array
  *                   items:
- *                     $ref: '#/components/schemas/OrderResponse'
+ *                     $ref: '#/components/schemas/Order'
  *                 pagination:
  *                   type: object
  *                   properties:
@@ -125,15 +114,15 @@
  *                       type: number
  *                     page:
  *                       type: number
- *                     pages:
- *                       type: number
  *                     limit:
+ *                       type: number
+ *                     pages:
  *                       type: number
  *
  * /api/orders/{id}:
  *   get:
  *     tags: [Orders]
- *     summary: Lấy thông tin đơn hàng theo ID
+ *     summary: Lấy thông tin chi tiết đơn hàng
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -148,5 +137,35 @@
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/OrderResponse'
+ *               $ref: '#/components/schemas/Order'
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Order:
+ *       type: object
+ *       properties:
+ *         _id:
+ *           type: string
+ *         user_id:
+ *           type: string
+ *         courses:
+ *           type: array
+ *           items:
+ *             type: string
+ *         amount:
+ *           type: number
+ *         status:
+ *           type: string
+ *           enum: [pending, paid, failed, refunded]
+ *         payment_id:
+ *           type: string
+ *         created_at:
+ *           type: string
+ *           format: date-time
+ *         updated_at:
+ *           type: string
+ *           format: date-time
  */ 
