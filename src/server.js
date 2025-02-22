@@ -59,16 +59,17 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./config/swagger.config");
 
 const CSS_URL =
-  "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css";
+  "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.18.2/swagger-ui.min.css";
 // Swagger UI middleware
 app.use(
   "/api-docs",
   swaggerUi.serve,
   swaggerUi.setup(swaggerSpec, {
     explorer: true,
-    customCss: '.swagger-ui .topbar { display: none }',
-    customSiteTitle: "E-Course API Documentation"
-}));
+    customCssUrl: CSS_URL,
+    customSiteTitle: "E-Course API Documentation",
+  })
+);
 
 // Dev routes
 if (process.env.NODE_ENV === "development") {
