@@ -63,8 +63,10 @@ class CloudinaryService {
 
       const uploadResult = await cloudinary.uploader.upload(filePath, {
         resource_type: "raw",
-        ...this._getDefaultOptions(),
-        ...options,
+        folder: `${process.env.NODE_ENV}/courses/attachments`,
+        unique_filename: true,
+        overwrite: true,
+        format: "pdf",
       });
 
       return uploadResult;

@@ -58,7 +58,7 @@ const cloudinaryFileSchema = new mongoose.Schema({
     // Định dạng file
     format: {
         type: String,
-        required: true,
+        required: false,
     },
 
     // Metadata bổ sung

@@ -2245,3 +2245,129 @@ Use mongoose.model(name, schema) {
   "query": {},
   "user": null
 }
+2025-02-22 20:14:16 [ERROR]: upload.invalidFormat {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "article",
+    "is_free": "true",
+    "content": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 20:15:14 [ERROR]: upload.invalidFormat {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "article",
+    "is_free": "true",
+    "content": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 20:16:25 [ERROR]: CloudinaryFile validation failed: format: Path `format` is required. {}
+2025-02-22 20:16:25 [ERROR]: CloudinaryFile validation failed: format: Path `format` is required. {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "article",
+    "is_free": "true",
+    "content": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 20:21:20 [ERROR]: purpose is not defined {}
+2025-02-22 20:21:20 [ERROR]: purpose is not defined {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "article",
+    "is_free": "true",
+    "content": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 20:22:25 [ERROR]: upload.failed {}
+2025-02-22 20:22:25 [ERROR]: upload.failed {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "article",
+    "is_free": "true",
+    "content": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 20:32:38 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
+2025-02-22 20:32:38 [ERROR]: Cannot read properties of undefined (reading 'toString') {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "article",
+    "is_free": "true",
+    "content": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 20:48:01 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
+2025-02-22 20:48:01 [ERROR]: Cannot read properties of undefined (reading 'toString') {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "article",
+    "is_free": "true",
+    "content": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-22 20:52:54 [ERROR]: Invalid token {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-22 21:07:43 [ERROR]: CloudinaryFile validation failed: format: Path `format` is required. {}
+2025-02-22 21:07:43 [ERROR]: CloudinaryFile validation failed: format: Path `format` is required. {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter Introduction",
+    "description": "Hehehe",
+    "type": "article",
+    "is_free": "true",
+    "content": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}

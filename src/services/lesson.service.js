@@ -131,8 +131,8 @@ class LessonService {
 
   async getLessonById(lessonId) {
     const lesson = await Lesson.findById(lessonId).populate([
-      { path: "video", select: "file_url metadata" },
-      { path: "attachments", select: "file_url original_name" },
+      { path: "video", select: "public_id metadata format" },
+      { path: "attachments", select: "public_id metadata format" },
       { path: "quiz", select: "questions" },
       { path: "comments", select: "content user created_at" },
     ]);
@@ -155,8 +155,8 @@ class LessonService {
     const [lessons, total] = await Promise.all([
       Lesson.find(query)
         .populate([
-          { path: "video", select: "file_url metadata" },
-          { path: "attachments", select: "file_url original_name" },
+          { path: "video", select: "file_url metadata format" },
+          { path: "attachments", select: "file_url metadata format" },
         ])
         .sort({ order: 1 })
         .skip((page - 1) * limit)

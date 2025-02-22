@@ -29,13 +29,8 @@ class CourseService {
         Course.countDocuments(queryFilter),
       ]);
 
-      // Transform all courses in parallel
-      const transformedCourses = await Promise.all(
-        courses.map(course => this._transformCourseData(course))
-      );
-
       return {
-        data: transformedCourses,
+        data: courses,
         pagination: {
           total,
           page: Number(page),
@@ -49,12 +44,9 @@ class CourseService {
   }
 
   async getCourseById(id) {
-    let course = await Course.findById(id)
+    return await Course.findById(id)
       .populate("instructor_id", "name email")
-      .populate("thumbnail_id", "public_id")
-      .lean();
-
-    return this._transformCourseData(course);
+      .populate("thumbnail_id", "public_id");
   }
 
   async create(courseData, thumbnailFile, instructorId) {

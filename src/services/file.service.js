@@ -19,7 +19,7 @@ class FileService {
     }
 
     // Upload to Cloudinary
-    const uploadResult = await CloudinaryService.uploadImage(file.path, {
+    const uploadResult = await this.upload(file_type, file, {
       folder,
       resource_type: this._getResourceType(file_type),
       ...this._getTransformOptions(file_type, purpose),
@@ -45,6 +45,33 @@ class FileService {
     });
 
     return cloudinaryFile;
+  }
+
+  async upload(file_type, file, options = {}) {
+    const { folder, purpose } = options;
+
+    switch (file_type) {
+      case "image":
+        return await CloudinaryService.uploadImage(file.path, {
+          folder,
+          resource_type: this._getResourceType(file_type),
+          ...this._getTransformOptions(file_type, purpose),
+        });
+      case "video":
+        return await CloudinaryService.uploadVideo(file.path, {
+          folder,
+          resource_type: this._getResourceType(file_type),
+          ...this._getTransformOptions(file_type, purpose),
+        });
+      case "document":
+        return await CloudinaryService.uploadDocument(file.path, {
+          folder,
+          resource_type: this._getResourceType(file_type),
+          ...this._getTransformOptions(file_type, purpose),
+        });
+      default:
+        throw new BadRequestError(i18next.t("upload.invalidFormat"));
+    }
   }
 
   async getSignedUrl(fileId, userId) {
@@ -83,7 +110,13 @@ class FileService {
       case "video":
         return "video";
       case "document":
-        return "raw";
+        return "pdf";
+      case "pdf":
+        return "pdf";
+      case "word":
+      case "excel":
+      case "ppt":
+        return "application";
       default:
         return "image";
     }
@@ -133,20 +166,22 @@ class FileService {
       options.resource_type = "video";
 
       if (purpose === "content") {
-          options.transformation = [
-              { width: 720, height: 480, crop: "limit" },
-              { quality: "auto" },
-              { format: "mp4" },
-          ];
+        options.transformation = [
+          { width: 720, height: 480, crop: "limit" },
+          { quality: "auto" },
+          { format: "mp4" },
+        ];
       } else if (purpose === "optimized") {
-          options.transformation = [
-              { width: 1280, height: 720, crop: "limit" },
-              { quality: "auto" },
-              { format: "mp4" },
-              { flags: "progressive" },
-          ];
+        options.transformation = [
+          { width: 1280, height: 720, crop: "limit" },
+          { quality: "auto" },
+          { format: "mp4" },
+          { flags: "progressive" },
+        ];
       }
-  }
+    } else if (purpose === "attachment") {
+      options.transformation = [{ format: "pdf" }];
+    }
 
     return options;
   }
