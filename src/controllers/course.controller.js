@@ -19,7 +19,7 @@ class CourseController extends BaseController {
 
   async getById(req, res, next) {
     try {
-      const course = await CourseService.getById(req.params.id);
+      const course = await CourseService.getCourseById(req.params.id);
       this.successResponse(res, course);
     } catch (error) {
       this.handleError(error, next);
