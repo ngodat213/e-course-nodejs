@@ -15,7 +15,7 @@ const options = {
         servers: [
             {
                 url: process.env.NODE_ENV === 'production' 
-                    ? 'https://e-course-nodejs-qo3nddv9j-ngodat213s-projects.vercel.app'
+                    ? 'https://e-course-nodejs-ngodat213s-projects.vercel.app/'
                     : `http://localhost:${process.env.PORT || 3000}`,
                 description: process.env.NODE_ENV === 'production' ? 'Production server' : 'Development server'
             }
