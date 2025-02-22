@@ -5,6 +5,24 @@ const { verifyToken } = require('../middleware/auth.middleware');
 const { validateRequest } = require('../middleware/validate.middleware');
 const { createOrderSchema } = require('../validators/order.validator');
 
+/**
+ * @swagger
+ * /api/orders:
+ *   post:
+ *     tags: [Orders]
+ *     summary: Create new order
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/CreateOrder'
+ *     responses:
+ *       201:
+ *         description: Order created successfully
+ */
 router.post(
   '/',
   verifyToken,
