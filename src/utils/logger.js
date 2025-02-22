@@ -1,5 +1,13 @@
 const winston = require('winston');
 const { format } = winston;
+const fs = require('fs');
+const path = require('path');
+
+// Tạo thư mục logs nếu chưa tồn tại
+const logsDir = path.join(process.cwd(), 'logs');
+if (!fs.existsSync(logsDir)) {
+    fs.mkdirSync(logsDir, { recursive: true });
+}
 
 // Custom format cho log
 const logFormat = format.printf(({ level, message, timestamp, ...meta }) => {
@@ -28,13 +36,13 @@ const logger = winston.createLogger({
         }),
         // Log errors vào file
         new winston.transports.File({ 
-            filename: 'logs/error.log', 
+            filename: path.join(logsDir, 'error.log'),
             level: 'error',
             format: logFormat
         }),
         // Log tất cả vào file
         new winston.transports.File({ 
-            filename: 'logs/combined.log',
+            filename: path.join(logsDir, 'combined.log'),
             format: logFormat
         })
     ]
