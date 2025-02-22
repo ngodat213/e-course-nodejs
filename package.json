@@ -32,5 +32,10 @@
   "devDependencies": {
     "jest": "^29.5.0",
     "nodemon": "^2.0.22"
-  }
+  },
+  "files": [
+    "src/**/*.js",
+    "src/**/*.json",
+    "src/swagger/*.js"
+  ]
 }
