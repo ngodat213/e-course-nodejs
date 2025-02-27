@@ -2371,3 +2371,354 @@ Use mongoose.model(name, schema) {
   "query": {},
   "user": "67b495ca9d35c758607e27cc"
 }
+2025-02-22 21:20:33 [ERROR]: Schema hasn't been registered for model "Comment".
+Use mongoose.model(name, schema) {}
+2025-02-22 21:20:33 [ERROR]: Schema hasn't been registered for model "Comment".
+Use mongoose.model(name, schema) {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5/67b9c828323f84ee29bb9047",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-24 08:25:54 [ERROR]: Invalid email or password {}
+2025-02-24 08:25:54 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngoda.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-24 08:27:06 [ERROR]: Invalid email or password {}
+2025-02-24 08:27:06 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngoda.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+haha
+2025-02-25 11:41:44 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-25 11:51:46 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-02-25 11:51:46 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-25 11:55:11 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-02-25 11:55:11 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-25 11:56:22 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-02-25 11:56:22 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-25 11:56:45 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-02-25 11:56:45 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-25 11:58:01 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-02-25 11:58:01 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-25 11:58:58 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-02-25 11:58:58 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-25 12:03:39 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-02-25 12:03:39 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-26 13:57:06 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-26 21:25:32 [ERROR]: Invalid token {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-26 21:26:20 [ERROR]: upload.failed {}
+2025-02-26 21:26:20 [ERROR]: upload.failed {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "Install Flutter",
+    "type": "video",
+    "is_free": "true",
+    "content": "string",
+    "attachments": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:01:53 [ERROR]: Invalid token {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-27 17:02:01 [ERROR]: Invalid email or password {}
+2025-02-27 17:02:01 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "john@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-27 17:21:00 [ERROR]: Invalid token {
+  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-27 17:22:44 [ERROR]: Insufficient permissions {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:23:21 [ERROR]: Document not found {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:25:45 [ERROR]: Document not found {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:26:14 [ERROR]: Document not found {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:27:32 [ERROR]: Document not found {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:27:50 [ERROR]: Document not found {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:28:20 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {}
+2025-02-27 17:28:20 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "string",
+    "attachments": "string",
+    "status": "published",
+    "title": "string",
+    "type": "video",
+    "video": "",
+    "description": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:29:06 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {}
+2025-02-27 17:29:06 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "string",
+    "attachments": "string",
+    "status": "published",
+    "title": "string",
+    "type": "video",
+    "video": "",
+    "description": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:30:21 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {}
+2025-02-27 17:30:21 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "string",
+    "attachments": "string",
+    "status": "published",
+    "title": "string",
+    "type": "video",
+    "video": "",
+    "description": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:31:56 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {}
+2025-02-27 17:31:56 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "string",
+    "attachments": "string",
+    "status": "published",
+    "title": "string",
+    "type": "video",
+    "video": "",
+    "description": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:34:25 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", title: Path `title` is required. {}
+2025-02-27 17:34:25 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", title: Path `title` is required. {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "string",
+    "status": "published",
+    "title": "",
+    "type": "video",
+    "video": "",
+    "description": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:34:46 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", title: Path `title` is required. {}
+2025-02-27 17:34:46 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", title: Path `title` is required. {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "",
+    "type": "video",
+    "video": "",
+    "description": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}
+2025-02-27 17:35:22 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", order: Path `order` is required., title: Path `title` is required. {}
+2025-02-27 17:35:22 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", order: Path `order` is required., title: Path `title` is required. {
+  "path": "/api/lessons/67b9c828323f84ee29bb9047",
+  "method": "PUT",
+  "body": {
+    "is_free": "true",
+    "order": "",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "",
+    "type": "video",
+    "video": "",
+    "description": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67b495ca9d35c758607e27cc"
+}

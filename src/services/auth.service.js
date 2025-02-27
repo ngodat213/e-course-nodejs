@@ -85,16 +85,8 @@ class AuthService {
     const refreshToken = await TokenService.generateRefreshToken(user);
 
     return {
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
-      },
-      tokens: {
-        access_token: accessToken,
-        refresh_token: refreshToken,
-      },
+      access_token: accessToken,
+      refresh_token: refreshToken,
     };
   }
 

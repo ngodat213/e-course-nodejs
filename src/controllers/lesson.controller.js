@@ -66,9 +66,9 @@ class LessonController extends BaseController {
 
   async updateLessonOrder(req, res, next) {
     try {
-      const { lessonId } = req.params;
+      const { id } = req.params;
       const { order } = req.body;
-      const result = await LessonService.updateLessonOrder(lessonId, order);
+      const result = await LessonService.updateLessonOrder(id, order);
       this.successResponse(res, result);
     } catch (error) {
       this.handleError(error, next);

@@ -309,7 +309,7 @@ class UserService {
   async getUserStats(userId) {
     const user = await User.findById(userId);
 
-    if (user.role === "instructor") {
+    if (user.role === "instructor" || user.role === "admin") {
       const [courseStats, studentStats, ratingStats] = await Promise.all([
         this.getInstructorCourseStats(userId),
         this.getInstructorStudentStats(userId),
@@ -341,7 +341,7 @@ class UserService {
   // Helper methods for stats
   async getInstructorCourseStats(userId) {
     return await Course.aggregate([
-      { $match: { instructor_id: mongoose.Types.ObjectId(userId) } },
+      { $match: { instructor_id: new mongoose.Types.ObjectId(userId) } },
       {
         $group: {
           _id: null,
@@ -370,7 +370,7 @@ class UserService {
 
   async getInstructorRatingStats(userId) {
     return await CourseReview.aggregate([
-      { $match: { instructor_id: mongoose.Types.ObjectId(userId) } },
+      { $match: { instructor_id: new mongoose.Types.ObjectId(userId) } },
       {
         $group: {
           _id: null,

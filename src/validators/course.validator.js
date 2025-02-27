@@ -15,17 +15,23 @@ const courseSchema = Joi.object({
 });
 
 const createCourseSchema = Joi.object({
-    title: Joi.string().required().min(5).max(100),
+    title: Joi.string().required().min(5).max(200),
     description: Joi.string().required().min(20),
     price: Joi.number().required().min(0),
-    status: Joi.string().valid('draft', 'published').default('draft')
+    type: Joi.string().required().valid('course', 'quiz'),
+    level: Joi.string().valid('beginner', 'intermediate', 'advanced'),
+    status: Joi.string().valid('draft', 'published', 'archived').default('draft'),
+    what_you_will_learn: Joi.array().items(Joi.string())
 });
 
 const updateCourseSchema = Joi.object({
-    title: Joi.string().min(5).max(100),
+    title: Joi.string().min(5).max(200),
     description: Joi.string().min(20),
     price: Joi.number().min(0),
-    status: Joi.string().valid('draft', 'published')
+    type: Joi.string().valid('course', 'quiz'),
+    level: Joi.string().valid('beginner', 'intermediate', 'advanced'),
+    status: Joi.string().valid('draft', 'published', 'archived'),
+    what_you_will_learn: Joi.array().items(Joi.string())
 }).min(1);
 
 module.exports = {

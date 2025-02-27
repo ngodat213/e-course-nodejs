@@ -21,10 +21,31 @@ const courseSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+    type: {
+      type: String,
+      enum: ["course", "quiz"],
+      required: true
+    },
     thumbnail_id: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "CloudinaryFile",
-      default: null,
+    },
+    level: {
+      type: String,
+      enum: ["beginner", "intermediate", "advanced"],
+    },
+    status: {
+      type: String,
+      enum: ["draft", "published", "archived"],
+      default: "draft",
+    },
+    total_duration: {
+      type: Number,
+      default: 0,
+    },
+    lesson_count: {
+      type: Number,
+      default: 0,
     },
     student_count: {
       type: Number,
@@ -33,8 +54,6 @@ const courseSchema = new mongoose.Schema(
     rating: {
       type: Number,
       default: 0,
-      min: 0,
-      max: 5,
     },
     review_count: {
       type: Number,
@@ -44,35 +63,38 @@ const courseSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    lesson_count: {
-      type: Number,
-      default: 0,
-    },
-    total_duration: {
-      type: Number,
-      default: 0,
-    },
-    has_certificate: {
-      type: Boolean,
-      default: false,
-    },
     requirements: [String],
     what_you_will_learn: [String],
-    level: {
-      type: String,
-      enum: ["beginner", "intermediate", "advanced"],
-      default: "beginner",
-    },
-    status: {
-      type: String,
-      enum: ["draft", "published", "archived"],
-      default: "draft",
-    },
+    lessons: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Lesson",
+      },
+    ],
   },
   {
     timestamps: true,
   }
 );
+
+// Middleware để validate type và lessons
+courseSchema.pre('save', async function(next) {
+  if (this.isModified('type')) {
+    const Lesson = mongoose.model('Lesson');
+    if (this.type === 'quiz') {
+      // Kiểm tra xem có lesson nào không phải quiz không
+      const nonQuizLessons = await Lesson.exists({
+        course_id: this._id,
+        type: { $ne: 'exam' }
+      });
+      
+      if (nonQuizLessons) {
+        throw new Error('Quiz courses can only contain exam lessons');
+      }
+    }
+  }
+  next();
+});
 
 // Tự động tính tổng thời lượng khóa học
 courseSchema.pre("save", async function () {

@@ -28,7 +28,6 @@ const validateLessonContent = (req, res, next) => {
 // Routes cho instructor
 router.post('/:id',
     restrictTo('instructor', 'admin'),
-    isOwnerOrAdmin(Course),
     upload.fields([
         { name: 'video', maxCount: 1 },
         { name: 'attachments', maxCount: 5 }
@@ -40,29 +39,26 @@ router.post('/:id',
 );
 
 router.put('/:lessonId',
-    restrictTo(['instructor', 'admin']),
-    isOwnerOrAdmin(Course),
+    restrictTo('instructor', 'admin'),
     upload.fields([
         { name: 'video', maxCount: 1 },
         { name: 'attachments', maxCount: 5 }
     ]),
-    validateLessonContent,
+    // validateLessonContent,
     (req, res, next) => {
         LessonController.updateLesson(req, res, next);
     }
 );
 
 router.delete('/:lessonId',
-    restrictTo(['instructor', 'admin']),
-    isOwnerOrAdmin(Course),
+    restrictTo('instructor', 'admin'),
     (req, res, next) => {
         LessonController.deleteLesson(req, res, next);
     }
 );
 
-router.put('/:lessonId/order',
-    restrictTo(['instructor', 'admin']),
-    isOwnerOrAdmin(Course),
+router.put('/:id/order',
+    restrictTo('instructor', 'admin'),
     validateRequest(lessonOrderSchema),
     (req, res, next) => {
         LessonController.updateLessonOrder(req, res, next);

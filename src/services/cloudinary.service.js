@@ -38,8 +38,8 @@ class CloudinaryService {
       }
 
       const uploadResult = await cloudinary.uploader.upload(filePath, {
-        resource_type: "video",
-        ...this._getDefaultOptions(),
+        resource_type: options.resource_type,
+        ...(Object.keys(options).length === 0 ? this._getDefaultOptions() : {}),
         ...options,
       });
 
@@ -82,7 +82,6 @@ class CloudinaryService {
       return result;
     } catch (error) {
       console.error("Cloudinary delete error:", error);
-      // Không throw error vì đây là operation cleanup
     }
   }
 

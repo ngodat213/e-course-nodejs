@@ -3,22 +3,15 @@ const { success } = require("../utils/logger");
 class BaseController {
   // Response helpers
   successResponse(res, data, message = "Success") {
-    res.success({
-      data,
-      message,
-    });
+    res.success(data, message);
   }
 
   createdResponse(res, data, message = "Created successfully") {
-    res.created({
-      data,
-      message,
-    });
+    res.created(data, message);
   }
 
   errorResponse(res, error) {
-    res.error({
-      message: error.message,
+    res.error(error.message, {
       code: error.code,
     });
   }

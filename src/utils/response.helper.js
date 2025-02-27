@@ -1,7 +1,8 @@
 const responseEnhancer = (req, res, next) => {
     res.success = function(data, message = 'Success') {
         return res.status(200).json({
-            status: 'success',
+            code: 200,
+            success: true,
             message,
             data
         });
@@ -10,6 +11,8 @@ const responseEnhancer = (req, res, next) => {
     res.created = function(data, message = 'Created successfully') {
         return res.status(201).json({
             status: 'success',
+            code: 201,
+            success: true,
             message,
             data
         });

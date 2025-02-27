@@ -13,18 +13,18 @@ const lessonSchema = new mongoose.Schema(
       trim: true,
     },
     description: String,
-    order: {
-      type: Number,
-      required: true,
-    },
     type: {
       type: String,
-      enum: ["video", "article", "quiz"],
+      enum: ["video", "document", "exam"],
       required: true,
     },
     duration: {
       type: Number,
       default: 0,
+    },
+    order: {
+      type: Number,
+      required: true,
     },
     is_free: {
       type: Boolean,
@@ -32,11 +32,8 @@ const lessonSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["draft", "published"],
+      enum: ["draft", "published", "archived"],
       default: "draft",
-    },
-    content: {
-      type: String, // HTML content cho article
     },
     video: {
       type: mongoose.Schema.Types.ObjectId,
@@ -46,24 +43,27 @@ const lessonSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Quiz",
     },
-    attachments: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "CloudinaryFile",
-    }],
-    requirements: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Lesson",
-    }],
-    comments: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Comment",
-    }],
+    attachments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "CloudinaryFile",
+      },
+    ],
+    requirements: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Lesson",
+      },
+    ],
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comment",
+      },
+    ],
   },
   {
-    timestamps: {
-      createdAt: "created_at",
-      updatedAt: "updated_at",
-    },
+    timestamps: true,
   }
 );
 
@@ -71,12 +71,28 @@ const lessonSchema = new mongoose.Schema(
 lessonSchema.index({ course_id: 1, order: 1 });
 lessonSchema.index({ title: "text" });
 
-// Middleware để cập nhật course khi lesson được publish
+// Middleware để validate lesson type với course type
+lessonSchema.pre("save", async function (next) {
+  const Course = mongoose.model("Course");
+  const course = await Course.findById(this.course_id);
+  if (course.type === "quiz" && this.type !== "exam") {
+    throw new Error("Quiz courses can only contain exam lessons");
+  }
+
+  next();
+});
+
+// Middleware để cập nhật course khi thêm/sửa lesson
 lessonSchema.post("save", async function () {
   const Course = mongoose.model("Course");
+
   if (this.status === "published") {
     await Course.findByIdAndUpdate(this.course_id, {
-      $inc: { lesson_count: 1, total_duration: this.duration },
+      $inc: {
+        lesson_count: 1,
+        total_duration: this.duration || 0,
+      },
+      $push: { lessons: this._id }, 
     });
   }
 });
@@ -87,6 +103,7 @@ lessonSchema.post("remove", async function () {
   if (this.status === "published") {
     await Course.findByIdAndUpdate(this.course_id, {
       $inc: { lesson_count: -1, total_duration: -this.duration },
+      $pull: { lessons: this._id },
     });
   }
 });

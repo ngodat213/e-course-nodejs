@@ -11,112 +11,124 @@ const FileService = require("./file.service");
 
 class CourseService {
   async getAll(options = {}) {
-    try {
-      const { page = 1, limit = 10, sort = "-createdAt", ...filters } = options;
+    const { 
+      page = 1, 
+      limit = 10, 
+      sort = "-createdAt",
+      type,
+      status,
+      level,
+      search
+    } = options;
 
-      const skip = (page - 1) * limit;
-      const queryFilter = this._buildFilterQuery(filters);
+    const query = {};
 
-      // Get data and total count in parallel
-      const [courses, total] = await Promise.all([
-        Course.find(queryFilter)
-          .populate("instructor_id", "name email")
-          .populate("thumbnail_id", "public_id")
-          .sort(sort)
-          .skip(skip)
-          .limit(limit)
-          .lean(),
-        Course.countDocuments(queryFilter),
-      ]);
-
-      return {
-        data: courses,
-        pagination: {
-          total,
-          page: Number(page),
-          totalPages: Math.ceil(total / limit),
-          limit: Number(limit),
-        },
-      };
-    } catch (error) {
-      throw new Error(i18next.t("course.fetchError"));
+    if (type) query.type = type;
+    if (status) query.status = status;
+    if (level) query.level = level;
+    if (search) {
+      query.$or = [
+        { title: { $regex: search, $options: "i" } },
+        { description: { $regex: search, $options: "i" } }
+      ];
     }
+
+    const [courses, total] = await Promise.all([
+      Course.find(query)
+        .populate("instructor_id", "name email")
+        .populate("thumbnail_id", "public_id")
+        .populate("lessons")
+        .sort(sort)
+        .skip((page - 1) * limit)
+        .limit(limit)
+        .lean(),
+      Course.countDocuments(query)
+    ]);
+
+    return {
+      data: courses,
+      pagination: {
+        total,
+        page: Number(page),
+        limit: Number(limit),
+        pages: Math.ceil(total / limit)
+      }
+    };
   }
 
-  async getCourseById(id) {
-    return await Course.findById(id)
+  async getCourseById(courseId) {
+    const course = await Course.findById(courseId)
       .populate("instructor_id", "name email")
-      .populate("thumbnail_id", "public_id");
+      .populate("thumbnail_id", "public_id")
+      .populate({
+        path: "lessons",
+        select: "title type duration is_free status"
+      });
+
+    if (!course) {
+      throw new NotFoundError(i18next.t("course.notFound"));
+    }
+
+    return course;
   }
 
   async create(courseData, thumbnailFile, instructorId) {
-    if (!courseData.title || !courseData.description || !courseData.price) {
-      throw new BadRequestError(i18next.t("course.missingInfo"));
-    }
-
-    // Upload thumbnail to Cloudinary if provided
+    // Upload thumbnail if provided
+    let thumbnailId;
     if (thumbnailFile) {
-      const result = await FileService.uploadFile(thumbnailFile, {
+      const uploadedFile = await FileService.uploadFile(thumbnailFile, {
         owner_id: instructorId,
-        owner_type: "User",
+        owner_type: "Course",
         purpose: "thumbnail",
-        file_type: "image",
+        file_type: "image"
       });
-      courseData.thumbnail_id = result._id;
+      thumbnailId = uploadedFile._id;
     }
 
-    courseData.instructor_id = instructorId;
-
-    const course = await Course.create(courseData);
-    return course;
-  }
-
-  async update(id, updateData) {
-    // Nếu có thumbnail mới, xóa thumbnail cũ
-    if (updateData.thumbnail && updateData.thumbnail_id) {
-      const course = await Course.findById(id);
-      if (course && course.thumbnail_id) {
-        await CloudinaryService.deleteImage(course.thumbnail_id);
-      }
-    }
-
-    const course = await Course.findByIdAndUpdate(id, updateData, {
-      new: true,
-      runValidators: true,
+    const course = await Course.create({
+      ...courseData,
+      instructor_id: instructorId,
+      thumbnail_id: thumbnailId
     });
 
+    return course;
+  }
+
+  async update(courseId, updateData, thumbnailFile) {
+    const course = await Course.findById(courseId);
     if (!course) {
       throw new NotFoundError(i18next.t("course.notFound"));
     }
+
+    // Upload new thumbnail if provided
+    if (thumbnailFile) {
+      const uploadedFile = await FileService.uploadFile(thumbnailFile, {
+        owner_id: course.instructor_id,
+        owner_type: "Course",
+        purpose: "thumbnail",
+        file_type: "image"
+      });
+      updateData.thumbnail_id = uploadedFile._id;
+    }
+
+    Object.assign(course, updateData);
+    await course.save();
 
     return course;
   }
 
-  async delete(id) {
-    const course = await Course.findById(id);
+  async delete(courseId) {
+    const course = await Course.findById(courseId);
     if (!course) {
       throw new NotFoundError(i18next.t("course.notFound"));
     }
 
-    // Check if there are any enrolled students
-    const enrollments = await UserProgress.find({ course_id: id });
-    if (enrollments.length > 0) {
+    if (course.student_count > 0) {
       throw new BadRequestError(i18next.t("course.hasStudents"));
     }
 
-    // Xóa thumbnail từ Cloudinary
-    if (course.thumbnail_id) {
-      await CloudinaryService.deleteImage(course.thumbnail_id);
-    }
-
-    // Xóa tất cả bài học và tài nguyên liên quan
-    const lessons = await Lesson.find({ course_id: id });
-    for (const lesson of lessons) {
-      await LessonService.deleteLesson(lesson._id);
-    }
-
     await course.remove();
-    return true;
+    return { message: i18next.t("course.deleted") };
   }
 
   async enrollCourse(courseId, userId) {

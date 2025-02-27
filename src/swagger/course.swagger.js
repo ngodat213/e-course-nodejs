@@ -4,36 +4,99 @@
  *   schemas:
  *     Course:
  *       type: object
+ *       required:
+ *         - title
+ *         - description
+ *         - price
+ *         - instructor_id
+ *         - type
  *       properties:
  *         _id:
  *           type: string
  *         title:
  *           type: string
+ *           description: Tiêu đề khóa học/bài kiểm tra
  *         description:
  *           type: string
+ *           description: Mô tả chi tiết
  *         price:
  *           type: number
+ *           description: Giá (0 cho miễn phí)
  *         instructor_id:
  *           type: string
- *         thumbnail:
+ *           description: ID của giảng viên
+ *         type:
  *           type: string
- *           format: uri
- *         thumbnail_id:
+ *           enum: [course, exam]
+ *           description: Loại (khóa học hoặc bài kiểm tra)
+ *         level:
  *           type: string
+ *           enum: [beginner, intermediate, advanced]
+ *         status:
+ *           type: string
+ *           enum: [draft, published, archived]
+ *         total_duration:
+ *           type: number
+ *           description: Tổng thời lượng (phút)
+ *         lesson_count:
+ *           type: number
  *         student_count:
  *           type: number
  *         rating:
  *           type: number
  *         review_count:
  *           type: number
- *         total_revenue:
- *           type: number
+ *         requirements:
+ *           type: array
+ *           items:
+ *             type: string
+ *         what_you_will_learn:
+ *           type: array
+ *           items:
+ *             type: string
+ *         thumbnail_id:
+ *           type: string
+ *           description: ID của ảnh thumbnail
+ *         lessons:
+ *           type: array
+ *           items:
+ *             type: string
+ *           description: Danh sách ID các bài học
  *         created_at:
  *           type: string
  *           format: date-time
  *         updated_at:
  *           type: string
  *           format: date-time
+ *
+ *     CourseResponse:
+ *       type: object
+ *       properties:
+ *         success:
+ *           type: boolean
+ *         data:
+ *           $ref: '#/components/schemas/Course'
+ *
+ *     CourseList:
+ *       type: object
+ *       properties:
+ *         success:
+ *           type: boolean
+ *         data:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/Course'
+ *         pagination:
+ *           type: object
+ *           properties:
+ *             total:
+ *               type: number
+ *             page:
+ *               type: number
+ *             limit:
+ *               type: number
+ *             pages:
+ *               type: number
  *     CourseDeleteRequest:
  *       type: object
  *       properties:
@@ -75,189 +138,28 @@
  * /api/courses:
  *   get:
  *     tags: [Courses]
- *     summary: Get all courses
+ *     summary: Lấy danh sách khóa học/bài kiểm tra
  *     parameters:
  *       - in: query
- *         name: page
+ *         name: type
  *         schema:
- *           type: integer
- *         description: Page number
+ *           type: string
+ *           enum: [course, exam]
+ *         description: Lọc theo loại
  *       - in: query
- *         name: limit
+ *         name: status
  *         schema:
- *           type: integer
- *         description: Items per page
+ *           type: string
+ *           enum: [draft, published, archived]
+ *       - in: query
+ *         name: level
+ *         schema:
+ *           type: string
+ *           enum: [beginner, intermediate, advanced]
  *       - in: query
  *         name: search
  *         schema:
  *           type: string
- *         description: Search term
- *     responses:
- *       200:
- *         description: List of courses
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 data:
- *                   type: array
- *                   items:
- *                     $ref: '#/components/schemas/Course'
- *                 pagination:
- *                   type: object
- *                   properties:
- *                     page:
- *                       type: integer
- *                     limit:
- *                       type: integer
- *                     total:
- *                       type: integer
- *
- *   post:
- *     tags: [Courses]
- *     summary: Create a new course
- *     security:
- *       - bearerAuth: []
- *     description: Only instructors, admins and super admins can create courses
- *     requestBody:
- *       required: true
- *       content:
- *         multipart/form-data:
- *           schema:
- *             type: object
- *             properties:
- *               title:
- *                 type: string
- *                 required: true
- *                 minLength: 5
- *                 maxLength: 100
- *               description:
- *                 type: string
- *                 required: true
- *                 minLength: 20
- *               price:
- *                 type: number
- *                 required: true
- *                 minimum: 0
- *               thumbnail:
- *                 type: string
- *                 format: binary
- *               status:
- *                 type: string
- *                 enum: [draft, published]
- *                 default: draft
- *     responses:
- *       201:
- *         description: Course created successfully
- *       403:
- *         description: Insufficient permissions
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Course'
- */
-
-/**
- * @swagger
- * /api/courses/{id}:
- *   put:
- *     tags: [Courses]
- *     summary: Update a course
- *     description: Only course owner or admins can update the course
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *     requestBody:
- *       required: true
- *       content:
- *         multipart/form-data:
- *           schema:
- *             type: object
- *             properties:
- *               title:
- *                 type: string
- *                 minLength: 5
- *                 maxLength: 100
- *               description:
- *                 type: string
- *                 minLength: 20
- *               price:
- *                 type: number
- *                 minimum: 0
- *               thumbnail:
- *                 type: string
- *                 format: binary
- *               status:
- *                 type: string
- *                 enum: [draft, published]
- *     responses:
- *       200:
- *         description: Course updated successfully
- *       403:
- *         description: You do not have permission to update this course
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Course'
- */
-
-/**
- * @swagger
- * /api/courses/{id}:
- *   delete:
- *     tags: [Courses]
- *     summary: Delete a course
- *     description: Only admins can delete courses directly
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: Course deleted successfully
- *       403:
- *         description: Not authorized to delete courses
- *       404:
- *         description: Course not found
- */
-
-/**
- * @swagger
- * /api/courses:
- *   get:
- *     tags: [Courses]
- *     summary: Get all courses
- *     parameters:
- *       - in: query
- *         name: search
- *         schema:
- *           type: string
- *         description: Search by title or description
- *       - in: query
- *         name: minPrice
- *         schema:
- *           type: number
- *         description: Minimum price filter
- *       - in: query
- *         name: maxPrice
- *         schema:
- *           type: number
- *         description: Maximum price filter
- *       - in: query
- *         name: instructor
- *         schema:
- *           type: string
- *         description: Filter by instructor ID
  *       - in: query
  *         name: page
  *         schema:
@@ -270,27 +172,51 @@
  *           default: 10
  *     responses:
  *       200:
- *         description: List of courses
+ *         description: Thành công
  *         content:
  *           application/json:
  *             schema:
- *               type: object
- *               properties:
- *                 data:
- *                   type: array
- *                   items:
- *                     $ref: '#/components/schemas/Course'
- *                 pagination:
- *                   type: object
- *                   properties:
- *                     total:
- *                       type: number
- *                     page:
- *                       type: number
- *                     limit:
- *                       type: number
- *                     pages:
- *                       type: number
+ *               $ref: '#/components/schemas/CourseList'
+ *
+ *   post:
+ *     tags: [Courses]
+ *     summary: Tạo khóa học/bài kiểm tra mới
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - title
+ *               - description
+ *               - price
+ *               - type
+ *             properties:
+ *               title:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *               type:
+ *                 type: string
+ *                 enum: [course, exam]
+ *               level:
+ *                 type: string
+ *                 enum: [beginner, intermediate, advanced]
+ *               thumbnail:
+ *                 type: string
+ *                 format: binary
+ *     responses:
+ *       201:
+ *         description: Tạo thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/CourseResponse'
  */
 
 /**
@@ -298,7 +224,7 @@
  * /api/courses/{id}:
  *   get:
  *     tags: [Courses]
- *     summary: Get course by ID
+ *     summary: Lấy chi tiết khóa học/bài kiểm tra
  *     parameters:
  *       - in: path
  *         name: id
@@ -307,11 +233,73 @@
  *           type: string
  *     responses:
  *       200:
- *         description: Course details
+ *         description: Thành công
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Course'
+ *               $ref: '#/components/schemas/CourseResponse'
+ *
+ *   put:
+ *     tags: [Courses] 
+ *     summary: Cập nhật khóa học/bài kiểm tra
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *               type:
+ *                 type: string
+ *                 enum: [course, exam]
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published, archived]
+ *               level:
+ *                 type: string
+ *                 enum: [beginner, intermediate, advanced]
+ *               thumbnail:
+ *                 type: string
+ *                 format: binary
+ *               what_you_will_learn:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       200:
+ *         description: Cập nhật thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/CourseResponse'
+ *
+ *   delete:
+ *     tags: [Courses]
+ *     summary: Xóa khóa học/bài kiểm tra
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Xóa thành công
  */
 
 /**
