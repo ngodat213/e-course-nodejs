@@ -5,21 +5,29 @@
  *     RegisterInput:
  *       type: object
  *       required:
- *         - name
+ *         - first_name
+ *         - last_name
  *         - email
  *         - password
  *       properties:
- *         name:
+ *         first_name:
  *           type: string
- *           description: Tên người dùng
+ *           description: Tên của người dùng
+ *           example: John
+ *         last_name:
+ *           type: string 
+ *           description: Họ của người dùng
+ *           example: Doe
  *         email:
  *           type: string
  *           format: email
  *           description: Email đăng ký
+ *           example: john.doe@example.com
  *         password:
  *           type: string
  *           format: password
- *           description: Mật khẩu
+ *           description: Mật khẩu (tối thiểu 6 ký tự)
+ *           example: "123456"
  *     LoginInput:
  *       type: object
  *       required:
@@ -29,9 +37,13 @@
  *         email:
  *           type: string
  *           format: email
+ *           description: Email đăng nhập
+ *           example: john.doe@example.com
  *         password:
  *           type: string
  *           format: password
+ *           description: Mật khẩu
+ *           example: "123456"
  *     OTPInput:
  *       type: object
  *       required:
@@ -44,39 +56,33 @@
  *         otp:
  *           type: string
  *           pattern: '^[0-9]{6}$'
- *     LoginResponse:
+ *     AuthResponse:
  *       type: object
  *       properties:
- *         status:
- *           type: string
- *           example: success
- *         data:
+ *         user:
  *           type: object
  *           properties:
- *             user:
- *               type: object
- *               properties:
- *                 id:
- *                   type: string
- *                   example: 5f7d3a2e9d3e2a1b3c9d1e2f
- *                 name:
- *                   type: string
- *                   example: John Doe
- *                 email:
- *                   type: string
- *                   example: john@example.com
- *                 role:
- *                   type: string
- *                   enum: [student, instructor, admin]
- *             tokens:
- *               type: object
- *               properties:
- *                 access_token:
- *                   type: string
- *                   example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
- *                 refresh_token:
- *                   type: string
- *                   example: 7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d...
+ *             _id:
+ *               type: string
+ *             first_name:
+ *               type: string
+ *             last_name:
+ *               type: string
+ *             email:
+ *               type: string
+ *             role:
+ *               type: string
+ *               enum: [student, instructor, admin]
+ *             status:
+ *               type: string
+ *               enum: [pending, active, blocked]
+ *         tokens:
+ *           type: object
+ *           properties:
+ *             access_token:
+ *               type: string
+ *             refresh_token:
+ *               type: string
  *     
  *     RefreshTokenRequest:
  *       type: object
@@ -115,8 +121,8 @@
  * @swagger
  * /api/auth/register:
  *   post:
- *     summary: Đăng ký tài khoản mới
  *     tags: [Auth]
+ *     summary: Đăng ký tài khoản mới
  *     requestBody:
  *       required: true
  *       content:
@@ -126,8 +132,18 @@
  *     responses:
  *       201:
  *         description: Đăng ký thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Vui lòng kiểm tra email để xác thực tài khoản
+ *                 userId:
+ *                   type: string
  *       400:
- *         description: Dữ liệu không hợp lệ
+ *         description: Dữ liệu không hợp lệ hoặc email đã tồn tại
  *
  * /api/auth/register/mobile:
  *   post:
@@ -159,38 +175,27 @@
  *
  * /api/auth/login:
  *   post:
- *     tags: [Authentication]
+ *     tags: [Auth]
  *     summary: Đăng nhập
- *     description: Đăng nhập và nhận access token + refresh token
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
- *             type: object
- *             required:
- *               - email
- *               - password
- *             properties:
- *               email:
- *                 type: string
- *                 format: email
- *                 example: john@example.com
- *               password:
- *                 type: string
- *                 format: password
- *                 example: password123
+ *             $ref: '#/components/schemas/LoginInput'
  *     responses:
  *       200:
  *         description: Đăng nhập thành công
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/LoginResponse'
- *       401:
- *         description: Email hoặc mật khẩu không đúng
+ *               $ref: '#/components/schemas/AuthResponse'
  *       400:
- *         description: Dữ liệu không hợp lệ
+ *         description: Email hoặc mật khẩu không đúng
+ *       401:
+ *         description: Tài khoản chưa được xác thực
+ *       403:
+ *         description: Tài khoản đã bị khóa
  *
  * /api/auth/verify-email/{token}:
  *   get:

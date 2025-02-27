@@ -1,13 +1,15 @@
 const Joi = require("joi");
 
 const registerSchema = Joi.object({
-  name: Joi.string().required().min(2).max(50),
+  first_name: Joi.string().required().min(2).max(50),
+  last_name: Joi.string().required().min(2).max(50),
   email: Joi.string().email().required(),
   password: Joi.string().required().min(6),
 });
 
 const registerAdminSchema = Joi.object({
-  name: Joi.string().required().min(2).max(50),
+  first_name: Joi.string().required().min(2).max(50),
+  last_name: Joi.string().required().min(2).max(50),
   email: Joi.string().email().required(),
   password: Joi.string().required().min(6),
   dev_secret_key: Joi.string().required(),

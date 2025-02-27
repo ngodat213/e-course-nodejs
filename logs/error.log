@@ -2722,3 +2722,53 @@ haha
   "query": {},
   "user": "67b495ca9d35c758607e27cc"
 }
+2025-02-27 18:20:34 [ERROR]: User validation failed: last_name: Path `last_name` is required., first_name: Path `first_name` is required. {}
+2025-02-27 18:20:34 [ERROR]: User validation failed: last_name: Path `last_name` is required., first_name: Path `first_name` is required. {
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "name": "string",
+    "email": "ngodat.it213@gmail.com",
+    "password": "123456789"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-27 18:22:51 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "first_name": "Hydra",
+    "last_name": "Coder",
+    "email": "ngodat.it213@gmail.com",
+    "password": "123456789"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-27 18:57:38 [ERROR]: utils.populate: invalid path. Expected string. Got typeof `object` {}
+2025-02-27 18:57:38 [ERROR]: utils.populate: invalid path. Expected string. Got typeof `object` {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "This tutorial learning Flutter zero to hero",
+    "price": "1111",
+    "type": "course",
+    "level": "beginner",
+    "thumbnail": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c04b201ebf87f29678f4b9"
+}
+2025-02-27 19:45:05 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}

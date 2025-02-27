@@ -12874,3 +12874,110 @@ Use mongoose.model(name, schema) {
 }
 2025-02-27 17:51:21 [INFO]: MongoDB disconnected 
 2025-02-27 18:06:15 [INFO]: MongoDB disconnected 
+2025-02-27 18:19:51 [INFO]: Server is running on port 3000 
+2025-02-27 18:19:51 [INFO]: Environment: development 
+2025-02-27 18:19:51 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 18:19:54 [INFO]: Connected to MongoDB 
+2025-02-27 18:20:34 [ERROR]: User validation failed: last_name: Path `last_name` is required., first_name: Path `first_name` is required. {}
+2025-02-27 18:20:34 [ERROR]: User validation failed: last_name: Path `last_name` is required., first_name: Path `first_name` is required. {
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "name": "string",
+    "email": "ngodat.it213@gmail.com",
+    "password": "123456789"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-27 18:22:20 [INFO]: Server is running on port 3000 
+2025-02-27 18:22:20 [INFO]: Environment: development 
+2025-02-27 18:22:20 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 18:22:24 [INFO]: Connected to MongoDB 
+2025-02-27 18:22:51 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/register/mobile",
+  "method": "POST",
+  "body": {
+    "first_name": "Hydra",
+    "last_name": "Coder",
+    "email": "ngodat.it213@gmail.com",
+    "password": "123456789"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-27 18:23:06 [INFO]: Server is running on port 3000 
+2025-02-27 18:23:06 [INFO]: Environment: development 
+2025-02-27 18:23:06 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 18:23:09 [INFO]: Connected to MongoDB 
+2025-02-27 18:23:16 [INFO]: Mobile user registered {
+  "userId": "67c04b201ebf87f29678f4b9"
+}
+2025-02-27 18:23:16 [INFO]: Mobile user registered {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 18:24:01 [INFO]: OTP verified successfully {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 18:24:01 [INFO]: OTP verified {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 18:24:49 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 18:26:09 [INFO]: Course created {
+  "id": "67c04bd01ebf87f29678f4ca"
+}
+2025-02-27 18:56:16 [INFO]: Course created {
+  "id": "67c052e01ebf87f29678f4cc"
+}
+2025-02-27 18:56:34 [INFO]: Course created {
+  "id": "67c052f11ebf87f29678f4ce"
+}
+2025-02-27 18:57:31 [INFO]: Server is running on port 3000 
+2025-02-27 18:57:31 [INFO]: Environment: development 
+2025-02-27 18:57:31 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 18:57:34 [INFO]: Connected to MongoDB 
+2025-02-27 18:57:38 [ERROR]: utils.populate: invalid path. Expected string. Got typeof `object` {}
+2025-02-27 18:57:38 [ERROR]: utils.populate: invalid path. Expected string. Got typeof `object` {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "Flutter for beginner",
+    "description": "This tutorial learning Flutter zero to hero",
+    "price": "1111",
+    "type": "course",
+    "level": "beginner",
+    "thumbnail": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c04b201ebf87f29678f4b9"
+}
+2025-02-27 18:58:51 [INFO]: Server is running on port 3000 
+2025-02-27 18:58:51 [INFO]: Environment: development 
+2025-02-27 18:58:51 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 18:58:54 [INFO]: Connected to MongoDB 
+2025-02-27 18:58:57 [INFO]: Course created {
+  "id": "67c0537d77bd862af6f460c6"
+}
+2025-02-27 19:44:40 [INFO]: Server is running on port 3000 
+2025-02-27 19:44:40 [INFO]: Environment: development 
+2025-02-27 19:44:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 19:44:43 [INFO]: Connected to MongoDB 
+2025-02-27 19:45:05 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-27 19:45:27 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 19:45:40 [INFO]: Course created {
+  "id": "67c05e74ae7076bd1b79cbe2"
+}

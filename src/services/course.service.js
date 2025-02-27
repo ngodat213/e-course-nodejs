@@ -76,12 +76,7 @@ class CourseService {
     // Upload thumbnail if provided
     let thumbnailId;
     if (thumbnailFile) {
-      const uploadedFile = await FileService.uploadFile(thumbnailFile, {
-        owner_id: instructorId,
-        owner_type: "Course",
-        purpose: "thumbnail",
-        file_type: "image"
-      });
+      const uploadedFile = await FileService.uploadFile(instructorId, "Course", thumbnailFile, "thumbnail");
       thumbnailId = uploadedFile._id;
     }
 
@@ -102,12 +97,7 @@ class CourseService {
 
     // Upload new thumbnail if provided
     if (thumbnailFile) {
-      const uploadedFile = await FileService.uploadFile(thumbnailFile, {
-        owner_id: course.instructor_id,
-        owner_type: "Course",
-        purpose: "thumbnail",
-        file_type: "image"
-      });
+      const uploadedFile = await FileService.uploadFile(course.instructor_id, "Course", thumbnailFile, "thumbnail");
       updateData.thumbnail_id = uploadedFile._id;
     }
 

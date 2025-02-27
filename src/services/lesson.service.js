@@ -19,26 +19,18 @@ class LessonService {
     const order = lastLesson ? lastLesson.order + 1 : 1;
 
     // Upload video nếu có
-    let video;
+    let video, duration = 0;
     if (files?.video) {
-      const uploadedFile = await FileService.uploadFile(files.video[0], {
-        owner_id: courseId,
-        owner_type: "Course",
-        purpose: "content",
-        file_type: "video",
-      });
+      const uploadedFile = await FileService.uploadFile(courseId, "Course", files.video[0], "video");
       video = uploadedFile._id;
+      duration = uploadedFile.duration;
     }
 
     // Upload attachments
     const attachments = [];
     if (files?.attachments) {
       for (const file of files.attachments) {
-        const uploadedFile = await FileService.uploadFile(file, {
-          owner_id: courseId,
-          owner_type: "Course",
-          purpose: "attachment",
-        });
+        const uploadedFile = await FileService.uploadFile(courseId, "Course", file, "attachment");
         attachments.push(uploadedFile._id);
       }
     }
@@ -48,6 +40,7 @@ class LessonService {
       course_id: courseId,
       order,
       video,
+      duration,
       attachments,
     });
 
@@ -70,27 +63,18 @@ class LessonService {
         await FileService.deleteFile(lesson.video);
       }
       
-      const uploadedFile = await FileService.uploadFile(files.video[0], {
-        owner_id: lesson.course_id,
-        owner_type: "Course",
-        purpose: "content",
-        file_type: "video",
-      });
+      const uploadedFile = await FileService.uploadFile(lesson.course_id, "Course", files.video[0], "video");
       lesson.video = uploadedFile._id;
     }
 
     // Upload attachments mới
     if (files?.attachments) {
       for (const file of files.attachments) {
-        const uploadedFile = await FileService.uploadFile(file, {
-          owner_id: lesson.course_id,
-          owner_type: "Course", 
-          purpose: "attachment",
-        });
+        const uploadedFile = await FileService.uploadFile(lesson.course_id, "Course", file, "attachment");
         lesson.attachments.push(uploadedFile._id);
       }
     }
-
+    
     Object.assign(lesson, updateData);
     await lesson.save();
 
