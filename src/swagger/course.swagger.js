@@ -14,6 +14,7 @@
  *         - price
  *         - instructor_id
  *         - type
+ *         - categories
  *       properties:
  *         _id:
  *           type: string
@@ -59,6 +60,12 @@
  *         updated_at:
  *           type: string
  *           format: date-time
+ *         categories:
+ *           type: array
+ *           items:
+ *             type: string
+ *           description: Danh sách ID của các danh mục
+ *           minItems: 1
  *
  *     CourseResponse:
  *       type: object

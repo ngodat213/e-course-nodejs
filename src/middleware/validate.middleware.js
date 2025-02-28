@@ -9,10 +9,12 @@ const validateRequest = (schema) => {
       });
 
       if (error) {
-        const errors = error.details.map((err) => ({
-          field: err.path[0],
-          message: err.message,
-        }));
+        // Transform validation errors to object
+        const errors = error.details.reduce((acc, err) => {
+          acc[err.path[0]] = err.message.replace(/['"]/g, '');
+          return acc;
+        }, {});
+
         throw new BadRequestError("Dữ liệu không hợp lệ", errors);
       }
 

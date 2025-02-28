@@ -8,65 +8,27 @@ const CourseDeleteRequest = require("../models/course_delete_request.model");
 const Lesson = require("../models/lesson.model");
 const LessonService = require("./lesson.service");
 const FileService = require("./file.service");
+const CourseCategory = require("../models/course_category.model");
 
 class CourseService {
-  async getAll(options = {}) {
-    const { 
-      page = 1, 
-      limit = 10, 
-      sort = "-createdAt",
-      type,
-      status,
-      level,
-      search
-    } = options;
+  async getAll(query) {
+    const courses = await Course.find(this._buildFilterQuery(query))
+      .populate('instructor_id', 'first_name last_name email')
+      .populate('categories', 'name slug')
+      .sort(query.sort || '-created_at')
+      .skip(query.skip)
+      .limit(query.limit);
 
-    const query = {};
-
-    if (type) query.type = type;
-    if (status) query.status = status;
-    if (level) query.level = level;
-    if (search) {
-      query.$or = [
-        { title: { $regex: search, $options: "i" } },
-        { description: { $regex: search, $options: "i" } }
-      ];
-    }
-
-    const [courses, total] = await Promise.all([
-      Course.find(query)
-        .populate("instructor_id", "name email")
-        .populate("thumbnail_id", "public_id")
-        .populate("lessons")
-        .sort(sort)
-        .skip((page - 1) * limit)
-        .limit(limit)
-        .lean(),
-      Course.countDocuments(query)
-    ]);
-
-    return {
-      data: courses,
-      pagination: {
-        total,
-        page: Number(page),
-        limit: Number(limit),
-        pages: Math.ceil(total / limit)
-      }
-    };
+    return courses;
   }
 
-  async getCourseById(courseId) {
-    const course = await Course.findById(courseId)
-      .populate("instructor_id", "name email")
-      .populate("thumbnail_id", "public_id")
-      .populate({
-        path: "lessons",
-        select: "title type duration is_free status"
-      });
+  async getCourseById(id) {
+    const course = await Course.findById(id)
+      .populate('instructor_id', 'first_name last_name email')
+      .populate('categories', 'name slug description');
 
     if (!course) {
-      throw new NotFoundError(i18next.t("course.notFound"));
+      throw new NotFoundError('Course not found');
     }
 
     return course;
@@ -80,6 +42,18 @@ class CourseService {
       thumbnailId = uploadedFile._id;
     }
 
+    // Validate categories exist
+    if (courseData.categories) {
+      const validCategories = await CourseCategory.find({
+        _id: { $in: courseData.categories },
+        status: 'active'
+      });
+
+      if (validCategories.length !== courseData.categories.length) {
+        throw new BadRequestError('One or more categories are invalid');
+      }
+    }
+
     const course = await Course.create({
       ...courseData,
       instructor_id: instructorId,
@@ -89,16 +63,22 @@ class CourseService {
     return course;
   }
 
-  async update(courseId, updateData, thumbnailFile) {
+  async update(courseId, updateData) {
     const course = await Course.findById(courseId);
     if (!course) {
       throw new NotFoundError(i18next.t("course.notFound"));
     }
 
-    // Upload new thumbnail if provided
-    if (thumbnailFile) {
-      const uploadedFile = await FileService.uploadFile(course.instructor_id, "Course", thumbnailFile, "thumbnail");
-      updateData.thumbnail_id = uploadedFile._id;
+    // Validate categories if being updated
+    if (updateData.categories) {
+      const validCategories = await CourseCategory.find({
+        _id: { $in: updateData.categories },
+        status: 'active'
+      });
+
+      if (validCategories.length !== updateData.categories.length) {
+        throw new BadRequestError('One or more categories are invalid');
+      }
     }
 
     Object.assign(course, updateData);
@@ -279,6 +259,10 @@ class CourseService {
 
     if (filters.instructor_id) {
       queryFilter.instructor_id = filters.instructor_id;
+    }
+
+    if (filters.category) {
+      queryFilter.categories = filters.category;
     }
 
     return queryFilter;

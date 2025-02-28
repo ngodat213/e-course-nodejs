@@ -11,7 +11,7 @@ class BaseController {
   }
 
   errorResponse(res, error) {
-    res.error(error.message, {
+    res.success(error.message, {
       code: error.code,
     });
   }

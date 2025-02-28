@@ -3385,3 +3385,479 @@ haha
   "query": {},
   "user": "67c05fa139552b1e8f2d900d"
 }
+2025-02-28 15:54:48 [ERROR]: Invalid email or password {}
+2025-02-28 15:54:48 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 15:54:49 [ERROR]: Invalid email or password {}
+2025-02-28 15:54:49 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 15:55:23 [ERROR]: Invalid email or password {}
+2025-02-28 15:55:23 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 15:55:51 [ERROR]: Invalid email or password {}
+2025-02-28 15:55:51 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 15:57:43 [ERROR]: Invalid email or password {}
+2025-02-28 15:57:43 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 15:57:54 [ERROR]: Invalid email or password {}
+2025-02-28 15:57:54 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 15:58:20 [ERROR]: Invalid email or password {}
+2025-02-28 15:58:20 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:01:56 [ERROR]: Invalid email or password {}
+2025-02-28 16:02:30 [ERROR]: Invalid email or password {}
+2025-02-28 16:02:32 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:03:10 [ERROR]: Invalid email or password {}
+2025-02-28 16:03:12 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:03:31 [ERROR]: Invalid email or password {}
+2025-02-28 16:03:39 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "123"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:04:05 [ERROR]: Invalid email or password {}
+2025-02-28 16:04:07 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:05:03 [ERROR]: Invalid email or password {}
+2025-02-28 16:05:07 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:05:48 [ERROR]: Invalid email or password {}
+2025-02-28 16:05:48 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "123456"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:07:15 [ERROR]: Invalid email or password {}
+2025-02-28 16:07:15 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "12345678"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:08:46 [ERROR]: Invalid email or password {}
+2025-02-28 16:08:46 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:09:20 [ERROR]: Invalid email or password {}
+2025-02-28 16:09:20 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "12345678"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:09:25 [ERROR]: Invalid email or password {}
+2025-02-28 16:09:25 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:10:21 [ERROR]: Invalid email or password {}
+2025-02-28 16:10:21 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:11:04 [ERROR]: Invalid email or password {}
+2025-02-28 16:11:04 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:11:11 [ERROR]: Invalid email or password {}
+2025-02-28 16:11:11 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:11:30 [ERROR]: Invalid email or password {}
+2025-02-28 16:11:30 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:11:45 [ERROR]: Invalid email or password {}
+2025-02-28 16:11:45 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:47:05 [ERROR]: Invalid token {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Flutter",
+    "description": "Flutter",
+    "status": "active",
+    "order": 0,
+    "icon": ""
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 16:56:26 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Programing",
+    "description": "haha",
+    "parent_id": "",
+    "status": "active",
+    "order": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 16:56:36 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Programing",
+    "description": "Hahha hâh hâhhaha ",
+    "parent_id": "",
+    "status": "active",
+    "order": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 16:56:44 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Programing",
+    "description": "Hahha hâh hâhhaha ",
+    "status": "active",
+    "order": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 17:41:12 [ERROR]: Invalid email or password {}
+2025-02-28 17:41:12 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 17:42:37 [ERROR]: Invalid email or password {}
+2025-02-28 17:42:37 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": "Code26102003"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:08:00 [ERROR]: Invalid token {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:08:37 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "",
+    "password": ""
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:13:59 [ERROR]: Expected ':' after property name in JSON at position 102 (line 5 column 47) {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:14:12 [ERROR]: Expected ':' after property name in JSON at position 102 (line 5 column 47) {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:14:24 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": ""
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:16:11 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": ""
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:18:54 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": ""
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:18:59 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": ""
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:19:05 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": ""
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:21:08 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": ""
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 20:24:24 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "ngodat.it213@gmail.com",
+    "password": ""
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "password": "Mật khẩu không được để trống"
+    }
+  }
+}
+2025-02-28 20:24:33 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "",
+    "password": ""
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "email": "Email không được để trống",
+      "password": "Mật khẩu không được để trống"
+    }
+  }
+}

@@ -21,6 +21,19 @@ const createCourseSchema = Joi.object({
     type: Joi.string().required().valid('course', 'quiz'),
     level: Joi.string().valid('beginner', 'intermediate', 'advanced'),
     status: Joi.string().valid('draft', 'published', 'archived').default('draft'),
+    categories: Joi.array()
+        .items(Joi.string().required().messages({
+            'string.empty': 'ID danh mục không được để trống',
+            'string.base': 'ID danh mục không hợp lệ'
+        }))
+        .min(1)
+        .required()
+        .messages({
+            'array.min': 'Khóa học phải thuộc ít nhất 1 danh mục',
+            'array.base': 'Danh mục không hợp lệ',
+            'any.required': 'Vui lòng chọn danh mục cho khóa học',
+            'array.includesRequiredUnknowns': 'Các ID danh mục không được để trống'
+        }),
 });
 
 const updateCourseSchema = Joi.object({
@@ -30,6 +43,17 @@ const updateCourseSchema = Joi.object({
     type: Joi.string().valid('course', 'quiz'),
     level: Joi.string().valid('beginner', 'intermediate', 'advanced'),
     status: Joi.string().valid('draft', 'published', 'archived'),
+    categories: Joi.array()
+        .items(Joi.string().messages({
+            'string.empty': 'ID danh mục không được để trống',
+            'string.base': 'ID danh mục không hợp lệ'
+        }))
+        .min(1)
+        .messages({
+            'array.min': 'Khóa học phải thuộc ít nhất 1 danh mục',
+            'array.base': 'Danh mục không hợp lệ',
+            'array.includesRequiredUnknowns': 'Các ID danh mục không được để trống'
+        }),
 }).min(1);
 
 module.exports = {
