@@ -12981,3 +12981,840 @@ Use mongoose.model(name, schema) {
 2025-02-27 19:45:40 [INFO]: Course created {
   "id": "67c05e74ae7076bd1b79cbe2"
 }
+2025-02-27 19:49:33 [INFO]: Server is running on port 3000 
+2025-02-27 19:49:33 [INFO]: Environment: development 
+2025-02-27 19:49:33 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 19:49:36 [INFO]: Connected to MongoDB 
+2025-02-27 19:50:34 [INFO]: Server is running on port 3000 
+2025-02-27 19:50:34 [INFO]: Environment: development 
+2025-02-27 19:50:34 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 19:50:37 [INFO]: Connected to MongoDB 
+2025-02-27 19:50:45 [INFO]: Mobile user registered {
+  "userId": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 19:50:45 [INFO]: Mobile user registered {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 19:51:01 [INFO]: OTP verified successfully {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 19:51:01 [INFO]: OTP verified {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 19:52:21 [INFO]: Server is running on port 3000 
+2025-02-27 19:52:21 [INFO]: Environment: development 
+2025-02-27 19:52:21 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 19:52:24 [INFO]: Connected to MongoDB 
+2025-02-27 19:52:31 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 19:52:56 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 19:53:45 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 19:53:53 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-27 19:54:17 [INFO]: Course created {
+  "id": "67c060782aaa9b16b68bc874"
+}
+2025-02-27 19:56:53 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 19:56:53 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 19:57:34 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 19:57:34 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 19:58:38 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 19:58:38 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:00:27 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 20:00:27 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:00:37 [INFO]: Server is running on port 3000 
+2025-02-27 20:00:37 [INFO]: Environment: development 
+2025-02-27 20:00:37 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 20:00:42 [INFO]: Connected to MongoDB 
+2025-02-27 20:00:57 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 20:00:57 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:10:45 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:11:19 [INFO]: Server is running on port 3000 
+2025-02-27 20:11:19 [INFO]: Environment: development 
+2025-02-27 20:11:19 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 20:11:20 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "Hahaha2",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:11:20 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "Hahaha2",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:11:21 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "Hahaha2",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:11:22 [INFO]: Connected to MongoDB 
+2025-02-27 20:11:51 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "This tutorial learning Flutter zero to heroThis tutorial learning Flutter zero to hero",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:12:07 [INFO]: Server is running on port 3000 
+2025-02-27 20:12:07 [INFO]: Environment: development 
+2025-02-27 20:12:07 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 20:12:08 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "This tutorial learning Flutter zero to heroThis tutorial learning Flutter zero to hero",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:12:10 [INFO]: Connected to MongoDB 
+2025-02-27 20:12:14 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "This tutorial learning Flutter zero to heroThis tutorial learning Flutter zero to hero",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:12:22 [INFO]: Server is running on port 3000 
+2025-02-27 20:12:22 [INFO]: Environment: development 
+2025-02-27 20:12:22 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-27 20:12:26 [INFO]: Connected to MongoDB 
+2025-02-27 20:39:48 [INFO]: MongoDB disconnected 
+2025-02-27 20:42:14 [INFO]: MongoDB disconnected 
+2025-02-27 21:27:57 [INFO]: MongoDB disconnected 
+2025-02-28 11:32:07 [INFO]: Server is running on port 3000 
+2025-02-28 11:32:07 [INFO]: Environment: development 
+2025-02-28 11:32:07 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:32:10 [INFO]: Connected to MongoDB 
+2025-02-28 11:35:59 [ERROR]: Unexpected token 'g', ...""email": ngodat.it21"... is not valid JSON {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 11:36:11 [ERROR]: Unexpected token 'g', ...""email": ngodat.it21"... is not valid JSON {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 11:36:30 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-28 11:36:55 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:37:19 [INFO]: Server is running on port 3000 
+2025-02-28 11:37:19 [INFO]: Environment: development 
+2025-02-28 11:37:19 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:37:21 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:37:22 [INFO]: Connected to MongoDB 
+2025-02-28 11:37:23 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:37:32 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:37:35 [INFO]: Server is running on port 3000 
+2025-02-28 11:37:35 [INFO]: Environment: development 
+2025-02-28 11:37:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:37:37 [INFO]: Connected to MongoDB 
+2025-02-28 11:37:40 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
+2025-02-28 11:37:40 [ERROR]: Cannot read properties of undefined (reading 'toString') {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:38:39 [INFO]: Server is running on port 3000 
+2025-02-28 11:38:39 [INFO]: Environment: development 
+2025-02-28 11:38:39 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:38:42 [INFO]: Connected to MongoDB 
+2025-02-28 11:38:45 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
+2025-02-28 11:38:45 [ERROR]: Cannot read properties of undefined (reading 'toString') {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:39:49 [INFO]: Server is running on port 3000 
+2025-02-28 11:39:49 [INFO]: Environment: development 
+2025-02-28 11:39:49 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:39:52 [INFO]: Connected to MongoDB 
+2025-02-28 11:40:01 [INFO]: Server is running on port 3000 
+2025-02-28 11:40:01 [INFO]: Environment: development 
+2025-02-28 11:40:01 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:40:05 [INFO]: Server is running on port 3000 
+2025-02-28 11:40:05 [INFO]: Environment: development 
+2025-02-28 11:40:05 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:40:07 [INFO]: Connected to MongoDB 
+2025-02-28 11:40:12 [ERROR]: course.notInstructor {}
+2025-02-28 11:40:12 [ERROR]: course.notInstructor {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:41:00 [INFO]: Server is running on port 3000 
+2025-02-28 11:41:00 [INFO]: Environment: development 
+2025-02-28 11:41:00 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:41:03 [INFO]: Connected to MongoDB 
+2025-02-28 11:41:19 [INFO]: Server is running on port 3000 
+2025-02-28 11:41:19 [INFO]: Environment: development 
+2025-02-28 11:41:19 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:41:22 [INFO]: Connected to MongoDB 
+2025-02-28 11:41:28 [INFO]: Course delete requested {
+  "courseId": "67c060782aaa9b16b68bc874"
+}
+2025-02-28 11:42:23 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:42:40 [INFO]: Server is running on port 3000 
+2025-02-28 11:42:40 [INFO]: Environment: development 
+2025-02-28 11:42:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:42:43 [INFO]: Connected to MongoDB 
+2025-02-28 11:42:48 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:42:54 [INFO]: Server is running on port 3000 
+2025-02-28 11:42:54 [INFO]: Environment: development 
+2025-02-28 11:42:54 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:42:57 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:42:57 [INFO]: Connected to MongoDB 
+2025-02-28 11:43:12 [INFO]: Server is running on port 3000 
+2025-02-28 11:43:12 [INFO]: Environment: development 
+2025-02-28 11:43:12 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:43:15 [INFO]: Connected to MongoDB 
+2025-02-28 11:43:18 [ERROR]: this.deleteCourse is not a function {}
+2025-02-28 11:43:18 [ERROR]: this.deleteCourse is not a function {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:46:35 [INFO]: Server is running on port 3000 
+2025-02-28 11:46:35 [INFO]: Environment: development 
+2025-02-28 11:46:35 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:46:38 [INFO]: Connected to MongoDB 
+2025-02-28 11:46:40 [ERROR]: This request has already been handled {}
+2025-02-28 11:46:40 [ERROR]: This request has already been handled {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:51:00 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:51:00 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:51:55 [INFO]: Delete request handled {
+  "requestId": "67c13e774796e4472344612a",
+  "status": "approved"
+}
+2025-02-28 11:52:59 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:52:59 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:53:07 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:53:07 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:53:19 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:53:19 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:53:51 [INFO]: Server is running on port 3000 
+2025-02-28 11:53:51 [INFO]: Environment: development 
+2025-02-28 11:53:51 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 11:53:55 [INFO]: Connected to MongoDB 
+2025-02-28 11:53:56 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:53:56 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "status": "pending",
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:54:54 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:54:54 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "status": "pending",
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:56:14 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:56:14 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "status": "pending",
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 12:10:41 [INFO]: MongoDB disconnected 
+2025-02-28 12:24:14 [INFO]: MongoDB disconnected 
+2025-02-28 12:45:27 [INFO]: MongoDB disconnected 
+2025-02-28 13:00:57 [INFO]: MongoDB disconnected 
+2025-02-28 13:31:38 [INFO]: MongoDB disconnected 
+2025-02-28 13:47:08 [INFO]: MongoDB disconnected 
+2025-02-28 14:05:27 [INFO]: Server is running on port 3000 
+2025-02-28 14:05:27 [INFO]: Environment: development 
+2025-02-28 14:05:27 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:05:31 [INFO]: Connected to MongoDB 
+2025-02-28 14:06:24 [INFO]: Server is running on port 3000 
+2025-02-28 14:06:24 [INFO]: Environment: development 
+2025-02-28 14:06:24 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:06:26 [ERROR]: Cannot read properties of undefined (reading 'role') {
+  "path": "/api/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-created_at"
+  },
+  "user": null
+}
+2025-02-28 14:06:28 [INFO]: Connected to MongoDB 
+2025-02-28 14:07:06 [ERROR]: Cannot read properties of undefined (reading 'role') {
+  "path": "/api/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-created_at"
+  },
+  "user": null
+}
+2025-02-28 14:07:23 [INFO]: Server is running on port 3000 
+2025-02-28 14:07:23 [INFO]: Environment: development 
+2025-02-28 14:07:23 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:07:26 [INFO]: Connected to MongoDB 
+2025-02-28 14:07:27 [ERROR]: Cannot read properties of undefined (reading 'role') {
+  "path": "/api/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-created_at"
+  },
+  "user": null
+}
+2025-02-28 14:08:34 [INFO]: Server is running on port 3000 
+2025-02-28 14:08:34 [INFO]: Environment: development 
+2025-02-28 14:08:34 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:08:36 [ERROR]: Invalid token {
+  "path": "/api/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-created_at"
+  },
+  "user": null
+}
+2025-02-28 14:08:37 [INFO]: Connected to MongoDB 
+2025-02-28 14:09:04 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-28 14:15:11 [INFO]: Server is running on port 3000 
+2025-02-28 14:15:11 [INFO]: Environment: development 
+2025-02-28 14:15:11 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:15:14 [INFO]: Connected to MongoDB 
+2025-02-28 14:18:20 [INFO]: Server is running on port 3000 
+2025-02-28 14:18:20 [INFO]: Environment: development 
+2025-02-28 14:18:20 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:18:23 [INFO]: Connected to MongoDB 
+2025-02-28 14:18:49 [INFO]: Server is running on port 3000 
+2025-02-28 14:18:49 [INFO]: Environment: development 
+2025-02-28 14:18:49 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:18:53 [INFO]: Connected to MongoDB 
+2025-02-28 14:35:40 [INFO]: MongoDB disconnected 
+2025-02-28 14:40:38 [INFO]: Server is running on port 3000 
+2025-02-28 14:40:38 [INFO]: Environment: development 
+2025-02-28 14:40:38 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:40:41 [INFO]: Connected to MongoDB 
+2025-02-28 14:42:40 [INFO]: Server is running on port 3000 
+2025-02-28 14:42:40 [INFO]: Environment: development 
+2025-02-28 14:42:40 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:42:43 [INFO]: Connected to MongoDB 
+2025-02-28 14:45:27 [INFO]: Server is running on port 3000 
+2025-02-28 14:45:27 [INFO]: Environment: development 
+2025-02-28 14:45:27 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:45:31 [INFO]: Connected to MongoDB 
+2025-02-28 14:46:10 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-28 14:46:52 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:49:15 [ERROR]: Invalid token {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 14:49:25 [ERROR]: Invalid email or password {}
+2025-02-28 14:49:25 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "john.doe@example.com",
+    "password": "123456"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 14:49:43 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-02-28 14:49:59 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:50:26 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:51:02 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:51:25 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:52:44 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:53:17 [INFO]: Server is running on port 3000 
+2025-02-28 14:53:17 [INFO]: Environment: development 
+2025-02-28 14:53:17 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:53:22 [INFO]: Connected to MongoDB 
+2025-02-28 14:53:26 [INFO]: Course delete requested {
+  "courseId": "67c060782aaa9b16b68bc874",
+  "userId": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:54:19 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "123",
+    "description": "123",
+    "price": "0123",
+    "type": "course",
+    "level": "beginner"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:54:28 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "123",
+    "description": "123 123 123 123 123 123",
+    "price": "0123",
+    "type": "course",
+    "level": "beginner"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:54:44 [INFO]: Course created {
+  "id": "67c16bc4038b6c54ebbaf111"
+}
+2025-02-28 14:55:51 [ERROR]: E11000 duplicate key error collection: ecourse.coursedeleterequests index: course_id_1_status_1 dup key: { course_id: ObjectId('67c060782aaa9b16b68bc874'), status: "pending" } {
+  "code": 11000
+}
+2025-02-28 14:55:51 [ERROR]: E11000 duplicate key error collection: ecourse.coursedeleterequests index: course_id_1_status_1 dup key: { course_id: ObjectId('67c060782aaa9b16b68bc874'), status: "pending" } {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:56:59 [INFO]: Server is running on port 3000 
+2025-02-28 14:56:59 [INFO]: Environment: development 
+2025-02-28 14:56:59 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:57:05 [INFO]: Connected to MongoDB 
+2025-02-28 14:57:08 [INFO]: Course delete requested {
+  "courseId": "67c060782aaa9b16b68bc874",
+  "userId": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:58:00 [INFO]: Server is running on port 3000 
+2025-02-28 14:58:00 [INFO]: Environment: development 
+2025-02-28 14:58:00 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 14:58:04 [INFO]: Connected to MongoDB 
+2025-02-28 15:02:52 [INFO]: Server is running on port 3000 
+2025-02-28 15:02:52 [INFO]: Environment: development 
+2025-02-28 15:02:52 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 15:02:56 [INFO]: Connected to MongoDB 
+2025-02-28 15:03:18 [INFO]: Server is running on port 3000 
+2025-02-28 15:03:18 [INFO]: Environment: development 
+2025-02-28 15:03:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 15:03:21 [INFO]: Connected to MongoDB 
+2025-02-28 15:04:18 [INFO]: Server is running on port 3000 
+2025-02-28 15:04:18 [INFO]: Environment: development 
+2025-02-28 15:04:18 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 15:04:22 [INFO]: Connected to MongoDB 
+2025-02-28 15:04:46 [INFO]: Server is running on port 3000 
+2025-02-28 15:04:46 [INFO]: Environment: development 
+2025-02-28 15:04:46 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 15:04:49 [INFO]: Connected to MongoDB 
+2025-02-28 15:05:42 [INFO]: Server is running on port 3000 
+2025-02-28 15:05:42 [INFO]: Environment: development 
+2025-02-28 15:05:42 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 15:05:46 [INFO]: Connected to MongoDB 
+2025-02-28 15:06:02 [INFO]: Server is running on port 3000 
+2025-02-28 15:06:02 [INFO]: Environment: development 
+2025-02-28 15:06:02 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 15:06:05 [INFO]: Connected to MongoDB 
+2025-02-28 15:06:34 [INFO]: Server is running on port 3000 
+2025-02-28 15:06:34 [INFO]: Environment: development 
+2025-02-28 15:06:34 [INFO]: API Documentation: http://localhost:3000/api-docs 
+2025-02-28 15:06:37 [INFO]: Connected to MongoDB 

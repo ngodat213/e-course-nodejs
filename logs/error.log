@@ -2772,3 +2772,616 @@ haha
   "query": {},
   "user": null
 }
+2025-02-27 19:52:56 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 19:53:45 [ERROR]: Insufficient permissions {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 19:56:53 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 19:56:53 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 19:57:34 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 19:57:34 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 19:58:38 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 19:58:38 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:00:27 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 20:00:27 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:00:57 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-02-27 20:00:57 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "Haha1",
+    "type": "video",
+    "description": "Haha2"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:10:45 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:11:20 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "Hahaha2",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:11:20 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "Hahaha2",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:11:21 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "Hahaha2",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:11:51 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "This tutorial learning Flutter zero to heroThis tutorial learning Flutter zero to hero",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:12:08 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "This tutorial learning Flutter zero to heroThis tutorial learning Flutter zero to hero",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-27 20:12:14 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "title": "Hahaha",
+    "description": "This tutorial learning Flutter zero to heroThis tutorial learning Flutter zero to hero",
+    "price": "1111",
+    "type": "course",
+    "status": "published",
+    "level": "beginner",
+    "what_you_will_learn": ""
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:35:59 [ERROR]: Unexpected token 'g', ...""email": ngodat.it21"... is not valid JSON {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 11:36:11 [ERROR]: Unexpected token 'g', ...""email": ngodat.it21"... is not valid JSON {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {},
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 11:36:55 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:37:21 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:37:23 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:37:32 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:37:40 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
+2025-02-28 11:37:40 [ERROR]: Cannot read properties of undefined (reading 'toString') {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:38:45 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
+2025-02-28 11:38:45 [ERROR]: Cannot read properties of undefined (reading 'toString') {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:40:12 [ERROR]: course.notInstructor {}
+2025-02-28 11:40:12 [ERROR]: course.notInstructor {
+  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:42:23 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:42:48 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:42:57 [ERROR]: Insufficient permissions {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:43:18 [ERROR]: this.deleteCourse is not a function {}
+2025-02-28 11:43:18 [ERROR]: this.deleteCourse is not a function {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:46:40 [ERROR]: This request has already been handled {}
+2025-02-28 11:46:40 [ERROR]: This request has already been handled {
+  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
+  "method": "PUT",
+  "body": {
+    "status": "approved",
+    "message": "string"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 11:51:00 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:51:00 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:52:59 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:52:59 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:53:07 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:53:07 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:53:19 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:53:19 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:53:56 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:53:56 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "status": "pending",
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:54:54 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:54:54 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "status": "pending",
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 11:56:14 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
+2025-02-28 11:56:14 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "status": "pending",
+    "page": "1",
+    "limit": "10"
+  },
+  "user": null
+}
+2025-02-28 14:06:26 [ERROR]: Cannot read properties of undefined (reading 'role') {
+  "path": "/api/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-created_at"
+  },
+  "user": null
+}
+2025-02-28 14:07:06 [ERROR]: Cannot read properties of undefined (reading 'role') {
+  "path": "/api/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-created_at"
+  },
+  "user": null
+}
+2025-02-28 14:07:27 [ERROR]: Cannot read properties of undefined (reading 'role') {
+  "path": "/api/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-created_at"
+  },
+  "user": null
+}
+2025-02-28 14:08:36 [ERROR]: Invalid token {
+  "path": "/api/delete-requests",
+  "method": "GET",
+  "body": {},
+  "params": {},
+  "query": {
+    "page": "1",
+    "limit": "10",
+    "sort": "-created_at"
+  },
+  "user": null
+}
+2025-02-28 14:46:52 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:49:15 [ERROR]: Invalid token {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 14:49:25 [ERROR]: Invalid email or password {}
+2025-02-28 14:49:25 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "john.doe@example.com",
+    "password": "123456"
+  },
+  "params": {},
+  "query": {},
+  "user": null
+}
+2025-02-28 14:49:59 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:50:26 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:51:02 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:51:25 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:52:44 [ERROR]: Insufficient permissions {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:54:19 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "123",
+    "description": "123",
+    "price": "0123",
+    "type": "course",
+    "level": "beginner"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:54:28 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses",
+  "method": "POST",
+  "body": {
+    "title": "123",
+    "description": "123 123 123 123 123 123",
+    "price": "0123",
+    "type": "course",
+    "level": "beginner"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}
+2025-02-28 14:55:51 [ERROR]: E11000 duplicate key error collection: ecourse.coursedeleterequests index: course_id_1_status_1 dup key: { course_id: ObjectId('67c060782aaa9b16b68bc874'), status: "pending" } {
+  "code": 11000
+}
+2025-02-28 14:55:51 [ERROR]: E11000 duplicate key error collection: ecourse.coursedeleterequests index: course_id_1_status_1 dup key: { course_id: ObjectId('67c060782aaa9b16b68bc874'), status: "pending" } {
+  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "reason": "stringstri"
+  },
+  "params": {},
+  "query": {},
+  "user": "67c05fa139552b1e8f2d900d"
+}

@@ -113,11 +113,7 @@ class CourseService {
       throw new NotFoundError(i18next.t("course.notFound"));
     }
 
-    if (course.student_count > 0) {
-      throw new BadRequestError(i18next.t("course.hasStudents"));
-    }
-
-    await course.remove();
+    await course.updateOne({ status: "deleted" });
     return { message: i18next.t("course.deleted") };
   }
 
@@ -183,7 +179,7 @@ class CourseService {
   async createDeleteRequest(courseId, userId, reason) {
     const course = await Course.findById(courseId);
 
-    if (course.instructor.toString() !== userId.toString()) {
+    if (course.instructor_id._id.toString() !== userId) {
       throw new BadRequestError(i18next.t("course.notInstructor"));
     }
 
@@ -202,10 +198,10 @@ class CourseService {
       filter.status = status;
     }
 
-    const requests = await CourseDeleteRequest.find(filter)
-      .populate("course_id", "title")
-      .populate("instructor_id", "name email")
-      .populate("admin_response.admin_id", "name")
+    const requests = await CourseDeleteRequest.find()
+      .populate("course_id", "title description")
+      .populate("instructor_id", "email")
+      .populate("admin_response", "message action_date")
       .sort("-created_at")
       .skip((page - 1) * limit)
       .limit(limit);
@@ -244,11 +240,16 @@ class CourseService {
 
     // Nếu approved thì xóa khóa học
     if (status === "approved") {
-      await this.deleteCourse(request.course_id);
+      await this.delete(request.course_id);
     }
 
-    // Gửi email thông báo cho instructor
-    // TODO: Implement email notification
+    // Send email to instructor
+    await EmailService.sendCourseDeleteRequestEmail(
+      request.instructor_id,
+      request.course_id,
+      status,
+      message
+    );
 
     return request;
   }

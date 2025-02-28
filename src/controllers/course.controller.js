@@ -73,13 +73,13 @@ class CourseController extends BaseController {
   async requestDelete(req, res, next) {
     try {
       const result = await CourseService.createDeleteRequest(
-        req.params.id,
-        req.user._id,
+        req.params.courseId,
+        req.user.id,
         req.body.reason
       );
       this.logInfo("Course delete requested", {
-        courseId: req.params.id,
-        userId: req.user._id,
+        courseId: req.params.courseId,
+        userId: req.user.id,
       });
       this.successResponse(res, result);
     } catch (error) {

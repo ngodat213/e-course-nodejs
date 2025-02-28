@@ -1,5 +1,9 @@
 /**
  * @swagger
+ * tags:
+ *   name: Courses
+ *   description: Quản lý khóa học
+ * 
  * components:
  *   schemas:
  *     Course:
@@ -15,53 +19,40 @@
  *           type: string
  *         title:
  *           type: string
- *           description: Tiêu đề khóa học/bài kiểm tra
+ *           description: Tên khóa học
  *         description:
  *           type: string
- *           description: Mô tả chi tiết
+ *           description: Mô tả khóa học
  *         price:
  *           type: number
- *           description: Giá (0 cho miễn phí)
+ *           description: Giá khóa học (0 cho miễn phí)
  *         instructor_id:
  *           type: string
  *           description: ID của giảng viên
  *         type:
  *           type: string
- *           enum: [course, exam]
- *           description: Loại (khóa học hoặc bài kiểm tra)
+ *           enum: [course, quiz]
+ *           description: Loại khóa học
  *         level:
  *           type: string
  *           enum: [beginner, intermediate, advanced]
+ *           description: Độ khó của khóa học
+ *         thumbnail:
+ *           type: string
+ *           description: URL ảnh thumbnail
  *         status:
  *           type: string
  *           enum: [draft, published, archived]
- *         total_duration:
- *           type: number
- *           description: Tổng thời lượng (phút)
- *         lesson_count:
- *           type: number
- *         student_count:
- *           type: number
+ *           description: Trạng thái khóa học
  *         rating:
  *           type: number
- *         review_count:
+ *           description: Đánh giá trung bình
+ *         total_reviews:
  *           type: number
- *         requirements:
- *           type: array
- *           items:
- *             type: string
- *         what_you_will_learn:
- *           type: array
- *           items:
- *             type: string
- *         thumbnail_id:
- *           type: string
- *           description: ID của ảnh thumbnail
- *         lessons:
- *           type: array
- *           items:
- *             type: string
- *           description: Danh sách ID các bài học
+ *           description: Tổng số đánh giá
+ *         total_students:
+ *           type: number
+ *           description: Tổng số học viên
  *         created_at:
  *           type: string
  *           format: date-time
@@ -102,29 +93,33 @@
  *       properties:
  *         _id:
  *           type: string
+ *           description: ID của yêu cầu xóa
  *         course_id:
  *           type: string
- *           description: ID of the course to be deleted
+ *           description: ID của khóa học
  *         instructor_id:
  *           type: string
- *           description: ID of the instructor requesting deletion
+ *           description: ID của giảng viên
  *         reason:
  *           type: string
- *           minLength: 10
- *           description: Reason for deletion request
+ *           description: Lý do xóa khóa học
  *         status:
  *           type: string
  *           enum: [pending, approved, rejected]
+ *           description: Trạng thái yêu cầu
  *         admin_response:
  *           type: object
  *           properties:
  *             admin_id:
  *               type: string
+ *               description: ID của admin xử lý
  *             message:
  *               type: string
+ *               description: Phản hồi của admin
  *             action_date:
  *               type: string
  *               format: date-time
+ *               description: Thời gian xử lý
  *         created_at:
  *           type: string
  *           format: date-time
@@ -138,49 +133,55 @@
  * /api/courses:
  *   get:
  *     tags: [Courses]
- *     summary: Lấy danh sách khóa học/bài kiểm tra
+ *     summary: Lấy danh sách khóa học
  *     parameters:
- *       - in: query
- *         name: type
- *         schema:
- *           type: string
- *           enum: [course, exam]
- *         description: Lọc theo loại
- *       - in: query
- *         name: status
- *         schema:
- *           type: string
- *           enum: [draft, published, archived]
- *       - in: query
- *         name: level
- *         schema:
- *           type: string
- *           enum: [beginner, intermediate, advanced]
- *       - in: query
- *         name: search
- *         schema:
- *           type: string
  *       - in: query
  *         name: page
  *         schema:
  *           type: integer
- *           default: 1
+ *         description: Số trang
  *       - in: query
  *         name: limit
  *         schema:
  *           type: integer
- *           default: 10
+ *         description: Số lượng items mỗi trang
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *         description: Tìm kiếm theo tên hoặc mô tả
+ *       - in: query
+ *         name: sort
+ *         schema:
+ *           type: string
+ *         description: Sắp xếp (-created_at, price, etc)
  *     responses:
  *       200:
  *         description: Thành công
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/CourseList'
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Course'
+ *                 pagination:
+ *                   type: object
+ *                   properties:
+ *                     total:
+ *                       type: integer
+ *                     page:
+ *                       type: integer
+ *                     limit:
+ *                       type: integer
+ *                     pages:
+ *                       type: integer
  *
  *   post:
  *     tags: [Courses]
- *     summary: Tạo khóa học/bài kiểm tra mới
+ *     summary: Tạo khóa học mới
  *     security:
  *       - bearerAuth: []
  *     requestBody:
@@ -203,7 +204,7 @@
  *                 type: number
  *               type:
  *                 type: string
- *                 enum: [course, exam]
+ *                 enum: [course, quiz]
  *               level:
  *                 type: string
  *                 enum: [beginner, intermediate, advanced]
@@ -212,19 +213,22 @@
  *                 format: binary
  *     responses:
  *       201:
- *         description: Tạo thành công
+ *         description: Tạo khóa học thành công
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/CourseResponse'
- */
-
-/**
- * @swagger
+ *               $ref: '#/components/schemas/Course'
+ *       400:
+ *         description: Dữ liệu không hợp lệ
+ *       401:
+ *         description: Chưa đăng nhập
+ *       403:
+ *         description: Không có quyền tạo khóa học
+ *
  * /api/courses/{id}:
  *   get:
- *     tags: [Courses]
- *     summary: Lấy chi tiết khóa học/bài kiểm tra
+ *     tags: [Courses] 
+ *     summary: Lấy chi tiết khóa học
  *     parameters:
  *       - in: path
  *         name: id
@@ -237,11 +241,13 @@
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/CourseResponse'
+ *               $ref: '#/components/schemas/Course'
+ *       404:
+ *         description: Không tìm thấy khóa học
  *
  *   put:
- *     tags: [Courses] 
- *     summary: Cập nhật khóa học/bài kiểm tra
+ *     tags: [Courses]
+ *     summary: Cập nhật khóa học
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -264,42 +270,31 @@
  *                 type: number
  *               type:
  *                 type: string
- *                 enum: [course, exam]
- *               status:
- *                 type: string
- *                 enum: [draft, published, archived]
+ *                 enum: [course, quiz]
  *               level:
  *                 type: string
  *                 enum: [beginner, intermediate, advanced]
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published, archived]
  *               thumbnail:
  *                 type: string
  *                 format: binary
- *               what_you_will_learn:
- *                 type: array
- *                 items:
- *                   type: string
  *     responses:
  *       200:
  *         description: Cập nhật thành công
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/CourseResponse'
- *
- *   delete:
- *     tags: [Courses]
- *     summary: Xóa khóa học/bài kiểm tra
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: Xóa thành công
+ *               $ref: '#/components/schemas/Course'
+ *       400:
+ *         description: Dữ liệu không hợp lệ
+ *       401:
+ *         description: Chưa đăng nhập
+ *       403:
+ *         description: Không có quyền sửa khóa học này
+ *       404:
+ *         description: Không tìm thấy khóa học
  */
 
 /**
@@ -345,8 +340,8 @@
  * /api/courses/{id}/delete-request:
  *   post:
  *     tags: [Courses]
- *     summary: Request to delete a course
- *     description: Only course instructors can request course deletion
+ *     summary: Yêu cầu xóa khóa học
+ *     description: Giảng viên gửi yêu cầu xóa khóa học của họ
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -355,6 +350,7 @@
  *         required: true
  *         schema:
  *           type: string
+ *         description: ID của khóa học
  *     requestBody:
  *       required: true
  *       content:
@@ -368,17 +364,26 @@
  *                 type: string
  *                 minLength: 10
  *                 maxLength: 500
+ *                 description: Lý do xóa khóa học
  *     responses:
  *       200:
- *         description: Delete request created successfully
+ *         description: Yêu cầu xóa đã được gửi thành công
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/CourseDeleteRequest'
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: success
+ *                 data:
+ *                   $ref: '#/components/schemas/CourseDeleteRequest'
  *       400:
- *         description: A pending delete request already exists
+ *         description: Dữ liệu không hợp lệ
  *       403:
- *         description: Not authorized to request deletion
+ *         description: Không có quyền gửi yêu cầu xóa
+ *       404:
+ *         description: Không tìm thấy khóa học
  */
 
 /**
@@ -386,8 +391,8 @@
  * /api/courses/delete-requests:
  *   get:
  *     tags: [Courses]
- *     summary: Get all course delete requests
- *     description: Only admins can view delete requests
+ *     summary: Lấy danh sách yêu cầu xóa khóa học
+ *     description: Admin lấy danh sách các yêu cầu xóa khóa học
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -396,24 +401,30 @@
  *         schema:
  *           type: string
  *           enum: [pending, approved, rejected]
+ *         description: Lọc theo trạng thái yêu cầu
  *       - in: query
  *         name: page
  *         schema:
  *           type: integer
  *           default: 1
+ *         description: Số trang
  *       - in: query
  *         name: limit
  *         schema:
  *           type: integer
  *           default: 10
+ *         description: Số lượng items mỗi trang
  *     responses:
  *       200:
- *         description: List of delete requests
+ *         description: Danh sách yêu cầu xóa
  *         content:
  *           application/json:
  *             schema:
  *               type: object
  *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: success
  *                 data:
  *                   type: array
  *                   items:
@@ -422,24 +433,24 @@
  *                   type: object
  *                   properties:
  *                     total:
- *                       type: number
+ *                       type: integer
  *                     page:
- *                       type: number
+ *                       type: integer
  *                     limit:
- *                       type: number
+ *                       type: integer
  *                     pages:
- *                       type: number
+ *                       type: integer
  *       403:
- *         description: Not authorized to view delete requests
+ *         description: Không có quyền xem danh sách yêu cầu
  */
 
 /**
  * @swagger
  * /api/courses/delete-requests/{requestId}:
  *   put:
- *     tags: [Courses]
- *     summary: Handle a course delete request
- *     description: Only admins can approve/reject delete requests
+ *     tags: [Courses] 
+ *     summary: Xử lý yêu cầu xóa khóa học
+ *     description: Admin phê duyệt hoặc từ chối yêu cầu xóa khóa học
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -448,6 +459,7 @@
  *         required: true
  *         schema:
  *           type: string
+ *         description: ID của yêu cầu xóa
  *     requestBody:
  *       required: true
  *       content:
@@ -461,19 +473,29 @@
  *               status:
  *                 type: string
  *                 enum: [approved, rejected]
+ *                 description: Trạng thái phê duyệt
  *               message:
  *                 type: string
  *                 minLength: 5
  *                 maxLength: 500
+ *                 description: Phản hồi của admin
  *     responses:
  *       200:
- *         description: Delete request handled successfully
+ *         description: Xử lý yêu cầu thành công
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/CourseDeleteRequest'
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: success
+ *                 data:
+ *                   $ref: '#/components/schemas/CourseDeleteRequest'
  *       400:
- *         description: Request has already been handled
+ *         description: Dữ liệu không hợp lệ hoặc yêu cầu đã được xử lý
  *       403:
- *         description: Not authorized to handle delete requests
+ *         description: Không có quyền xử lý yêu cầu
+ *       404:
+ *         description: Không tìm thấy yêu cầu xóa
  */ 

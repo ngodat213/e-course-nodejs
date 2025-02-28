@@ -76,48 +76,11 @@ router.post(
  */
 router.put(
   "/:id",
-  restrictTo(["instructor", "admin"]),
+  restrictTo("instructor", "admin"),
   upload.single("thumbnail"),
   validateRequest(updateCourseSchema),
   (req, res, next) => {
     CourseController.update(req, res, next);
-  }
-);
-
-/**
- * @route POST /api/courses/:id/delete-request
- * @desc Yêu cầu xóa khóa học
- * @access Private (Instructor)
- * @param {string} id - Course ID
- */
-router.post(
-  "/:id/delete-request",
-  restrictTo(["instructor"]),
-  (req, res, next) => {
-    CourseController.requestDelete(req, res, next);
-  }
-);
-
-/**
- * @route GET /api/courses/delete-requests
- * @desc Lấy danh sách yêu cầu xóa khóa học
- * @access Private (Admin)
- */
-router.get("/delete-requests", restrictTo(["admin"]), (req, res, next) => {
-  CourseController.getDeleteRequests(req, res, next);
-});
-
-/**
- * @route PUT /api/courses/delete-requests/:requestId
- * @desc Xử lý yêu cầu xóa khóa học
- * @access Private (Admin)
- * @param {string} requestId - Request ID
- */
-router.put(
-  "/delete-requests/:requestId",
-  restrictTo(["admin"]),
-  (req, res, next) => {
-    CourseController.handleDeleteRequest(req, res, next);
   }
 );
 
