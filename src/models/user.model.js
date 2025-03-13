@@ -20,6 +20,32 @@ const userSchema = new mongoose.Schema(
       trim: true,
       lowercase: true,
     },
+    followers: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
+    followers_count: {
+      type: Number,
+      default: 0,
+    },
+    working_at: {
+      type: String,
+      default: null,
+    },
+    address: {
+      type: String,
+      default: null,
+    },
+    about: {
+      type: String,
+      default: null,
+    },
+    level: {
+      type: String,
+      default: null,
+    },
     password: {
       type: String,
       required: true,
@@ -88,21 +114,6 @@ const userSchema = new mongoose.Schema(
     timestamps: {
       createdAt: "created_at",
       updatedAt: "updated_at",
-    },
-    toJSON: {
-      transform: async function (doc, ret) {
-        if (ret.profile_picture) {
-          const CloudinaryService = require('../services/cloudinary.service');
-          ret.profile_picture = await CloudinaryService.generateSignedUrl(
-            ret.profile_picture.public_id,
-            { expires_in: process.env.SIGN_URL_EXPIRES }
-          );
-        }
-        ret.id = ret._id;
-        delete ret._id;
-        delete ret.__v;
-        return ret;
-      },
     },
   }
 );

@@ -12,12 +12,32 @@
  *         _id:
  *           type: string
  *           description: ID của người dùng
- *         name:
+ *         first_name:
+ *           type: string
+ *           description: Họ người dùng
+ *         last_name:
  *           type: string
  *           description: Tên người dùng
  *         email:
  *           type: string
  *           description: Email người dùng
+ *         working_at:
+ *           type: string
+ *           description: Nơi làm việc
+ *         address:
+ *           type: string
+ *           description: Địa chỉ
+ *         about:
+ *           type: string
+ *           description: Giới thiệu bản thân
+ *         followers:
+ *           type: array
+ *           items:
+ *             type: string
+ *           description: Danh sách ID người theo dõi
+ *         followers_count:
+ *           type: number
+ *           description: Số lượng người theo dõi
  *         profile_picture:
  *           type: object
  *           description: Thông tin avatar
@@ -42,13 +62,21 @@
  *     UpdateProfileInput:
  *       type: object
  *       properties:
- *         name:
+ *         first_name:
+ *           type: string
+ *           description: Họ người dùng
+ *         last_name:
  *           type: string
  *           description: Tên người dùng
- *         email:
+ *         working_at:
  *           type: string
- *           format: email
- *           description: Email
+ *           description: Nơi làm việc
+ *         address:
+ *           type: string
+ *           description: Địa chỉ
+ *         about:
+ *           type: string
+ *           description: Giới thiệu bản thân
  *
  *     ChangePasswordInput:
  *       type: object
@@ -77,6 +105,59 @@
  *           enum: [student, instructor, admin]
  *           description: Role mới
  *
+ *     Teacher:
+ *       type: object
+ *       properties:
+ *         _id:
+ *           type: string
+ *           description: ID của giảng viên
+ *         first_name:
+ *           type: string
+ *           description: Họ giảng viên
+ *         last_name:
+ *           type: string
+ *           description: Tên giảng viên
+ *         email:
+ *           type: string
+ *           description: Email giảng viên
+ *         working_at:
+ *           type: string
+ *           description: Nơi làm việc
+ *         level:
+ *           type: string
+ *           description: Cấp độ giảng viên
+ *         about:
+ *           type: string
+ *           description: Giới thiệu về giảng viên
+ *         followers_count:
+ *           type: number
+ *           description: Số lượng người theo dõi
+ *         profile_picture:
+ *           type: string
+ *           description: URL ảnh đại diện
+ *         teaching_courses:
+ *           type: array
+ *           description: Danh sách khóa học đang dạy
+ *           items:
+ *             type: object
+ *             properties:
+ *               _id:
+ *                 type: string
+ *               title:
+ *                 type: string
+ *               thumbnail:
+ *                 type: string
+ *               student_count:
+ *                 type: number
+ *               rating_average:
+ *                 type: number
+ *         total_students:
+ *           type: number
+ *           description: Tổng số học viên
+ *         average_rating:
+ *           type: number
+ *           description: Điểm đánh giá trung bình
+ *
  * /api/users/profile:
  *   get:
  *     tags: [Users]
@@ -92,26 +173,7 @@
  *               type: object
  *               properties:
  *                 user:
- *                   type: object
- *                   properties:
- *                     id:
- *                       type: string
- *                     name:
- *                       type: string  
- *                     email:
- *                       type: string
- *                     role:
- *                       type: string
- *                     profile_picture:
- *                       type: string
- *                     enrolled_courses:
- *                       type: array
- *                       items:
- *                         type: object
- *                     teaching_courses:
- *                       type: array
- *                       items:
- *                         type: object
+ *                   $ref: '#/components/schemas/User'
  *                 stats:
  *                   type: object
  *                   description: Thống kê người dùng
@@ -181,6 +243,101 @@
  *       401:
  *         description: Chưa đăng nhập
  *
+ * /api/users/{id}/follow:
+ *   post:
+ *     tags: [Users]
+ *     summary: Follow người dùng
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID người dùng muốn follow
+ *     responses:
+ *       200:
+ *         description: Follow thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                 followers_count:
+ *                   type: number
+ *       400:
+ *         description: Lỗi (đã follow hoặc tự follow chính mình)
+ *       401:
+ *         description: Chưa đăng nhập
+ *       404:
+ *         description: Không tìm thấy người dùng
+ *
+ *   delete:
+ *     tags: [Users]
+ *     summary: Unfollow người dùng
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID người dùng muốn unfollow
+ *     responses:
+ *       200:
+ *         description: Unfollow thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                 followers_count:
+ *                   type: number
+ *       400:
+ *         description: Lỗi (chưa follow)
+ *       401:
+ *         description: Chưa đăng nhập
+ *       404:
+ *         description: Không tìm thấy người dùng
+ *
+ * /api/users/{id}/followers:
+ *   get:
+ *     tags: [Users]
+ *     summary: Lấy danh sách người theo dõi
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID người dùng
+ *     responses:
+ *       200:
+ *         description: Thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 followers:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/User'
+ *                 total:
+ *                   type: number
+ *       401:
+ *         description: Chưa đăng nhập
+ *       404:
+ *         description: Không tìm thấy người dùng
+ *
  * /api/users/admin:
  *   get:
  *     tags: [Users]
@@ -236,29 +393,7 @@
  *                 data:
  *                   type: array
  *                   items:
- *                     type: object
- *                     properties:
- *                       id:
- *                         type: string
- *                       name:
- *                         type: string
- *                       email:
- *                         type: string
- *                       role:
- *                         type: string
- *                         enum: [student, instructor, admin, super_admin]
- *                       status:
- *                         type: string
- *                         enum: [pending, active, blocked]
- *                       profile_picture:
- *                         type: string
- *                         description: Signed URL của avatar
- *                       created_at:
- *                         type: string
- *                         format: date-time
- *                       updated_at:
- *                         type: string
- *                         format: date-time
+ *                     $ref: '#/components/schemas/User'
  *                 pagination:
  *                   type: object
  *                   properties:
@@ -275,20 +410,41 @@
  *       403:
  *         description: Không có quyền truy cập
  *
- * /api/users/admin/{id}:
+ * /api/users/teachers:
  *   get:
  *     tags: [Users]
- *     summary: Lấy thông tin chi tiết người dùng (Admin)
- *     description: API dành cho admin để xem thông tin chi tiết của một người dùng
- *     security:
- *       - bearerAuth: []
+ *     summary: Lấy danh sách giảng viên
+ *     description: API để lấy danh sách giảng viên với các thông tin chi tiết
  *     parameters:
- *       - in: path
- *         name: id
- *         required: true
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           default: 1
+ *         description: Số trang
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 10
+ *         description: Số lượng item mỗi trang
+ *       - in: query
+ *         name: sort
  *         schema:
  *           type: string
- *         description: ID của người dùng
+ *           default: -followers_count
+ *           enum: [followers_count, -followers_count, total_students, -total_students, average_rating, -average_rating]
+ *         description: Sắp xếp kết quả (- là giảm dần)
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *         description: Tìm kiếm theo tên hoặc email
+ *       - in: query
+ *         name: level
+ *         schema:
+ *           type: string
+ *         description: Lọc theo cấp độ giảng viên
  *     responses:
  *       200:
  *         description: Thành công
@@ -297,122 +453,141 @@
  *             schema:
  *               type: object
  *               properties:
- *                 user:
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Teacher'
+ *                 pagination:
  *                   type: object
  *                   properties:
- *                     id:
- *                       type: string
- *                     name:
- *                       type: string
- *                     email:
- *                       type: string
- *                     role:
- *                       type: string
- *                     profile_picture:
- *                       type: string
- *                     enrolled_courses:
- *                       type: array
- *                       items:
- *                         type: object
- *                         properties:
- *                           id:
- *                             type: string
- *                           title:
- *                             type: string
- *                           progress_percent:
- *                             type: number
- *                     teaching_courses:
- *                       type: array
- *                       items:
- *                         type: object
- *                         properties:
- *                           id:
- *                             type: string
- *                           title:
- *                             type: string
- *                           student_count:
- *                             type: number
- *                 stats:
- *                   type: object
- *                   description: Thống kê người dùng
- *       401:
- *         description: Chưa đăng nhập
- *       403:
- *         description: Không có quyền truy cập
- *       404:
- *         description: Không tìm thấy người dùng
- *
- *   put:
- *     tags: [Users]
- *     summary: Cập nhật thông tin người dùng (Admin)
- *     description: API dành cho admin để cập nhật thông tin của một người dùng
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *         description: ID của người dùng
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               name:
- *                 type: string
- *               email:
- *                 type: string
- *                 format: email
- *               role:
- *                 type: string
- *                 enum: [student, instructor, admin]
- *               status:
- *                 type: string
- *                 enum: [pending, active, blocked]
- *     responses:
- *       200:
- *         description: Cập nhật thành công
+ *                     page:
+ *                       type: integer
+ *                     limit:
+ *                       type: integer
+ *                     total:
+ *                       type: integer
+ *                     totalPages:
+ *                       type: integer
  *       400:
- *         description: Dữ liệu không hợp lệ
- *       401:
- *         description: Chưa đăng nhập
- *       403:
- *         description: Không có quyền truy cập
- *       404:
- *         description: Không tìm thấy người dùng
+ *         description: Lỗi tham số không hợp lệ
  *
- *   delete:
+ * /api/users/teachers/{id}:
+ *   get:
  *     tags: [Users]
- *     summary: Xóa người dùng (Admin)
- *     description: API dành cho admin để xóa một người dùng
- *     security:
- *       - bearerAuth: []
+ *     summary: Lấy thông tin chi tiết giảng viên
+ *     description: API để lấy thông tin chi tiết của một giảng viên bao gồm các khóa học, đánh giá và thống kê
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: string
- *         description: ID của người dùng
+ *         description: ID của giảng viên
  *     responses:
  *       200:
- *         description: Xóa thành công
+ *         description: Thành công
  *         content:
  *           application/json:
  *             schema:
  *               type: object
  *               properties:
- *                 message:
- *                   type: string
- *                   example: Xóa người dùng thành công
- *       401:
- *         description: Chưa đăng nhập
- *       403:
- *         description: Không có quyền truy cập
+ *                 teacher:
+ *                   type: object
+ *                   properties:
+ *                     _id:
+ *                       type: string
+ *                     first_name:
+ *                       type: string
+ *                     last_name:
+ *                       type: string
+ *                     email:
+ *                       type: string
+ *                     working_at:
+ *                       type: string
+ *                     level:
+ *                       type: string
+ *                     about:
+ *                       type: string
+ *                     profile_picture:
+ *                       type: string
+ *                     followers:
+ *                       type: array
+ *                       items:
+ *                         type: object
+ *                         properties:
+ *                           _id:
+ *                             type: string
+ *                           first_name:
+ *                             type: string
+ *                           last_name:
+ *                             type: string
+ *                           profile_picture:
+ *                             type: string
+ *                     teaching_courses:
+ *                       type: array
+ *                       items:
+ *                         type: object
+ *                         properties:
+ *                           _id:
+ *                             type: string
+ *                           title:
+ *                             type: string
+ *                           description:
+ *                             type: string
+ *                           thumbnail:
+ *                             type: string
+ *                           price:
+ *                             type: number
+ *                           level:
+ *                             type: string
+ *                           student_count:
+ *                             type: number
+ *                           rating_average:
+ *                             type: number
+ *                           reviews:
+ *                             type: array
+ *                             items:
+ *                               type: object
+ *                               properties:
+ *                                 rating:
+ *                                   type: number
+ *                                 content:
+ *                                   type: string
+ *                                 created_at:
+ *                                   type: string
+ *                                   format: date-time
+ *                                 user_id:
+ *                                   type: object
+ *                                   properties:
+ *                                     first_name:
+ *                                       type: string
+ *                                     last_name:
+ *                                       type: string
+ *                                     profile_picture:
+ *                                       type: string
+ *                     total_students:
+ *                       type: number
+ *                     average_rating:
+ *                       type: number
+ *                     total_reviews:
+ *                       type: number
+ *                 stats:
+ *                   type: object
+ *                   properties:
+ *                     totalCourses:
+ *                       type: number
+ *                     totalStudents:
+ *                       type: number
+ *                     totalRevenue:
+ *                       type: number
+ *                     averageRating:
+ *                       type: number
+ *                     totalReviews:
+ *                       type: number
+ *                     ratingDistribution:
+ *                       type: object
+ *                       additionalProperties:
+ *                         type: number
  *       404:
- *         description: Không tìm thấy người dùng
+ *         description: Không tìm thấy giảng viên
  */ 

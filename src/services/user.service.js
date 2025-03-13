@@ -258,7 +258,6 @@ class UserService {
       .populate([
         {
           path: "profile_picture",
-          select: "public_id",
         },
         {
           path: "enrolled_courses",
@@ -291,17 +290,8 @@ class UserService {
     // Thêm thống kê
     const stats = await this.getUserStats(userId);
 
-    // Generate signed URL for profile picture
-    const sanitizedUser = this._sanitizeUser(user);
-    if (sanitizedUser.profile_picture) {
-      sanitizedUser.profile_picture = await CloudinaryService.generateSignedUrl(
-        sanitizedUser.profile_picture.public_id,
-        { expires_in: parseInt(process.env.SIGN_URL_EXPIRES) }
-      );
-    }
-
     return {
-      user: sanitizedUser,
+      user: user,
       stats,
     };
   }
@@ -323,17 +313,17 @@ class UserService {
       };
     }
 
-    if (user.role === "student") {
-      const [learningStats, certificateStats] = await Promise.all([
-        this.getStudentLearningStats(userId),
-        this.getStudentCertificateStats(userId),
-      ]);
+    // if (user.role === "student") {
+    //   const [learningStats, certificateStats] = await Promise.all([
+    //     this.getStudentLearningStats(userId),
+    //     this.getStudentCertificateStats(userId),
+    //   ]);
 
-      return {
-        learning: learningStats,
-        certificates: certificateStats,
-      };
-    }
+    //   return {
+    //     learning: learningStats,
+    //     certificates: certificateStats,
+    //   };
+    // }
 
     return null;
   }
@@ -409,6 +399,299 @@ class UserService {
 
   async findByEmail(email) {
     return User.findOne({ email });
+  }
+
+  async followUser(targetUserId, currentUserId) {
+    // Kiểm tra user tồn tại
+    const targetUser = await User.findById(targetUserId);
+    if (!targetUser) {
+      throw new NotFoundError(i18next.t("user.notFound"));
+    }
+
+    // Kiểm tra không thể tự follow chính mình
+    if (targetUserId === currentUserId.toString()) {
+      throw new BadRequestError(i18next.t("user.cannotFollowSelf"));
+    }
+
+    // Kiểm tra đã follow chưa
+    if (targetUser.followers.includes(currentUserId)) {
+      throw new BadRequestError(i18next.t("user.alreadyFollowing"));
+    }
+
+    // Thêm vào danh sách followers và tăng followers_count
+    targetUser.followers.push(currentUserId);
+    targetUser.followers_count += 1;
+    await targetUser.save();
+
+    return {
+      message: i18next.t("user.followSuccess"),
+      followers_count: targetUser.followers_count
+    };
+  }
+
+  async unfollowUser(targetUserId, currentUserId) {
+    // Kiểm tra user tồn tại
+    const targetUser = await User.findById(targetUserId);
+    if (!targetUser) {
+      throw new NotFoundError(i18next.t("user.notFound"));
+    }
+
+    // Kiểm tra đã follow chưa
+    const followerIndex = targetUser.followers.indexOf(currentUserId);
+    if (followerIndex === -1) {
+      throw new BadRequestError(i18next.t("user.notFollowing"));
+    }
+
+    // Xóa khỏi danh sách followers và giảm followers_count
+    targetUser.followers.splice(followerIndex, 1);
+    targetUser.followers_count -= 1;
+    await targetUser.save();
+
+    return {
+      message: i18next.t("user.unfollowSuccess"),
+      followers_count: targetUser.followers_count
+    };
+  }
+
+  async getFollowers(userId) {
+    const user = await User.findById(userId)
+      .populate({
+        path: "followers",
+        select: "first_name last_name email profile_picture"
+      });
+
+    if (!user) {
+      throw new NotFoundError(i18next.t("user.notFound"));
+    }
+
+    // Generate signed URLs for followers' profile pictures
+    const followersWithSignedUrls = await Promise.all(
+      user.followers.map(async (follower) => {
+        const sanitizedFollower = this._sanitizeUser(follower);
+        if (sanitizedFollower.profile_picture) {
+          sanitizedFollower.profile_picture = await CloudinaryService.generateSignedUrl(
+            sanitizedFollower.profile_picture.public_id,
+            { expires_in: parseInt(process.env.SIGN_URL_EXPIRES) }
+          );
+        }
+        return sanitizedFollower;
+      })
+    );
+
+    return {
+      followers: followersWithSignedUrls,
+      total: user.followers_count
+    };
+  }
+
+  async getTeachers(options = {}) {
+    const { 
+      page = 1, 
+      limit = 10, 
+      sort = "-followers_count",
+      search,
+      level 
+    } = options;
+
+    let query = { role: "instructor", status: "active" };
+
+    // Tìm kiếm theo tên hoặc email
+    if (search) {
+      query.$or = [
+        { first_name: { $regex: search, $options: "i" } },
+        { last_name: { $regex: search, $options: "i" } },
+        { email: { $regex: search, $options: "i" } }
+      ];
+    }
+
+    // Lọc theo level nếu có
+    if (level) {
+      query.level = level;
+    }
+
+    const teachers = await User
+      .find(query)
+      .select("-password -verification_token -verification_token_expires -otp -otp_expires -reset_password_token -reset_password_expires")
+      .sort(sort)
+      .skip((page - 1) * limit)
+      .limit(limit)
+      .populate([
+        {
+          path: "profile_picture",
+          select: "file_url",
+        },
+        {
+          path: "teaching_courses",
+          select: "title thumbnail student_count rating_average",
+        }
+      ]);
+
+    const total = await User.countDocuments(query);
+
+    // Xử lý và format dữ liệu trả về
+    const formattedTeachers = teachers.map(teacher => {
+      const sanitizedTeacher = this._sanitizeUser(teacher);
+      return {
+        ...sanitizedTeacher,
+        total_students: sanitizedTeacher.teaching_courses.reduce((sum, course) => sum + (course.student_count || 0), 0),
+        average_rating: sanitizedTeacher.teaching_courses.reduce((sum, course) => sum + (course.rating_average || 0), 0) / 
+          (sanitizedTeacher.teaching_courses.length || 1)
+      };
+    });
+
+    return {
+      data: formattedTeachers,
+      pagination: {
+        page: parseInt(page),
+        limit: parseInt(limit),
+        total,
+        totalPages: Math.ceil(total / limit),
+      },
+    };
+  }
+
+  async getTeacherById(teacherId) {
+    // Tìm giảng viên và populate các thông tin liên quan
+    const teacher = await User.findOne({ 
+      _id: teacherId,
+      role: "instructor",
+      status: "active"
+    })
+    .select("-password -verification_token -verification_token_expires -otp -otp_expires -reset_password_token -reset_password_expires")
+    .populate([
+      {
+        path: "profile_picture",
+        select: "public_id file_url",
+      },
+      {
+        path: "teaching_courses",
+        select: "title thumbnail description student_count rating_average price level status created_at",
+        match: { status: "published" },
+        populate: [
+          {
+            path: "reviews",
+            select: "rating content created_at",
+            populate: {
+              path: "user_id",
+              select: "first_name last_name profile_picture"
+            }
+          }
+        ]
+      },
+      {
+        path: "followers",
+        select: "first_name last_name profile_picture",
+        populate: {
+          path: "profile_picture",
+          select: "file_url"
+        }
+      }
+    ]);
+
+    if (!teacher) {
+      throw new NotFoundError(i18next.t("user.teacherNotFound"));
+    }
+
+    // Tính toán các thống kê
+    const stats = await this.getTeacherStats(teacherId);
+
+    // Chỉ lấy thông tin cần thiết từ teacher
+    const sanitizedTeacher = this._sanitizeUser(teacher);
+
+    // Xử lý reviews để lấy avatar từ file_url
+    if (sanitizedTeacher.teaching_courses) {
+      sanitizedTeacher.teaching_courses = sanitizedTeacher.teaching_courses.map(course => {
+        if (course.reviews) {
+          course.reviews = course.reviews.map(review => {
+            if (review.user_id?.profile_picture) {
+              review.user_id.profile_picture = review.user_id.profile_picture.file_url;
+            }
+            return review;
+          });
+        }
+        return course;
+      });
+    }
+
+    return {
+      teacher: {
+        ...sanitizedTeacher,
+        total_students: stats.totalStudents,
+        average_rating: stats.averageRating,
+        total_reviews: stats.totalReviews
+      },
+      stats
+    };
+  }
+
+  async getTeacherStats(teacherId) {
+    const [courseStats, reviewStats] = await Promise.all([
+      Course.aggregate([
+        { 
+          $match: { 
+            instructor_id: new mongoose.Types.ObjectId(teacherId),
+            status: "published"
+          }
+        },
+        {
+          $group: {
+            _id: null,
+            totalCourses: { $sum: 1 },
+            totalStudents: { $sum: "$student_count" },
+            totalRevenue: { $sum: "$total_revenue" },
+            averageRating: { $avg: "$rating_average" },
+            totalReviews: { $sum: "$review_count" }
+          }
+        }
+      ]),
+      CourseReview.aggregate([
+        {
+          $lookup: {
+            from: "courses",
+            localField: "course_id",
+            foreignField: "_id",
+            as: "course"
+          }
+        },
+        {
+          $unwind: "$course"
+        },
+        {
+          $match: {
+            "course.instructor_id": new mongoose.Types.ObjectId(teacherId)
+          }
+        },
+        {
+          $group: {
+            _id: "$rating",
+            count: { $sum: 1 }
+          }
+        }
+      ])
+    ]);
+
+    const stats = courseStats[0] || {
+      totalCourses: 0,
+      totalStudents: 0,
+      totalRevenue: 0,
+      averageRating: 0,
+      totalReviews: 0
+    };
+
+    // Tính phân bố rating
+    const ratingDistribution = {};
+    reviewStats.forEach(item => {
+      ratingDistribution[item._id] = item.count;
+    });
+
+    return {
+      totalCourses: stats.totalCourses,
+      totalStudents: stats.totalStudents,
+      totalRevenue: stats.totalRevenue,
+      averageRating: stats.averageRating,
+      totalReviews: stats.totalReviews,
+      ratingDistribution
+    };
   }
 }
 
