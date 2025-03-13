@@ -1,11 +1,12 @@
 const Joi = require('joi');
 
 const updateUserSchema = Joi.object({
-    name: Joi.string().min(2).max(50),
-    email: Joi.string().email(),
-    profile_picture: Joi.string().uri().allow(null),
-    role: Joi.string().valid('student', 'instructor', 'admin'),
-    status: Joi.string().valid('pending', 'active', 'blocked')
+    first_name: Joi.string().min(2).max(50),
+    last_name: Joi.string().min(2).max(50),
+    working_at: Joi.string().max(100).allow(null),
+    address: Joi.string().max(200).allow(null),
+    about: Joi.string().max(500).allow(null),
+    level: Joi.string().max(50).allow(null),
 }).min(1); // Yêu cầu ít nhất 1 trường được cập nhật
 
 const changePasswordSchema = Joi.object({
@@ -41,25 +42,28 @@ const updateProfileSchema = Joi.object({
       'string.base': 'Tên phải là chuỗi ký tự'
     }),
 
-  phone: Joi.string()
-    .pattern(/^[0-9]{10}$/)
+  working_at: Joi.string()
+    .max(100)
+    .allow(null)
     .messages({
-      'string.pattern.base': 'Số điện thoại phải có 10 chữ số',
-      'string.base': 'Số điện thoại không hợp lệ'
-    }),
-
-  bio: Joi.string()
-    .max(500)
-    .messages({
-      'string.max': 'Giới thiệu không được vượt quá {#limit} ký tự',
-      'string.base': 'Giới thiệu phải là chuỗi ký tự'
+      'string.max': 'Nơi làm việc không được vượt quá {#limit} ký tự',
+      'string.base': 'Nơi làm việc phải là chuỗi ký tự'
     }),
 
   address: Joi.string()
     .max(200)
+    .allow(null)
     .messages({
       'string.max': 'Địa chỉ không được vượt quá {#limit} ký tự',
       'string.base': 'Địa chỉ phải là chuỗi ký tự'
+    }),
+
+  about: Joi.string()
+    .max(500)
+    .allow(null)
+    .messages({
+      'string.max': 'Giới thiệu không được vượt quá {#limit} ký tự',
+      'string.base': 'Giới thiệu phải là chuỗi ký tự'
     })
 }).min(1).messages({
   'object.min': 'Vui lòng cung cấp ít nhất một thông tin để cập nhật'

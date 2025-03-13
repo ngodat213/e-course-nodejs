@@ -54,6 +54,51 @@ router.post("/avatar", upload.single("avatar"), (req, res, next) => {
   UserController.uploadAvatar(req, res, next);
 });
 
+/**
+ * @route POST /api/users/:id/follow
+ * @desc Follow một người dùng
+ * @access Private
+ */
+router.post("/:id/follow", (req, res, next) => {
+  UserController.followUser(req, res, next);
+});
+
+/**
+ * @route DELETE /api/users/:id/follow
+ * @desc Unfollow một người dùng
+ * @access Private
+ */
+router.delete("/:id/follow", (req, res, next) => {
+  UserController.unfollowUser(req, res, next);
+});
+
+/**
+ * @route GET /api/users/:id/followers
+ * @desc Lấy danh sách người theo dõi
+ * @access Private
+ */
+router.get("/:id/followers", (req, res, next) => {
+  UserController.getFollowers(req, res, next);
+});
+
+/**
+ * @route GET /api/users/teachers
+ * @desc Lấy danh sách giảng viên
+ * @access Public
+ */
+router.get("/teachers", (req, res, next) => {
+  UserController.getTeachers(req, res, next);
+});
+
+/**
+ * @route GET /api/users/teachers/:id
+ * @desc Lấy thông tin chi tiết giảng viên
+ * @access Public
+ */
+router.get("/teachers/:id", (req, res, next) => {
+  UserController.getTeacherById(req, res, next);
+});
+
 // Admin only routes
 router.use(restrictTo("admin", "super_admin"));
 router.get("/admin/", (req, res, next) => {

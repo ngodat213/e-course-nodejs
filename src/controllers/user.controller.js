@@ -64,8 +64,8 @@ class UserController extends BaseController {
 
   async updateProfile(req, res, next) {
     try {
-      const result = await UserService.updateProfile(req.user._id, req.body);
-      this.logInfo("Profile updated", { userId: req.user._id });
+      const result = await UserService.updateProfile(req.user.id, req.body);
+      this.logInfo("Profile updated", { userId: req.user.id });
       this.successResponse(res, result);
     } catch (error) {
       this.handleError(error, next);
@@ -122,6 +122,51 @@ class UserController extends BaseController {
       res.success(result);
     } catch (error) {
       next(error);
+    }
+  }
+
+  async followUser(req, res, next) {
+    try {
+      const result = await UserService.followUser(req.params.id, req.user._id);
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async unfollowUser(req, res, next) {
+    try {
+      const result = await UserService.unfollowUser(req.params.id, req.user._id);
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async getFollowers(req, res, next) {
+    try {
+      const result = await UserService.getFollowers(req.params.id);
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async getTeachers(req, res, next) {
+    try {
+      const result = await UserService.getTeachers(req.query);
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async getTeacherById(req, res, next) {
+    try {
+      const result = await UserService.getTeacherById(req.params.id);
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
     }
   }
 }

@@ -1,3863 +1,590 @@
-2025-02-18 13:04:34 [ERROR]: Invalid dev secret key {
-  "stack": "Error: Invalid dev secret key\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:11:23)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
+2025-03-11 14:03:39 [ERROR]: Invalid email or password {
+  "code": 401
 }
-2025-02-18 13:04:34 [ERROR]: Invalid dev secret key {
-  "stack": "Error: Invalid dev secret key\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:11:23)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:04:56 [ERROR]: Invalid dev secret key {
-  "stack": "Error: Invalid dev secret key\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:11:23)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:04:56 [ERROR]: Invalid dev secret key {
-  "stack": "Error: Invalid dev secret key\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:11:23)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:05:04 [ERROR]: UserService.createUser is not a function {
-  "stack": "TypeError: UserService.createUser is not a function\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:21:45)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:05:04 [ERROR]: UserService.createUser is not a function {
-  "stack": "TypeError: UserService.createUser is not a function\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:21:45)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:08:41 [ERROR]: EmailService.sendWelcomeEmail is not a function {
-  "stack": "TypeError: EmailService.sendWelcomeEmail is not a function\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:329:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:22:27)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:08:41 [ERROR]: EmailService.sendWelcomeEmail is not a function {
-  "stack": "TypeError: EmailService.sendWelcomeEmail is not a function\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:329:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:22:27)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:17:30 [ERROR]: Email already exists {
-  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:323:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:22:27)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:17:30 [ERROR]: Email already exists {
-  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:323:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:22:27)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:18:26 [ERROR]: Cannot read properties of undefined (reading 'info') {
-  "stack": "TypeError: Cannot read properties of undefined (reading 'info')\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 13:18:26 [ERROR]: Cannot read properties of undefined (reading 'info') {
-  "stack": "TypeError: Cannot read properties of undefined (reading 'info')\n    at registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "admin@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 17:14:37 [ERROR]: Uncaught Exception: error.error is not a function {
-  "stack": "TypeError: error.error is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/server.js:72:11)\n    at process.emit (node:events:507:28)\n    at emitUnhandledRejection (node:internal/process/promises:252:13)\n    at throwUnhandledRejectionsMode (node:internal/process/promises:388:19)\n    at processPromiseRejections (node:internal/process/promises:475:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:106:32)"
-}
-2025-02-18 17:14:42 [ERROR]: Unhandled Rejection: error.error is not a function {
-  "stack": "TypeError: error.error is not a function\n    at connectDB (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:12:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-}
-2025-02-18 17:14:50 [ERROR]: MongoDB connection error: info.info is not a function {
-  "stack": "TypeError: info.info is not a function\n    at connectDB (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:10:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-}
-2025-02-18 17:14:54 [ERROR]: MongoDB connection error: info.info is not a function {
-  "stack": "TypeError: info.info is not a function\n    at connectDB (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:10:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-}
-2025-02-18 17:15:07 [ERROR]: Invalid dev secret key {
-  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15"
-}
-2025-02-18 17:15:40 [ERROR]: Invalid dev secret key {
-  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15"
-}
-2025-02-18 17:15:59 [ERROR]: Invalid dev secret key {
-  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15"
-}
-2025-02-18 17:15:59 [ERROR]: Invalid dev secret key {
-  "stack": "Error: Invalid dev secret key\n    at DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:15:15)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/dev.routes.js:19:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "string",
-    "email": "user@example.com",
-    "password": "string",
-    "dev_secret_key": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 17:16:25 [ERROR]: Email already exists {
-  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:83:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)"
-}
-2025-02-18 17:16:25 [ERROR]: Email already exists {
-  "stack": "Error: Email already exists\n    at UserService.createUser (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/user.service.js:83:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async DevController.registerAdmin (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/dev.controller.js:24:21)",
-  "path": "/api/dev/register-admin",
-  "method": "POST",
-  "body": {
-    "name": "Admin",
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003",
-    "dev_secret_key": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 17:18:24 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
-  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:59:18)"
-}
-2025-02-18 17:40:24 [ERROR]: res.created is not a function {
-  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-}
-2025-02-18 17:40:24 [ERROR]: res.created is not a function {
-  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-  "path": "/api/auth/register/mobile",
-  "method": "POST",
-  "body": {
-    "name": "NgoVanTienDat",
-    "email": "gangal.dat@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 17:43:21 [ERROR]: res.created is not a function {
-  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-}
-2025-02-18 17:43:21 [ERROR]: res.created is not a function {
-  "stack": "TypeError: res.created is not a function\n    at AuthController.createdResponse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/base.controller.js:13:13)\n    at AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:24:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-  "path": "/api/auth/register/mobile",
-  "method": "POST",
-  "body": {
-    "name": "NgoVanTienDat",
-    "email": "gangal.dat@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 17:48:21 [ERROR]: Dữ liệu không hợp lệ {
-  "stack": "Error: Dữ liệu không hợp lệ\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:16:23\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/index.js:47:12)",
-  "path": "/api/auth/verify-otp",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "otp": "302896"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 17:58:11 [ERROR]: otp.notFound {
-  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
-}
-2025-02-18 17:58:11 [ERROR]: otp.notFound {
-  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
-  "path": "/api/auth/verify-otp",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "otp": "302896"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 17:58:48 [ERROR]: otp.notFound {
-  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
-}
-2025-02-18 17:58:48 [ERROR]: otp.notFound {
-  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
-  "path": "/api/auth/verify-otp",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "otp": "970739"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 17:58:51 [ERROR]: otp.notFound {
-  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
-}
-2025-02-18 17:58:51 [ERROR]: otp.notFound {
-  "stack": "Error: otp.notFound\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
-  "path": "/api/auth/verify-otp",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "otp": "970739"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 20:42:45 [ERROR]: bcrypt is not defined {
-  "stack": "ReferenceError: bcrypt is not defined\n    at HashService.hashData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/hash.service.js:3:9)\n    at OTPService.saveOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:23:36)\n    at OTPService.generateAndSendOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:67:20)\n    at AuthService.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:176:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:22:28)"
-}
-2025-02-18 20:42:45 [ERROR]: bcrypt is not defined {
-  "stack": "ReferenceError: bcrypt is not defined\n    at HashService.hashData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/hash.service.js:3:9)\n    at OTPService.saveOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:23:36)\n    at OTPService.generateAndSendOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:67:20)\n    at AuthService.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:176:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthController.registerMobile (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:22:28)",
-  "path": "/api/auth/register/mobile",
-  "method": "POST",
-  "body": {
-    "name": "string",
-    "email": "haha@example.com",
-    "password": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 21:15:07 [ERROR]: otp.invalid {
-  "stack": "Error: otp.invalid\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
-}
-2025-02-18 21:15:07 [ERROR]: otp.invalid {
-  "stack": "Error: otp.invalid\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
-  "path": "/api/auth/verify-otp",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "otp": "773164"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 21:16:02 [ERROR]: user.notActive {
-  "stack": "Error: user.notActive\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)"
-}
-2025-02-18 21:16:02 [ERROR]: user.notActive {
-  "stack": "Error: user.notActive\n    at OTPService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/otp.service.js:44:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async AuthService.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:187:9)\n    at async AuthController.verifyOTP (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:33:28)",
-  "path": "/api/auth/verify-otp",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "otp": "773164"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 21:17:14 [ERROR]: Invalid email or password {
-  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)"
-}
-2025-02-18 21:17:14 [ERROR]: Invalid email or password {
-  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)",
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 21:17:54 [ERROR]: Invalid email or password {}
-2025-02-18 21:17:54 [ERROR]: Invalid email or password {
-  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)",
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 21:18:15 [ERROR]: Invalid email or password {}
-2025-02-18 21:18:15 [ERROR]: Invalid email or password {
-  "stack": "Error: Invalid email or password\n    at AuthService.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/auth.service.js:80:19)\n    at async AuthController.login (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/auth.controller.js:55:28)",
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 21:19:02 [ERROR]: Invalid email or password {}
-2025-02-18 21:19:02 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-18 21:35:08 [ERROR]: Unhandled Rejection: error.error is not a function {
-  "stack": "TypeError: error.error is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:31:15)"
-}
-2025-02-19 13:19:41 [ERROR]: Invalid email or password {}
-2025-02-19 13:19:41 [ERROR]: Invalid email or password {
+2025-03-11 14:03:39 [ERROR]: Invalid email or password {
   "path": "/api/auth/login",
   "method": "POST",
   "body": {
     "email": "ngodat.it213@gmail.com",
     "password": "Code26102003"
   },
-  "params": {},
-  "query": {},
-  "user": null
+  "error": {
+    "code": 401,
+    "success": false
+  }
 }
-2025-02-19 13:22:21 [ERROR]: User is not defined {}
-2025-02-19 13:22:21 [ERROR]: User is not defined {
-  "path": "/api/auth/refresh-token",
-  "method": "POST",
-  "body": {
-    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
-  },
-  "params": {},
-  "query": {},
-  "user": null
+2025-03-11 14:04:08 [ERROR]: Invalid email or password {
+  "code": 401
 }
-2025-02-19 13:22:39 [ERROR]: User is not defined {}
-2025-02-19 13:22:39 [ERROR]: User is not defined {
-  "path": "/api/auth/refresh-token",
-  "method": "POST",
-  "body": {
-    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 13:25:16 [ERROR]: User is not defined {}
-2025-02-19 13:25:16 [ERROR]: User is not defined {
-  "path": "/api/auth/refresh-token",
-  "method": "POST",
-  "body": {
-    "refresh_token": "40f78084117f14e2e24dc55748babd0d876aa776c99f0256b61466f3d79622b689da2127babd6798"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 13:25:42 [ERROR]: auth.invalidRefreshToken {}
-2025-02-19 13:25:42 [ERROR]: auth.invalidRefreshToken {
-  "path": "/api/auth/refresh-token",
-  "method": "POST",
-  "body": {
-    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 13:27:45 [ERROR]: Invalid refresh token {}
-2025-02-19 13:27:45 [ERROR]: Invalid refresh token {
-  "path": "/api/auth/refresh-token",
-  "method": "POST",
-  "body": {
-    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 13:30:20 [ERROR]: Invalid refresh token {}
-2025-02-19 13:30:20 [ERROR]: Invalid refresh token {
-  "path": "/api/auth/refresh-token",
-  "method": "POST",
-  "body": {
-    "refresh_token": "40f78084117f14e2e24dc55748babd0d876"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 14:42:15 [ERROR]: Invalid token {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 14:42:34 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:43:50 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:43:52 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:44:19 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:45:21 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:46:57 [ERROR]: Unhandled Rejection: error.error is not a function {
-  "stack": "TypeError: error.error is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:31:15)"
-}
-2025-02-19 14:47:14 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:47:44 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:48:18 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:50:17 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:50:55 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:53:49 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:53:54 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter",
-    "price": "10000",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:54:43 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter",
-    "price": "10000",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:55:22 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter",
-    "price": "10000",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:55:52 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter",
-    "price": "10000",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:55:59 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter",
-    "price": "10000",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:56:30 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter",
-    "price": "10000",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:56:55 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter",
-    "price": "",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:57:13 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "price": "",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:57:39 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {}
-2025-02-19 14:57:39 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "price": "111111",
-    "status": "draft",
-    "thumbnail_id": "ecourse/[object Object]/sbbl2u8b3yiwwzrmbckk"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 14:59:07 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter ",
-    "price": "111111",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:04:43 [ERROR]: Invalid token {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 15:05:08 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter ",
-    "price": "111111",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:05:42 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter ",
-    "price": "111111",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:06:37 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {}
-2025-02-19 15:06:37 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter for beginner hahahahahaha",
-    "price": "111111",
-    "status": "draft",
-    "thumbnail_id": "ecourse/[object Object]/xs7kvykgvtpemlcn6tmy"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:07:48 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {}
-2025-02-19 15:07:48 [ERROR]: Course validation failed: instructor_id: Path `instructor_id` is required. {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Flutter for beginner hahahahahaha",
-    "price": "111111",
-    "status": "draft",
-    "thumbnail_id": "ecourse/[object Object]/tyuibfrqbun1tbp8uu5y"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:25:03 [ERROR]: Invalid email or password {}
-2025-02-19 15:25:03 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "john@example.com",
-    "password": "password123"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 15:27:17 [ERROR]: Invalid token {
-  "path": "/api/users/info",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 15:27:34 [ERROR]: Invalid email or password {}
-2025-02-19 15:27:34 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 15:27:56 [ERROR]: UserController.getUserById is not a function {
-  "path": "/api/users/info",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:29:34 [ERROR]: UserController.getUserById is not a function {
-  "path": "/api/users/info",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:29:54 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
-2025-02-19 15:29:54 [ERROR]: Cannot read properties of undefined (reading 'findById') {
-  "path": "/api/users/info",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:34:17 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
-2025-02-19 15:34:17 [ERROR]: Cannot read properties of undefined (reading 'findById') {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:34:20 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
-2025-02-19 15:34:20 [ERROR]: Cannot read properties of undefined (reading 'findById') {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:36:01 [ERROR]: Invalid email or password {}
-2025-02-19 15:36:01 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 15:36:19 [ERROR]: User not found {}
-2025-02-19 15:36:19 [ERROR]: User not found {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:36:51 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {}
-2025-02-19 15:36:51 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:41:30 [ERROR]: CloudinaryService.upload is not a function {}
-2025-02-19 15:41:30 [ERROR]: CloudinaryService.upload is not a function {
-  "path": "/api/users/avatar",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:42:04 [ERROR]: upload.failed {}
-2025-02-19 15:42:04 [ERROR]: upload.failed {
-  "path": "/api/users/avatar",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:46:24 [ERROR]: upload.failed {}
-2025-02-19 15:46:24 [ERROR]: upload.failed {
-  "path": "/api/users/avatar",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:50:49 [ERROR]: upload.failed {}
-2025-02-19 15:50:49 [ERROR]: upload.failed {
-  "path": "/api/users/avatar",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 15:58:30 [ERROR]: Invalid token {
-  "path": "/api/users/avatar",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 18:10:05 [ERROR]: Invalid token {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 18:10:14 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
-2025-02-19 18:10:14 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+2025-03-11 14:04:08 [ERROR]: Invalid email or password {
   "path": "/api/auth/login",
   "method": "POST",
   "body": {
     "email": "ngodat.it213@gmail.com",
     "password": "Code26102003#!@"
   },
-  "params": {},
-  "query": {},
-  "user": null
+  "error": {
+    "code": 401,
+    "success": false
+  }
 }
-2025-02-19 18:11:44 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
-2025-02-19 18:11:44 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+2025-03-11 14:04:29 [ERROR]: Invalid email or password {
+  "code": 401
+}
+2025-03-11 14:04:29 [ERROR]: Invalid email or password {
   "path": "/api/auth/login",
   "method": "POST",
   "body": {
     "email": "ngodat.it213@gmail.com",
     "password": "Code26102003#!@"
   },
-  "params": {},
-  "query": {},
-  "user": null
+  "error": {
+    "code": 401,
+    "success": false
+  }
 }
-2025-02-19 18:12:30 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {}
-2025-02-19 18:12:30 [ERROR]: RefreshToken validation failed: expires_at: Cast to date failed for value "Invalid Date" (type Date) at path "expires_at" {
+2025-03-11 14:39:25 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-11 14:50:03 [ERROR]: Invalid email or password {
+  "code": 401
+}
+2025-03-11 14:50:03 [ERROR]: Invalid email or password {
   "path": "/api/auth/login",
   "method": "POST",
   "body": {
     "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003#!@"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 18:25:06 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {}
-2025-02-19 18:25:06 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {
-  "path": "/api/users",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 18:25:09 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {}
-2025-02-19 18:25:09 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {
-  "path": "/api/users",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:02:34 [ERROR]: User not found {
-  "path": "/api/users/change-password",
-  "method": "PUT",
-  "body": {
-    "currentPassword": "Code26102003#!@",
-    "newPassword": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:03:17 [ERROR]: User not found {
-  "path": "/api/users/change-password",
-  "method": "PUT",
-  "body": {
-    "currentPassword": "Code26102003#!@",
-    "newPassword": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:03:55 [ERROR]: User not found {
-  "path": "/api/users/change-password",
-  "method": "PUT",
-  "body": {
-    "currentPassword": "Code26102003#!@",
-    "newPassword": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:04:19 [ERROR]: Invalid email or password {}
-2025-02-19 19:04:19 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003#!@"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-19 19:06:57 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {}
-2025-02-19 19:06:57 [ERROR]: Cannot destructure property 'search' of 'query' as it is undefined. {
-  "path": "/api/users",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:38:15 [ERROR]: Cannot read properties of undefined (reading 'findById') {}
-2025-02-19 19:38:15 [ERROR]: Cannot read properties of undefined (reading 'findById') {
-  "path": "/api/users/67b495ca9d35c758607e27cc",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:40:13 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {}
-2025-02-19 19:40:13 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:40:30 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {}
-2025-02-19 19:40:30 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:41:26 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {}
-2025-02-19 19:41:26 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:42:17 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {}
-2025-02-19 19:42:17 [ERROR]: Schema hasn't been registered for model "Notification".
-Use mongoose.model(name, schema) {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-19 19:50:07 [ERROR]: Invalid token {
-  "path": "/api/users/admin",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10",
-    "sort": "-createdAt"
-  },
-  "user": null
-}
-2025-02-19 19:50:10 [ERROR]: Invalid token {
-  "path": "/api/users/admin",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10",
-    "sort": "-createdAt"
-  },
-  "user": null
-}
-2025-02-20 21:47:19 [ERROR]: Error closing MongoDB connection: info.info is not a function {
-  "stack": "TypeError: info.info is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:28:10)"
-}
-2025-02-20 21:56:58 [ERROR]: Invalid email or password {}
-2025-02-20 21:56:58 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "john@example.com",
-    "password": "password123"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-20 23:48:40 [ERROR]: upload.failed {}
-2025-02-20 23:48:40 [ERROR]: upload.failed {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-    "description": "stringstringstringsthhhhhhhhhhhhhhhh",
-    "price": "11111",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-20 23:49:31 [ERROR]: Error closing MongoDB connection: info.info is not a function {
-  "stack": "TypeError: info.info is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:28:10)"
-}
-2025-02-20 23:53:58 [ERROR]: Course validation failed: thumbnail_id: Cast to ObjectId failed for value "course-thumbnails/yodo3gccxztnzzhvlsry" (type string) at path "thumbnail_id" because of "BSONError" {}
-2025-02-20 23:53:58 [ERROR]: Course validation failed: thumbnail_id: Cast to ObjectId failed for value "course-thumbnails/yodo3gccxztnzzhvlsry" (type string) at path "thumbnail_id" because of "BSONError" {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-    "description": "stringstringstringsthhhhhhhhhhhhhhhh",
-    "price": "11111",
-    "status": "draft",
-    "thumbnail_id": "course-thumbnails/yodo3gccxztnzzhvlsry",
-    "instructor_id": "67b495ca9d35c758607e27cc"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-21 00:00:04 [ERROR]: CloudinaryFile validation failed: purpose: `course_thumbnail` is not a valid enum value for path `purpose`. {}
-2025-02-21 00:00:04 [ERROR]: CloudinaryFile validation failed: purpose: `course_thumbnail` is not a valid enum value for path `purpose`. {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-    "description": "stringstringstringsthhhhhhhhhhhhhhhh",
-    "price": "11111",
-    "status": "draft"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-21 00:06:53 [ERROR]: CourseService.getById is not a function {}
-2025-02-21 00:06:53 [ERROR]: CourseService.getById is not a function {
-  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 00:07:30 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
-Use mongoose.model(name, schema) {}
-2025-02-21 00:07:30 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
-Use mongoose.model(name, schema) {
-  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 00:09:47 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
-Use mongoose.model(name, schema) {}
-2025-02-21 00:09:47 [ERROR]: Schema hasn't been registered for model "thumbnail_id".
-Use mongoose.model(name, schema) {
-  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 00:10:27 [ERROR]: Cannot populate path `lessons` because it is not in your schema. Set the `strictPopulate` option to false to override. {}
-2025-02-21 00:10:27 [ERROR]: Cannot populate path `lessons` because it is not in your schema. Set the `strictPopulate` option to false to override. {
-  "path": "/api/courses/67b75fd6e2e66f1197d5bec9",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 00:25:20 [ERROR]: Invalid token {
-  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 00:25:23 [ERROR]: Invalid token {
-  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 00:25:31 [ERROR]: Invalid token {
-  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 00:25:50 [ERROR]: Invalid token {
-  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 00:26:08 [ERROR]: Invalid token {
-  "path": "/api/courses/haha/67b75fd6e2e66f1197d5bec9",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 10:08:42 [ERROR]: Invalid token {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 10:09:38 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:09:38 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:11:22 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:11:22 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:34:31 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:34:31 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:41:39 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:41:39 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:45:52 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:45:52 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:47:21 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:47:21 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:49:05 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:49:05 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:49:55 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:49:55 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:55:56 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:55:56 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:56:27 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:56:27 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 10:57:04 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 10:57:04 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 12:00:19 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 12:00:19 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 12:00:26 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 12:00:26 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 12:00:36 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {}
-2025-02-21 12:00:36 [ERROR]: Cannot read properties of null (reading 'thumbnail_id') {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 12:01:30 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {}
-2025-02-21 12:01:30 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 12:01:36 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {}
-2025-02-21 12:01:36 [ERROR]: Cast to ObjectId failed for value "{ page: '1', limit: '10' }" (type Object) at path "_id" for model "Course" {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 12:01:58 [ERROR]: course.fetchError {}
-2025-02-21 12:01:58 [ERROR]: course.fetchError {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 12:02:20 [ERROR]: course.fetchError {}
-2025-02-21 12:02:20 [ERROR]: course.fetchError {
-  "path": "/api/courses",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-21 12:02:37 [ERROR]: Unhandled Rejection: courseData is not defined {
-  "stack": "ReferenceError: courseData is not defined\n    at CourseService._transformCourseData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:304:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:35:29\n    at Array.map (<anonymous>)\n    at CourseService.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:33:42)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CourseController.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/course.controller.js:13:23)"
-}
-2025-02-21 12:02:56 [ERROR]: Unhandled Rejection: courseData is not defined {
-  "stack": "ReferenceError: courseData is not defined\n    at CourseService._transformCourseData (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:304:5)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:35:29\n    at Array.map (<anonymous>)\n    at CourseService.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/course.service.js:33:42)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CourseController.getAll (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/course.controller.js:13:23)"
-}
-2025-02-21 13:59:51 [ERROR]: Invalid token {
-  "path": "/api/momo/create",
-  "method": "POST",
-  "body": {
-    "amount": 10000,
-    "orderInfo": "Thanh toan khoa hoc ABC"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 14:00:17 [ERROR]: Error creating MoMo payment: Order validation failed: total_price: Path `total_price` is required., user_id: Path `user_id` is required. {
-  "errors": {
-    "total_price": {
-      "name": "ValidatorError",
-      "message": "Path `total_price` is required.",
-      "properties": {
-        "message": "Path `total_price` is required.",
-        "type": "required",
-        "path": "total_price"
-      },
-      "kind": "required",
-      "path": "total_price"
-    },
-    "user_id": {
-      "name": "ValidatorError",
-      "message": "Path `user_id` is required.",
-      "properties": {
-        "message": "Path `user_id` is required.",
-        "type": "required",
-        "path": "user_id"
-      },
-      "kind": "required",
-      "path": "user_id"
-    }
-  },
-  "_message": "Order validation failed",
-  "stack": "ValidationError: Order validation failed: total_price: Path `total_price` is required., user_id: Path `user_id` is required.\n    at Document.invalidate (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3219:32)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3012:17\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)"
-}
-2025-02-21 14:00:17 [ERROR]: Order validation failed: total_price: Path `total_price` is required., user_id: Path `user_id` is required. {}
-2025-02-21 14:00:17 [ERROR]: Order validation failed: total_price: Path `total_price` is required., user_id: Path `user_id` is required. {
-  "path": "/api/momo/create",
-  "method": "POST",
-  "body": {
-    "amount": 10000,
-    "orderInfo": "Thanh toan khoa hoc ABC"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-21 14:02:08 [ERROR]: Error creating MoMo payment: userId is not defined {
-  "stack": "ReferenceError: userId is not defined\n    at MoMoService.createPaymentUrl (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:80:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoController.createPayment (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/momo.controller.js:22:27)"
-}
-2025-02-21 14:02:08 [ERROR]: userId is not defined {}
-2025-02-21 14:02:08 [ERROR]: userId is not defined {
-  "path": "/api/momo/create",
-  "method": "POST",
-  "body": {
-    "amount": 10000,
-    "orderInfo": "Thanh toan khoa hoc ABC"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-21 15:00:13 [ERROR]: Invalid token {
-  "path": "/api/momo/create",
-  "method": "POST",
-  "body": {
-    "amount": 10000,
-    "orderInfo": "Thanh toan khoa hoc ABC"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 17:06:30 [ERROR]: Invalid token {
-  "path": "/api/momo/create",
-  "method": "POST",
-  "body": {
-    "amount": 10000,
-    "orderInfo": "Thanh toan khoa hoc ABC"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 17:06:40 [ERROR]: Invalid email or password {}
-2025-02-21 17:06:40 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "john@example.com",
-    "password": "password123"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-21 17:07:06 [ERROR]: Error creating MoMo payment: env is not defined {
-  "stack": "ReferenceError: env is not defined\n    at MoMoService._createRedirectUrl (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:15:5)\n    at MoMoService.createPaymentUrl (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:41:29)\n    at MoMoController.createPayment (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/momo.controller.js:22:45)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/routes/momo.routes.js:12:38\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/validate.middleware.js:19:13\n    at Layer.handle [as handle_request] (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/express/lib/router/route.js:149:13)\n    at verifyToken (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/middleware/auth.middleware.js:22:7)"
-}
-2025-02-21 17:07:06 [ERROR]: env is not defined {}
-2025-02-21 17:07:06 [ERROR]: env is not defined {
-  "path": "/api/momo/create",
-  "method": "POST",
-  "body": {
-    "amount": 10000,
-    "orderInfo": "Thanh toan khoa hoc ABC"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-21 17:21:43 [ERROR]: Error processing MoMo payment: Order validation failed: amount: Path `amount` is required., status: `completed` is not a valid enum value for path `status`. {
-  "errors": {
-    "amount": {
-      "name": "ValidatorError",
-      "message": "Path `amount` is required.",
-      "properties": {
-        "message": "Path `amount` is required.",
-        "type": "required",
-        "path": "amount"
-      },
-      "kind": "required",
-      "path": "amount"
-    },
-    "status": {
-      "name": "ValidatorError",
-      "message": "`completed` is not a valid enum value for path `status`.",
-      "properties": {
-        "message": "`completed` is not a valid enum value for path `status`.",
-        "type": "enum",
-        "enumValues": [
-          "pending",
-          "paid",
-          "failed",
-          "refunded"
-        ],
-        "path": "status",
-        "value": "completed"
-      },
-      "kind": "enum",
-      "path": "status",
-      "value": "completed"
-    }
-  },
-  "_message": "Order validation failed",
-  "stack": "ValidationError: Order validation failed: amount: Path `amount` is required., status: `completed` is not a valid enum value for path `status`.\n    at Document.invalidate (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3219:32)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3012:17\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)"
-}
-2025-02-21 17:21:43 [ERROR]: Order validation failed: amount: Path `amount` is required., status: `completed` is not a valid enum value for path `status`. {}
-2025-02-21 17:21:43 [ERROR]: Order validation failed: amount: Path `amount` is required., status: `completed` is not a valid enum value for path `status`. {
-  "path": "/api/momo/ipn/dev",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "orderId": [
-      "1740133143443_67b495ca9d35c758607e27cc",
-      "1740133143443_67b495ca9d35c758607e27cc"
-    ],
-    "partnerCode": "MOMO",
-    "requestId": "1740133143443_67b495ca9d35c758607e27cc",
-    "amount": "10000",
-    "orderInfo": "Payment for order 1740133143443_67b495ca9d35c758607e27cc",
-    "orderType": "momo_wallet",
-    "transId": "3291339912",
-    "resultCode": "0",
-    "message": "Thành công.",
-    "payType": "qr",
-    "responseTime": "1740133185550",
-    "extraData": "",
-    "signature": "2dbe67e93201fa9c39741e47a467b00f5d776414996adde0791ce81ea0fecba1"
-  },
-  "user": null
-}
-2025-02-21 17:23:54 [ERROR]: Error processing MoMo payment: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
-  "stringValue": "\"1740133299786_67b495ca9d35c758607e27cc\"",
-  "kind": "ObjectId",
-  "value": "1740133299786_67b495ca9d35c758607e27cc",
-  "path": "_id",
-  "reason": {},
-  "valueType": "string",
-  "stack": "CastError: Cast to ObjectId failed for value \"1740133299786_67b495ca9d35c758607e27cc\" (type string) at path \"_id\" for model \"Order\"\n    at ObjectId.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schema/objectid.js:250:11)\n    at SchemaType.applySetters (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1219:12)\n    at SchemaType.castForQuery (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1633:15)\n    at cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/cast.js:389:32)\n    at Query.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4927:12)\n    at Query._castConditions (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2237:10)\n    at model.Query._findOne (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2533:8)\n    at model.Query.exec (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4447:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoService.processIPNDev (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:174:21)"
-}
-2025-02-21 17:23:54 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {}
-2025-02-21 17:23:54 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
-  "path": "/api/momo/ipn/dev",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "orderIdResult": "1740133299786_67b495ca9d35c758607e27cc",
-    "partnerCode": "MOMO",
-    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
-    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
-    "amount": "10000",
-    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
-    "orderType": "momo_wallet",
-    "transId": "3291339914",
-    "resultCode": "0",
-    "message": "Thành công.",
-    "payType": "qr",
-    "responseTime": "1740133326409",
-    "extraData": "",
-    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
-  },
-  "user": null
-}
-2025-02-21 17:24:52 [ERROR]: Error processing MoMo payment: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
-  "stringValue": "\"1740133299786_67b495ca9d35c758607e27cc\"",
-  "kind": "ObjectId",
-  "value": "1740133299786_67b495ca9d35c758607e27cc",
-  "path": "_id",
-  "reason": {},
-  "valueType": "string",
-  "stack": "CastError: Cast to ObjectId failed for value \"1740133299786_67b495ca9d35c758607e27cc\" (type string) at path \"_id\" for model \"Order\"\n    at ObjectId.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schema/objectid.js:250:11)\n    at SchemaType.applySetters (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1219:12)\n    at SchemaType.castForQuery (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1633:15)\n    at cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/cast.js:389:32)\n    at Query.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4927:12)\n    at Query._castConditions (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2237:10)\n    at model.Query._findOne (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2533:8)\n    at model.Query.exec (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4447:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoService.processIPNDev (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:174:21)"
-}
-2025-02-21 17:24:52 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {}
-2025-02-21 17:24:52 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
-  "path": "/api/momo/ipn/dev",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "orderIdResult": "1740133299786_67b495ca9d35c758607e27cc",
-    "partnerCode": "MOMO",
-    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
-    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
-    "amount": "10000",
-    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
-    "orderType": "momo_wallet",
-    "transId": "3291339914",
-    "resultCode": "0",
-    "message": "Thành công.",
-    "payType": "qr",
-    "responseTime": "1740133326409",
-    "extraData": "",
-    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
-  },
-  "user": null
-}
-2025-02-21 17:26:02 [ERROR]: Error processing MoMo payment: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
-  "stringValue": "\"1740133299786_67b495ca9d35c758607e27cc\"",
-  "kind": "ObjectId",
-  "value": "1740133299786_67b495ca9d35c758607e27cc",
-  "path": "_id",
-  "reason": {},
-  "valueType": "string",
-  "stack": "CastError: Cast to ObjectId failed for value \"1740133299786_67b495ca9d35c758607e27cc\" (type string) at path \"_id\" for model \"Order\"\n    at ObjectId.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schema/objectid.js:250:11)\n    at SchemaType.applySetters (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1219:12)\n    at SchemaType.castForQuery (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1633:15)\n    at cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/cast.js:389:32)\n    at Query.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4927:12)\n    at Query._castConditions (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2237:10)\n    at model.Query._findOne (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2533:8)\n    at model.Query.exec (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4447:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoService.processIPNDev (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:174:21)"
-}
-2025-02-21 17:26:02 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {}
-2025-02-21 17:26:02 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
-  "path": "/api/momo/ipn/dev",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "orderIdResult": "1740133299786_67b495ca9d35c758607e27cc",
-    "partnerCode": "MOMO",
-    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
-    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
-    "amount": "10000",
-    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
-    "orderType": "momo_wallet",
-    "transId": "3291339914",
-    "resultCode": "0",
-    "message": "Thành công.",
-    "payType": "qr",
-    "responseTime": "1740133326409",
-    "extraData": "",
-    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
-  },
-  "user": null
-}
-2025-02-21 17:26:26 [ERROR]: Error processing MoMo payment: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
-  "stringValue": "\"1740133299786_67b495ca9d35c758607e27cc\"",
-  "kind": "ObjectId",
-  "value": "1740133299786_67b495ca9d35c758607e27cc",
-  "path": "_id",
-  "reason": {},
-  "valueType": "string",
-  "stack": "CastError: Cast to ObjectId failed for value \"1740133299786_67b495ca9d35c758607e27cc\" (type string) at path \"_id\" for model \"Order\"\n    at ObjectId.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schema/objectid.js:250:11)\n    at SchemaType.applySetters (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1219:12)\n    at SchemaType.castForQuery (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1633:15)\n    at cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/cast.js:389:32)\n    at Query.cast (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4927:12)\n    at Query._castConditions (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2237:10)\n    at model.Query._findOne (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:2533:8)\n    at model.Query.exec (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/query.js:4447:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MoMoService.processIPNDev (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/services/momo.service.js:174:21)"
-}
-2025-02-21 17:26:26 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {}
-2025-02-21 17:26:26 [ERROR]: Cast to ObjectId failed for value "1740133299786_67b495ca9d35c758607e27cc" (type string) at path "_id" for model "Order" {
-  "path": "/api/momo/ipn/dev",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "orderIdResult": "1740133299786_67b495ca9d35c758607e27cc",
-    "partnerCode": "MOMO",
-    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
-    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
-    "amount": "10000",
-    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
-    "orderType": "momo_wallet",
-    "transId": "3291339914",
-    "resultCode": "0",
-    "message": "Thành công.",
-    "payType": "qr",
-    "responseTime": "1740133326409",
-    "extraData": "",
-    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
-  },
-  "user": null
-}
-2025-02-21 17:26:42 [ERROR]: Error processing MoMo payment: Order validation failed: status: `completed` is not a valid enum value for path `status`. {
-  "errors": {
-    "status": {
-      "name": "ValidatorError",
-      "message": "`completed` is not a valid enum value for path `status`.",
-      "properties": {
-        "message": "`completed` is not a valid enum value for path `status`.",
-        "type": "enum",
-        "enumValues": [
-          "pending",
-          "paid",
-          "failed",
-          "refunded"
-        ],
-        "path": "status",
-        "value": "completed"
-      },
-      "kind": "enum",
-      "path": "status",
-      "value": "completed"
-    }
-  },
-  "_message": "Order validation failed",
-  "stack": "ValidationError: Order validation failed: status: `completed` is not a valid enum value for path `status`.\n    at Document.invalidate (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3219:32)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3012:17\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/mongoose/lib/schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)"
-}
-2025-02-21 17:26:42 [ERROR]: Order validation failed: status: `completed` is not a valid enum value for path `status`. {}
-2025-02-21 17:26:42 [ERROR]: Order validation failed: status: `completed` is not a valid enum value for path `status`. {
-  "path": "/api/momo/ipn/dev",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "orderIdResult": "67b853b5b86cf9a233df6f64",
-    "partnerCode": "MOMO",
-    "orderId": "1740133299786_67b495ca9d35c758607e27cc",
-    "requestId": "1740133299786_67b495ca9d35c758607e27cc",
-    "amount": "10000",
-    "orderInfo": "Payment for order 1740133299786_67b495ca9d35c758607e27cc",
-    "orderType": "momo_wallet",
-    "transId": "3291339914",
-    "resultCode": "0",
-    "message": "Thành công.",
-    "payType": "qr",
-    "responseTime": "1740133326409",
-    "extraData": "",
-    "signature": "b5d65aa81aeb4ce9b55762471b327b073473ece2e7cdb72149af2e00746ec77c"
-  },
-  "user": null
-}
-2025-02-21 21:58:14 [ERROR]: Error creating MoMo payment: Course is not defined {
-  "stack": "ReferenceError: Course is not defined\n    at model.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/models/order.model.js:39:21)\n    at callMiddlewareFunction (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/kareem/index.js:628:27)\n    at model.next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/kareem/index.js:93:7)\n    at _next (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/kareem/index.js:146:10)\n    at /Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/node_modules/kareem/index.js:653:30\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)"
-}
-2025-02-21 21:58:14 [ERROR]: Course is not defined {}
-2025-02-21 21:58:14 [ERROR]: Course is not defined {
-  "path": "/api/orders",
-  "method": "POST",
-  "body": {
-    "courseIds": [
-      "67b75fd6e2e66f1197d5bec9",
-      "67b7f43fe1eb5507e5a3daf5"
-    ]
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 17:35:06 [ERROR]: Invalid token {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-22 17:35:47 [ERROR]: Document not found {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 17:36:44 [ERROR]: Document not found {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 17:36:52 [ERROR]: Error closing MongoDB connection: info.info is not a function {
-  "stack": "TypeError: info.info is not a function\n    at process.<anonymous> (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/config/database.config.js:28:10)"
-}
-2025-02-22 17:37:24 [ERROR]: upload.invalidFormat {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Setup Flutter",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"title\":\"hâhhaa\"}"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 17:58:06 [ERROR]: upload.invalidFormat {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Setup Flutter",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"title\":\"hâhhaa\"}"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 17:58:25 [ERROR]: upload.invalidFormat {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Setup Flutter",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"title\":\"hâhhaa\"}"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 17:59:38 [ERROR]: upload.invalidFormat {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Setup Flutter",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"title\":\"hâhhaa\"}"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 17:59:52 [ERROR]: upload.invalidFormat {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Setup Flutter",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"title\":\"hâhhaa\"}"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:00:22 [ERROR]: schema.validate is not a function {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Setup Flutter",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"title\":\"hâhhaa\"}",
-    "attachments": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:01:41 [ERROR]: schema.validate is not a function {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Setup Flutter",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"title\":\"hâhhaa\"}",
-    "attachments": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:04:01 [ERROR]: Insufficient permissions {
-  "path": "/api/lessons/67b75fd6e2e66f1197d5bec9",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:04:37 [ERROR]: Insufficient permissions {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:05:12 [ERROR]: Document not found {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:06:05 [ERROR]: "content" must be of type object {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:06:20 [ERROR]: "content" must be of type object {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:07:37 [ERROR]: "content" must be of type object {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:10:32 [ERROR]: schema is not defined {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:10:57 [ERROR]: error is not defined {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:11:15 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
-  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at createLesson (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/lesson.controller.js:19:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-}
-2025-02-22 18:12:39 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
-  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at createLesson (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/lesson.controller.js:19:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-}
-2025-02-22 18:13:20 [ERROR]: Course not found {}
-2025-02-22 18:13:20 [ERROR]: Course not found {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:13:50 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {}
-2025-02-22 18:13:50 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:16:49 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {}
-2025-02-22 18:16:49 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:17:41 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {}
-2025-02-22 18:17:41 [ERROR]: Cannot read properties of undefined (reading 'startsWith') {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:18:40 [ERROR]: upload.failed {}
-2025-02-22 18:18:40 [ERROR]: upload.failed {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:27:06 [ERROR]: upload.failed {}
-2025-02-22 18:27:06 [ERROR]: upload.failed {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:31:31 [ERROR]: CloudinaryFile validation failed: purpose: `lesson_video` is not a valid enum value for path `purpose`. {}
-2025-02-22 18:31:31 [ERROR]: CloudinaryFile validation failed: purpose: `lesson_video` is not a valid enum value for path `purpose`. {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "video",
-    "is_free": "true",
-    "content": "{\"haha\":\"haha\"}",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 18:55:53 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
-  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at getLessonsByCourse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/lesson.controller.js:63:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-}
-2025-02-22 18:56:08 [ERROR]: Unhandled Rejection: Cannot read properties of undefined (reading 'handleError') {
-  "stack": "TypeError: Cannot read properties of undefined (reading 'handleError')\n    at getLessonsByCourse (/Users/datngovantien/Documents/Projects/bacnend/nodejs/e-course-nodejs/src/controllers/lesson.controller.js:63:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-}
-2025-02-22 19:10:54 [ERROR]: Invalid token {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-22 19:49:56 [ERROR]: Invalid token {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-22 20:14:16 [ERROR]: upload.invalidFormat {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "article",
-    "is_free": "true",
-    "content": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 20:15:14 [ERROR]: upload.invalidFormat {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "article",
-    "is_free": "true",
-    "content": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 20:16:25 [ERROR]: CloudinaryFile validation failed: format: Path `format` is required. {}
-2025-02-22 20:16:25 [ERROR]: CloudinaryFile validation failed: format: Path `format` is required. {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "article",
-    "is_free": "true",
-    "content": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 20:21:20 [ERROR]: purpose is not defined {}
-2025-02-22 20:21:20 [ERROR]: purpose is not defined {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "article",
-    "is_free": "true",
-    "content": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 20:22:25 [ERROR]: upload.failed {}
-2025-02-22 20:22:25 [ERROR]: upload.failed {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "article",
-    "is_free": "true",
-    "content": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 20:32:38 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
-2025-02-22 20:32:38 [ERROR]: Cannot read properties of undefined (reading 'toString') {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "article",
-    "is_free": "true",
-    "content": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 20:48:01 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
-2025-02-22 20:48:01 [ERROR]: Cannot read properties of undefined (reading 'toString') {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "article",
-    "is_free": "true",
-    "content": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 20:52:54 [ERROR]: Invalid token {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-22 21:07:43 [ERROR]: CloudinaryFile validation failed: format: Path `format` is required. {}
-2025-02-22 21:07:43 [ERROR]: CloudinaryFile validation failed: format: Path `format` is required. {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter Introduction",
-    "description": "Hehehe",
-    "type": "article",
-    "is_free": "true",
-    "content": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-22 21:20:33 [ERROR]: Schema hasn't been registered for model "Comment".
-Use mongoose.model(name, schema) {}
-2025-02-22 21:20:33 [ERROR]: Schema hasn't been registered for model "Comment".
-Use mongoose.model(name, schema) {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5/67b9c828323f84ee29bb9047",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-24 08:25:54 [ERROR]: Invalid email or password {}
-2025-02-24 08:25:54 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngoda.it213@gmail.com",
     "password": "Code26102003"
   },
-  "params": {},
-  "query": {},
-  "user": null
+  "error": {
+    "code": 401,
+    "success": false
+  }
 }
-2025-02-24 08:27:06 [ERROR]: Invalid email or password {}
-2025-02-24 08:27:06 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngoda.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-haha
-2025-02-25 11:41:44 [ERROR]: Invalid token {
+2025-03-11 16:42:29 [ERROR]: Invalid token {
   "path": "/api/users/profile",
   "method": "GET",
   "body": {},
-  "params": {},
-  "query": {},
-  "user": null
+  "error": {
+    "code": 401,
+    "success": false
+  }
 }
-2025-02-25 11:51:46 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-02-25 11:51:46 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+2025-03-11 17:51:44 [ERROR]: Dữ liệu không hợp lệ {
   "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-25 11:55:11 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-02-25 11:55:11 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-25 11:56:22 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-02-25 11:56:22 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-25 11:56:45 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-02-25 11:56:45 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-25 11:58:01 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-02-25 11:58:01 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-25 11:58:58 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-02-25 11:58:58 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-25 12:03:39 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-02-25 12:03:39 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-26 13:57:06 [ERROR]: Invalid token {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-26 21:25:32 [ERROR]: Invalid token {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-26 21:26:20 [ERROR]: upload.failed {}
-2025-02-26 21:26:20 [ERROR]: upload.failed {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "Install Flutter",
-    "type": "video",
-    "is_free": "true",
-    "content": "string",
-    "attachments": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:01:53 [ERROR]: Invalid token {
-  "path": "/api/lessons",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-27 17:02:01 [ERROR]: Invalid email or password {}
-2025-02-27 17:02:01 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "john@example.com",
-    "password": "password123"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-27 17:21:00 [ERROR]: Invalid token {
-  "path": "/api/lessons/67b7f43fe1eb5507e5a3daf5",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-27 17:22:44 [ERROR]: Insufficient permissions {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
   "method": "PUT",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:23:21 [ERROR]: Document not found {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:25:45 [ERROR]: Document not found {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:26:14 [ERROR]: Document not found {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:27:32 [ERROR]: Document not found {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:27:50 [ERROR]: Document not found {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:28:20 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {}
-2025-02-27 17:28:20 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "string",
-    "attachments": "string",
-    "status": "published",
-    "title": "string",
-    "type": "video",
-    "video": "",
-    "description": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:29:06 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {}
-2025-02-27 17:29:06 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "string",
-    "attachments": "string",
-    "status": "published",
-    "title": "string",
-    "type": "video",
-    "video": "",
-    "description": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:30:21 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {}
-2025-02-27 17:30:21 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "string",
-    "attachments": "string",
-    "status": "published",
-    "title": "string",
-    "type": "video",
-    "video": "",
-    "description": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:31:56 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {}
-2025-02-27 17:31:56 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError" {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "string",
-    "attachments": "string",
-    "status": "published",
-    "title": "string",
-    "type": "video",
-    "video": "",
-    "description": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:34:25 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", title: Path `title` is required. {}
-2025-02-27 17:34:25 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", title: Path `title` is required. {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "",
-    "attachments": "string",
-    "status": "published",
-    "title": "",
-    "type": "video",
-    "video": "",
-    "description": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:34:46 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", title: Path `title` is required. {}
-2025-02-27 17:34:46 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", title: Path `title` is required. {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "",
-    "attachments": "",
-    "status": "published",
-    "title": "",
-    "type": "video",
-    "video": "",
-    "description": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 17:35:22 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", order: Path `order` is required., title: Path `title` is required. {}
-2025-02-27 17:35:22 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError", attachments.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "attachments.0" because of "CastError", video: Cast to ObjectId failed for value "" (type string) at path "video" because of "BSONError", order: Path `order` is required., title: Path `title` is required. {
-  "path": "/api/lessons/67b9c828323f84ee29bb9047",
-  "method": "PUT",
-  "body": {
-    "is_free": "true",
-    "order": "",
-    "requirements": "",
-    "attachments": "",
-    "status": "published",
-    "title": "",
-    "type": "video",
-    "video": "",
-    "description": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67b495ca9d35c758607e27cc"
-}
-2025-02-27 18:20:34 [ERROR]: User validation failed: last_name: Path `last_name` is required., first_name: Path `first_name` is required. {}
-2025-02-27 18:20:34 [ERROR]: User validation failed: last_name: Path `last_name` is required., first_name: Path `first_name` is required. {
-  "path": "/api/auth/register/mobile",
-  "method": "POST",
-  "body": {
-    "name": "string",
-    "email": "ngodat.it213@gmail.com",
-    "password": "123456789"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-27 18:22:51 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/register/mobile",
-  "method": "POST",
   "body": {
     "first_name": "Hydra",
     "last_name": "Coder",
-    "email": "ngodat.it213@gmail.com",
-    "password": "123456789"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-27 18:57:38 [ERROR]: utils.populate: invalid path. Expected string. Got typeof `object` {}
-2025-02-27 18:57:38 [ERROR]: utils.populate: invalid path. Expected string. Got typeof `object` {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "Flutter for beginner",
-    "description": "This tutorial learning Flutter zero to hero",
-    "price": "1111",
-    "type": "course",
-    "level": "beginner",
-    "thumbnail": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c04b201ebf87f29678f4b9"
-}
-2025-02-27 19:45:05 [ERROR]: Invalid token {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-27 19:52:56 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 19:53:45 [ERROR]: Insufficient permissions {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 19:56:53 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
-2025-02-27 19:56:53 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
-  "path": "/api/lessons/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "",
-    "attachments": "",
-    "status": "published",
-    "title": "Haha1",
-    "type": "video",
-    "description": "Haha2"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 19:57:34 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
-2025-02-27 19:57:34 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
-  "path": "/api/lessons/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "",
-    "status": "published",
-    "title": "Haha1",
-    "type": "video",
-    "description": "Haha2"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 19:58:38 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
-2025-02-27 19:58:38 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
-  "path": "/api/lessons/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "",
-    "attachments": "",
-    "status": "published",
-    "title": "Haha1",
-    "type": "video",
-    "description": "Haha2"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 20:00:27 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
-2025-02-27 20:00:27 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
-  "path": "/api/lessons/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "",
-    "attachments": "",
-    "status": "published",
-    "title": "Haha1",
-    "type": "video",
-    "description": "Haha2"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 20:00:57 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
-2025-02-27 20:00:57 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
-  "path": "/api/lessons/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "is_free": "true",
-    "order": "0",
-    "requirements": "",
-    "attachments": "",
-    "status": "published",
-    "title": "Haha1",
-    "type": "video",
-    "description": "Haha2"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 20:10:45 [ERROR]: Insufficient permissions {
-  "path": "/api/courses/67c060782aaa9b16b68bc874",
-  "method": "PUT",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 20:11:20 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses/67c060782aaa9b16b68bc874",
-  "method": "PUT",
-  "body": {
-    "title": "Hahaha",
-    "description": "Hahaha2",
-    "price": "1111",
-    "type": "course",
-    "status": "published",
-    "level": "beginner",
-    "what_you_will_learn": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 20:11:20 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses/67c060782aaa9b16b68bc874",
-  "method": "PUT",
-  "body": {
-    "title": "Hahaha",
-    "description": "Hahaha2",
-    "price": "1111",
-    "type": "course",
-    "status": "published",
-    "level": "beginner",
-    "what_you_will_learn": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 20:11:21 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses/67c060782aaa9b16b68bc874",
-  "method": "PUT",
-  "body": {
-    "title": "Hahaha",
-    "description": "Hahaha2",
-    "price": "1111",
-    "type": "course",
-    "status": "published",
-    "level": "beginner",
-    "what_you_will_learn": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 20:11:51 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses/67c060782aaa9b16b68bc874",
-  "method": "PUT",
-  "body": {
-    "title": "Hahaha",
-    "description": "This tutorial learning Flutter zero to heroThis tutorial learning Flutter zero to hero",
-    "price": "1111",
-    "type": "course",
-    "status": "published",
-    "level": "beginner",
-    "what_you_will_learn": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 20:12:08 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses/67c060782aaa9b16b68bc874",
-  "method": "PUT",
-  "body": {
-    "title": "Hahaha",
-    "description": "This tutorial learning Flutter zero to heroThis tutorial learning Flutter zero to hero",
-    "price": "1111",
-    "type": "course",
-    "status": "published",
-    "level": "beginner",
-    "what_you_will_learn": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-27 20:12:14 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses/67c060782aaa9b16b68bc874",
-  "method": "PUT",
-  "body": {
-    "title": "Hahaha",
-    "description": "This tutorial learning Flutter zero to heroThis tutorial learning Flutter zero to hero",
-    "price": "1111",
-    "type": "course",
-    "status": "published",
-    "level": "beginner",
-    "what_you_will_learn": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:35:59 [ERROR]: Unexpected token 'g', ...""email": ngodat.it21"... is not valid JSON {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 11:36:11 [ERROR]: Unexpected token 'g', ...""email": ngodat.it21"... is not valid JSON {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 11:36:55 [ERROR]: Insufficient permissions {
-  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:37:21 [ERROR]: Insufficient permissions {
-  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:37:23 [ERROR]: Insufficient permissions {
-  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:37:32 [ERROR]: Insufficient permissions {
-  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:37:40 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
-2025-02-28 11:37:40 [ERROR]: Cannot read properties of undefined (reading 'toString') {
-  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:38:45 [ERROR]: Cannot read properties of undefined (reading 'toString') {}
-2025-02-28 11:38:45 [ERROR]: Cannot read properties of undefined (reading 'toString') {
-  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:40:12 [ERROR]: course.notInstructor {}
-2025-02-28 11:40:12 [ERROR]: course.notInstructor {
-  "path": "/api/courses/67c060782aaa9b16b68bc874/delete-request",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:42:23 [ERROR]: Insufficient permissions {
-  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
-  "method": "PUT",
-  "body": {
-    "status": "approved",
-    "message": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:42:48 [ERROR]: Insufficient permissions {
-  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
-  "method": "PUT",
-  "body": {
-    "status": "approved",
-    "message": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:42:57 [ERROR]: Insufficient permissions {
-  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
-  "method": "PUT",
-  "body": {
-    "status": "approved",
-    "message": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:43:18 [ERROR]: this.deleteCourse is not a function {}
-2025-02-28 11:43:18 [ERROR]: this.deleteCourse is not a function {
-  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
-  "method": "PUT",
-  "body": {
-    "status": "approved",
-    "message": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:46:40 [ERROR]: This request has already been handled {}
-2025-02-28 11:46:40 [ERROR]: This request has already been handled {
-  "path": "/api/courses/delete-requests/67c13e774796e4472344612a",
-  "method": "PUT",
-  "body": {
-    "status": "approved",
-    "message": "string"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 11:51:00 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
-2025-02-28 11:51:00 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
-  "path": "/api/courses/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-28 11:52:59 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
-2025-02-28 11:52:59 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
-  "path": "/api/courses/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-28 11:53:07 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
-2025-02-28 11:53:07 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
-  "path": "/api/courses/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-28 11:53:19 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
-2025-02-28 11:53:19 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
-  "path": "/api/courses/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-28 11:53:56 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
-2025-02-28 11:53:56 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
-  "path": "/api/courses/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "status": "pending",
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-28 11:54:54 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
-2025-02-28 11:54:54 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
-  "path": "/api/courses/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "status": "pending",
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-28 11:56:14 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {}
-2025-02-28 11:56:14 [ERROR]: Cast to ObjectId failed for value "delete-requests" (type string) at path "_id" for model "Course" {
-  "path": "/api/courses/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "status": "pending",
-    "page": "1",
-    "limit": "10"
-  },
-  "user": null
-}
-2025-02-28 14:06:26 [ERROR]: Cannot read properties of undefined (reading 'role') {
-  "path": "/api/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10",
-    "sort": "-created_at"
-  },
-  "user": null
-}
-2025-02-28 14:07:06 [ERROR]: Cannot read properties of undefined (reading 'role') {
-  "path": "/api/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10",
-    "sort": "-created_at"
-  },
-  "user": null
-}
-2025-02-28 14:07:27 [ERROR]: Cannot read properties of undefined (reading 'role') {
-  "path": "/api/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10",
-    "sort": "-created_at"
-  },
-  "user": null
-}
-2025-02-28 14:08:36 [ERROR]: Invalid token {
-  "path": "/api/delete-requests",
-  "method": "GET",
-  "body": {},
-  "params": {},
-  "query": {
-    "page": "1",
-    "limit": "10",
-    "sort": "-created_at"
-  },
-  "user": null
-}
-2025-02-28 14:46:52 [ERROR]: Insufficient permissions {
-  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 14:49:15 [ERROR]: Invalid token {
-  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 14:49:25 [ERROR]: Invalid email or password {}
-2025-02-28 14:49:25 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "john.doe@example.com",
-    "password": "123456"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 14:49:59 [ERROR]: Insufficient permissions {
-  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 14:50:26 [ERROR]: Insufficient permissions {
-  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 14:51:02 [ERROR]: Insufficient permissions {
-  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 14:51:25 [ERROR]: Insufficient permissions {
-  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 14:52:44 [ERROR]: Insufficient permissions {
-  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 14:54:19 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "123",
-    "description": "123",
-    "price": "0123",
-    "type": "course",
-    "level": "beginner"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 14:54:28 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/courses",
-  "method": "POST",
-  "body": {
-    "title": "123",
-    "description": "123 123 123 123 123 123",
-    "price": "0123",
-    "type": "course",
-    "level": "beginner"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 14:55:51 [ERROR]: E11000 duplicate key error collection: ecourse.coursedeleterequests index: course_id_1_status_1 dup key: { course_id: ObjectId('67c060782aaa9b16b68bc874'), status: "pending" } {
-  "code": 11000
-}
-2025-02-28 14:55:51 [ERROR]: E11000 duplicate key error collection: ecourse.coursedeleterequests index: course_id_1_status_1 dup key: { course_id: ObjectId('67c060782aaa9b16b68bc874'), status: "pending" } {
-  "path": "/api/delete-requests/67c060782aaa9b16b68bc874",
-  "method": "POST",
-  "body": {
-    "reason": "stringstri"
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 15:54:48 [ERROR]: Invalid email or password {}
-2025-02-28 15:54:48 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 15:54:49 [ERROR]: Invalid email or password {}
-2025-02-28 15:54:49 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 15:55:23 [ERROR]: Invalid email or password {}
-2025-02-28 15:55:23 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 15:55:51 [ERROR]: Invalid email or password {}
-2025-02-28 15:55:51 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "123"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 15:57:43 [ERROR]: Invalid email or password {}
-2025-02-28 15:57:43 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 15:57:54 [ERROR]: Invalid email or password {}
-2025-02-28 15:57:54 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 15:58:20 [ERROR]: Invalid email or password {}
-2025-02-28 15:58:20 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "123"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:01:56 [ERROR]: Invalid email or password {}
-2025-02-28 16:02:30 [ERROR]: Invalid email or password {}
-2025-02-28 16:02:32 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "123"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:03:10 [ERROR]: Invalid email or password {}
-2025-02-28 16:03:12 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "123"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:03:31 [ERROR]: Invalid email or password {}
-2025-02-28 16:03:39 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "123"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:04:05 [ERROR]: Invalid email or password {}
-2025-02-28 16:04:07 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:05:03 [ERROR]: Invalid email or password {}
-2025-02-28 16:05:07 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:05:48 [ERROR]: Invalid email or password {}
-2025-02-28 16:05:48 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "123456"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:07:15 [ERROR]: Invalid email or password {}
-2025-02-28 16:07:15 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "12345678"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:08:46 [ERROR]: Invalid email or password {}
-2025-02-28 16:08:46 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:09:20 [ERROR]: Invalid email or password {}
-2025-02-28 16:09:20 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "12345678"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:09:25 [ERROR]: Invalid email or password {}
-2025-02-28 16:09:25 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:10:21 [ERROR]: Invalid email or password {}
-2025-02-28 16:10:21 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:11:04 [ERROR]: Invalid email or password {}
-2025-02-28 16:11:04 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:11:11 [ERROR]: Invalid email or password {}
-2025-02-28 16:11:11 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:11:30 [ERROR]: Invalid email or password {}
-2025-02-28 16:11:30 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:11:45 [ERROR]: Invalid email or password {}
-2025-02-28 16:11:45 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:47:05 [ERROR]: Invalid token {
-  "path": "/api/categories",
-  "method": "POST",
-  "body": {
-    "name": "Flutter",
-    "description": "Flutter",
-    "status": "active",
-    "order": 0,
-    "icon": ""
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 16:56:26 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/categories",
-  "method": "POST",
-  "body": {
-    "name": "Programing",
-    "description": "haha",
-    "parent_id": "",
-    "status": "active",
-    "order": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 16:56:36 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/categories",
-  "method": "POST",
-  "body": {
-    "name": "Programing",
-    "description": "Hahha hâh hâhhaha ",
-    "parent_id": "",
-    "status": "active",
-    "order": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 16:56:44 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/categories",
-  "method": "POST",
-  "body": {
-    "name": "Programing",
-    "description": "Hahha hâh hâhhaha ",
-    "status": "active",
-    "order": ""
-  },
-  "params": {},
-  "query": {},
-  "user": "67c05fa139552b1e8f2d900d"
-}
-2025-02-28 17:41:12 [ERROR]: Invalid email or password {}
-2025-02-28 17:41:12 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 17:42:37 [ERROR]: Invalid email or password {}
-2025-02-28 17:42:37 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:08:00 [ERROR]: Invalid token {
-  "path": "/api/categories",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:08:37 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "",
-    "password": ""
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:13:59 [ERROR]: Expected ':' after property name in JSON at position 102 (line 5 column 47) {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:14:12 [ERROR]: Expected ':' after property name in JSON at position 102 (line 5 column 47) {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {},
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:14:24 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": ""
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:16:11 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": ""
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:18:54 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": ""
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:18:59 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": ""
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:19:05 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": ""
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:21:08 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": ""
-  },
-  "params": {},
-  "query": {},
-  "user": null
-}
-2025-02-28 20:24:24 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": ""
+    "working_at": "AWS",
+    "address": "District 9, Ho Chi Minh City, Viet Nam",
+    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
   },
   "error": {
     "code": 400,
     "success": false,
     "error": {
-      "password": "Mật khẩu không được để trống"
+      "undefined": "value must have at least 1 key"
     }
   }
 }
-2025-02-28 20:24:33 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/login",
-  "method": "POST",
+2025-03-11 17:52:13 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/users/profile",
+  "method": "PUT",
   "body": {
-    "email": "",
-    "password": ""
+    "first_name": "Hydra",
+    "last_name": "Coder",
+    "working_at": "AWS",
+    "address": "District 9, Ho Chi Minh City, Viet Nam",
+    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
   },
   "error": {
     "code": 400,
     "success": false,
     "error": {
-      "email": "Email không được để trống",
-      "password": "Mật khẩu không được để trống"
+      "undefined": "value must have at least 1 key"
     }
+  }
+}
+2025-03-11 17:53:35 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/users/profile",
+  "method": "PUT",
+  "body": {
+    "first_name": "Hydra",
+    "last_name": "Coder",
+    "working_at": "AWS",
+    "address": "District 9, Ho Chi Minh City, Viet Nam",
+    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "undefined": "value must have at least 1 key"
+    }
+  }
+}
+2025-03-11 17:54:18 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/users/profile",
+  "method": "PUT",
+  "body": {
+    "first_name": "Hydra"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "undefined": "value must have at least 1 key"
+    }
+  }
+}
+2025-03-11 17:54:32 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/users/profile",
+  "method": "PUT",
+  "body": {
+    "first_name": "Hydra",
+    "last_name": "Coder",
+    "working_at": "AWS",
+    "address": "District 9, Ho Chi Minh City, Viet Nam",
+    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. "
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "undefined": "value must have at least 1 key"
+    }
+  }
+}
+2025-03-11 17:55:06 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/users/profile",
+  "method": "PUT",
+  "body": {
+    "first_name": "Hydra",
+    "last_name": "Coder",
+    "working_at": "AWS",
+    "address": "District 9, Ho Chi Minh City, Viet Nam",
+    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "undefined": "value must have at least 1 key"
+    }
+  }
+}
+2025-03-11 17:55:14 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/users/profile",
+  "method": "PUT",
+  "body": {
+    "first_name": "Hydra",
+    "last_name": "Coder",
+    "working_at": "AWS",
+    "address": "District 9, Ho Chi Minh City, Viet Nam",
+    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "undefined": "value must have at least 1 key"
+    }
+  }
+}
+2025-03-11 17:55:54 [ERROR]: User not found {
+  "code": 404
+}
+2025-03-11 17:55:54 [ERROR]: User not found {
+  "path": "/api/users/profile",
+  "method": "PUT",
+  "body": {
+    "first_name": "Hydra",
+    "last_name": "Coder",
+    "working_at": "AWS",
+    "address": "District 9, Ho Chi Minh City, Viet Nam",
+    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-11 18:35:03 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-11 18:36:01 [ERROR]: user.teacherNotFound {
+  "code": 404
+}
+2025-03-11 18:36:01 [ERROR]: user.teacherNotFound {
+  "path": "/api/users/teachers/67c05fa139552b1e8f2d900d",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-11 19:47:08 [ERROR]: sanitizedUser is not defined {}
+2025-03-11 19:47:08 [ERROR]: sanitizedUser is not defined {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-11 20:55:48 [ERROR]: Invalid token {
+  "path": "/api/users/teachers/67c05fa139552b1e8f2d900d",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-11 21:52:33 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/register",
+  "method": "POST",
+  "body": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@gmail.com",
+    "password": "123456"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "password": "Mật khẩu phải chứa ít nhất 1 chữ hoa, 1 chữ thường và 1 số"
+    }
+  }
+}
+2025-03-11 21:52:40 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/auth/register",
+  "method": "POST",
+  "body": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@gmail.com",
+    "password": "123456789"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "password": "Mật khẩu phải chứa ít nhất 1 chữ hoa, 1 chữ thường và 1 số"
+    }
+  }
+}
+2025-03-12 21:12:12 [ERROR]: User not found {
+  "code": 400
+}
+2025-03-12 21:12:12 [ERROR]: User not found {
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "user@example.com",
+    "otp": "810969"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-12 21:35:18 [ERROR]: otp.invalid {
+  "code": 400
+}
+2025-03-12 21:35:18 [ERROR]: otp.invalid {
+  "path": "/api/auth/verify-otp",
+  "method": "POST",
+  "body": {
+    "email": "gangaldat.it.213@gmail.com",
+    "otp": "296325"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-12 21:35:54 [ERROR]: Invalid email or password {
+  "code": 401
+}
+2025-03-12 21:35:54 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "gangaldat.it.213@gmail.com",
+    "password": "123456789#!@"
+  },
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-12 21:36:02 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-03-12 21:36:02 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-12 21:36:03 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-12 21:36:03 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-12 21:36:36 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-03-12 21:36:36 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-12 21:36:36 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-12 21:36:36 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-12 21:37:22 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
+2025-03-12 21:37:22 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-12 21:51:10 [ERROR]: Cart validation failed: user_id: Path `user_id` is required. {}
+2025-03-12 21:51:10 [ERROR]: Cart validation failed: user_id: Path `user_id` is required. {
+  "path": "/api/cart",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "errors": {
+      "user_id": {
+        "name": "ValidatorError",
+        "message": "Path `user_id` is required.",
+        "properties": {
+          "message": "Path `user_id` is required.",
+          "type": "required",
+          "path": "user_id"
+        },
+        "kind": "required",
+        "path": "user_id"
+      }
+    },
+    "_message": "Cart validation failed",
+    "name": "ValidationError",
+    "message": "Cart validation failed: user_id: Path `user_id` is required."
+  }
+}
+2025-03-12 21:55:20 [ERROR]: Cast to ObjectId failed for value "string" (type string) at path "_id" for model "Course" {}
+2025-03-12 21:55:20 [ERROR]: Cast to ObjectId failed for value "string" (type string) at path "_id" for model "Course" {
+  "path": "/api/cart/add",
+  "method": "POST",
+  "body": {
+    "course_id": "string"
+  },
+  "error": {
+    "stringValue": "\"string\"",
+    "valueType": "string",
+    "kind": "ObjectId",
+    "value": "string",
+    "path": "_id",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"string\" (type string) at path \"_id\" for model \"Course\""
+  }
+}
+2025-03-12 21:55:41 [ERROR]: cart.notFound {
+  "code": 404
+}
+2025-03-12 21:55:41 [ERROR]: cart.notFound {
+  "path": "/api/cart/remove",
+  "method": "POST",
+  "body": {
+    "course_id": "string"
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-12 21:55:52 [ERROR]: cart.notFound {
+  "code": 404
+}
+2025-03-12 21:55:52 [ERROR]: cart.notFound {
+  "path": "/api/cart/clear",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-12 22:03:08 [ERROR]: Cart validation failed: user_id: Path `user_id` is required. {}
+2025-03-12 22:03:08 [ERROR]: Cart validation failed: user_id: Path `user_id` is required. {
+  "path": "/api/cart/add",
+  "method": "POST",
+  "body": {
+    "course_id": "67c060782aaa9b16b68bc874"
+  },
+  "error": {
+    "errors": {
+      "user_id": {
+        "name": "ValidatorError",
+        "message": "Path `user_id` is required.",
+        "properties": {
+          "message": "Path `user_id` is required.",
+          "type": "required",
+          "path": "user_id"
+        },
+        "kind": "required",
+        "path": "user_id"
+      }
+    },
+    "_message": "Cart validation failed",
+    "name": "ValidationError",
+    "message": "Cart validation failed: user_id: Path `user_id` is required."
+  }
+}
+2025-03-12 22:03:47 [ERROR]: cart.cannotAddOwnCourse {
+  "code": 400
+}
+2025-03-12 22:03:47 [ERROR]: cart.cannotAddOwnCourse {
+  "path": "/api/cart/add",
+  "method": "POST",
+  "body": {
+    "course_id": "67c060782aaa9b16b68bc874"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-13 13:17:34 [ERROR]: cart.courseNotInCart {
+  "code": 404
+}
+2025-03-13 13:17:34 [ERROR]: cart.courseNotInCart {
+  "path": "/api/cart/remove",
+  "method": "POST",
+  "body": {
+    "course_id": "67d27862d133254c78b099fa"
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-13 13:44:31 [ERROR]: Error creating MoMo payment: Order validation failed: courses.0: Cast to [ObjectId] failed for value "[\n' +
+  '  { course_id: new ObjectId("67c060782aaa9b16b68bc874"), price: 1111 },\n' +
+  '  { course_id: new ObjectId("67c18e8fef4cea5480728c07"), price: 1111 }\n' +
+  ']" (type string) at path "courses.0" because of "CastError" {
+  "errors": {
+    "courses.0": {
+      "stringValue": "\"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\"",
+      "valueType": "string",
+      "kind": "[ObjectId]",
+      "value": "[\n  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\n  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\n]",
+      "path": "courses.0",
+      "reason": {
+        "stringValue": "\"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\"",
+        "valueType": "Object",
+        "kind": "ObjectId",
+        "value": {
+          "course_id": "67c060782aaa9b16b68bc874",
+          "price": 1111
+        },
+        "path": "courses",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to ObjectId failed for value \"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\" (type Object) at path \"courses\" because of \"BSONError\""
+      },
+      "name": "CastError",
+      "message": "Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\""
+    }
+  },
+  "_message": "Order validation failed",
+  "stack": "ValidationError: Order validation failed: courses.0: Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\"\n    at Document.invalidate (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3219:32)\n    at model.$set (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:1464:12)\n    at model.$set (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:1119:16)\n    at model.Document (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:165:12)\n    at model.Model (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:123:12)\n    at new model (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:4758:15)\n    at /Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:2922:18\n    at Array.map (<anonymous>)\n    at Function.create (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:2911:30)\n    at MoMoService.createPaymentUrl (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/src/services/momo.service.js:92:19)"
+}
+2025-03-13 13:44:31 [ERROR]: Order validation failed: courses.0: Cast to [ObjectId] failed for value "[\n' +
+  '  { course_id: new ObjectId("67c060782aaa9b16b68bc874"), price: 1111 },\n' +
+  '  { course_id: new ObjectId("67c18e8fef4cea5480728c07"), price: 1111 }\n' +
+  ']" (type string) at path "courses.0" because of "CastError" {}
+2025-03-13 13:44:31 [ERROR]: Order validation failed: courses.0: Cast to [ObjectId] failed for value "[\n' +
+  '  { course_id: new ObjectId("67c060782aaa9b16b68bc874"), price: 1111 },\n' +
+  '  { course_id: new ObjectId("67c18e8fef4cea5480728c07"), price: 1111 }\n' +
+  ']" (type string) at path "courses.0" because of "CastError" {
+  "path": "/api/cart/checkout",
+  "method": "POST",
+  "body": {
+    "payment_method": "momo"
+  },
+  "error": {
+    "errors": {
+      "courses.0": {
+        "stringValue": "\"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\"",
+        "valueType": "string",
+        "kind": "[ObjectId]",
+        "value": "[\n  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\n  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\n]",
+        "path": "courses.0",
+        "reason": {
+          "stringValue": "\"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\"",
+          "valueType": "Object",
+          "kind": "ObjectId",
+          "value": {
+            "course_id": "67c060782aaa9b16b68bc874",
+            "price": 1111
+          },
+          "path": "courses",
+          "reason": {},
+          "name": "CastError",
+          "message": "Cast to ObjectId failed for value \"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\" (type Object) at path \"courses\" because of \"BSONError\""
+        },
+        "name": "CastError",
+        "message": "Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\""
+      }
+    },
+    "_message": "Order validation failed",
+    "name": "ValidationError",
+    "message": "Order validation failed: courses.0: Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\""
   }
 }

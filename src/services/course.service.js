@@ -13,7 +13,8 @@ const CourseCategory = require("../models/course_category.model");
 class CourseService {
   async getAll(query) {
     const courses = await Course.find(this._buildFilterQuery(query))
-      .populate('instructor_id', 'first_name last_name email')
+      .populate('instructor_id', '-password -__v -role -status -certificate_count -followers -notifications -unread_notifications -created_at -updated_at')
+      .populate('thumbnail_id')
       .populate('categories', 'name slug')
       .sort(query.sort || '-created_at')
       .skip(query.skip)
