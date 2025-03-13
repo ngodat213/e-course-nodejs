@@ -89,19 +89,26 @@ class MoMoService {
       const response = await this._sendHttpsRequest(options, requestBody);
 
       // Save order to DB
-      await Order.create({
-        order_id: orderId,
-        amount: amount,
-        courses: courses,
-        status: "pending",
-        payment_method: "momo",
-        user_id: userId,
-        response: response.paymentUrl,
-        payment_info: {
-          requestBody: JSON.parse(requestBody),
-          responseBody: response,
-        },
-      });
+      try {
+        await Order.create({
+          order_id: orderId,
+          amount: amount,
+          courses: courses,
+          status: "pending",
+          payment_method: "momo",
+          user_id: userId,
+          response: response.payUrl,
+          payment_info: {
+            requestBody: JSON.parse(requestBody),
+            responseBody: response,
+          },
+        });
+        
+        success.info("Order saved successfully", { orderId });
+      } catch (orderError) {
+        error("Save order to DB is error", orderError);
+        // Vẫn tiếp tục trả về response để người dùng có thể thanh toán
+      }
 
       success.info("MoMo payment created", {
         orderId,

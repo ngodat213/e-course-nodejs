@@ -41,6 +41,26 @@ class CartController extends BaseController {
       this.handleError(error, next);
     }
   }
+
+  async checkout(req, res, next) {
+    try {
+      const { payment_method } = req.body;
+      const result = await CartService.checkout(req.user.id, payment_method);
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async processPaymentSuccess(req, res, next) {
+    try {
+      const { order_id } = req.body;
+      const result = await CartService.processSuccessfulPayment(order_id);
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
 }
 
 module.exports = new CartController();

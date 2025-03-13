@@ -514,3 +514,77 @@
     "success": false
   }
 }
+2025-03-13 13:44:31 [ERROR]: Error creating MoMo payment: Order validation failed: courses.0: Cast to [ObjectId] failed for value "[\n' +
+  '  { course_id: new ObjectId("67c060782aaa9b16b68bc874"), price: 1111 },\n' +
+  '  { course_id: new ObjectId("67c18e8fef4cea5480728c07"), price: 1111 }\n' +
+  ']" (type string) at path "courses.0" because of "CastError" {
+  "errors": {
+    "courses.0": {
+      "stringValue": "\"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\"",
+      "valueType": "string",
+      "kind": "[ObjectId]",
+      "value": "[\n  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\n  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\n]",
+      "path": "courses.0",
+      "reason": {
+        "stringValue": "\"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\"",
+        "valueType": "Object",
+        "kind": "ObjectId",
+        "value": {
+          "course_id": "67c060782aaa9b16b68bc874",
+          "price": 1111
+        },
+        "path": "courses",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to ObjectId failed for value \"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\" (type Object) at path \"courses\" because of \"BSONError\""
+      },
+      "name": "CastError",
+      "message": "Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\""
+    }
+  },
+  "_message": "Order validation failed",
+  "stack": "ValidationError: Order validation failed: courses.0: Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\"\n    at Document.invalidate (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3219:32)\n    at model.$set (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:1464:12)\n    at model.$set (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:1119:16)\n    at model.Document (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:165:12)\n    at model.Model (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:123:12)\n    at new model (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:4758:15)\n    at /Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:2922:18\n    at Array.map (<anonymous>)\n    at Function.create (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:2911:30)\n    at MoMoService.createPaymentUrl (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/src/services/momo.service.js:92:19)"
+}
+2025-03-13 13:44:31 [ERROR]: Order validation failed: courses.0: Cast to [ObjectId] failed for value "[\n' +
+  '  { course_id: new ObjectId("67c060782aaa9b16b68bc874"), price: 1111 },\n' +
+  '  { course_id: new ObjectId("67c18e8fef4cea5480728c07"), price: 1111 }\n' +
+  ']" (type string) at path "courses.0" because of "CastError" {}
+2025-03-13 13:44:31 [ERROR]: Order validation failed: courses.0: Cast to [ObjectId] failed for value "[\n' +
+  '  { course_id: new ObjectId("67c060782aaa9b16b68bc874"), price: 1111 },\n' +
+  '  { course_id: new ObjectId("67c18e8fef4cea5480728c07"), price: 1111 }\n' +
+  ']" (type string) at path "courses.0" because of "CastError" {
+  "path": "/api/cart/checkout",
+  "method": "POST",
+  "body": {
+    "payment_method": "momo"
+  },
+  "error": {
+    "errors": {
+      "courses.0": {
+        "stringValue": "\"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\"",
+        "valueType": "string",
+        "kind": "[ObjectId]",
+        "value": "[\n  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\n  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\n]",
+        "path": "courses.0",
+        "reason": {
+          "stringValue": "\"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\"",
+          "valueType": "Object",
+          "kind": "ObjectId",
+          "value": {
+            "course_id": "67c060782aaa9b16b68bc874",
+            "price": 1111
+          },
+          "path": "courses",
+          "reason": {},
+          "name": "CastError",
+          "message": "Cast to ObjectId failed for value \"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\" (type Object) at path \"courses\" because of \"BSONError\""
+        },
+        "name": "CastError",
+        "message": "Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\""
+      }
+    },
+    "_message": "Order validation failed",
+    "name": "ValidationError",
+    "message": "Order validation failed: courses.0: Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\""
+  }
+}

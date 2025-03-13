@@ -67,6 +67,61 @@
  *           type: string
  *           format: date-time
  *
+ *     CheckoutRequest:
+ *       type: object
+ *       required:
+ *         - payment_method
+ *       properties:
+ *         payment_method:
+ *           type: string
+ *           enum: [momo]
+ *           description: Phương thức thanh toán
+ *
+ *     CheckoutResponse:
+ *       type: object
+ *       properties:
+ *         order_id:
+ *           type: string
+ *           description: ID đơn hàng
+ *         payment_url:
+ *           type: string
+ *           description: URL thanh toán
+ *         amount:
+ *           type: number
+ *           description: Tổng số tiền
+ *         courses:
+ *           type: array
+ *           items:
+ *             type: object
+ *             properties:
+ *               _id:
+ *                 type: string
+ *               title:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *
+ *     PaymentSuccessRequest:
+ *       type: object
+ *       required:
+ *         - order_id
+ *       properties:
+ *         order_id:
+ *           type: string
+ *           description: ID đơn hàng
+ *
+ *     PaymentSuccessResponse:
+ *       type: object
+ *       properties:
+ *         message:
+ *           type: string
+ *         order_id:
+ *           type: string
+ *         courses:
+ *           type: array
+ *           items:
+ *             type: string
+ *
  * /api/cart:
  *   get:
  *     tags: [Cart]
@@ -162,4 +217,58 @@
  *         description: Chưa đăng nhập
  *       404:
  *         description: Không tìm thấy giỏ hàng
+ *
+ * /api/cart/checkout:
+ *   post:
+ *     tags: [Cart]
+ *     summary: Thanh toán giỏ hàng
+ *     description: Tạo đơn hàng và chuyển hướng đến cổng thanh toán
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/CheckoutRequest'
+ *     responses:
+ *       200:
+ *         description: Thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/CheckoutResponse'
+ *       400:
+ *         description: Lỗi dữ liệu hoặc giỏ hàng trống
+ *       401:
+ *         description: Chưa đăng nhập
+ *       404:
+ *         description: Không tìm thấy giỏ hàng
+ *
+ * /api/cart/payment-success:
+ *   post:
+ *     tags: [Cart]
+ *     summary: Xử lý sau khi thanh toán thành công
+ *     description: Cập nhật trạng thái đơn hàng và đăng ký khóa học cho người dùng
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/PaymentSuccessRequest'
+ *     responses:
+ *       200:
+ *         description: Thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/PaymentSuccessResponse'
+ *       400:
+ *         description: Lỗi dữ liệu hoặc đơn hàng chưa thanh toán
+ *       401:
+ *         description: Chưa đăng nhập
+ *       404:
+ *         description: Không tìm thấy đơn hàng
  */
