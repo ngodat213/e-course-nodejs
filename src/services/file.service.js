@@ -1,138 +1,124 @@
-const CloudinaryFile = require('../models/cloudinary_file.model');
-const CloudinaryService = require('./cloudinary.service');
-const { BadRequestError, NotFoundError } = require('../utils/errors');
-const i18next = require('i18next');
+const CloudinaryService = require("../services/cloudinary.service");
+const File = require("../models/cloudinary_file.model");
+const { BadRequestError, NotFoundError } = require("../utils/errors");
 
 class FileService {
-    async uploadFile(file, options = {}) {
-        const {
-            owner_id,
-            owner_type,
-            purpose,
-            file_type = this._detectFileType(file.mimetype),
-            folder = this._getFolderPath(owner_type, purpose)
-        } = options;
+  /**
+   * Upload file lên Cloudinary và lưu vào MongoDB
+   * @param {ObjectId} ownerId - ID của đối tượng sở hữu file
+   * @param {String} ownerType - Loại đối tượng sở hữu file (User, Course, Exam, Lesson)
+   * @param {Object} file - File cần upload
+   * @param {String} purpose - Mục đích sử dụng file
+   * @returns {Object} - File đã upload
+   */
+  async uploadFile(ownerId, ownerType, file, purpose) {
+    if (!file) throw new BadRequestError("File không được để trống");
 
-        // Validate file type
-        if (!this._isValidFileType(file.mimetype, file_type)) {
-            throw new BadRequestError(i18next.t('upload.invalidFormat'));
-        }
+    const folder = `${ownerType}/${ownerId}/${purpose}`;
+    const uploadResponse = await CloudinaryService.upload(file.path, {
+      resource_type: "auto",
+      folder,
+    });
 
-        // Upload to Cloudinary
-        const uploadResult = await CloudinaryService.uploadImage(file.path, {
-            folder,
-            resource_type: this._getResourceType(file_type),
-            ...this._getTransformOptions(file_type, purpose)
-        });
+    const newFile = new File({
+      owner_id: ownerId,
+      owner_type: ownerType,
+      file_type: uploadResponse.resource_type,
+      purpose,
+      original_name: file.originalname,
+      file_url: uploadResponse.secure_url,
+      public_id: uploadResponse.public_id,
+      size: uploadResponse.bytes,
+      format: uploadResponse.format,
+      metadata: {
+        width: uploadResponse.width || null,
+        height: uploadResponse.height || null,
+        duration: uploadResponse.duration || null,
+        pages: uploadResponse.pages || null,
+      },
+    });
 
-        // Create file record
-        const cloudinaryFile = await CloudinaryFile.create({
-            owner_id,
-            owner_type,
-            purpose,
-            file_type,
-            original_name: file.originalname,
-            file_url: uploadResult.secure_url,
-            public_id: uploadResult.public_id,
-            size: file.size,
-            format: uploadResult.format,
-            metadata: {
-                width: uploadResult.width,
-                height: uploadResult.height,
-                duration: uploadResult.duration,
-                pages: uploadResult.pages
-            }
-        });
+    await newFile.save();
+    return newFile;
+  }
 
-        return cloudinaryFile;
-    }
+  /**
+   * Lấy danh sách file theo owner
+   * @param {ObjectId} ownerId - ID của đối tượng sở hữu file
+   * @param {String} ownerType - Loại đối tượng sở hữu file (User, Course, Exam, Lesson)
+   * @param {String} [purpose] - Lọc theo mục đích sử dụng file
+   * @returns {Array} - Danh sách file
+   */
+  async getFiles(ownerId, ownerType, purpose) {
+    const query = { owner_id: ownerId, owner_type: ownerType, status: "active" };
+    if (purpose) query.purpose = purpose;
+    return File.find(query).select("-file_url");
+  }
 
-    async getSignedUrl(fileId, userId) {
-        const file = await CloudinaryFile.findOne({ 
-            _id: fileId,
-            user_id: userId
-        }).select('+secure_url');
+  /**
+   * Lấy chi tiết file theo ID
+   * @param {ObjectId} fileId - ID file
+   * @returns {Object} - File tìm thấy
+   */
+  async getFileById(fileId) {
+    const file = await File.findById(fileId);
+    if (!file) throw new NotFoundError("File không tồn tại");
+    return file;
+  }
 
-        if (!file) {
-            throw new NotFoundError('File not found');
-        }
+  /**
+   * Xóa file khỏi Cloudinary và cập nhật trạng thái MongoDB
+   * @param {ObjectId} fileId - ID file
+   * @returns {Object} - Thông báo xóa file thành công
+   */
+  async deleteFile(fileId) {
+    const file = await File.findById(fileId);
+    if (!file) throw new NotFoundError("File không tồn tại");
 
-        // Tạo signed URL với thời hạn ngắn
-        const signedUrl = await CloudinaryService.generateSignedUrl(
-            file.public_id,
-            { expires_in: 3600 } // 1 hour
-        );
+    await CloudinaryService.delete(file.public_id);
+    file.status = "deleted";
+    await file.save();
 
-        return signedUrl;
-    }
+    return { message: "File đã bị xóa thành công" };
+  }
 
-    async deleteFile(fileId) {
-        const file = await CloudinaryFile.findById(fileId);
-        if (!file) return;
+  /**
+   * Cập nhật file (thay thế file cũ)
+   * @param {ObjectId} fileId - ID file
+   * @param {Object} newFile - File mới
+   * @returns {Object} - File sau khi cập nhật
+   */
+  async updateFile(fileId, newFile) {
+    const existingFile = await File.findById(fileId);
+    if (!existingFile) throw new NotFoundError("File không tồn tại");
 
-        // Delete from Cloudinary
-        await CloudinaryService.delete(file.public_id);
+    // Xóa file cũ trên Cloudinary
+    await CloudinaryService.delete(existingFile.public_id);
 
-        // Mark as deleted in database
-        file.status = 'deleted';
-        await file.save();
-    }
+    const folder = `${existingFile.owner_type}/${existingFile.owner_id}/${existingFile.purpose}`;
+    const uploadResponse = await CloudinaryService.upload(newFile.path, {
+      resource_type: "auto",
+      folder,
+    });
 
-    _getResourceType(fileType) {
-        switch (fileType) {
-            case 'video':
-                return 'video';
-            case 'document':
-                return 'raw';
-            default:
-                return 'image';
-        }
-    }
+    // Cập nhật thông tin file
+    Object.assign(existingFile, {
+      original_name: newFile.originalname,
+      file_url: uploadResponse.secure_url,
+      public_id: uploadResponse.public_id,
+      size: uploadResponse.bytes,
+      format: uploadResponse.format,
+      metadata: {
+        width: uploadResponse.width || null,
+        height: uploadResponse.height || null,
+        duration: uploadResponse.duration || null,
+        pages: uploadResponse.pages || null,
+      },
+    });
 
-    _detectFileType(mimetype) {
-        if (mimetype.startsWith('image/')) return 'image';
-        if (mimetype.startsWith('video/')) return 'video';
-        return 'document';
-    }
-
-    _isValidFileType(mimetype, expectedType) {
-        switch (expectedType) {
-            case 'image':
-                return mimetype.startsWith('image/');
-            case 'video':
-                return mimetype.startsWith('video/');
-            case 'document':
-                return ['application/pdf', 'application/msword'].includes(mimetype);
-            default:
-                return false;
-        }
-    }
-
-    _getFolderPath(ownerType, purpose) {
-        return `${process.env.NODE_ENV}/${ownerType.toLowerCase()}s/${purpose}s`;
-    }
-
-    _getTransformOptions(fileType, purpose) {
-        const options = {
-            quality: 'auto'
-        };
-
-        if (fileType === 'image') {
-            if (purpose === 'avatar') {
-                options.transformation = [
-                    { width: 400, height: 400, crop: 'fill' },
-                    { quality: 'auto' }
-                ];
-            } else if (purpose === 'thumbnail') {
-                options.transformation = [
-                    { width: 720, height: 480, crop: 'fill' },
-                    { quality: 'auto' }
-                ];
-            }
-        }
-
-        return options;
-    }
+    await existingFile.save();
+    return existingFile;
+  }
 }
 
-module.exports = new FileService(); 
+module.exports = new FileService();

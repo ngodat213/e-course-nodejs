@@ -15,6 +15,18 @@ class EmailTemplateService {
         };
     }
 
+    sendCourseDeleteRequestEmail(instructor, course, status, message) {
+        return {
+            subject: `Yêu cầu xóa khóa học ${course.title}`,
+            html: `
+                <h2>Xin chào ${instructor.name}!</h2>
+                <p>Chúng tôi đã nhận được yêu cầu xóa khóa học "${course.title}" từ bạn.</p>
+                <p>Trạng thái: ${status}</p>
+                <p>Lý do: ${message}</p>
+            `
+        };
+    }
+
     getResetPasswordEmail(user, resetUrl) {
         return {
             subject: i18next.t('email:resetPassword.subject'),

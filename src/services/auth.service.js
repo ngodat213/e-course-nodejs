@@ -85,16 +85,8 @@ class AuthService {
     const refreshToken = await TokenService.generateRefreshToken(user);
 
     return {
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
-      },
-      tokens: {
-        access_token: accessToken,
-        refresh_token: refreshToken,
-      },
+      access_token: accessToken,
+      refresh_token: refreshToken,
     };
   }
 
@@ -212,17 +204,8 @@ class AuthService {
 
     success.info("OTP verified successfully", { email });
 
-    // Tạo JWT token
-    const token = jwt.sign(
-      { id: user._id, role: user.role },
-      process.env.JWT_SECRET,
-      { expiresIn: "1d" }
-    );
-
     return {
       message: i18next.t("auth.verified"),
-      token,
-      user: this._sanitizeUser(user),
     };
   }
 

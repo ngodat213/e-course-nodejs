@@ -3,7 +3,12 @@ const bcrypt = require("bcryptjs");
 
 const userSchema = new mongoose.Schema(
   {
-    name: {
+    first_name: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    last_name: {
       type: String,
       required: true,
       trim: true,
@@ -71,6 +76,13 @@ const userSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    courses: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Course",
+      },
+    ],
+    
   },
   {
     timestamps: {

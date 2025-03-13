@@ -36,9 +36,9 @@ const authMiddleware = {
   },
 
   // Kiểm tra owner của resource
-  isOwnerOrAdmin: (Model) => async (req, res, next) => {
+  isOwnerOrAdmin: (Model, id) => async (req, res, next) => {
     try {
-      const doc = await Model.findById(req.params.id);
+      const doc = await Model.findById(id);
       if (!doc) {
         return next(new NotFoundError("Document not found"));
       }

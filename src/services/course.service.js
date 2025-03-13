@@ -8,123 +8,93 @@ const CourseDeleteRequest = require("../models/course_delete_request.model");
 const Lesson = require("../models/lesson.model");
 const LessonService = require("./lesson.service");
 const FileService = require("./file.service");
+const CourseCategory = require("../models/course_category.model");
 
 class CourseService {
-  async getAll(options = {}) {
-    try {
-      const { page = 1, limit = 10, sort = "-createdAt", ...filters } = options;
+  async getAll(query) {
+    const courses = await Course.find(this._buildFilterQuery(query))
+      .populate('instructor_id', 'first_name last_name email')
+      .populate('categories', 'name slug')
+      .sort(query.sort || '-created_at')
+      .skip(query.skip)
+      .limit(query.limit);
 
-      const skip = (page - 1) * limit;
-      const queryFilter = this._buildFilterQuery(filters);
-
-      // Get data and total count in parallel
-      const [courses, total] = await Promise.all([
-        Course.find(queryFilter)
-          .populate("instructor_id", "name email")
-          .populate("thumbnail_id", "public_id")
-          .sort(sort)
-          .skip(skip)
-          .limit(limit)
-          .lean(),
-        Course.countDocuments(queryFilter),
-      ]);
-
-      // Transform all courses in parallel
-      const transformedCourses = await Promise.all(
-        courses.map(course => this._transformCourseData(course))
-      );
-
-      return {
-        data: transformedCourses,
-        pagination: {
-          total,
-          page: Number(page),
-          totalPages: Math.ceil(total / limit),
-          limit: Number(limit),
-        },
-      };
-    } catch (error) {
-      throw new Error(i18next.t("course.fetchError"));
-    }
+    return courses;
   }
 
   async getCourseById(id) {
-    let course = await Course.findById(id)
-      .populate("instructor_id", "name email")
-      .populate("thumbnail_id", "public_id")
-      .lean();
+    const course = await Course.findById(id)
+      .populate('instructor_id', 'first_name last_name email')
+      .populate('categories', 'name slug description');
 
-    return this._transformCourseData(course);
+    if (!course) {
+      throw new NotFoundError('Course not found');
+    }
+
+    return course;
   }
 
   async create(courseData, thumbnailFile, instructorId) {
-    if (!courseData.title || !courseData.description || !courseData.price) {
-      throw new BadRequestError(i18next.t("course.missingInfo"));
-    }
-
-    // Upload thumbnail to Cloudinary if provided
+    // Upload thumbnail if provided
+    let thumbnailId;
     if (thumbnailFile) {
-      const result = await FileService.uploadFile(thumbnailFile, {
-        owner_id: instructorId,
-        owner_type: "User",
-        purpose: "thumbnail",
-        file_type: "image",
-      });
-      courseData.thumbnail_id = result._id;
+      const uploadedFile = await FileService.uploadFile(instructorId, "Course", thumbnailFile, "thumbnail");
+      thumbnailId = uploadedFile._id;
     }
 
-    courseData.instructor_id = instructorId;
+    // Validate categories exist
+    if (courseData.categories) {
+      const validCategories = await CourseCategory.find({
+        _id: { $in: courseData.categories },
+        status: 'active'
+      });
 
-    const course = await Course.create(courseData);
-    return course;
-  }
-
-  async update(id, updateData) {
-    // Nếu có thumbnail mới, xóa thumbnail cũ
-    if (updateData.thumbnail && updateData.thumbnail_id) {
-      const course = await Course.findById(id);
-      if (course && course.thumbnail_id) {
-        await CloudinaryService.deleteImage(course.thumbnail_id);
+      if (validCategories.length !== courseData.categories.length) {
+        throw new BadRequestError('One or more categories are invalid');
       }
     }
 
-    const course = await Course.findByIdAndUpdate(id, updateData, {
-      new: true,
-      runValidators: true,
+    const course = await Course.create({
+      ...courseData,
+      instructor_id: instructorId,
+      thumbnail_id: thumbnailId
     });
-
-    if (!course) {
-      throw new NotFoundError(i18next.t("course.notFound"));
-    }
 
     return course;
   }
 
-  async delete(id) {
-    const course = await Course.findById(id);
+  async update(courseId, updateData) {
+    const course = await Course.findById(courseId);
     if (!course) {
       throw new NotFoundError(i18next.t("course.notFound"));
     }
 
-    // Check if there are any enrolled students
-    const enrollments = await UserProgress.find({ course_id: id });
-    if (enrollments.length > 0) {
-      throw new BadRequestError(i18next.t("course.hasStudents"));
+    // Validate categories if being updated
+    if (updateData.categories) {
+      const validCategories = await CourseCategory.find({
+        _id: { $in: updateData.categories },
+        status: 'active'
+      });
+
+      if (validCategories.length !== updateData.categories.length) {
+        throw new BadRequestError('One or more categories are invalid');
+      }
     }
 
-    // Xóa thumbnail từ Cloudinary
-    if (course.thumbnail_id) {
-      await CloudinaryService.deleteImage(course.thumbnail_id);
+    Object.assign(course, updateData);
+    await course.save();
+
+    return course;
+  }
+
+  async delete(courseId) {
+    const course = await Course.findById(courseId);
+    if (!course) {
+      throw new NotFoundError(i18next.t("course.notFound"));
     }
 
-    // Xóa tất cả bài học và tài nguyên liên quan
-    const lessons = await Lesson.find({ course_id: id });
-    for (const lesson of lessons) {
-      await LessonService.deleteLesson(lesson._id);
-    }
-
-    await course.remove();
-    return true;
+    await course.updateOne({ status: "deleted" });
+    return { message: i18next.t("course.deleted") };
   }
 
   async enrollCourse(courseId, userId) {
@@ -189,7 +159,7 @@ class CourseService {
   async createDeleteRequest(courseId, userId, reason) {
     const course = await Course.findById(courseId);
 
-    if (course.instructor.toString() !== userId.toString()) {
+    if (course.instructor_id._id.toString() !== userId) {
       throw new BadRequestError(i18next.t("course.notInstructor"));
     }
 
@@ -208,10 +178,10 @@ class CourseService {
       filter.status = status;
     }
 
-    const requests = await CourseDeleteRequest.find(filter)
-      .populate("course_id", "title")
-      .populate("instructor_id", "name email")
-      .populate("admin_response.admin_id", "name")
+    const requests = await CourseDeleteRequest.find()
+      .populate("course_id", "title description")
+      .populate("instructor_id", "email")
+      .populate("admin_response", "message action_date")
       .sort("-created_at")
       .skip((page - 1) * limit)
       .limit(limit);
@@ -250,11 +220,16 @@ class CourseService {
 
     // Nếu approved thì xóa khóa học
     if (status === "approved") {
-      await this.deleteCourse(request.course_id);
+      await this.delete(request.course_id);
     }
 
-    // Gửi email thông báo cho instructor
-    // TODO: Implement email notification
+    // Send email to instructor
+    await EmailService.sendCourseDeleteRequestEmail(
+      request.instructor_id,
+      request.course_id,
+      status,
+      message
+    );
 
     return request;
   }
@@ -284,6 +259,10 @@ class CourseService {
 
     if (filters.instructor_id) {
       queryFilter.instructor_id = filters.instructor_id;
+    }
+
+    if (filters.category) {
+      queryFilter.categories = filters.category;
     }
 
     return queryFilter;

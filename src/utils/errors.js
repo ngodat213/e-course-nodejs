@@ -1,42 +1,41 @@
 class AppError extends Error {
-    constructor(message, statusCode, errors = []) {
-        super(message);
-        this.statusCode = statusCode;
-        this.status = `${statusCode}`.startsWith('4') ? 'fail' : 'error';
-        this.isOperational = true;
-        this.errors = errors;
-        Error.captureStackTrace(this, this.constructor);
-    }
-}
-
-class NotFoundError extends AppError {
-    constructor(message = 'Resource not found') {
-        super(message, 404);
-    }
+  constructor(message, code = 500) {
+    super(message);
+    this.code = code;
+    this.success = false;
+    Error.captureStackTrace(this, this.constructor);
+  }
 }
 
 class BadRequestError extends AppError {
-    constructor(message = 'Bad request', errors = []) {
-        super(message, 400, errors);
-    }
+  constructor(message = "Dữ liệu không hợp lệ", error = null) {
+    super(message, 400);
+    this.error = error;
+  }
+}
+
+class NotFoundError extends AppError {
+  constructor(message = "Không tìm thấy tài nguyên") {
+    super(message, 404);
+  }
 }
 
 class UnauthorizedError extends AppError {
-    constructor(message = 'Unauthorized') {
-        super(message, 401);
-    }
+  constructor(message = "Không có quyền truy cập") {
+    super(message, 401); 
+  }
 }
 
 class ForbiddenError extends AppError {
-    constructor(message = 'Forbidden') {
-        super(message, 403);
-    }
+  constructor(message = "Không đủ quyền thực hiện") {
+    super(message, 403);
+  }
 }
 
 module.exports = {
-    AppError,
-    NotFoundError,
-    BadRequestError,
-    UnauthorizedError,
-    ForbiddenError
+  AppError,
+  BadRequestError,
+  NotFoundError,
+  UnauthorizedError,
+  ForbiddenError
 }; 
