@@ -9,11 +9,22 @@ const Lesson = require("../models/lesson.model");
 const LessonService = require("./lesson.service");
 const FileService = require("./file.service");
 const CourseCategory = require("../models/course_category.model");
+const User = require("../models/user.model");
 
 class CourseService {
-  async getAll(query) {
-    const courses = await Course.find(this._buildFilterQuery(query))
-      .populate('instructor_id', '-password -__v -role -status -certificate_count -followers -notifications -unread_notifications -created_at -updated_at')
+  async getAll(query, userId = null) {
+    let filterQuery = this._buildFilterQuery(query);
+
+    // Nếu có userId, loại bỏ các khóa học đã đăng ký
+    if (userId) {
+      const user = await User.findById(userId);
+      if (user && user.enrolled_courses && user.enrolled_courses.length > 0) {
+        filterQuery._id = { $nin: user.enrolled_courses };
+      }
+    }
+
+    const courses = await Course.find(filterQuery)
+      .populate('instructor_id', 'first_name last_name email followers_count working_at address about level profile_picture')
       .populate('thumbnail_id')
       .populate('categories', 'name slug')
       .sort(query.sort || '-created_at')
@@ -25,8 +36,9 @@ class CourseService {
 
   async getCourseById(id) {
     const course = await Course.findById(id)
-      .populate('instructor_id', 'first_name last_name email')
-      .populate('categories', 'name slug description');
+    .populate('instructor_id', 'first_name last_name email followers_count working_at address about level profile_picture')
+    .populate('thumbnail_id')
+    .populate('categories', 'name slug')
 
     if (!course) {
       throw new NotFoundError('Course not found');

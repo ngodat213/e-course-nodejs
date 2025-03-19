@@ -55,14 +55,28 @@ const lessonContentSchema = (type) => {
 
 // Schema cho order
 const lessonOrderSchema = Joi.object({
-    order: Joi.number().required().min(1).messages({
+    order: Joi.number().min(1).messages({
         'number.base': 'Order must be a number',
-        'number.min': 'Order must be greater than 0',
-        'any.required': 'Order is required'
+        'number.min': 'Order must be greater than 0'
+    }),
+    sequence: Joi.number().min(1).messages({
+        'number.base': 'Sequence must be a number',
+        'number.min': 'Sequence must be greater than 0'
     })
+}).or('order', 'sequence').messages({
+    'object.missing': 'Either order or sequence must be provided'
 });
 
+// Schema cho Lesson
 const createLessonSchema = Joi.object({
+  course_id: Joi.string()
+    .required()
+    .messages({
+      'any.required': 'Vui lòng cung cấp ID khóa học',
+      'string.empty': 'ID khóa học không được để trống',
+      'string.base': 'ID khóa học không hợp lệ'
+    }),
+
   title: Joi.string()
     .required()
     .min(5)
@@ -76,49 +90,12 @@ const createLessonSchema = Joi.object({
     }),
 
   description: Joi.string()
-    .required()
     .min(20)
     .max(1000)
     .messages({
-      'any.required': 'Vui lòng nhập mô tả bài học',
-      'string.empty': 'Mô tả không được để trống',
       'string.min': 'Mô tả phải có ít nhất {#limit} ký tự',
       'string.max': 'Mô tả không được vượt quá {#limit} ký tự',
       'string.base': 'Mô tả phải là chuỗi ký tự'
-    }),
-
-  content: Joi.string()
-    .required()
-    .min(50)
-    .messages({
-      'any.required': 'Vui lòng nhập nội dung bài học',
-      'string.empty': 'Nội dung không được để trống',
-      'string.min': 'Nội dung phải có ít nhất {#limit} ký tự',
-      'string.base': 'Nội dung phải là chuỗi ký tự'
-    }),
-
-  type: Joi.string()
-    .valid('video', 'text', 'exam')
-    .required()
-    .messages({
-      'any.required': 'Vui lòng chọn loại bài học',
-      'string.empty': 'Loại bài học không được để trống',
-      'any.only': 'Loại bài học phải là video, text hoặc exam',
-      'string.base': 'Loại bài học không hợp lệ'
-    }),
-
-  duration: Joi.number()
-    .integer()
-    .min(0)
-    .when('type', {
-      is: 'video',
-      then: Joi.required()
-    })
-    .messages({
-      'any.required': 'Vui lòng nhập thời lượng video',
-      'number.base': 'Thời lượng phải là số',
-      'number.integer': 'Thời lượng phải là số nguyên',
-      'number.min': 'Thời lượng không được âm'
     }),
 
   is_free: Joi.boolean()
@@ -128,10 +105,10 @@ const createLessonSchema = Joi.object({
     }),
 
   status: Joi.string()
-    .valid('draft', 'published')
+    .valid('draft', 'published', 'archived')
     .default('draft')
     .messages({
-      'any.only': 'Trạng thái phải là draft hoặc published',
+      'any.only': 'Trạng thái phải là draft, published hoặc archived',
       'string.base': 'Trạng thái không hợp lệ'
     })
 });
@@ -155,32 +132,118 @@ const updateLessonSchema = Joi.object({
       'string.base': 'Mô tả phải là chuỗi ký tự'
     }),
 
-  content: Joi.string()
-    .min(50)
-    .messages({
-      'string.min': 'Nội dung phải có ít nhất {#limit} ký tự',
-      'string.base': 'Nội dung phải là chuỗi ký tự'
-    }),
-
-  duration: Joi.number()
-    .integer()
-    .min(0)
-    .messages({
-      'number.base': 'Thời lượng phải là số',
-      'number.integer': 'Thời lượng phải là số nguyên',
-      'number.min': 'Thời lượng không được âm'
-    }),
-
   is_free: Joi.boolean()
     .messages({
       'boolean.base': 'Trạng thái miễn phí không hợp lệ'
     }),
 
   status: Joi.string()
-    .valid('draft', 'published')
+    .valid('draft', 'published', 'archived')
     .messages({
-      'any.only': 'Trạng thái phải là draft hoặc published',
+      'any.only': 'Trạng thái phải là draft, published hoặc archived',
       'string.base': 'Trạng thái không hợp lệ'
+    })
+}).min(1).messages({
+  'object.min': 'Vui lòng cung cấp ít nhất một trường để cập nhật'
+});
+
+// Schema cho LessonContent
+const createLessonContentSchema = Joi.object({
+  lesson_id: Joi.string()
+    .required()
+    .messages({
+      'any.required': 'Vui lòng cung cấp ID bài học',
+      'string.empty': 'ID bài học không được để trống',
+      'string.base': 'ID bài học không hợp lệ'
+    }),
+
+  title: Joi.string()
+    .required()
+    .min(5)
+    .max(200)
+    .messages({
+      'any.required': 'Vui lòng nhập tiêu đề nội dung',
+      'string.empty': 'Tiêu đề không được để trống',
+      'string.min': 'Tiêu đề phải có ít nhất {#limit} ký tự',
+      'string.max': 'Tiêu đề không được vượt quá {#limit} ký tự'
+    }),
+
+  type: Joi.string()
+    .required()
+    .valid('video', 'document', 'quiz')
+    .messages({
+      'any.required': 'Vui lòng chọn loại nội dung',
+      'any.only': 'Loại nội dung phải là video, document hoặc quiz'
+    }),
+
+  video: Joi.when('type', {
+    is: 'video',
+    then: Joi.string().required().messages({
+      'any.required': 'Vui lòng upload video'
+    })
+  }),
+
+  quiz: Joi.when('type', {
+    is: 'quiz',
+    then: Joi.string().required().messages({
+      'any.required': 'Vui lòng cung cấp ID quiz'
+    })
+  }),
+
+  attachments: Joi.array()
+    .items(Joi.string())
+    .messages({
+      'array.base': 'Danh sách tài liệu đính kèm không hợp lệ'
+    }),
+
+  requirements: Joi.array()
+    .items(Joi.string())
+    .messages({
+      'array.base': 'Danh sách yêu cầu không hợp lệ'
+    }),
+
+  status: Joi.string()
+    .valid('draft', 'published', 'archived')
+    .default('draft')
+    .messages({
+      'any.only': 'Trạng thái phải là draft, published hoặc archived'
+    })
+});
+
+const updateLessonContentSchema = Joi.object({
+  title: Joi.string()
+    .min(5)
+    .max(200)
+    .messages({
+      'string.min': 'Tiêu đề phải có ít nhất {#limit} ký tự',
+      'string.max': 'Tiêu đề không được vượt quá {#limit} ký tự'
+    }),
+
+  video: Joi.string(),
+  quiz: Joi.string(),
+
+  attachments: Joi.array()
+    .items(Joi.string())
+    .messages({
+      'array.base': 'Danh sách tài liệu đính kèm không hợp lệ'
+    }),
+
+  requirements: Joi.array()
+    .items(Joi.string())
+    .messages({
+      'array.base': 'Danh sách yêu cầu không hợp lệ'
+    }),
+
+  removeAttachments: Joi.array()
+    .items(Joi.string())
+    .messages({
+      'array.base': 'Danh sách tài liệu cần xóa không hợp lệ'
+    }),
+
+  status: Joi.string()
+    .valid('draft', 'published', 'archived')
+    .messages({
+      'any.only': 'Trạng thái phải là draft, published hoặc archived'
     })
 }).min(1).messages({
   'object.min': 'Vui lòng cung cấp ít nhất một trường để cập nhật'
@@ -190,5 +253,7 @@ module.exports = {
     lessonContentSchema,
     lessonOrderSchema,
     createLessonSchema,
-    updateLessonSchema
+    updateLessonSchema,
+    createLessonContentSchema,
+    updateLessonContentSchema
 }; 

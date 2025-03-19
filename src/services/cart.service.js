@@ -146,6 +146,40 @@ class CartService {
       price: item.price
     }));
 
+    // Nếu là môi trường development, tự động xử lý thanh toán thành công
+    if (process.env.NODE_ENV === 'development') {
+      // Tạo đơn hàng với trạng thái đã thanh toán
+      await Order.create({
+        order_id: orderId,
+        user_id: userId,
+        courses: orderCourses,
+        amount: cart.total_amount,
+        payment_method: paymentMethod,
+        status: 'paid',
+        payment_details: {
+          provider: 'development',
+          transaction_id: `DEV_${Date.now()}`,
+          payment_date: new Date()
+        }
+      });
+
+
+      // Xử lý thanh toán thành công
+      const result = await this.processSuccessfulPayment(orderId);
+
+      return {
+        ...result,
+        development_mode: true,
+        order_id: orderId,
+        amount: cart.total_amount,
+        courses: courses.map(course => ({
+          _id: course._id,
+          title: course.title,
+          price: course.price
+        }))
+      };
+    }
+
     // Xử lý theo phương thức thanh toán
     switch (paymentMethod) {
       case "momo":

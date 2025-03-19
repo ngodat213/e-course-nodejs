@@ -52,15 +52,21 @@ const lessonRoutes = require("./routes/lesson.routes");
 const deleteRequestRoutes = require("./routes/delete_request.routes");
 const categoryRoutes = require("./routes/category.routes");
 const cartRoutes = require("./routes/cart.routes");
+const userProgressRoutes = require('./routes/user_progress.routes');
+const lessonContentRoutes = require('./routes/lesson_content.routes');
+const examRoutes = require('./routes/exam.routes');
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/courses", courseRoutes);
 app.use("/api/momo", momoRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/lessons", lessonRoutes);
+app.use("/api/exams", examRoutes);
+app.use("/api/lesson-contents", lessonContentRoutes);
 app.use("/api/delete-requests", deleteRequestRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/cart", cartRoutes);
+app.use('/api/progress', userProgressRoutes);
 
 // Swagger UI setup
 const swaggerUi = require("swagger-ui-express");

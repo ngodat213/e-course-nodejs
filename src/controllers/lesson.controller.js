@@ -8,11 +8,9 @@ class LessonController extends BaseController {
 
   async createLesson(req, res, next) {
     try {
-      const { id } = req.params;
       const result = await LessonService.createLesson(
-        id,
-        req.body,
-        req.files
+        req.body.course_id,
+        req.body
       );
       this.createdResponse(res, result);
     } catch (error) {
@@ -25,8 +23,7 @@ class LessonController extends BaseController {
       const { lessonId } = req.params;
       const result = await LessonService.updateLesson(
         lessonId,
-        req.body,
-        req.files
+        req.body
       );
       this.successResponse(res, result);
     } catch (error) {
@@ -38,7 +35,10 @@ class LessonController extends BaseController {
     try {
       const { lessonId } = req.params;
       await LessonService.deleteLesson(lessonId);
-      this.successResponse(res, { message: "Lesson deleted successfully" });
+      this.successResponse(res, { 
+        success: true,
+        message: "Lesson deleted successfully" 
+      });
     } catch (error) {
       this.handleError(error, next);
     }
@@ -57,7 +57,11 @@ class LessonController extends BaseController {
   async getLessonsByCourse(req, res, next) {
     try {
       const { courseId } = req.params;
-      const result = await LessonService.getLessonsByCourse(courseId, req.query);
+      const result = await LessonService.getLessonsByCourse(
+        courseId, 
+        req.user.id, 
+        req.query
+      );
       this.successResponse(res, result);
     } catch (error) {
       this.handleError(error, next);

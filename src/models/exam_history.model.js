@@ -17,9 +17,21 @@ const examHistorySchema = new mongoose.Schema({
         min: 0,
         max: 100
     },
+    answers: {
+        type: Map,
+        of: String
+    },
+    passed: {
+        type: Boolean,
+        required: true
+    },
     completed_at: {
         type: Date,
         default: Date.now
+    },
+    duration_taken: {
+        type: Number,
+        default: 0
     }
 }, {
     timestamps: true

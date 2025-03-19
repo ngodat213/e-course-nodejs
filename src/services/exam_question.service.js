@@ -1,6 +1,7 @@
 const ExamQuestion = require('../models/exam_question.model');
 const CloudinaryService = require('./cloudinary.service');
 const { NotFoundError, BadRequestError } = require('../utils/errors');
+const FileService = require('./file.service');
 const i18next = require('i18next');
 
 class ExamQuestionService {
@@ -19,11 +20,11 @@ class ExamQuestionService {
 
         // Upload image nếu có
         if (files?.image) {
-            const imageResult = await CloudinaryService.uploadImage(
-                files.image.path,
-                {
-                    folder: 'exam_questions'
-                }
+            const imageResult = await FileService.uploadFile(
+                examId,
+                "ExamQuestion",
+                files.image,
+                "image"
             );
             questionData.image_id = imageResult._id;
         }

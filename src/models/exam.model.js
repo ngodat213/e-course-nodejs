@@ -6,15 +6,6 @@ const examSchema = new mongoose.Schema({
         ref: 'Lesson',
         required: true
     },
-    title: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    description: {
-        type: String,
-        required: true
-    },
     duration: {
         type: Number, // in minutes
         required: true,

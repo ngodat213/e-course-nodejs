@@ -169,6 +169,43 @@ class UserController extends BaseController {
       this.handleError(error, next);
     }
   }
+
+  async updateStreak(req, res, next) {
+    try {
+      const result = await UserService.updateStreak(req.user.id);
+      this.successResponse(res, {
+        message: i18next.t("user.streakUpdated"),
+        ...result
+      });
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async resetStreak(req, res, next) {
+    try {
+      const result = await UserService.resetStreak(req.user.id);
+      this.successResponse(res, {
+        message: i18next.t("user.streakReset"),
+        ...result
+      });
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async getStreak(req, res, next) {
+    try {
+      const user = await UserService.getUserById(req.user.id);
+      this.successResponse(res, {
+        current_streak: user.current_streak,
+        longest_streak: user.longest_streak,
+        last_streak_date: user.last_streak_date
+      });
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
 }
 
 module.exports = new UserController();

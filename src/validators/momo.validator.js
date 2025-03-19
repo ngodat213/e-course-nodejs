@@ -5,6 +5,12 @@ const createMoMoPaymentSchema = Joi.object({
   orderInfo: Joi.string()
 });
 
+const forceProcessPaymentSchema = Joi.object({
+  orderId: Joi.string().required(),
+  status: Joi.string().valid('paid', 'failed').default('paid')
+});
+
 module.exports = {
-  createMoMoPaymentSchema
+  createMoMoPaymentSchema,
+  forceProcessPaymentSchema
 }; 

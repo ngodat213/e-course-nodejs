@@ -590,4 +590,74 @@
  *                         type: number
  *       404:
  *         description: Không tìm thấy giảng viên
+ *
+ * /api/users/streak/increment:
+ *   post:
+ *     tags: [Users]
+ *     summary: Tăng streak của user
+ *     description: Tăng streak lên 1 khi user hoàn thành bài học trong ngày
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Cập nhật streak thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                 current_streak:
+ *                   type: number
+ *                 longest_streak:
+ *                   type: number
+ *
+ * /api/users/streak/reset:
+ *   post:
+ *     tags: [Users]
+ *     summary: Reset streak của user
+ *     description: Reset streak về 0 khi user bỏ lỡ ngày học
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Reset streak thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                 current_streak:
+ *                   type: number
+ *                 longest_streak:
+ *                   type: number
+ *
+ * /api/users/streak:
+ *   get:
+ *     tags: [Users]
+ *     summary: Lấy thông tin streak
+ *     description: Lấy thông tin streak hiện tại của user
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 current_streak:
+ *                   type: number
+ *                   description: Số ngày streak hiện tại
+ *                 longest_streak:
+ *                   type: number
+ *                   description: Số ngày streak dài nhất
+ *                 last_streak_date:
+ *                   type: string
+ *                   format: date-time
+ *                   description: Thời điểm cập nhật streak gần nhất
  */ 
