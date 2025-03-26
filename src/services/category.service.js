@@ -20,7 +20,20 @@ class CategoryService {
       .populate("parent_id", "name")
       .populate({
         path: "courses",
-        match: { status: "published" }
+        match: { status: "published" },
+        populate: [
+          {
+            path: 'instructor_id',
+            select: 'first_name last_name email followers_count working_at address about level profile_picture'
+          },
+          {
+            path: 'thumbnail_id'
+          },
+          {
+            path: 'categories',
+            select: '-courses'
+          }
+        ]
       })
       .sort(sort);
 

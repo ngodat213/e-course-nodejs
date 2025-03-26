@@ -12,7 +12,7 @@ class LessonService {
       throw new NotFoundError(i18next.t("course.notFound"));
     }
 
-    // Tạo lesson mới
+    // Tạo lesson mới - order sẽ tự động được set
     const lesson = await Lesson.create({
       ...lessonData,
       course_id: courseId
@@ -96,7 +96,7 @@ class LessonService {
     // Lấy tổng số bài học
     const total = await Lesson.countDocuments(query);
 
-    // Lấy danh sách bài học với phân trang
+    // Lấy danh sách bài học với phân trang và sắp xếp theo order
     const lessons = await Lesson.find(query)
       .populate({
         path: 'contents',
@@ -106,7 +106,7 @@ class LessonService {
           { path: 'attachments'}
         ]
       })
-      .sort({ createdAt: -1 })
+      .sort({ order: 1 }) // Sắp xếp theo order tăng dần
       .skip((page - 1) * limit)
       .limit(limit);
 
@@ -119,6 +119,21 @@ class LessonService {
         pages: Math.ceil(total / limit)
       }
     };
+  }
+
+  async updateLessonOrder(courseId, lessonId, newOrder) {
+    const lesson = await Lesson.findById(lessonId);
+    if (!lesson) {
+      throw new NotFoundError(i18next.t("lesson.notFound"));
+    }
+
+    if (lesson.course_id.toString() !== courseId) {
+      throw new BadRequestError(i18next.t("lesson.notBelongToCourse"));
+    }
+
+    await Lesson.reorderLessons(courseId, lessonId, newOrder);
+
+    return await Lesson.find({ course_id: courseId }).sort({ order: 1 });
   }
 }
 

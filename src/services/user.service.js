@@ -272,7 +272,6 @@ class UserService {
             },
             {
               path: "categories",
-              select: "name slug"
             }
           ]
         },

@@ -3153,3 +3153,273 @@ Use mongoose.model(name, schema) {
     "success": false
   }
 }
+2025-03-19 22:43:59 [ERROR]: Course not found {
+  "code": 404
+}
+2025-03-19 22:43:59 [ERROR]: Course not found {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c05fa139552b1e8f2d900d",
+    "title": "Variables in Flutter",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": false,
+    "status": "published"
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-19 22:50:32 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 11:49:14 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 11:49:27 [ERROR]: Invalid token {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 11:52:29 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "60d3b41f7c213e3ab47892b1,60d3b41f7c213e3ab47892b2"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 11:52:53 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "67c1887af24c9b367ce6dde9"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 11:53:00 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "67c1887af24c9b367ce6dde9"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 11:57:51 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "[67c1887af24c9b367ce6dde9]"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 12:02:27 [ERROR]: Invalid token {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 12:02:51 [ERROR]: Invalid token {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 12:02:57 [ERROR]: E11000 duplicate key error collection: ecourse.coursecategories index: slug_1 dup key: { slug: null } {
+  "code": 11000
+}
+2025-03-21 12:02:57 [ERROR]: E11000 duplicate key error collection: ecourse.coursecategories index: slug_1 dup key: { slug: null } {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Mobile",
+    "description": "Mobile Application",
+    "status": "active",
+    "order": "0"
+  },
+  "error": {
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "slug": 1
+    },
+    "keyValue": {
+      "slug": null
+    }
+  }
+}
+2025-03-21 12:05:17 [ERROR]: One or more categories are invalid {
+  "code": 400
+}
+2025-03-21 12:05:17 [ERROR]: One or more categories are invalid {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": [
+      "67c060782aaa9b16b68bc874"
+    ]
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-21 13:13:30 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 13:13:31 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 14:22:01 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {}
+2025-03-21 14:22:01 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/my-courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "stringValue": "\"my-courses\"",
+    "valueType": "string",
+    "kind": "ObjectId",
+    "value": "my-courses",
+    "path": "_id",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"my-courses\" (type string) at path \"_id\" for model \"Course\""
+  }
+}
+2025-03-21 14:22:07 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {}
+2025-03-21 14:22:07 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/my-courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "stringValue": "\"my-courses\"",
+    "valueType": "string",
+    "kind": "ObjectId",
+    "value": "my-courses",
+    "path": "_id",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"my-courses\" (type string) at path \"_id\" for model \"Course\""
+  }
+}
+2025-03-21 15:46:58 [ERROR]: Invalid email or password {
+  "code": 401
+}
+2025-03-21 15:46:58 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "nguyenngoccattuong04554@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 16:15:09 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Python",
+    "description": "Python",
+    "parent_id": "",
+    "status": "active",
+    "order": "0",
+    "icon": ""
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "description": "Mô tả phải có ít nhất 10 ký tự",
+      "parent_id": "ID danh mục cha không được để trống"
+    }
+  }
+}
+2025-03-21 16:15:18 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Python",
+    "description": "Python Programing",
+    "parent_id": "",
+    "status": "active",
+    "order": "0",
+    "icon": ""
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "parent_id": "ID danh mục cha không được để trống"
+    }
+  }
+}
+2025-03-21 17:51:15 [ERROR]: Order.paginate is not a function {}
+2025-03-21 17:51:15 [ERROR]: Order.paginate is not a function {
+  "path": "/api/orders",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}

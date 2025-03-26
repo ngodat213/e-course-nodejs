@@ -4105,3 +4105,483 @@ Use mongoose.model(name, schema) {
 2025-03-19 22:23:54 [INFO]: User logged in {
   "email": "ngodat.it213@gmail.com"
 }
+2025-03-19 22:39:28 [INFO]: Server is running on port 3333 
+2025-03-19 22:39:28 [INFO]: Environment: development 
+2025-03-19 22:39:28 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-19 22:39:31 [INFO]: Connected to MongoDB 
+2025-03-19 22:39:36 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-19 22:40:31 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-19 22:43:59 [ERROR]: Course not found {
+  "code": 404
+}
+2025-03-19 22:43:59 [ERROR]: Course not found {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c05fa139552b1e8f2d900d",
+    "title": "Variables in Flutter",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": false,
+    "status": "published"
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-19 22:44:38 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-19 22:48:04 [INFO]: Server is running on port 3333 
+2025-03-19 22:48:04 [INFO]: Environment: development 
+2025-03-19 22:48:04 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-19 22:48:07 [INFO]: Connected to MongoDB 
+2025-03-19 22:50:32 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-19 22:50:52 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-19 22:55:03 [INFO]: Server is running on port 3333 
+2025-03-19 22:55:03 [INFO]: Environment: development 
+2025-03-19 22:55:03 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-19 22:55:05 [INFO]: Connected to MongoDB 
+2025-03-19 22:55:26 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 09:13:14 [INFO]: Server is running on port 3333 
+2025-03-21 09:13:14 [INFO]: Environment: development 
+2025-03-21 09:13:14 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 09:13:18 [INFO]: Connected to MongoDB 
+2025-03-21 09:15:26 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 11:48:20 [INFO]: Server is running on port 3333 
+2025-03-21 11:48:20 [INFO]: Environment: development 
+2025-03-21 11:48:20 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 11:48:24 [INFO]: Connected to MongoDB 
+2025-03-21 11:49:14 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 11:49:27 [ERROR]: Invalid token {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 11:52:17 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 11:52:29 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "60d3b41f7c213e3ab47892b1,60d3b41f7c213e3ab47892b2"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 11:52:53 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "67c1887af24c9b367ce6dde9"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 11:53:00 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "67c1887af24c9b367ce6dde9"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 11:57:51 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "[67c1887af24c9b367ce6dde9]"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 12:02:27 [ERROR]: Invalid token {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 12:02:51 [ERROR]: Invalid token {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 12:02:57 [ERROR]: E11000 duplicate key error collection: ecourse.coursecategories index: slug_1 dup key: { slug: null } {
+  "code": 11000
+}
+2025-03-21 12:02:57 [ERROR]: E11000 duplicate key error collection: ecourse.coursecategories index: slug_1 dup key: { slug: null } {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Mobile",
+    "description": "Mobile Application",
+    "status": "active",
+    "order": "0"
+  },
+  "error": {
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "slug": 1
+    },
+    "keyValue": {
+      "slug": null
+    }
+  }
+}
+2025-03-21 12:04:45 [INFO]: Category created {
+  "id": "67dcf36d4d371823e2d80b35"
+}
+2025-03-21 12:05:17 [ERROR]: One or more categories are invalid {
+  "code": 400
+}
+2025-03-21 12:05:17 [ERROR]: One or more categories are invalid {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": [
+      "67c060782aaa9b16b68bc874"
+    ]
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-21 12:32:35 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 13:11:50 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 13:13:30 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 13:13:31 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 13:13:39 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 13:19:09 [INFO]: Server is running on port 3333 
+2025-03-21 13:19:09 [INFO]: Environment: development 
+2025-03-21 13:19:09 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 13:19:12 [INFO]: Connected to MongoDB 
+2025-03-21 13:22:10 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 13:22:52 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 13:25:12 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 14:12:05 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 14:13:05 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 14:22:01 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {}
+2025-03-21 14:22:01 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/my-courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "stringValue": "\"my-courses\"",
+    "valueType": "string",
+    "kind": "ObjectId",
+    "value": "my-courses",
+    "path": "_id",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"my-courses\" (type string) at path \"_id\" for model \"Course\""
+  }
+}
+2025-03-21 14:22:07 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {}
+2025-03-21 14:22:07 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/my-courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "stringValue": "\"my-courses\"",
+    "valueType": "string",
+    "kind": "ObjectId",
+    "value": "my-courses",
+    "path": "_id",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"my-courses\" (type string) at path \"_id\" for model \"Course\""
+  }
+}
+2025-03-21 14:40:27 [INFO]: MongoDB disconnected 
+2025-03-21 14:56:13 [INFO]: MongoDB disconnected 
+2025-03-21 15:12:05 [INFO]: MongoDB disconnected 
+2025-03-21 15:27:56 [INFO]: MongoDB disconnected 
+2025-03-21 15:33:00 [INFO]: MongoDB disconnected 
+2025-03-21 15:43:00 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 15:44:10 [INFO]: Server is running on port 3333 
+2025-03-21 15:44:10 [INFO]: Environment: development 
+2025-03-21 15:44:10 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 15:44:13 [INFO]: Connected to MongoDB 
+2025-03-21 15:44:26 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 15:45:51 [INFO]: Server is running on port 3333 
+2025-03-21 15:45:51 [INFO]: Environment: development 
+2025-03-21 15:45:51 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 15:45:54 [INFO]: Connected to MongoDB 
+2025-03-21 15:46:58 [ERROR]: Invalid email or password {
+  "code": 401
+}
+2025-03-21 15:46:58 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "nguyenngoccattuong04554@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 15:47:52 [INFO]: Server is running on port 3333 
+2025-03-21 15:47:52 [INFO]: Environment: development 
+2025-03-21 15:47:52 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 15:47:55 [INFO]: Connected to MongoDB 
+2025-03-21 15:48:03 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 15:48:49 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 15:51:48 [INFO]: Server is running on port 3333 
+2025-03-21 15:51:48 [INFO]: Environment: development 
+2025-03-21 15:51:48 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 15:51:51 [INFO]: Connected to MongoDB 
+2025-03-21 15:51:58 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 15:52:55 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 15:53:43 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 15:59:31 [INFO]: Server is running on port 3333 
+2025-03-21 15:59:31 [INFO]: Environment: development 
+2025-03-21 15:59:31 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 15:59:35 [INFO]: Connected to MongoDB 
+2025-03-21 16:00:12 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 16:15:09 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Python",
+    "description": "Python",
+    "parent_id": "",
+    "status": "active",
+    "order": "0",
+    "icon": ""
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "description": "Mô tả phải có ít nhất 10 ký tự",
+      "parent_id": "ID danh mục cha không được để trống"
+    }
+  }
+}
+2025-03-21 16:15:18 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Python",
+    "description": "Python Programing",
+    "parent_id": "",
+    "status": "active",
+    "order": "0",
+    "icon": ""
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "parent_id": "ID danh mục cha không được để trống"
+    }
+  }
+}
+2025-03-21 16:15:23 [INFO]: Category created {
+  "id": "67dd2e2bde9cfba28d958597"
+}
+2025-03-21 16:16:40 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 16:30:08 [INFO]: MongoDB disconnected 
+2025-03-21 16:35:09 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 16:36:01 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 16:59:57 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 17:09:45 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 17:14:33 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 17:18:51 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 17:22:48 [INFO]: Server is running on port 3333 
+2025-03-21 17:22:48 [INFO]: Environment: development 
+2025-03-21 17:22:48 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 17:22:51 [INFO]: Connected to MongoDB 
+2025-03-21 17:22:58 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 17:27:09 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 17:51:15 [ERROR]: Order.paginate is not a function {}
+2025-03-21 17:51:15 [ERROR]: Order.paginate is not a function {
+  "path": "/api/orders",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-21 17:53:53 [INFO]: Server is running on port 3333 
+2025-03-21 17:53:53 [INFO]: Environment: development 
+2025-03-21 17:53:53 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-21 17:53:55 [INFO]: Connected to MongoDB 
+2025-03-21 18:03:22 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 18:03:51 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 18:04:21 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 18:05:32 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 18:06:24 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 18:09:39 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 18:36:45 [INFO]: MongoDB disconnected 
+2025-03-21 18:52:30 [INFO]: MongoDB disconnected 
+2025-03-21 19:08:23 [INFO]: MongoDB disconnected 
+2025-03-21 19:24:15 [INFO]: MongoDB disconnected 
+2025-03-21 19:39:45 [INFO]: MongoDB disconnected 
+2025-03-21 19:55:37 [INFO]: MongoDB disconnected 
+2025-03-21 20:11:29 [INFO]: MongoDB disconnected 
+2025-03-21 20:22:53 [INFO]: MongoDB disconnected 
+2025-03-21 20:38:24 [INFO]: MongoDB disconnected 
+2025-03-21 20:54:15 [INFO]: MongoDB disconnected 
+2025-03-21 21:11:22 [INFO]: MongoDB disconnected 
+2025-03-21 21:23:43 [INFO]: MongoDB disconnected 
+2025-03-21 21:39:24 [INFO]: MongoDB disconnected 
+2025-03-21 22:00:39 [INFO]: MongoDB disconnected 
+2025-03-21 22:16:10 [INFO]: MongoDB disconnected 
+2025-03-21 22:24:37 [INFO]: MongoDB disconnected 
+2025-03-21 22:29:23 [INFO]: MongoDB disconnected 
+2025-03-21 22:38:25 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 22:59:46 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 23:50:45 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-21 23:56:28 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-22 00:00:08 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}

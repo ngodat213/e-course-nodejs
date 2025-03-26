@@ -5,40 +5,64 @@ const EmailService = require("./email_template.service");
 const CloudinaryService = require("./cloudinary.service");
 const i18next = require("i18next");
 const CourseDeleteRequest = require("../models/course_delete_request.model");
-const Lesson = require("../models/lesson.model");
-const LessonService = require("./lesson.service");
 const FileService = require("./file.service");
 const CourseCategory = require("../models/course_category.model");
 const User = require("../models/user.model");
 
 class CourseService {
   async getAll(query, userId = null) {
+    const { page = 1, limit = 10, search, sort = '-created_at' } = query;
     let filterQuery = this._buildFilterQuery(query);
 
-    // Nếu có userId, loại bỏ các khóa học đã đăng ký
+    // Nếu có userId
     if (userId) {
       const user = await User.findById(userId);
-      if (user && user.enrolled_courses && user.enrolled_courses.length > 0) {
-        filterQuery._id = { $nin: user.enrolled_courses };
+      if (user) {
+        // Nếu là instructor, loại bỏ các khóa học do họ tạo
+        if (user.role === "instructor") {
+          filterQuery.instructor_id = { $ne: userId };
+        }
+        // Nếu user đã đăng ký khóa học, loại bỏ các khóa học đã đăng ký
+        if (user.enrolled_courses && user.enrolled_courses.length > 0) {
+          filterQuery._id = { $nin: user.enrolled_courses };
+        }
       }
+    }
+
+    // Thêm điều kiện tìm kiếm
+    if (search) {
+      filterQuery.$or = [
+        { title: { $regex: search, $options: 'i' } },
+        { description: { $regex: search, $options: 'i' } }
+      ];
     }
 
     const courses = await Course.find(filterQuery)
       .populate('instructor_id', 'first_name last_name email followers_count working_at address about level profile_picture')
       .populate('thumbnail_id')
-      .populate('categories', 'name slug')
-      .sort(query.sort || '-created_at')
-      .skip(query.skip)
-      .limit(query.limit);
+      .populate('categories', '-courses')
+      .sort(sort)
+      .skip((page - 1) * limit)
+      .limit(parseInt(limit));
 
-    return courses;
+    const total = await Course.countDocuments(filterQuery);
+
+    return {
+      data: courses,
+      pagination: {
+        total,
+        page: parseInt(page),
+        limit: parseInt(limit),
+        pages: Math.ceil(total / limit)
+      }
+    };
   }
 
   async getCourseById(id) {
     const course = await Course.findById(id)
     .populate('instructor_id', 'first_name last_name email followers_count working_at address about level profile_picture')
     .populate('thumbnail_id')
-    .populate('categories', 'name slug')
+    .populate('categories', '-courses')
 
     if (!course) {
       throw new NotFoundError('Course not found');
@@ -251,13 +275,7 @@ class CourseService {
   _buildFilterQuery(filters) {
     const queryFilter = {};
 
-    if (filters.search) {
-      queryFilter.$or = [
-        { title: { $regex: filters.search, $options: "i" } },
-        { description: { $regex: filters.search, $options: "i" } },
-      ];
-    }
-
+    // Chỉ thêm các điều kiện nếu filter tương ứng được cung cấp
     if (filters.level) {
       queryFilter.level = filters.level;
     }
@@ -277,6 +295,9 @@ class CourseService {
     if (filters.category) {
       queryFilter.categories = filters.category;
     }
+
+    // Thêm điều kiện mặc định chỉ lấy các khóa học không bị xóa
+    queryFilter.status = { $ne: 'deleted' };
 
     return queryFilter;
   }

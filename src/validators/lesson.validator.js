@@ -55,16 +55,14 @@ const lessonContentSchema = (type) => {
 
 // Schema cho order
 const lessonOrderSchema = Joi.object({
-    order: Joi.number().min(1).messages({
-        'number.base': 'Order must be a number',
-        'number.min': 'Order must be greater than 0'
-    }),
-    sequence: Joi.number().min(1).messages({
-        'number.base': 'Sequence must be a number',
-        'number.min': 'Sequence must be greater than 0'
-    })
-}).or('order', 'sequence').messages({
-    'object.missing': 'Either order or sequence must be provided'
+    order: Joi.number()
+        .min(1)
+        .required()
+        .messages({
+            'number.base': 'Order phải là số',
+            'number.min': 'Order phải lớn hơn 0',
+            'any.required': 'Order là bắt buộc'
+        })
 });
 
 // Schema cho Lesson

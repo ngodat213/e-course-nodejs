@@ -143,25 +143,50 @@
  *     summary: Lấy danh sách khóa học
  *     parameters:
  *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *         description: Tìm kiếm theo title hoặc description (không phân biệt hoa thường)
+ *       - in: query
  *         name: page
  *         schema:
  *           type: integer
+ *           default: 1
  *         description: Số trang
  *       - in: query
  *         name: limit
  *         schema:
  *           type: integer
+ *           default: 10
  *         description: Số lượng items mỗi trang
- *       - in: query
- *         name: search
- *         schema:
- *           type: string
- *         description: Tìm kiếm theo tên hoặc mô tả
  *       - in: query
  *         name: sort
  *         schema:
  *           type: string
- *         description: Sắp xếp (-created_at, price, etc)
+ *           default: -created_at
+ *         description: Sắp xếp (-created_at, price, title)
+ *       - in: query
+ *         name: level
+ *         schema:
+ *           type: string
+ *           enum: [beginner, intermediate, advanced]
+ *         description: Lọc theo cấp độ
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [draft, published, archived]
+ *         description: Lọc theo trạng thái
+ *       - in: query
+ *         name: price
+ *         schema:
+ *           type: number
+ *         description: Lọc theo giá (nhỏ hơn hoặc bằng)
+ *       - in: query
+ *         name: category
+ *         schema:
+ *           type: string
+ *         description: Lọc theo category ID
  *     responses:
  *       200:
  *         description: Thành công
@@ -202,22 +227,36 @@
  *               - description
  *               - price
  *               - type
+ *               - categories
  *             properties:
  *               title:
  *                 type: string
+ *                 description: Tên khóa học
  *               description:
  *                 type: string
+ *                 description: Mô tả khóa học
  *               price:
  *                 type: number
+ *                 description: Giá khóa học (0 cho miễn phí)
  *               type:
  *                 type: string
  *                 enum: [course, quiz]
+ *                 description: Loại khóa học
  *               level:
  *                 type: string
  *                 enum: [beginner, intermediate, advanced]
+ *                 description: Độ khó của khóa học
  *               thumbnail:
  *                 type: string
  *                 format: binary
+ *                 description: Ảnh thumbnail của khóa học
+ *               categories:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Danh sách ID của các danh mục
+ *                 minItems: 1
+ *                 example: ["60d3b41f7c213e3ab47892b1", "60d3b41f7c213e3ab47892b2"]
  *     responses:
  *       201:
  *         description: Tạo khóa học thành công
@@ -263,6 +302,7 @@
  *         required: true
  *         schema:
  *           type: string
+ *         description: ID của khóa học
  *     requestBody:
  *       content:
  *         multipart/form-data:
@@ -271,22 +311,44 @@
  *             properties:
  *               title:
  *                 type: string
+ *                 description: Tên khóa học
  *               description:
  *                 type: string
+ *                 description: Mô tả khóa học
  *               price:
  *                 type: number
+ *                 description: Giá khóa học (0 cho miễn phí)
  *               type:
  *                 type: string
  *                 enum: [course, quiz]
+ *                 description: Loại khóa học
  *               level:
  *                 type: string
  *                 enum: [beginner, intermediate, advanced]
+ *                 description: Độ khó của khóa học
  *               status:
  *                 type: string
  *                 enum: [draft, published, archived]
+ *                 description: Trạng thái khóa học
  *               thumbnail:
  *                 type: string
  *                 format: binary
+ *                 description: Ảnh thumbnail của khóa học
+ *               categories:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Danh sách ID của các danh mục
+ *                 minItems: 1
+ *                 example: ["60d3b41f7c213e3ab47892b1", "60d3b41f7c213e3ab47892b2"]
+ *           example:
+ *             title: "Khóa học nâng cao"
+ *             description: "Mô tả chi tiết về khóa học"
+ *             price: 99.99
+ *             type: "course"
+ *             level: "intermediate"
+ *             status: "published"
+ *             categories: ["60d3b41f7c213e3ab47892b1", "60d3b41f7c213e3ab47892b2"]
  *     responses:
  *       200:
  *         description: Cập nhật thành công

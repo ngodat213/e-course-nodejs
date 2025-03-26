@@ -3,7 +3,7 @@ const router = express.Router();
 const LessonController = require('../controllers/lesson.controller');
 const { verifyToken, restrictTo } = require('../middleware/auth.middleware');
 const { validateRequest } = require('../middleware/validate.middleware');
-const { createLessonSchema, updateLessonSchema } = require('../validators/lesson.validator');
+const { createLessonSchema, updateLessonSchema, lessonOrderSchema } = require('../validators/lesson.validator');
 
 // Tất cả routes đều yêu cầu xác thực
 router.use(verifyToken);
@@ -24,6 +24,17 @@ router.put('/:lessonId',
 router.delete('/:lessonId',
   restrictTo('instructor', 'admin'),
   (req, res, next) => LessonController.deleteLesson(req, res, next)
+);
+
+/**
+ * @route PUT /api/lessons/:lessonId/order
+ * @desc Cập nhật thứ tự của lesson
+ * @access Private
+ */
+router.put('/:lessonId/order',
+  restrictTo('instructor', 'admin'),
+  validateRequest(lessonOrderSchema),
+  (req, res, next) => LessonController.updateLessonOrder(req, res, next)
 );
 
 // Routes cho tất cả users
