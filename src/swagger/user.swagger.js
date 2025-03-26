@@ -52,6 +52,19 @@
  *         status:
  *           type: string
  *           enum: [pending, active, blocked]
+ *         fcm_tokens:
+ *           type: array
+ *           items:
+ *             type: object
+ *             properties:
+ *               token:
+ *                 type: string
+ *               device_info:
+ *                 type: string
+ *               last_used:
+ *                 type: string
+ *                 format: date-time
+ *           description: FCM tokens cho push notification
  *         created_at:
  *           type: string
  *           format: date-time
@@ -90,6 +103,18 @@
  *         newPassword:
  *           type: string
  *           description: Mật khẩu mới
+ *
+ *     FcmTokenInput:
+ *       type: object
+ *       required:
+ *         - fcm_token
+ *       properties:
+ *         fcm_token:
+ *           type: string
+ *           description: FCM token mới từ thiết bị
+ *         device_info:
+ *           type: string
+ *           description: Thông tin thiết bị (optional)
  *
  *     SetRoleInput:
  *       type: object
@@ -660,4 +685,36 @@
  *                   type: string
  *                   format: date-time
  *                   description: Thời điểm cập nhật streak gần nhất
+ *
+ * /api/users/fcm-token:
+ *   post:
+ *     tags: [Users]
+ *     summary: Cập nhật FCM token
+ *     description: Cập nhật FCM token cho user để gửi push notification
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/FcmTokenInput'
+ *     responses:
+ *       200:
+ *         description: Cập nhật FCM token thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: FCM token updated successfully
+ *                 token_count:
+ *                   type: number
+ *                   description: Số lượng token hiện có của user
+ *       400:
+ *         description: FCM token không được cung cấp
+ *       401:
+ *         description: Chưa đăng nhập
  */ 

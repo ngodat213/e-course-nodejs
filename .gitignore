@@ -5,3 +5,4 @@ coverage/
 .vscode/
 logs/**/ 
 src/logs/
+service-account.json

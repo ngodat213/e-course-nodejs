@@ -206,6 +206,21 @@ class UserController extends BaseController {
       this.handleError(error, next);
     }
   }
+
+  async updateFcmToken(req, res, next) {
+    try {
+      const { fcm_token, device_info } = req.body;
+      
+      if (!fcm_token) {
+        throw new BadRequestError(i18next.t("user.fcmTokenRequired", { defaultValue: "FCM token is required" }));
+      }
+      
+      const result = await UserService.updateFcmToken(req.user.id, fcm_token, device_info);
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
 }
 
 module.exports = new UserController();

@@ -67,6 +67,20 @@ const userSchema = new mongoose.Schema(
       enum: ["pending", "active", "blocked"],
       default: "pending",
     },
+    fcm_tokens: [{
+      token: {
+        type: String,
+        required: true
+      },
+      device_info: {
+        type: String,
+        default: null
+      },
+      last_used: {
+        type: Date,
+        default: Date.now
+      }
+    }],
     verification_token: String,
     verification_token_expires: Date,
     otp: String,
