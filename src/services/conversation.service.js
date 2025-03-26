@@ -4,6 +4,8 @@ const Course = require("../models/course.model");
 const Order = require("../models/order.model");
 const { NotFoundError, BadRequestError } = require("../utils/errors");
 const i18next = require("i18next");
+const chatCacheService = require('./chat_cache.service');
+const { debug } = require('../utils/logger');
 
 class ConversationService {
   async getOrCreateDirectConversation(userId1, userId2) {
@@ -105,6 +107,9 @@ class ConversationService {
       }
     });
     
+    // Invalidate cache khi có thành viên mới
+    await chatCacheService.invalidateParticipantsCache(conversationId);
+    
     return { success: true };
   }
 
@@ -123,21 +128,69 @@ class ConversationService {
       'participants.user': userId
     })
     .populate('lastMessage')
-    .populate('participants.user', 'name email avatar')
     .populate('courseId', 'title')
     .sort({ updatedAt: -1 });
+    
+    // Populate participants từ cache nếu có, nếu không thì load từ DB
+    for (const conversation of conversations) {
+      const cachedParticipants = await chatCacheService.getParticipantsFromCache(conversation._id);
+      
+      if (cachedParticipants) {
+        debug(`Using cached participants for conversation ${conversation._id}`);
+        // Gán participants từ cache
+        conversation.participants = cachedParticipants.map(p => ({
+          user: {
+            _id: p.userId,
+            name: p.name,
+            email: p.email,
+            avatar: p.avatar
+          },
+          role: p.role,
+          joinedAt: p.joinedAt || new Date()
+        }));
+      } else {
+        // Load từ database và cache lại
+        await conversation.populate('participants.user', 'name email avatar');
+        await chatCacheService.cacheParticipants(conversation._id, conversation.participants);
+      }
+      
+      // Thêm thông tin người dùng online
+      const onlineUsers = await chatCacheService.getOnlineUsers(conversation._id);
+      conversation._doc.onlineUsers = onlineUsers;
+      
+      // Thêm thông tin người dùng đang typing
+      const typingUsers = await chatCacheService.getUsersTyping(conversation._id);
+      conversation._doc.typingUsers = typingUsers;
+    }
     
     return conversations;
   }
 
   async getMessages(conversationId, page = 1, limit = 20) {
+    // Thử lấy từ cache trước (chỉ áp dụng cho page đầu tiên)
+    if (page === 1) {
+      const cachedMessages = await chatCacheService.getMessagesFromCache(conversationId);
+      if (cachedMessages) {
+        debug(`Using cached messages for conversation ${conversationId}`);
+        return cachedMessages;
+      }
+    }
+    
+    // Nếu không có cache hoặc không phải page đầu, lấy từ database
     const messages = await Message.find({ conversation: conversationId })
       .populate('sender', 'name email avatar')
       .sort({ createdAt: -1 })
       .skip((page - 1) * limit)
       .limit(limit);
     
-    return messages.reverse();
+    const result = messages.reverse();
+    
+    // Cache lại nếu là page đầu tiên
+    if (page === 1) {
+      await chatCacheService.cacheMessages(conversationId, result);
+    }
+    
+    return result;
   }
 
   async addMessage(conversationId, senderId, content, contentType = 'text') {
@@ -167,6 +220,9 @@ class ConversationService {
     });
     
     await message.populate('sender', 'name email avatar');
+    
+    // Invalidate cache khi có tin nhắn mới
+    await chatCacheService.invalidateMessagesCache(conversationId);
     
     return message;
   }
