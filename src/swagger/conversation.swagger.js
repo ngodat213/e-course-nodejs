@@ -73,6 +73,31 @@
  *         contentType:
  *           type: string
  *           enum: [text, image, file]
+ *         fileInfo:
+ *           type: object
+ *           description: Thông tin file đính kèm (chỉ khi contentType là image hoặc file)
+ *           properties:
+ *             fileId:
+ *               type: string
+ *               description: ID của file trong bảng CloudinaryFile
+ *             url:
+ *               type: string
+ *               description: URL của file trên Cloudinary
+ *             publicId:
+ *               type: string
+ *               description: Public ID của file trên Cloudinary
+ *             width:
+ *               type: number
+ *               description: Chiều rộng của hình ảnh
+ *             height:
+ *               type: number
+ *               description: Chiều cao của hình ảnh
+ *             format:
+ *               type: string
+ *               description: Định dạng file (jpg, png, etc.)
+ *             size:
+ *               type: number
+ *               description: Kích thước file (bytes)
  *         readBy:
  *           type: array
  *           items:
@@ -380,4 +405,55 @@
  *         description: Không có quyền truy cập
  *       404:
  *         description: Không tìm thấy khóa học
+ */
+
+/**
+ * @swagger
+ * /api/conversations/message/image:
+ *   post:
+ *     summary: Upload và gửi tin nhắn hình ảnh
+ *     tags: [Conversations]
+ *     security:
+ *       - bearerAuth: []
+ *     consumes:
+ *       - multipart/form-data
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - conversationId
+ *               - image
+ *             properties:
+ *               conversationId:
+ *                 type: string
+ *                 description: ID của conversation
+ *               image:
+ *                 type: string
+ *                 format: binary
+ *                 description: File hình ảnh cần gửi
+ *               caption:
+ *                 type: string
+ *                 description: Chú thích cho hình ảnh (không bắt buộc)
+ *     responses:
+ *       200:
+ *         description: Tin nhắn hình ảnh đã được gửi
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 data:
+ *                   $ref: '#/components/schemas/Message'
+ *       400:
+ *         description: Dữ liệu không hợp lệ hoặc không có file
+ *       401:
+ *         description: Không có quyền truy cập
+ *       404:
+ *         description: Không tìm thấy conversation
  */ 

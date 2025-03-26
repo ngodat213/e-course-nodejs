@@ -2,6 +2,10 @@ const conversationService = require('../../services/conversation.service');
 const chatCacheService = require('../../services/chat_cache.service');
 const { info, error, debug } = require('../../utils/logger');
 const Conversation = require('../../models/conversation.model');
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+const os = require('os');
 
 class ChatHandler {
   constructor(io, socket) {
@@ -15,6 +19,7 @@ class ChatHandler {
   setupEventHandlers() {
     this.socket.on('join:conversations', this.handleJoinConversations.bind(this));
     this.socket.on('message:send', this.handleSendMessage.bind(this));
+    this.socket.on('message:image', this.handleImageMessage.bind(this));
     this.socket.on('typing:start', this.handleTypingStart.bind(this));
     this.socket.on('typing:stop', this.handleTypingStop.bind(this));
     this.socket.on('message:read', this.handleReadMessage.bind(this));
@@ -80,6 +85,61 @@ class ChatHandler {
     } catch (err) {
       error(`Error sending message: ${err.message}`);
       this.socket.emit('error', { message: err.message });
+    }
+  }
+  
+  async handleImageMessage(data) {
+    try {
+      const { conversationId, base64Image, caption, fileName, mimeType } = data;
+      
+      if (!base64Image) {
+        throw new Error('Không có dữ liệu hình ảnh');
+      }
+      
+      // Chuyển đổi base64 thành file
+      const imageBuffer = Buffer.from(
+        base64Image.replace(/^data:image\/\w+;base64,/, ''),
+        'base64'
+      );
+      
+      // Tạo file tạm
+      const tempDir = os.tmpdir();
+      const tempFilePath = path.join(tempDir, fileName || `image_${Date.now()}.jpg`);
+      
+      // Ghi file tạm
+      fs.writeFileSync(tempFilePath, imageBuffer);
+      
+      // Tạo file object giống multer để tương thích với FileService
+      const fileObject = {
+        path: tempFilePath,
+        originalname: fileName || `image_${Date.now()}.jpg`,
+        mimetype: mimeType || 'image/jpeg',
+        size: imageBuffer.length
+      };
+      
+      // Gửi tin nhắn hình ảnh
+      const message = await conversationService.addImageMessage(
+        conversationId,
+        this.userId,
+        fileObject,
+        caption
+      );
+      
+      // Gửi tin nhắn tới tất cả thành viên trong conversation
+      this.io.to(`conversation:${conversationId}`).emit('message:new', message);
+      
+      // Dừng typing indicator
+      await this.handleTypingStop(conversationId);
+      
+      // Xóa file tạm
+      fs.unlinkSync(tempFilePath);
+      
+    } catch (err) {
+      error(`Error sending image message: ${err.message}`);
+      this.socket.emit('error', { 
+        type: 'image_upload', 
+        message: `Error sending image: ${err.message}` 
+      });
     }
   }
   

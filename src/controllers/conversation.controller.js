@@ -3,6 +3,9 @@ const ConversationService = require('../services/conversation.service');
 const { NotFoundError, BadRequestError } = require('../utils/errors');
 const Course = require('../models/course.model');
 const i18next = require('i18next');
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+const fs = require('fs');
 
 class ConversationController extends BaseController {
   constructor() {
@@ -207,6 +210,45 @@ class ConversationController extends BaseController {
         message: i18next.t('conversation.joinedSuccessfully')
       });
     } catch (error) {
+      this.handleError(error, next);
+    }
+  }
+
+  async uploadMessageImage(req, res, next) {
+    try {
+      if (!req.file) {
+        throw new BadRequestError(i18next.t('common.fileRequired'));
+      }
+
+      const { conversationId } = req.body;
+      const caption = req.body.caption || '';
+
+      const isMember = await ConversationService.checkUserInGroup(
+        req.user.id,
+        conversationId
+      );
+
+      if (!isMember) {
+        fs.unlinkSync(req.file.path);
+        throw new BadRequestError(i18next.t('conversation.notMember'));
+      }
+
+      const message = await ConversationService.addImageMessage(
+        conversationId,
+        req.user.id,
+        req.file,
+        caption
+      );
+
+      req.app.get('io').to(`conversation:${conversationId}`).emit('message:new', message);
+
+      fs.unlinkSync(req.file.path);
+
+      this.successResponse(res, message);
+    } catch (error) {
+      if (req.file && req.file.path) {
+        fs.unlinkSync(req.file.path);
+      }
       this.handleError(error, next);
     }
   }

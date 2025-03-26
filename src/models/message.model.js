@@ -20,6 +20,18 @@ const messageSchema = new mongoose.Schema({
     enum: ['text', 'image', 'file'],
     default: 'text'
   },
+  fileInfo: {
+    fileId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'CloudinaryFile'
+    },
+    url: String,
+    publicId: String,
+    width: Number,
+    height: Number,
+    format: String,
+    size: Number
+  },
   readBy: [{
     user: {
       type: mongoose.Schema.Types.ObjectId,
