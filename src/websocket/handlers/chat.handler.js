@@ -1,5 +1,7 @@
 const conversationService = require('../../services/conversation.service');
-const { info, error } = require('../../utils/logger');
+const chatCacheService = require('../../services/chat_cache.service');
+const { info, error, debug } = require('../../utils/logger');
+const Conversation = require('../../models/conversation.model');
 
 class ChatHandler {
   constructor(io, socket) {
@@ -16,6 +18,9 @@ class ChatHandler {
     this.socket.on('typing:start', this.handleTypingStart.bind(this));
     this.socket.on('typing:stop', this.handleTypingStop.bind(this));
     this.socket.on('message:read', this.handleReadMessage.bind(this));
+    
+    // Thêm event listener cho disconnection để cập nhật trạng thái online
+    this.socket.on('disconnect', this.handleDisconnect.bind(this));
   }
   
   async handleJoinConversations(conversationIds) {
@@ -33,6 +38,22 @@ class ChatHandler {
         if (isMember) {
           this.socket.join(`conversation:${conversationId}`);
           info(`User ${this.userId} joined conversation room: ${conversationId}`);
+          
+          // Cập nhật trạng thái online trong Redis
+          await chatCacheService.addOnlineUser(conversationId, this.userId);
+          
+          // Thông báo cho các thành viên khác
+          this.socket.to(`conversation:${conversationId}`).emit('user:online', {
+            conversationId,
+            userId: this.userId.toString()
+          });
+          
+          // Lấy danh sách người dùng online và gửi cho client
+          const onlineUsers = await chatCacheService.getOnlineUsers(conversationId);
+          this.socket.emit('users:online', {
+            conversationId,
+            users: onlineUsers
+          });
         }
       }
     } catch (err) {
@@ -53,24 +74,41 @@ class ChatHandler {
       );
       
       this.io.to(`conversation:${conversationId}`).emit('message:new', message);
+      
+      // Dừng typing indicator sau khi gửi message
+      await this.handleTypingStop(conversationId);
     } catch (err) {
       error(`Error sending message: ${err.message}`);
       this.socket.emit('error', { message: err.message });
     }
   }
   
-  handleTypingStart(conversationId) {
-    this.socket.to(`conversation:${conversationId}`).emit('typing:start', {
-      conversationId,
-      userId: this.userId
-    });
+  async handleTypingStart(conversationId) {
+    try {
+      // Lưu trạng thái typing vào Redis
+      await chatCacheService.setUserTyping(conversationId, this.userId);
+      
+      this.socket.to(`conversation:${conversationId}`).emit('typing:start', {
+        conversationId,
+        userId: this.userId
+      });
+    } catch (err) {
+      debug(`Error handling typing start: ${err}`);
+    }
   }
   
-  handleTypingStop(conversationId) {
-    this.socket.to(`conversation:${conversationId}`).emit('typing:stop', {
-      conversationId,
-      userId: this.userId
-    });
+  async handleTypingStop(conversationId) {
+    try {
+      // Xóa trạng thái typing từ Redis
+      await chatCacheService.stopUserTyping(conversationId, this.userId);
+      
+      this.socket.to(`conversation:${conversationId}`).emit('typing:stop', {
+        conversationId,
+        userId: this.userId
+      });
+    } catch (err) {
+      debug(`Error handling typing stop: ${err}`);
+    }
   }
   
   async handleReadMessage(conversationId) {
@@ -84,6 +122,36 @@ class ChatHandler {
     } catch (err) {
       error(`Error marking messages as read: ${err.message}`);
       this.socket.emit('error', { message: err.message });
+    }
+  }
+  
+  async handleDisconnect() {
+    try {
+      // Lấy tất cả conversation mà user là thành viên
+      const conversations = await Conversation.find({
+        'participants.user': this.userId
+      }, '_id');
+      
+      // Cập nhật trạng thái online trong tất cả các conversation
+      for (const conversation of conversations) {
+        const conversationId = conversation._id;
+        
+        // Xóa trạng thái online từ Redis
+        await chatCacheService.removeOnlineUser(conversationId, this.userId);
+        
+        // Xóa trạng thái typing
+        await chatCacheService.stopUserTyping(conversationId, this.userId);
+        
+        // Thông báo cho các thành viên khác
+        this.io.to(`conversation:${conversationId}`).emit('user:offline', {
+          conversationId,
+          userId: this.userId.toString()
+        });
+      }
+      
+      info(`User ${this.userId} disconnected from all conversations`);
+    } catch (err) {
+      error(`Error handling disconnect: ${err.message}`);
     }
   }
 }
