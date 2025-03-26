@@ -20,39 +20,39 @@ router.use(verifyToken);
 
 // Routes cho exam
 router.post(
-    '/lessons/:lessonId/exams',
-    restrictTo(['instructor', 'admin']),
+    '/lessons/:lessonId',
+    restrictTo('instructor', 'admin'),
     validateRequest(createExamSchema),
     (req, res, next) => ExamController.createExam(req, res, next)
 );
 
 router.get(
-    '/lessons/:lessonId/exams',
+    '/lessons/:lessonId',
     (req, res, next) => ExamController.getExamsByLesson(req, res, next)
 );
 
 router.get(
-    '/exams/:examId',
+    '/:examId',
     (req, res, next) => ExamController.getExam(req, res, next)
 );
 
 router.put(
-    '/exams/:examId',
-    restrictTo(['instructor', 'admin']),
+    '/:examId',
+    restrictTo('instructor', 'admin'),
     validateRequest(updateExamSchema),
     (req, res, next) => ExamController.updateExam(req, res, next)
 );
 
 router.delete(
-    '/exams/:examId',
-    restrictTo(['instructor', 'admin']),
+    '/:examId',
+    restrictTo('instructor', 'admin'),
     (req, res, next) => ExamController.deleteExam(req, res, next)
 );
 
 // Routes cho exam questions
 router.post(
-    '/exams/:examId/questions',
-    restrictTo(['instructor', 'admin']),
+    '/:examId/questions',
+      restrictTo('instructor', 'admin'),
     upload.fields([
         { name: 'video', maxCount: 1 },
         { name: 'image', maxCount: 1 }
@@ -62,18 +62,18 @@ router.post(
 );
 
 router.get(
-    '/exams/:examId/questions',
+    '/:examId/questions',
     (req, res, next) => QuizQuestionController.findAll(req, res, next)
 );
 
 router.get(
-    '/exams/:examId/questions/:questionId',
+    '/:examId/questions/:questionId',
     (req, res, next) => QuizQuestionController.findOne(req, res, next)
 );
 
 router.put(
-    '/exams/:examId/questions/:questionId',
-    restrictTo(['instructor', 'admin']),
+    '/:examId/questions/:questionId',
+    restrictTo('instructor', 'admin'),
     upload.fields([
         { name: 'video', maxCount: 1 },
         { name: 'image', maxCount: 1 }
@@ -83,19 +83,19 @@ router.put(
 );
 
 router.delete(
-    '/exams/:examId/questions/:questionId',
-    restrictTo(['instructor', 'admin']),
+    '/:examId/questions/:questionId',
+    restrictTo('instructor', 'admin'),
     (req, res, next) => QuizQuestionController.delete(req, res, next)
 );
 
 // Routes cho taking exam
 router.post(
-    '/exams/:examId/start',
+    '/:examId/start',
     (req, res, next) => ExamController.startExam(req, res, next)
 );
 
 router.post(
-    '/exams/:examId/submit',
+    '/:examId/submit',
     validateRequest(submitExamSchema),
     (req, res, next) => ExamController.submitExam(req, res, next)
 );

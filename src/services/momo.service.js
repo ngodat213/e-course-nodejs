@@ -3,6 +3,8 @@ const https = require("https");
 const momoConfig = require("../config/momo.config");
 const { success, error } = require("../utils/logger");
 const Order = require("../models/order.model");
+const User = require("../models/user.model");
+const Course = require("../models/course.model");
 
 class MoMoService {
   constructor() {
@@ -16,7 +18,7 @@ class MoMoService {
       return `${this.config.ipnUrl}/dev?orderIdResult=${orderId}`;
     }
 
-    return this.config.ipnUrl;
+    return this.config.redirectUrl;
   }
 
   async createPaymentUrl(params) {
@@ -157,83 +159,275 @@ class MoMoService {
   }
 
   verifyIPN(momoParams) {
-    // Get signature from request
-    const receivedSignature = momoParams.signature;
+    try {
+      // Log các tham số nhận được để debug
+      success.info("MoMo IPN received params:", momoParams);
+      
+      // Get signature from request
+      const receivedSignature = momoParams.signature;
+      if (!receivedSignature) {
+        error("Missing signature in MoMo IPN");
+        return false;
+      }
 
-    // Remove signature from params to verify
-    delete momoParams.signature;
+      // Tạo bản sao của params để không ảnh hưởng đến object gốc
+      const params = { ...momoParams };
+      
+      // Remove signature from params to verify
+      delete params.signature;
 
-    // Sort params by key and create raw signature
-    const rawSignature = Object.keys(momoParams)
-      .sort()
-      .map((key) => `${key}=${momoParams[key]}`)
-      .join("&");
+      // MoMo IPN có các tham số cụ thể cần được sử dụng để tạo chữ ký
+      // Dựa trên ví dụ IPN thực tế từ MoMo
+      const rawSignature = [
+        `accessKey=${this.config.accessKey}`,
+        `amount=${params.amount}`,
+        `extraData=${params.extraData || ""}`,
+        `message=${params.message}`,
+        `orderId=${params.orderId}`,
+        `orderInfo=${params.orderInfo || ""}`,
+        `orderType=${params.orderType}`,
+        `partnerCode=${params.partnerCode}`,
+        `payType=${params.payType}`,
+        `requestId=${params.requestId}`,
+        `responseTime=${params.responseTime}`,
+        `resultCode=${params.resultCode}`,
+        `transId=${params.transId}`
+      ].join("&");
 
-    // Create signature to compare
-    const signature = crypto
-      .createHmac("sha256", this.config.secretKey)
-      .update(rawSignature)
-      .digest("hex");
+      success.info("Raw signature for verification:", rawSignature);
 
-    return signature === receivedSignature;
+      // Create signature to compare
+      const signature = crypto
+        .createHmac("sha256", this.config.secretKey)
+        .update(rawSignature)
+        .digest("hex");
+
+      success.info("Calculated signature:", signature);
+      success.info("Received signature:", receivedSignature);
+
+      // Trong môi trường development hoặc test, có thể bỏ qua việc xác thực chữ ký
+      if (process.env.MOMO_SKIP_SIGNATURE_VERIFY === 'true') {
+        success.info("Skipping signature verification as per configuration");
+        return true;
+      }
+
+      const isValid = signature === receivedSignature;
+      
+      if (!isValid) {
+        error("Signature verification failed", {
+          calculated: signature,
+          received: receivedSignature,
+          rawSignature: rawSignature
+        });
+        
+        // Thử tạo chữ ký theo cách khác (sắp xếp tham số theo alphabet)
+        const sortedParams = {};
+        Object.keys(params).sort().forEach(key => {
+          sortedParams[key] = params[key];
+        });
+        
+        const sortedRawSignature = Object.keys(sortedParams)
+          .map(key => `${key}=${sortedParams[key]}`)
+          .join("&");
+          
+        const sortedSignature = crypto
+          .createHmac("sha256", this.config.secretKey)
+          .update(sortedRawSignature)
+          .digest("hex");
+          
+        success.info("Alternative signature calculation (sorted params):", {
+          rawSignature: sortedRawSignature,
+          signature: sortedSignature
+        });
+      }
+      
+      return isValid;
+    } catch (err) {
+      error("Error verifying MoMo IPN signature:", err);
+      return false;
+    }
   }
 
   async processIPNDev(momoParams) {
     try {
-      // Update order status
-      const order = await Order.findOne({ _id: momoParams.orderIdResult });
+      success.info("Processing MoMo payment in dev mode:", momoParams);
+      
+      // Tìm đơn hàng theo orderId
+      const order = await Order.findOne({ order_id: momoParams.orderIdResult });
 
       if (!order) {
+        error("Order not found:", momoParams.orderIdResult);
         return {
           status: "error",
           message: "Order not found",
         };
       }
+      
+      // Trong môi trường development, luôn cập nhật trạng thái thành "paid"
       order.status = "paid";
-
       order.payment_info = {
         ...order.payment_info,
         ipnResponse: momoParams,
+        devMode: true,
+        processedAt: new Date()
       };
 
       await order.save();
 
-      success.info("MoMo payment processed", {
+      // Xử lý đăng ký khóa học cho người dùng
+      try {
+        // Lấy thông tin user
+        const user = await User.findById(order.user_id);
+        if (!user) {
+          error("User not found:", order.user_id);
+        } else {
+          // Thêm khóa học vào danh sách đã đăng ký của user
+          const courseIds = order.courses.map(item => item.course_id);
+          
+          // Cập nhật enrolled_courses của user
+          await User.findByIdAndUpdate(
+            order.user_id,
+            { $addToSet: { enrolled_courses: { $each: courseIds } } }
+          );
+          
+          // Cập nhật student_count của các khóa học
+          await Course.updateMany(
+            { _id: { $in: courseIds } },
+            { $inc: { student_count: 1 } }
+          );
+          
+          // Xóa giỏ hàng
+          const Cart = require("../models/cart.model");
+          await Cart.findOneAndUpdate(
+            { user_id: order.user_id },
+            { $set: { items: [] } }
+          );
+          
+          success.info("User enrolled in courses successfully in dev mode", {
+            userId: order.user_id,
+            courses: courseIds
+          });
+        }
+      } catch (enrollError) {
+        error("Error processing enrollment after payment in dev mode:", enrollError);
+        // Không ảnh hưởng đến việc xử lý thanh toán, chỉ ghi log lỗi
+      }
+
+      success.info("MoMo payment processed in dev mode", {
         orderId: order.order_id,
       });
 
       return {
         status: "success",
-        message: "MoMo payment processed",
+        message: "MoMo payment processed in development mode",
+        data: {
+          orderId: order.order_id,
+          amount: order.amount,
+          status: order.status,
+          enrolledCourses: order.courses.map(c => c.course_id)
+        }
       };
     } catch (err) {
-      error("Error processing MoMo payment:", err);
+      error("Error processing MoMo payment in dev mode:", err);
       throw err;
     }
   }
 
   async processPaymentResult(momoParams) {
     try {
-      // Verify signature
-      if (!this.verifyIPN(momoParams)) {
-        return { status: "error", message: "Invalid signature" };
+      success.info("Processing MoMo payment result:", momoParams);
+      
+      // Trong môi trường development hoặc test, có thể bỏ qua việc xác thực chữ ký
+      let isValidSignature = true;
+      
+      // Kiểm tra cấu hình bỏ qua xác thực chữ ký
+      if (process.env.MOMO_SKIP_SIGNATURE_VERIFY !== 'true') {
+        // Verify signature
+        isValidSignature = this.verifyIPN(momoParams);
+      } else {
+        success.info("Skipping signature verification as per configuration");
+      }
+  
+      // Nếu chữ ký không hợp lệ và không được cấu hình bỏ qua
+      if (!isValidSignature && process.env.MOMO_SKIP_SIGNATURE_VERIFY !== 'true') {
+        error("Invalid signature in MoMo IPN");
+        return { 
+          status: "error", 
+          message: "Invalid signature",
+          details: {
+            orderId: momoParams.orderId,
+            resultCode: momoParams.resultCode
+          }
+        };
       }
   
       // Xác định trạng thái đơn hàng dựa vào `resultCode`
+      // resultCode = 0: Thành công, resultCode khác 0: Thất bại
       const newStatus = momoParams.resultCode === 0 ? "paid" : "failed";
   
-      // Cập nhật trực tiếp bằng `findOneAndUpdate()`
-      const order = await Order.findOneAndUpdate(
-        { order_id: momoParams.orderId },
-        {
-          status: newStatus,
-          payment_info: { ipnResponse: momoParams }
-        },
-        { new: true } // Trả về dữ liệu đã cập nhật
-      );
-  
+      // Tìm đơn hàng theo orderId
+      const order = await Order.findOne({ order_id: momoParams.orderId });
+      
       if (!order) {
-        return { status: "error", message: "Order not found" };
+        error("Order not found:", momoParams.orderId);
+        return { 
+          status: "error", 
+          message: "Order not found",
+          details: {
+            orderId: momoParams.orderId
+          }
+        };
+      }
+      
+      // Cập nhật trạng thái đơn hàng
+      order.status = newStatus;
+      order.payment_info = {
+        ...order.payment_info,
+        ipnResponse: momoParams,
+        processedAt: new Date()
+      };
+      
+      await order.save();
+  
+      // Nếu thanh toán thành công (resultCode = 0), thực hiện các bước sau
+      if (newStatus === "paid") {
+        try {
+          // Lấy thông tin user
+          const user = await User.findById(order.user_id);
+          if (!user) {
+            error("User not found:", order.user_id);
+          } else {
+            // Thêm khóa học vào danh sách đã đăng ký của user
+            const courseIds = order.courses.map(item => item.course_id);
+            
+            // Cập nhật enrolled_courses của user
+            await User.findByIdAndUpdate(
+              order.user_id,
+              { $addToSet: { enrolled_courses: { $each: courseIds } } }
+            );
+            
+            // Cập nhật student_count của các khóa học
+            await Course.updateMany(
+              { _id: { $in: courseIds } },
+              { $inc: { student_count: 1 } }
+            );
+            
+            // Xóa giỏ hàng
+            const Cart = require("../models/cart.model");
+            await Cart.findOneAndUpdate(
+              { user_id: order.user_id },
+              { $set: { items: [] } }
+            );
+            
+            success.info("User enrolled in courses successfully", {
+              userId: order.user_id,
+              courses: courseIds
+            });
+          }
+        } catch (enrollError) {
+          error("Error processing enrollment after payment:", enrollError);
+          // Không ảnh hưởng đến việc xử lý thanh toán, chỉ ghi log lỗi
+        }
       }
   
       success.info("MoMo payment processed", {
@@ -250,10 +444,208 @@ class MoMoService {
           amount: order.amount,
           status: order.status,
           message: momoParams.message,
+          resultCode: momoParams.resultCode
         },
       };
     } catch (err) {
       error("Error processing MoMo payment:", err);
+      throw err;
+    }
+  }
+
+  async processSimpleIPN(momoParams) {
+    try {
+      success.info("Processing MoMo IPN with simple method:", momoParams);
+      
+      // Kiểm tra các tham số bắt buộc
+      if (!momoParams.orderId || !momoParams.resultCode) {
+        error("Missing required parameters in MoMo IPN");
+        return { 
+          status: "error", 
+          message: "Missing required parameters" 
+        };
+      }
+      
+      // Xác định trạng thái đơn hàng dựa vào resultCode
+      // resultCode = 0: Thành công, resultCode khác 0: Thất bại
+      const newStatus = momoParams.resultCode === 0 ? "paid" : "failed";
+      
+      // Tìm đơn hàng theo orderId
+      const order = await Order.findOne({ order_id: momoParams.orderId });
+      
+      if (!order) {
+        error("Order not found:", momoParams.orderId);
+        return { 
+          status: "error", 
+          message: "Order not found" 
+        };
+      }
+      
+      // Cập nhật trạng thái đơn hàng
+      order.status = newStatus;
+      order.payment_info = {
+        ...order.payment_info,
+        ipnResponse: momoParams,
+        processedAt: new Date(),
+        simpleProcessing: true
+      };
+      
+      await order.save();
+      
+      // Nếu thanh toán thành công (resultCode = 0), thực hiện các bước sau
+      if (newStatus === "paid") {
+        try {
+          // Lấy thông tin user
+          const user = await User.findById(order.user_id);
+          if (!user) {
+            error("User not found:", order.user_id);
+          } else {
+            // Thêm khóa học vào danh sách đã đăng ký của user
+            const courseIds = order.courses.map(item => item.course_id);
+            
+            // Cập nhật enrolled_courses của user
+            await User.findByIdAndUpdate(
+              order.user_id,
+              { $addToSet: { enrolled_courses: { $each: courseIds } } }
+            );
+            
+            // Cập nhật student_count của các khóa học
+            await Course.updateMany(
+              { _id: { $in: courseIds } },
+              { $inc: { student_count: 1 } }
+            );
+            
+            // Xóa giỏ hàng
+            const Cart = require("../models/cart.model");
+            await Cart.findOneAndUpdate(
+              { user_id: order.user_id },
+              { $set: { items: [] } }
+            );
+            
+            success.info("User enrolled in courses successfully with simple method", {
+              userId: order.user_id,
+              courses: courseIds
+            });
+          }
+        } catch (enrollError) {
+          error("Error processing enrollment after payment with simple method:", enrollError);
+          // Không ảnh hưởng đến việc xử lý thanh toán, chỉ ghi log lỗi
+        }
+      }
+      
+      success.info("MoMo payment processed with simple method", {
+        orderId: order.order_id,
+        amount: order.amount,
+        status: order.status,
+        resultCode: momoParams.resultCode
+      });
+      
+      return {
+        status: "success",
+        data: {
+          orderId: order.order_id,
+          amount: order.amount,
+          status: order.status,
+          message: momoParams.message || "Processed with simple method"
+        }
+      };
+    } catch (err) {
+      error("Error processing MoMo IPN with simple method:", err);
+      throw err;
+    }
+  }
+
+  async forceProcessPayment(orderId, status = "paid") {
+    try {
+      success.info(`Force processing payment for order: ${orderId} with status: ${status}`);
+      
+      // Tìm đơn hàng theo orderId
+      const order = await Order.findOne({ order_id: orderId });
+      
+      if (!order) {
+        error("Order not found:", orderId);
+        return { 
+          status: "error", 
+          message: "Order not found" 
+        };
+      }
+      
+      // Cập nhật trạng thái đơn hàng
+      order.status = status;
+      order.payment_info = {
+        ...order.payment_info,
+        forceProcessed: true,
+        processedAt: new Date(),
+        forcedStatus: status
+      };
+      
+      await order.save();
+      
+      // Nếu trạng thái là "paid", thực hiện các bước sau
+      if (status === "paid") {
+        try {
+          // Lấy thông tin user
+          const user = await User.findById(order.user_id);
+          if (!user) {
+            error("User not found:", order.user_id);
+            return {
+              status: "error",
+              message: "User not found"
+            };
+          }
+          
+          // Thêm khóa học vào danh sách đã đăng ký của user
+          const courseIds = order.courses.map(item => item.course_id);
+          
+          // Cập nhật enrolled_courses của user
+          await User.findByIdAndUpdate(
+            order.user_id,
+            { $addToSet: { enrolled_courses: { $each: courseIds } } }
+          );
+          
+          // Cập nhật student_count của các khóa học
+          await Course.updateMany(
+            { _id: { $in: courseIds } },
+            { $inc: { student_count: 1 } }
+          );
+          
+          // Xóa giỏ hàng
+          const Cart = require("../models/cart.model");
+          await Cart.findOneAndUpdate(
+            { user_id: order.user_id },
+            { $set: { items: [] } }
+          );
+          
+          success.info("User enrolled in courses successfully with force method", {
+            userId: order.user_id,
+            courses: courseIds
+          });
+        } catch (enrollError) {
+          error("Error processing enrollment after forced payment:", enrollError);
+          return {
+            status: "partial_success",
+            message: "Payment processed but enrollment failed",
+            error: enrollError.message
+          };
+        }
+      }
+      
+      success.info("Payment force processed successfully", {
+        orderId: order.order_id,
+        status: status
+      });
+      
+      return {
+        status: "success",
+        data: {
+          orderId: order.order_id,
+          amount: order.amount,
+          status: order.status,
+          message: `Payment ${status === "paid" ? "completed" : "updated"} successfully`
+        }
+      };
+    } catch (err) {
+      error("Error force processing payment:", err);
       throw err;
     }
   }

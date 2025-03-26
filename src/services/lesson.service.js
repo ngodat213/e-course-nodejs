@@ -1,87 +1,37 @@
 const Lesson = require("../models/lesson.model");
 const Course = require("../models/course.model");
-const CloudinaryFile = require("../models/cloudinary_file.model");
 const { NotFoundError, BadRequestError } = require("../utils/errors");
 const i18next = require("i18next");
-const FileService = require("./file.service");
+const User = require("../models/user.model");
 
 class LessonService {
-  async createLesson(courseId, lessonData, files) {
+  async createLesson(courseId, lessonData) {
+    // Kiểm tra course tồn tại
     const course = await Course.findById(courseId);
     if (!course) {
       throw new NotFoundError(i18next.t("course.notFound"));
     }
 
-    // Tính order mới
-    const lastLesson = await Lesson.findOne({ course_id: courseId })
-      .sort({ order: -1 })
-      .limit(1);
-    const order = lastLesson ? lastLesson.order + 1 : 1;
-
-    // Upload video nếu có
-    let video, duration = 0;
-    if (files?.video) {
-      const uploadedFile = await FileService.uploadFile(courseId, "Course", files.video[0], "video");
-      video = uploadedFile._id;
-      duration = uploadedFile.duration;
-    }
-
-    // Upload attachments
-    const attachments = [];
-    if (files?.attachments) {
-      for (const file of files.attachments) {
-        const uploadedFile = await FileService.uploadFile(courseId, "Course", file, "attachment");
-        attachments.push(uploadedFile._id);
-      }
-    }
-
+    // Tạo lesson mới - order sẽ tự động được set
     const lesson = await Lesson.create({
       ...lessonData,
-      course_id: courseId,
-      order,
-      video,
-      duration,
-      attachments,
+      course_id: courseId
     });
 
-    return lesson.populate([
-      { path: "video", select: "file_url metadata" },
-      { path: "attachments", select: "file_url original_name" },
-    ]);
+    return lesson;
   }
 
-  async updateLesson(lessonId, updateData, files) {
+  async updateLesson(lessonId, updateData) {
     const lesson = await Lesson.findById(lessonId);
     if (!lesson) {
       throw new NotFoundError(i18next.t("lesson.notFound"));
     }
 
-    // Upload và update video nếu có
-    if (files?.video) {
-      // Xóa video cũ
-      if (lesson.video) {
-        await FileService.deleteFile(lesson.video);
-      }
-      
-      const uploadedFile = await FileService.uploadFile(lesson.course_id, "Course", files.video[0], "video");
-      lesson.video = uploadedFile._id;
-    }
-
-    // Upload attachments mới
-    if (files?.attachments) {
-      for (const file of files.attachments) {
-        const uploadedFile = await FileService.uploadFile(lesson.course_id, "Course", file, "attachment");
-        lesson.attachments.push(uploadedFile._id);
-      }
-    }
-    
+    // Cập nhật thông tin lesson
     Object.assign(lesson, updateData);
     await lesson.save();
 
-    return lesson.populate([
-      { path: "video", select: "file_url metadata" },
-      { path: "attachments", select: "file_url original_name" },
-    ]);
+    return lesson;
   }
 
   async deleteLesson(lessonId) {
@@ -90,36 +40,22 @@ class LessonService {
       throw new NotFoundError(i18next.t("lesson.notFound"));
     }
 
-    // Xóa files
-    if (lesson.video) {
-      await FileService.deleteFile(lesson.video);
-    }
-    
-    for (const attachmentId of lesson.attachments) {
-      await FileService.deleteFile(attachmentId);
-    }
-
     await lesson.remove();
-
-    // Reorder các lesson còn lại
-    await Lesson.updateMany(
-      {
-        course_id: lesson.course_id,
-        order: { $gt: lesson.order },
-      },
-      { $inc: { order: -1 } }
-    );
-
     return true;
   }
 
   async getLessonById(lessonId) {
-    const lesson = await Lesson.findById(lessonId).populate([
-      { path: "video", select: "public_id metadata format" },
-      { path: "attachments", select: "public_id metadata format" },
-      { path: "quiz", select: "questions" },
-      { path: "comments", select: "content user created_at" },
-    ]);
+    const lesson = await Lesson.findById(lessonId)
+      .populate({
+        path: 'contents',
+        populate: [
+          { path: 'video'},
+          { path: 'quiz' },
+          { path: 'attachments'},
+          { path: 'requirements', select: 'title' },
+          { path: 'comments' }
+        ]
+      });
 
     if (!lesson) {
       throw new NotFoundError(i18next.t("lesson.notFound"));
@@ -128,25 +64,51 @@ class LessonService {
     return lesson;
   }
 
-  async getLessonsByCourse(courseId, options = {}) {
+  async getLessonsByCourse(courseId, userId, options = {}) {
     const { page = 1, limit = 10, status } = options;
-    const query = { course_id: courseId };
     
+    // Kiểm tra khóa học tồn tại
+    const course = await Course.findById(courseId);
+    if (!course) {
+      throw new NotFoundError(i18next.t("course.notFound"));
+    }
+
+    // Kiểm tra quyền truy cập
+    const user = await User.findById(userId);
+    if (!user) {
+      throw new NotFoundError(i18next.t("user.notFound"));
+    }
+
+    // Nếu không phải admin và không phải instructor của khóa học
+    if (user.role !== 'admin' && course.instructor_id.toString() !== userId) {
+      // Kiểm tra xem user đã đăng ký khóa học chưa
+      const isEnrolled = user.enrolled_courses.includes(courseId);
+      if (!isEnrolled) {
+        throw new BadRequestError(i18next.t("course.notEnrolled"));
+      }
+    }
+
+    const query = { course_id: courseId };
     if (status) {
       query.status = status;
     }
 
-    const [lessons, total] = await Promise.all([
-      Lesson.find(query)
-        .populate([
-          { path: "video", select: "file_url metadata format" },
-          { path: "attachments", select: "file_url metadata format" },
-        ])
-        .sort({ order: 1 })
-        .skip((page - 1) * limit)
-        .limit(limit),
-      Lesson.countDocuments(query),
-    ]);
+    // Lấy tổng số bài học
+    const total = await Lesson.countDocuments(query);
+
+    // Lấy danh sách bài học với phân trang và sắp xếp theo order
+    const lessons = await Lesson.find(query)
+      .populate({
+        path: 'contents',
+        populate: [
+          { path: 'video'},
+          { path: 'quiz' },
+          { path: 'attachments'}
+        ]
+      })
+      .sort({ order: 1 }) // Sắp xếp theo order tăng dần
+      .skip((page - 1) * limit)
+      .limit(limit);
 
     return {
       data: lessons,
@@ -154,48 +116,24 @@ class LessonService {
         total,
         page: parseInt(page),
         limit: parseInt(limit),
-        pages: Math.ceil(total / limit),
-      },
+        pages: Math.ceil(total / limit)
+      }
     };
   }
 
-  async updateLessonOrder(lessonId, newOrder) {
+  async updateLessonOrder(courseId, lessonId, newOrder) {
     const lesson = await Lesson.findById(lessonId);
     if (!lesson) {
-      throw new NotFoundError(i18next.t("lesson.notFound")); 
+      throw new NotFoundError(i18next.t("lesson.notFound"));
     }
 
-    const totalLessons = await Lesson.countDocuments({
-      course_id: lesson.course_id,
-    });
-
-    if (newOrder < 1 || newOrder > totalLessons) {
-      throw new BadRequestError(i18next.t("lesson.invalidOrder"));
+    if (lesson.course_id.toString() !== courseId) {
+      throw new BadRequestError(i18next.t("lesson.notBelongToCourse"));
     }
 
-    const oldOrder = lesson.order;
-    if (newOrder > oldOrder) {
-      await Lesson.updateMany(
-        {
-          course_id: lesson.course_id,
-          order: { $gt: oldOrder, $lte: newOrder },
-        },
-        { $inc: { order: -1 } }
-      );
-    } else {
-      await Lesson.updateMany(
-        {
-          course_id: lesson.course_id,
-          order: { $gte: newOrder, $lt: oldOrder },
-        },
-        { $inc: { order: 1 } }
-      );
-    }
+    await Lesson.reorderLessons(courseId, lessonId, newOrder);
 
-    lesson.order = newOrder;
-    await lesson.save();
-
-    return lesson;
+    return await Lesson.find({ course_id: courseId }).sort({ order: 1 });
   }
 }
 

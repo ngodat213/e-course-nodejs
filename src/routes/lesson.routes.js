@@ -1,72 +1,49 @@
 const express = require('express');
 const router = express.Router();
 const LessonController = require('../controllers/lesson.controller');
-const { verifyToken, restrictTo, isOwnerOrAdmin } = require('../middleware/auth.middleware');
+const { verifyToken, restrictTo } = require('../middleware/auth.middleware');
 const { validateRequest } = require('../middleware/validate.middleware');
-const upload = require('../middleware/upload.middleware');
-const { lessonContentSchema, lessonOrderSchema } = require('../validators/lesson.validator');
-const Course = require('../models/course.model');
+const { createLessonSchema, updateLessonSchema, lessonOrderSchema } = require('../validators/lesson.validator');
 
 // Tất cả routes đều yêu cầu xác thực
 router.use(verifyToken);
 
-// Custom middleware để validate lesson content
-const validateLessonContent = (req, res, next) => {
-    try {
-        const { type } = req.body;
-        // const schema = lessonContentSchema(type);
-        // const { error } = schema.validate(req.body);
-        // if (error) {
-        //     throw error;
-        // }
-        next();
-    } catch (error) {
-        next(error);
-    }
-};
-
-// Routes cho instructor
-router.post('/:id',
-    restrictTo('instructor', 'admin'),
-    upload.fields([
-        { name: 'video', maxCount: 1 },
-        { name: 'attachments', maxCount: 5 }
-    ]),
-    validateLessonContent,
-    (req, res, next) => {
-        LessonController.createLesson(req, res, next);
-    },
+// Routes cho instructor/admin
+router.post('/',
+  restrictTo('instructor', 'admin'),
+  validateRequest(createLessonSchema),
+  (req, res, next) => LessonController.createLesson(req, res, next)
 );
 
 router.put('/:lessonId',
-    restrictTo('instructor', 'admin'),
-    upload.fields([
-        { name: 'video', maxCount: 1 },
-        { name: 'attachments', maxCount: 5 }
-    ]),
-    // validateLessonContent,
-    (req, res, next) => {
-        LessonController.updateLesson(req, res, next);
-    }
+  restrictTo('instructor', 'admin'),
+  validateRequest(updateLessonSchema),
+  (req, res, next) => LessonController.updateLesson(req, res, next)
 );
 
 router.delete('/:lessonId',
-    restrictTo('instructor', 'admin'),
-    (req, res, next) => {
-        LessonController.deleteLesson(req, res, next);
-    }
+  restrictTo('instructor', 'admin'),
+  (req, res, next) => LessonController.deleteLesson(req, res, next)
 );
 
-router.put('/:id/order',
-    restrictTo('instructor', 'admin'),
-    validateRequest(lessonOrderSchema),
-    (req, res, next) => {
-        LessonController.updateLessonOrder(req, res, next);
-    }
+/**
+ * @route PUT /api/lessons/:lessonId/order
+ * @desc Cập nhật thứ tự của lesson
+ * @access Private
+ */
+router.put('/:lessonId/order',
+  restrictTo('instructor', 'admin'),
+  validateRequest(lessonOrderSchema),
+  (req, res, next) => LessonController.updateLessonOrder(req, res, next)
 );
 
-// Routes cho student
-router.get('/:courseId', (req, res, next) => LessonController.getLessonsByCourse(req, res, next));
-router.get('/:courseId/:lessonId', (req, res, next) => LessonController.getLessonById(req, res, next));
+// Routes cho tất cả users
+router.get('/course/:courseId',
+  (req, res, next) => LessonController.getLessonsByCourse(req, res, next)
+);
+
+router.get('/:lessonId',
+  (req, res, next) => LessonController.getLessonById(req, res, next)
+);
 
 module.exports = router; 

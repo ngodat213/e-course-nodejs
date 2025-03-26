@@ -261,11 +261,19 @@ class UserService {
         },
         {
           path: "enrolled_courses",
-          select: "title description thumbnail progress_percent",
-          populate: {
-            path: "instructor_id",
-            select: "name email profile_picture",
-          },
+          select: "title description thumbnail_id progress_percent lessons",
+          populate: [
+            {
+              path: "instructor_id",
+              select: 'first_name last_name email followers_count working_at address about level profile_picture'
+            },
+            {
+              path: "thumbnail_id"
+            },
+            {
+              path: "categories",
+            }
+          ]
         },
         {
           path: "teaching_courses",
@@ -691,6 +699,51 @@ class UserService {
       averageRating: stats.averageRating,
       totalReviews: stats.totalReviews,
       ratingDistribution
+    };
+  }
+
+  async updateStreak(userId) {
+    const user = await User.findById(userId);
+    if (!user) {
+      throw new NotFoundError(i18next.t("user.notFound"));
+    }
+
+    // Tăng current streak lên 1
+    const updatedStreak = user.current_streak + 1;
+    
+    // Cập nhật longest streak nếu current streak mới lớn hơn
+    const longestStreak = Math.max(user.longest_streak, updatedStreak);
+
+    // Cập nhật user
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      {
+        current_streak: updatedStreak,
+        longest_streak: longestStreak,
+        last_streak_date: new Date()
+      },
+      { new: true }
+    );
+
+    return {
+      current_streak: updatedUser.current_streak,
+      longest_streak: updatedUser.longest_streak
+    };
+  }
+
+  async resetStreak(userId) {
+    const user = await User.findByIdAndUpdate(
+      userId,
+      {
+        current_streak: 0,
+        last_streak_date: new Date()
+      },
+      { new: true }
+    );
+
+    return {
+      current_streak: user.current_streak,
+      longest_streak: user.longest_streak
     };
   }
 }
