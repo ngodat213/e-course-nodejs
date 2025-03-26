@@ -76,25 +76,26 @@ class OrderController extends BaseController {
         query.status = status;
       }
 
-      const options = {
-        page: parseInt(page),
-        limit: parseInt(limit),
-        sort: { created_at: -1 },
-        populate: {
-          path: 'courses',
-          select: 'name price thumbnail'
-        }
-      };
+      // Đếm tổng số documents
+      const total = await Order.countDocuments(query);
 
-      const orders = await Order.paginate(query, options);
+      // Lấy danh sách orders với pagination
+      const orders = await Order.find(query)
+        .populate({
+          path: 'courses.course_id',
+          select: 'title price thumbnail_id'
+        })
+        .sort({ created_at: -1 })
+        .skip((page - 1) * limit)
+        .limit(parseInt(limit));
 
       return this.successResponse(res, {
-        orders: orders.docs,
+        data: orders,
         pagination: {
-          total: orders.totalDocs,
-          page: orders.page,
-          pages: orders.totalPages,
-          limit: orders.limit
+          total,
+          page: parseInt(page),
+          limit: parseInt(limit),
+          pages: Math.ceil(total / limit)
         }
       });
 
@@ -111,7 +112,10 @@ class OrderController extends BaseController {
       const order = await Order.findOne({ 
         _id: id,
         user_id: userId 
-      }).populate('courses', 'name price thumbnail');
+      }).populate({
+        path: 'courses.course_id',
+        select: 'title price thumbnail_id'
+      });
 
       if (!order) {
         throw new NotFoundError(i18next.t('order.notFound'));

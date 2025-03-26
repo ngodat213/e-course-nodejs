@@ -124,4 +124,31 @@ router.put("/role", restrictTo(["admin"]), (req, res, next) => {
   UserController.setUserRole(req, res, next);
 });
 
+/**
+ * @route POST /api/users/streak/increment
+ * @desc Tăng streak lên 1 khi user hoàn thành bài học trong ngày
+ * @access Private
+ */
+router.post("/streak/increment", verifyToken, (req, res, next) => {
+  UserController.updateStreak(req, res, next);
+});
+
+/**
+ * @route POST /api/users/streak/reset
+ * @desc Reset streak về 0 khi user bỏ lỡ ngày học
+ * @access Private
+ */
+router.post("/streak/reset", verifyToken, (req, res, next) => {
+  UserController.resetStreak(req, res, next);
+});
+
+/**
+ * @route GET /api/users/streak
+ * @desc Lấy thông tin streak hiện tại của user
+ * @access Private
+ */
+router.get("/streak", verifyToken, (req, res, next) => {
+  UserController.getStreak(req, res, next);
+});
+
 module.exports = router;

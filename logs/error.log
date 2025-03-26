@@ -1,558 +1,33 @@
-2025-03-11 14:03:39 [ERROR]: Invalid email or password {
-  "code": 401
-}
-2025-03-11 14:03:39 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-11 14:04:08 [ERROR]: Invalid email or password {
-  "code": 401
-}
-2025-03-11 14:04:08 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003#!@"
-  },
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-11 14:04:29 [ERROR]: Invalid email or password {
-  "code": 401
-}
-2025-03-11 14:04:29 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003#!@"
-  },
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-11 14:39:25 [ERROR]: Invalid token {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-11 14:50:03 [ERROR]: Invalid email or password {
-  "code": 401
-}
-2025-03-11 14:50:03 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "ngodat.it213@gmail.com",
-    "password": "Code26102003"
-  },
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-11 16:42:29 [ERROR]: Invalid token {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-11 17:51:44 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/users/profile",
-  "method": "PUT",
-  "body": {
-    "first_name": "Hydra",
-    "last_name": "Coder",
-    "working_at": "AWS",
-    "address": "District 9, Ho Chi Minh City, Viet Nam",
-    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": {
-      "undefined": "value must have at least 1 key"
-    }
-  }
-}
-2025-03-11 17:52:13 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/users/profile",
-  "method": "PUT",
-  "body": {
-    "first_name": "Hydra",
-    "last_name": "Coder",
-    "working_at": "AWS",
-    "address": "District 9, Ho Chi Minh City, Viet Nam",
-    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": {
-      "undefined": "value must have at least 1 key"
-    }
-  }
-}
-2025-03-11 17:53:35 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/users/profile",
-  "method": "PUT",
-  "body": {
-    "first_name": "Hydra",
-    "last_name": "Coder",
-    "working_at": "AWS",
-    "address": "District 9, Ho Chi Minh City, Viet Nam",
-    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": {
-      "undefined": "value must have at least 1 key"
-    }
-  }
-}
-2025-03-11 17:54:18 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/users/profile",
-  "method": "PUT",
-  "body": {
-    "first_name": "Hydra"
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": {
-      "undefined": "value must have at least 1 key"
-    }
-  }
-}
-2025-03-11 17:54:32 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/users/profile",
-  "method": "PUT",
-  "body": {
-    "first_name": "Hydra",
-    "last_name": "Coder",
-    "working_at": "AWS",
-    "address": "District 9, Ho Chi Minh City, Viet Nam",
-    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. "
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": {
-      "undefined": "value must have at least 1 key"
-    }
-  }
-}
-2025-03-11 17:55:06 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/users/profile",
-  "method": "PUT",
-  "body": {
-    "first_name": "Hydra",
-    "last_name": "Coder",
-    "working_at": "AWS",
-    "address": "District 9, Ho Chi Minh City, Viet Nam",
-    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": {
-      "undefined": "value must have at least 1 key"
-    }
-  }
-}
-2025-03-11 17:55:14 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/users/profile",
-  "method": "PUT",
-  "body": {
-    "first_name": "Hydra",
-    "last_name": "Coder",
-    "working_at": "AWS",
-    "address": "District 9, Ho Chi Minh City, Viet Nam",
-    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": {
-      "undefined": "value must have at least 1 key"
-    }
-  }
-}
-2025-03-11 17:55:54 [ERROR]: User not found {
+2025-03-14 10:56:12 [ERROR]: cart.courseNotInCart {
   "code": 404
 }
-2025-03-11 17:55:54 [ERROR]: User not found {
-  "path": "/api/users/profile",
-  "method": "PUT",
-  "body": {
-    "first_name": "Hydra",
-    "last_name": "Coder",
-    "working_at": "AWS",
-    "address": "District 9, Ho Chi Minh City, Viet Nam",
-    "about": "Tempor est officia sunt dolore et proident ullamco est voluptate laboris laborum laborum sit. Ullamco minim dolor cillum cillum eiusmod minim amet tempor anim. Dolore pariatur ipsum ad ullamco consectetur quis dolore. Excepteur ullamco deserunt occaecat quis enim aliqua excepteur reprehenderit irure ad ullamco. Magna laboris in tempor do cillum nisi. Laboris duis veniam labore veniam."
-  },
-  "error": {
-    "code": 404,
-    "success": false
-  }
-}
-2025-03-11 18:35:03 [ERROR]: Invalid token {
-  "path": "/api/users/teachers",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-11 18:36:01 [ERROR]: user.teacherNotFound {
-  "code": 404
-}
-2025-03-11 18:36:01 [ERROR]: user.teacherNotFound {
-  "path": "/api/users/teachers/67c05fa139552b1e8f2d900d",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "code": 404,
-    "success": false
-  }
-}
-2025-03-11 19:47:08 [ERROR]: sanitizedUser is not defined {}
-2025-03-11 19:47:08 [ERROR]: sanitizedUser is not defined {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "error": {}
-}
-2025-03-11 20:55:48 [ERROR]: Invalid token {
-  "path": "/api/users/teachers/67c05fa139552b1e8f2d900d",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-11 21:52:33 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/register",
-  "method": "POST",
-  "body": {
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "john.doe@gmail.com",
-    "password": "123456"
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": {
-      "password": "Mật khẩu phải chứa ít nhất 1 chữ hoa, 1 chữ thường và 1 số"
-    }
-  }
-}
-2025-03-11 21:52:40 [ERROR]: Dữ liệu không hợp lệ {
-  "path": "/api/auth/register",
-  "method": "POST",
-  "body": {
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "john.doe@gmail.com",
-    "password": "123456789"
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": {
-      "password": "Mật khẩu phải chứa ít nhất 1 chữ hoa, 1 chữ thường và 1 số"
-    }
-  }
-}
-2025-03-12 21:12:12 [ERROR]: User not found {
-  "code": 400
-}
-2025-03-12 21:12:12 [ERROR]: User not found {
-  "path": "/api/auth/verify-otp",
-  "method": "POST",
-  "body": {
-    "email": "user@example.com",
-    "otp": "810969"
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": null
-  }
-}
-2025-03-12 21:35:18 [ERROR]: otp.invalid {
-  "code": 400
-}
-2025-03-12 21:35:18 [ERROR]: otp.invalid {
-  "path": "/api/auth/verify-otp",
-  "method": "POST",
-  "body": {
-    "email": "gangaldat.it.213@gmail.com",
-    "otp": "296325"
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": null
-  }
-}
-2025-03-12 21:35:54 [ERROR]: Invalid email or password {
-  "code": 401
-}
-2025-03-12 21:35:54 [ERROR]: Invalid email or password {
-  "path": "/api/auth/login",
-  "method": "POST",
-  "body": {
-    "email": "gangaldat.it.213@gmail.com",
-    "password": "123456789#!@"
-  },
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-12 21:36:02 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-03-12 21:36:02 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "error": {}
-}
-2025-03-12 21:36:03 [ERROR]: Invalid token {
-  "path": "/api/users/teachers",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-12 21:36:03 [ERROR]: Invalid token {
-  "path": "/api/users/teachers",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-12 21:36:36 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-03-12 21:36:36 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "error": {}
-}
-2025-03-12 21:36:36 [ERROR]: Invalid token {
-  "path": "/api/users/teachers",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-12 21:36:36 [ERROR]: Invalid token {
-  "path": "/api/users/teachers",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "code": 401,
-    "success": false
-  }
-}
-2025-03-12 21:37:22 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {}
-2025-03-12 21:37:22 [ERROR]: Class constructor ObjectId cannot be invoked without 'new' {
-  "path": "/api/users/profile",
-  "method": "GET",
-  "body": {},
-  "error": {}
-}
-2025-03-12 21:51:10 [ERROR]: Cart validation failed: user_id: Path `user_id` is required. {}
-2025-03-12 21:51:10 [ERROR]: Cart validation failed: user_id: Path `user_id` is required. {
-  "path": "/api/cart",
-  "method": "GET",
-  "body": {},
-  "error": {
-    "errors": {
-      "user_id": {
-        "name": "ValidatorError",
-        "message": "Path `user_id` is required.",
-        "properties": {
-          "message": "Path `user_id` is required.",
-          "type": "required",
-          "path": "user_id"
-        },
-        "kind": "required",
-        "path": "user_id"
-      }
-    },
-    "_message": "Cart validation failed",
-    "name": "ValidationError",
-    "message": "Cart validation failed: user_id: Path `user_id` is required."
-  }
-}
-2025-03-12 21:55:20 [ERROR]: Cast to ObjectId failed for value "string" (type string) at path "_id" for model "Course" {}
-2025-03-12 21:55:20 [ERROR]: Cast to ObjectId failed for value "string" (type string) at path "_id" for model "Course" {
-  "path": "/api/cart/add",
-  "method": "POST",
-  "body": {
-    "course_id": "string"
-  },
-  "error": {
-    "stringValue": "\"string\"",
-    "valueType": "string",
-    "kind": "ObjectId",
-    "value": "string",
-    "path": "_id",
-    "reason": {},
-    "name": "CastError",
-    "message": "Cast to ObjectId failed for value \"string\" (type string) at path \"_id\" for model \"Course\""
-  }
-}
-2025-03-12 21:55:41 [ERROR]: cart.notFound {
-  "code": 404
-}
-2025-03-12 21:55:41 [ERROR]: cart.notFound {
+2025-03-14 10:56:12 [ERROR]: cart.courseNotInCart {
   "path": "/api/cart/remove",
   "method": "POST",
   "body": {
-    "course_id": "string"
+    "course_id": "67d2e1a81450f1c54c606e06"
   },
   "error": {
     "code": 404,
     "success": false
   }
 }
-2025-03-12 21:55:52 [ERROR]: cart.notFound {
+2025-03-14 11:00:49 [ERROR]: cart.courseNotInCart {
   "code": 404
 }
-2025-03-12 21:55:52 [ERROR]: cart.notFound {
-  "path": "/api/cart/clear",
-  "method": "POST",
-  "body": {},
-  "error": {
-    "code": 404,
-    "success": false
-  }
-}
-2025-03-12 22:03:08 [ERROR]: Cart validation failed: user_id: Path `user_id` is required. {}
-2025-03-12 22:03:08 [ERROR]: Cart validation failed: user_id: Path `user_id` is required. {
-  "path": "/api/cart/add",
-  "method": "POST",
-  "body": {
-    "course_id": "67c060782aaa9b16b68bc874"
-  },
-  "error": {
-    "errors": {
-      "user_id": {
-        "name": "ValidatorError",
-        "message": "Path `user_id` is required.",
-        "properties": {
-          "message": "Path `user_id` is required.",
-          "type": "required",
-          "path": "user_id"
-        },
-        "kind": "required",
-        "path": "user_id"
-      }
-    },
-    "_message": "Cart validation failed",
-    "name": "ValidationError",
-    "message": "Cart validation failed: user_id: Path `user_id` is required."
-  }
-}
-2025-03-12 22:03:47 [ERROR]: cart.cannotAddOwnCourse {
-  "code": 400
-}
-2025-03-12 22:03:47 [ERROR]: cart.cannotAddOwnCourse {
-  "path": "/api/cart/add",
-  "method": "POST",
-  "body": {
-    "course_id": "67c060782aaa9b16b68bc874"
-  },
-  "error": {
-    "code": 400,
-    "success": false,
-    "error": null
-  }
-}
-2025-03-13 13:17:34 [ERROR]: cart.courseNotInCart {
-  "code": 404
-}
-2025-03-13 13:17:34 [ERROR]: cart.courseNotInCart {
+2025-03-14 11:00:49 [ERROR]: cart.courseNotInCart {
   "path": "/api/cart/remove",
   "method": "POST",
   "body": {
-    "course_id": "67d27862d133254c78b099fa"
+    "course_id": "67d2e1af1450f1c54c606e10"
   },
   "error": {
     "code": 404,
     "success": false
   }
 }
-2025-03-13 13:44:31 [ERROR]: Error creating MoMo payment: Order validation failed: courses.0: Cast to [ObjectId] failed for value "[\n' +
-  '  { course_id: new ObjectId("67c060782aaa9b16b68bc874"), price: 1111 },\n' +
-  '  { course_id: new ObjectId("67c18e8fef4cea5480728c07"), price: 1111 }\n' +
-  ']" (type string) at path "courses.0" because of "CastError" {
-  "errors": {
-    "courses.0": {
-      "stringValue": "\"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\"",
-      "valueType": "string",
-      "kind": "[ObjectId]",
-      "value": "[\n  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\n  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\n]",
-      "path": "courses.0",
-      "reason": {
-        "stringValue": "\"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\"",
-        "valueType": "Object",
-        "kind": "ObjectId",
-        "value": {
-          "course_id": "67c060782aaa9b16b68bc874",
-          "price": 1111
-        },
-        "path": "courses",
-        "reason": {},
-        "name": "CastError",
-        "message": "Cast to ObjectId failed for value \"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\" (type Object) at path \"courses\" because of \"BSONError\""
-      },
-      "name": "CastError",
-      "message": "Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\""
-    }
-  },
-  "_message": "Order validation failed",
-  "stack": "ValidationError: Order validation failed: courses.0: Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\"\n    at Document.invalidate (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:3219:32)\n    at model.$set (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:1464:12)\n    at model.$set (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:1119:16)\n    at model.Document (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/document.js:165:12)\n    at model.Model (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:123:12)\n    at new model (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:4758:15)\n    at /Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:2922:18\n    at Array.map (<anonymous>)\n    at Function.create (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/node_modules/mongoose/lib/model.js:2911:30)\n    at MoMoService.createPaymentUrl (/Users/datngovantien/Projects/backend/nodejs/e-course-nodejs/src/services/momo.service.js:92:19)"
-}
-2025-03-13 13:44:31 [ERROR]: Order validation failed: courses.0: Cast to [ObjectId] failed for value "[\n' +
-  '  { course_id: new ObjectId("67c060782aaa9b16b68bc874"), price: 1111 },\n' +
-  '  { course_id: new ObjectId("67c18e8fef4cea5480728c07"), price: 1111 }\n' +
-  ']" (type string) at path "courses.0" because of "CastError" {}
-2025-03-13 13:44:31 [ERROR]: Order validation failed: courses.0: Cast to [ObjectId] failed for value "[\n' +
-  '  { course_id: new ObjectId("67c060782aaa9b16b68bc874"), price: 1111 },\n' +
-  '  { course_id: new ObjectId("67c18e8fef4cea5480728c07"), price: 1111 }\n' +
-  ']" (type string) at path "courses.0" because of "CastError" {
+2025-03-14 13:19:57 [ERROR]: Order validation failed: amount: Path `amount` is required. {}
+2025-03-14 13:19:57 [ERROR]: Order validation failed: amount: Path `amount` is required. {
   "path": "/api/cart/checkout",
   "method": "POST",
   "body": {
@@ -560,31 +35,3391 @@
   },
   "error": {
     "errors": {
-      "courses.0": {
-        "stringValue": "\"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\"",
-        "valueType": "string",
-        "kind": "[ObjectId]",
-        "value": "[\n  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\n  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\n]",
-        "path": "courses.0",
-        "reason": {
-          "stringValue": "\"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\"",
-          "valueType": "Object",
-          "kind": "ObjectId",
-          "value": {
-            "course_id": "67c060782aaa9b16b68bc874",
-            "price": 1111
-          },
-          "path": "courses",
-          "reason": {},
-          "name": "CastError",
-          "message": "Cast to ObjectId failed for value \"{ course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 }\" (type Object) at path \"courses\" because of \"BSONError\""
+      "amount": {
+        "name": "ValidatorError",
+        "message": "Path `amount` is required.",
+        "properties": {
+          "message": "Path `amount` is required.",
+          "type": "required",
+          "path": "amount"
         },
-        "name": "CastError",
-        "message": "Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\""
+        "kind": "required",
+        "path": "amount"
       }
     },
     "_message": "Order validation failed",
     "name": "ValidationError",
-    "message": "Order validation failed: courses.0: Cast to [ObjectId] failed for value \"[\\n' +\n  '  { course_id: new ObjectId(\"67c060782aaa9b16b68bc874\"), price: 1111 },\\n' +\n  '  { course_id: new ObjectId(\"67c18e8fef4cea5480728c07\"), price: 1111 }\\n' +\n  ']\" (type string) at path \"courses.0\" because of \"CastError\""
+    "message": "Order validation failed: amount: Path `amount` is required."
   }
+}
+2025-03-14 13:48:09 [ERROR]: Invalid refresh token {
+  "code": 401
+}
+2025-03-14 13:48:09 [ERROR]: Invalid refresh token {
+  "path": "/api/auth/refresh-token",
+  "method": "POST",
+  "body": {
+    "refresh_token": "7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d..."
+  },
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:00:41 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:00:41 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481556605536829479"
+      },
+      "signature": {
+        "hash": "Olbg2Rp59bqScgx64fVCFhKqWJw=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481556605536829479"
+    }
+  }
+}
+2025-03-14 14:06:53 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:06:53 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481558207559630866"
+      },
+      "signature": {
+        "hash": "TTwKs0aGGSpxi85FBUrTHNm4SIA=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481558207559630866"
+    }
+  }
+}
+2025-03-14 14:06:53 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:06:53 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:15:52 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:15:52 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481560522547003435"
+      },
+      "signature": {
+        "hash": "f92SuxHgXGX5i7gIeM4HtLKIOFM=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481560522547003435"
+    }
+  }
+}
+2025-03-14 14:15:53 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:15:53 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:16:24 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:16:24 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481560659985956889"
+      },
+      "signature": {
+        "hash": "2EFLx1265EVNotXk5iGLj/d/nYo=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481560659985956889"
+    }
+  }
+}
+2025-03-14 14:16:25 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:16:25 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:16:58 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:16:58 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481560806014844941"
+      },
+      "signature": {
+        "hash": "B9vSXamZlej5lRdGn3AyTRqQOzM=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481560806014844941"
+    }
+  }
+}
+2025-03-14 14:16:58 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:16:58 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:21:57 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:22:14 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:22:14 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481562163224510496"
+      },
+      "signature": {
+        "hash": "bxjG9w6aFmCKRlubzAMP3X20N6M=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481562163224510496"
+    }
+  }
+}
+2025-03-14 14:22:14 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:22:14 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481562163224510496"
+      },
+      "signature": {
+        "hash": "bxjG9w6aFmCKRlubzAMP3X20N6M=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481562163224510496"
+    }
+  }
+}
+2025-03-14 14:22:15 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:22:15 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:22:15 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:22:15 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:22:53 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:30:35 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:30:35 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481564315003125788"
+      },
+      "signature": {
+        "hash": "+ZXFVVIJVnDwg7IPkBf/TNagP/I=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481564315003125788"
+    }
+  }
+}
+2025-03-14 14:30:36 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:30:36 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:30:48 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:30:48 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481564370837700635"
+      },
+      "signature": {
+        "hash": "GBWlLOVwxwu0zbjmKhSB7zWHdRg=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481564370837700635"
+    }
+  }
+}
+2025-03-14 14:30:49 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:30:49 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:31:31 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:31:31 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481564555521294356"
+      },
+      "signature": {
+        "hash": "ksK1nojp4vue1YsfBBBd1B0Vi0U=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481564555521294356"
+    }
+  }
+}
+2025-03-14 14:31:31 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:31:31 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:32:26 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:32:26 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481564791744495648"
+      },
+      "signature": {
+        "hash": "ns2v4MOm59K1spp6B0N5s7KACjc=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481564791744495648"
+    }
+  }
+}
+2025-03-14 14:32:27 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:32:27 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:32:45 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "code": 31254
+}
+2025-03-14 14:32:45 [ERROR]: Cannot do exclusion on field password in inclusion projection {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 31254,
+    "codeName": "Location31254",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7481564869053906982"
+      },
+      "signature": {
+        "hash": "1Xw9ptnJe2gBRGl+ejKmrEU9VmY=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7481564869053906982"
+    }
+  }
+}
+2025-03-14 14:35:40 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 14:35:40 [ERROR]: Invalid token {
+  "path": "/api/users/teachers",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 15:56:46 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 15:56:46 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 15:56:46 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 15:56:46 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 15:56:46 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 15:56:46 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 15:56:46 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 15:56:46 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 16:00:00 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 16:04:47 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 16:04:47 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 16:04:47 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 16:04:47 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 16:04:47 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 16:04:47 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 16:04:47 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 16:04:47 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 16:05:16 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 16:05:16 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 16:05:16 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 16:05:16 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 16:05:16 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 16:05:16 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 16:05:16 [ERROR]: Cannot read properties of undefined (reading 'id') {}
+2025-03-14 16:05:16 [ERROR]: Cannot read properties of undefined (reading 'id') {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-14 16:20:13 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-03-14 16:20:13 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ 'string' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "string",
+    "attachments": "string",
+    "status": "published",
+    "title": "Introduction Flutter framework",
+    "type": "video",
+    "description": "Hahahahah"
+  },
+  "error": {
+    "errors": {
+      "requirements.0": {
+        "stringValue": "\"[ 'string' ]\"",
+        "valueType": "string",
+        "kind": "[ObjectId]",
+        "value": "[ 'string' ]",
+        "path": "requirements.0",
+        "reason": {
+          "stringValue": "\"string\"",
+          "valueType": "string",
+          "kind": "ObjectId",
+          "value": "string",
+          "path": "requirements",
+          "reason": {},
+          "name": "CastError",
+          "message": "Cast to ObjectId failed for value \"string\" (type string) at path \"requirements\" because of \"BSONError\""
+        },
+        "name": "CastError",
+        "message": "Cast to [ObjectId] failed for value \"[ 'string' ]\" (type string) at path \"requirements.0\" because of \"CastError\""
+      }
+    },
+    "_message": "Lesson validation failed",
+    "name": "ValidationError",
+    "message": "Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value \"[ 'string' ]\" (type string) at path \"requirements.0\" because of \"CastError\""
+  }
+}
+2025-03-14 16:20:33 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {}
+2025-03-14 16:20:33 [ERROR]: Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value "[ '' ]" (type string) at path "requirements.0" because of "CastError" {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {
+    "is_free": "true",
+    "order": "0",
+    "requirements": "",
+    "attachments": "",
+    "status": "published",
+    "title": "Introduction Flutter framework",
+    "type": "video",
+    "description": "Hahahahah"
+  },
+  "error": {
+    "errors": {
+      "requirements.0": {
+        "stringValue": "\"[ '' ]\"",
+        "valueType": "string",
+        "kind": "[ObjectId]",
+        "value": "[ '' ]",
+        "path": "requirements.0",
+        "reason": {
+          "stringValue": "\"\"",
+          "valueType": "string",
+          "kind": "ObjectId",
+          "value": "",
+          "path": "requirements",
+          "reason": {},
+          "name": "CastError",
+          "message": "Cast to ObjectId failed for value \"\" (type string) at path \"requirements\" because of \"BSONError\""
+        },
+        "name": "CastError",
+        "message": "Cast to [ObjectId] failed for value \"[ '' ]\" (type string) at path \"requirements.0\" because of \"CastError\""
+      }
+    },
+    "_message": "Lesson validation failed",
+    "name": "ValidationError",
+    "message": "Lesson validation failed: requirements.0: Cast to [ObjectId] failed for value \"[ '' ]\" (type string) at path \"requirements.0\" because of \"CastError\""
+  }
+}
+2025-03-14 16:31:22 [ERROR]: Insufficient permissions {
+  "path": "/api/lessons/67c060782aaa9b16b68bc874",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 403,
+    "success": false
+  }
+}
+2025-03-14 19:54:01 [ERROR]: course.notEnrolled {
+  "code": 400
+}
+2025-03-14 19:54:01 [ERROR]: course.notEnrolled {
+  "path": "/api/progress/course/67c16bc4038b6c54ebbaf111",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-14 21:26:26 [ERROR]: Invalid token {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "string",
+    "title": "string",
+    "description": "string",
+    "is_free": true,
+    "status": "draft"
+  },
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 21:27:23 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 21:40:03 [ERROR]: Invalid token {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "60d3b41f7c213e3ab47892b1",
+    "title": "Bài học đầu tiên",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": true,
+    "status": "draft"
+  },
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 21:40:50 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "60d3b41f7c213e3ab47892b1",
+    "title": "Bài học đầu tiên",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": true,
+    "status": "draft"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "content": "Vui lòng nhập nội dung bài học",
+      "type": "Vui lòng chọn loại bài học"
+    }
+  }
+}
+2025-03-14 21:42:00 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c060782aaa9b16b68bc874",
+    "title": "Flutter introduction",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": true,
+    "status": "published"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "content": "Vui lòng nhập nội dung bài học",
+      "type": "Vui lòng chọn loại bài học"
+    }
+  }
+}
+2025-03-14 21:43:45 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c060782aaa9b16b68bc874",
+    "title": "Flutter introduction",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": true,
+    "status": "published"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "content": "Vui lòng nhập nội dung bài học",
+      "type": "Vui lòng chọn loại bài học"
+    }
+  }
+}
+2025-03-14 21:43:50 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c060782aaa9b16b68bc874",
+    "title": "Flutter introduction",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": true,
+    "status": "published"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "content": "Vui lòng nhập nội dung bài học",
+      "type": "Vui lòng chọn loại bài học"
+    }
+  }
+}
+2025-03-14 21:43:55 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c060782aaa9b16b68bc874",
+    "title": "Flutter introduction",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": true,
+    "status": "published"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "content": "Vui lòng nhập nội dung bài học",
+      "type": "Vui lòng chọn loại bài học"
+    }
+  }
+}
+2025-03-14 21:45:01 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c060782aaa9b16b68bc874",
+    "title": "Flutter introduction",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": true,
+    "status": "published"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "content": "Vui lòng nhập nội dung bài học",
+      "type": "Vui lòng chọn loại bài học"
+    }
+  }
+}
+2025-03-14 21:48:58 [ERROR]: Course not found {
+  "code": 404
+}
+2025-03-14 21:48:58 [ERROR]: Course not found {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c060782aaa9b16b68bc874",
+    "title": "Flutter introduction",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": true,
+    "status": "published"
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-14 21:49:17 [ERROR]: Course not found {
+  "code": 404
+}
+2025-03-14 21:49:17 [ERROR]: Course not found {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c060782aaa9b16b68bc874",
+    "title": "Flutter introduction",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": true,
+    "status": "published"
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-14 22:01:15 [ERROR]: Invalid token {
+  "path": "/api/lessons/67d442555ff31d1966b9e457/contents",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 22:09:20 [ERROR]: Invalid token {
+  "path": "/api/lessons/67d442555ff31d1966b9e457/contents",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 22:34:05 [ERROR]: Invalid token {
+  "path": "/api/lessons/67d442555ff31d1966b9e457/contents",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-14 22:49:54 [ERROR]: schema.validate is not a function {
+  "path": "/api/lesson-contents/67c060782aaa9b16b68bc874/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "quiz_id": "string",
+    "requirements": "",
+    "status": "published",
+    "attachments": ""
+  },
+  "error": {}
+}
+2025-03-14 22:50:39 [ERROR]: schema.validate is not a function {
+  "path": "/api/lesson-contents/67c060782aaa9b16b68bc874/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "quiz_id": "string",
+    "requirements": "",
+    "status": "published",
+    "attachments": ""
+  },
+  "error": {}
+}
+2025-03-14 22:51:04 [ERROR]: schema.validate is not a function {
+  "path": "/api/lesson-contents/67c060782aaa9b16b68bc874/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "quiz_id": "string",
+    "requirements": "",
+    "status": "published",
+    "attachments": ""
+  },
+  "error": {}
+}
+2025-03-14 22:51:27 [ERROR]: schema.validate is not a function {
+  "path": "/api/lesson-contents/67c060782aaa9b16b68bc874/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "quiz_id": "string",
+    "requirements": "",
+    "status": "published",
+    "attachments": ""
+  },
+  "error": {}
+}
+2025-03-14 22:52:11 [ERROR]: schema.validate is not a function {
+  "path": "/api/lesson-contents/67c060782aaa9b16b68bc874/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "quiz_id": "string",
+    "requirements": "",
+    "status": "published",
+    "attachments": ""
+  },
+  "error": {}
+}
+2025-03-14 22:52:49 [ERROR]: schema.validate is not a function {
+  "path": "/api/lesson-contents/67c060782aaa9b16b68bc874/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "status": "published"
+  },
+  "error": {}
+}
+2025-03-14 22:54:03 [ERROR]: lesson.notFound {
+  "code": 404
+}
+2025-03-14 22:54:03 [ERROR]: lesson.notFound {
+  "path": "/api/lesson-contents/67c060782aaa9b16b68bc874/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "status": "published"
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-14 22:54:48 [ERROR]: Cannot populate path `comments` because it is not in your schema. Set the `strictPopulate` option to false to override. {}
+2025-03-14 22:54:48 [ERROR]: Cannot populate path `comments` because it is not in your schema. Set the `strictPopulate` option to false to override. {
+  "path": "/api/lesson-contents/67d442555ff31d1966b9e457/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "status": "published"
+  },
+  "error": {
+    "path": "comments"
+  }
+}
+2025-03-14 22:56:00 [ERROR]: Cannot populate path `comments` because it is not in your schema. Set the `strictPopulate` option to false to override. {}
+2025-03-14 22:56:00 [ERROR]: Cannot populate path `comments` because it is not in your schema. Set the `strictPopulate` option to false to override. {
+  "path": "/api/lesson-contents/67d442555ff31d1966b9e457/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "status": "published"
+  },
+  "error": {
+    "path": "comments"
+  }
+}
+2025-03-14 22:56:47 [ERROR]: Cannot populate path `requirements` because it is not in your schema. Set the `strictPopulate` option to false to override. {}
+2025-03-14 22:56:47 [ERROR]: Cannot populate path `requirements` because it is not in your schema. Set the `strictPopulate` option to false to override. {
+  "path": "/api/lesson-contents/67d442555ff31d1966b9e457/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "status": "published"
+  },
+  "error": {
+    "path": "requirements"
+  }
+}
+2025-03-14 22:57:57 [ERROR]: Cannot populate path `attachments` because it is not in your schema. Set the `strictPopulate` option to false to override. {}
+2025-03-14 22:57:57 [ERROR]: Cannot populate path `attachments` because it is not in your schema. Set the `strictPopulate` option to false to override. {
+  "path": "/api/lesson-contents/67d442555ff31d1966b9e457/contents",
+  "method": "POST",
+  "body": {
+    "title": "Install Flutter for Developer",
+    "description": "string string string",
+    "type": "video",
+    "status": "published"
+  },
+  "error": {
+    "path": "attachments"
+  }
+}
+2025-03-16 14:09:43 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-16 14:09:44 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-16 14:19:45 [ERROR]: Insufficient permissions {
+  "path": "/api/lessons/67d442555ff31d1966b9e457/exams",
+  "method": "POST",
+  "body": {
+    "title": "Bài kiểm tra số 1",
+    "type": "quiz",
+    "duration": 60,
+    "passing_score": 100,
+    "questions_per_exam": 10,
+    "random_questions": true,
+    "attempts_allowed": 2,
+    "status": "draft"
+  },
+  "error": {
+    "code": 403,
+    "success": false
+  }
+}
+2025-03-16 14:42:05 [ERROR]: Invalid token {
+  "path": "/api/users/profile",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-16 14:43:13 [ERROR]: Cast to ObjectId failed for value "attempts_allowed" (type string) at path "_id" for model "Course" {}
+2025-03-16 14:43:13 [ERROR]: Cast to ObjectId failed for value "attempts_allowed" (type string) at path "_id" for model "Course" {
+  "path": "/api/lessons/course/attempts_allowed",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "stringValue": "\"attempts_allowed\"",
+    "valueType": "string",
+    "kind": "ObjectId",
+    "value": "attempts_allowed",
+    "path": "_id",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"attempts_allowed\" (type string) at path \"_id\" for model \"Course\""
+  }
+}
+2025-03-16 14:44:05 [ERROR]: Course not found {
+  "code": 404
+}
+2025-03-16 14:44:05 [ERROR]: Course not found {
+  "path": "/api/lessons/course/67c05fa139552b1e8f2d900d",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-16 14:52:09 [ERROR]: Schema hasn't been registered for model "Quiz".
+Use mongoose.model(name, schema) {}
+2025-03-16 14:52:09 [ERROR]: Schema hasn't been registered for model "Quiz".
+Use mongoose.model(name, schema) {
+  "path": "/api/lessons/course/67c060782aaa9b16b68bc874",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-16 15:10:40 [ERROR]: ExamService.getExamById is not a function {}
+2025-03-16 15:10:40 [ERROR]: ExamService.getExamById is not a function {
+  "path": "/api/exams/67d68315cd905e2efaa93094",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-16 15:11:14 [ERROR]: exam.notFound {
+  "code": 404
+}
+2025-03-16 15:11:14 [ERROR]: exam.notFound {
+  "path": "/api/exams/67d68315cd905e2efaa93094/start",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-16 15:14:04 [ERROR]: Cannot read properties of null (reading 'status') {}
+2025-03-16 15:14:04 [ERROR]: Cannot read properties of null (reading 'status') {
+  "path": "/api/exams/67d68315cd905e2efaa93094/start",
+  "method": "POST",
+  "body": {},
+  "error": {}
+}
+2025-03-16 15:14:57 [ERROR]: Cannot read properties of null (reading 'status') {}
+2025-03-16 15:14:57 [ERROR]: Cannot read properties of null (reading 'status') {
+  "path": "/api/exams/67d68315cd905e2efaa93094/start",
+  "method": "POST",
+  "body": {},
+  "error": {}
+}
+2025-03-16 15:15:29 [ERROR]: Cannot read properties of null (reading 'status') {}
+2025-03-16 15:15:29 [ERROR]: Cannot read properties of null (reading 'status') {
+  "path": "/api/exams/67d68315cd905e2efaa93094/start",
+  "method": "POST",
+  "body": {},
+  "error": {}
+}
+2025-03-16 15:16:22 [ERROR]: Cannot read properties of null (reading 'status') {}
+2025-03-16 15:16:22 [ERROR]: Cannot read properties of null (reading 'status') {
+  "path": "/api/exams/67d68315cd905e2efaa93094/start",
+  "method": "POST",
+  "body": {},
+  "error": {}
+}
+2025-03-16 15:17:45 [ERROR]: Cannot read properties of null (reading 'status') {}
+2025-03-16 15:17:45 [ERROR]: Cannot read properties of null (reading 'status') {
+  "path": "/api/exams/67d68315cd905e2efaa93094/start",
+  "method": "POST",
+  "body": {},
+  "error": {}
+}
+2025-03-16 15:18:24 [ERROR]: Cannot read properties of null (reading 'status') {}
+2025-03-16 15:18:24 [ERROR]: Cannot read properties of null (reading 'status') {
+  "path": "/api/exams/67d68315cd905e2efaa93094/start",
+  "method": "POST",
+  "body": {},
+  "error": {}
+}
+2025-03-16 15:21:25 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "content": "Vui lòng nhập nội dung câu hỏi",
+      "type": "Vui lòng chọn loại câu hỏi",
+      "options": "Vui lòng nhập các đáp án"
+    }
+  }
+}
+2025-03-16 15:22:13 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "content": "Vui lòng nhập nội dung câu hỏi",
+      "type": "Vui lòng chọn loại câu hỏi",
+      "options": "Vui lòng nhập các đáp án"
+    }
+  }
+}
+2025-03-16 15:29:04 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "answers must be an array"
+    }
+  }
+}
+2025-03-16 15:30:37 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "answers must be an array"
+    }
+  }
+}
+2025-03-16 15:31:29 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n      \"text\": \"Node.js là một runtime environment cho JavaScript chạy trên server, sử dụng V8 engine\",\r\n      \"is_correct\": true\r\n    },\r\n    {\r\n      \"text\": \"Node.js là một framework của JavaScript\",\r\n      \"is_correct\": false\r\n    },\r\n    {\r\n      \"text\": \"Node.js là một ngôn ngữ lập trình\",\r\n      \"is_correct\": false\r\n    },\r\n    {\r\n      \"text\": \"Node.js chỉ dùng để phát triển ứng dụng mobile\",\r\n      \"is_correct\": false\r\n    }",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "answers must be an array"
+    }
+  }
+}
+2025-03-16 15:31:43 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Microsoft\",\"is_correct\":false}]",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "answers must be an array"
+    }
+  }
+}
+2025-03-16 15:32:35 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "answers must be an array"
+    }
+  }
+}
+2025-03-16 15:33:22 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "answers must be an array"
+    }
+  }
+}
+2025-03-16 15:34:03 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "answers must be an array"
+    }
+  }
+}
+2025-03-16 15:35:58 [ERROR]: Exam is not defined {}
+2025-03-16 15:35:58 [ERROR]: Exam is not defined {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {}
+}
+2025-03-16 15:36:29 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "Answers phải là một mảng các đáp án"
+    }
+  }
+}
+2025-03-16 15:36:37 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"answers":[{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}]}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 15:36:37 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"answers":[{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}]}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 15:38:08 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "Haha",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "Answers phải là một mảng các đáp án"
+    }
+  }
+}
+2025-03-16 15:38:12 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"answers":[{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}]}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 15:38:12 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"answers":[{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}]}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 15:38:27 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"answers":[{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}]}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 15:38:27 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"answers":[{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}]}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 15:38:31 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"answers":[{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}]}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 15:38:31 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"answers":[{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}]}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 15:43:38 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "explanation explanation explanation",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "Answers phải là một mảng các đáp án"
+    }
+  }
+}
+2025-03-16 15:44:30 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 15:44:30 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "explanation explanation explanation",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 15:47:30 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 15:47:30 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "explanation explanation explanation",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 15:48:37 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 15:48:37 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "explanation explanation explanation",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 15:49:38 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 15:49:38 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "explanation explanation explanation",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 15:51:38 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 15:51:38 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{\r\n' +
+  '  "text": "Facebook",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Google",\r\n' +
+  '  "is_correct": true\r\n' +
+  '},{\r\n' +
+  '  "text": "Microsoft",\r\n' +
+  '  "is_correct": false\r\n' +
+  '},{\r\n' +
+  '  "text": "Apple",\r\n' +
+  '  "is_correct": false\r\n' +
+  '}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "string",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\\r\\n' +\n  '  \"text\": \"Facebook\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Google\",\\r\\n' +\n  '  \"is_correct\": true\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Microsoft\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '},{\\r\\n' +\n  '  \"text\": \"Apple\",\\r\\n' +\n  '  \"is_correct\": false\\r\\n' +\n  '}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 16:08:25 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"answers\":[{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}]}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "Cấu trúc đáp án không hợp lệ"
+    }
+  }
+}
+2025-03-16 16:08:55 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 16:08:55 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 16:10:36 [ERROR]: Unexpected non-whitespace character after JSON at position 38 (line 1 column 39) {}
+2025-03-16 16:10:36 [ERROR]: Unexpected non-whitespace character after JSON at position 38 (line 1 column 39) {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {}
+}
+2025-03-16 16:11:28 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}" (type string) at path "answers" because of "ObjectParameterError" {}
+2025-03-16 16:11:28 [ERROR]: ExamQuestion validation failed: answers: Cast to embedded failed for value "{"text":"Facebook","is_correct":false},{"text":"Google","is_correct":true},{"text":"Microsoft","is_correct":false},{"text":"Apple","is_correct":false}" (type string) at path "answers" because of "ObjectParameterError" {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "answers": {
+        "stringValue": "\"{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}\"",
+        "valueType": "string",
+        "kind": "embedded",
+        "value": "{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}",
+        "path": "answers",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to embedded failed for value \"{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+      }
+    },
+    "_message": "ExamQuestion validation failed",
+    "name": "ValidationError",
+    "message": "ExamQuestion validation failed: answers: Cast to embedded failed for value \"{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}\" (type string) at path \"answers\" because of \"ObjectParameterError\""
+  }
+}
+2025-03-16 16:14:36 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "code": 400
+}
+2025-03-16 16:14:36 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-16 16:15:41 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "code": 400
+}
+2025-03-16 16:15:41 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "answers": "{\"text\":\"Facebook\",\"is_correct\":false},{\"text\":\"Google\",\"is_correct\":true},{\"text\":\"Microsoft\",\"is_correct\":false},{\"text\":\"Apple\",\"is_correct\":false}",
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-16 16:16:25 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "code": 400
+}
+2025-03-16 16:16:25 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Flutter được phát triển bởi công ty nào?",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"Facebook\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Google\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"Microsoft\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"Apple\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "string",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-16 16:18:45 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Haha",
+    "video": "",
+    "image": "",
+    "answers": "[{\"text\":\"string\",\"is_correct\":true},\"{\\n  \\\"text\\\": \\\"string\\\",\\n  \\\"is_correct\\\": false\\n}\",\"{\\n  \\\"text\\\": \\\"string\\\",\\n  \\\"is_correct\\\": false\\n}\",\"{\\n  \\\"text\\\": \\\"string\\\",\\n  \\\"is_correct\\\": false\\n}\"]",
+    "explanation": "string",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "question": "Câu hỏi phải có ít nhất 10 ký tự",
+      "answers": "Cấu trúc đáp án không hợp lệ"
+    }
+  }
+}
+2025-03-16 16:18:53 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Haha 101010",
+    "video": "",
+    "image": "",
+    "answers": "[{\"text\":\"string\",\"is_correct\":true},\"{\\n  \\\"text\\\": \\\"string\\\",\\n  \\\"is_correct\\\": false\\n}\",\"{\\n  \\\"text\\\": \\\"string\\\",\\n  \\\"is_correct\\\": false\\n}\",\"{\\n  \\\"text\\\": \\\"string\\\",\\n  \\\"is_correct\\\": false\\n}\"]",
+    "explanation": "string",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "Cấu trúc đáp án không hợp lệ"
+    }
+  }
+}
+2025-03-16 16:19:36 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "code": 400
+}
+2025-03-16 16:19:36 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Haha 101010",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"string\",\r\n  \"is_correct\": true\r\n},\r\n{\r\n  \"text\": \"string\",\r\n  \"is_correct\": false\r\n},\r\n{\r\n  \"text\": \"string\",\r\n  \"is_correct\": false\r\n},{\r\n  \"text\": \"string\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "string",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-16 16:19:45 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Haha 101010",
+    "video": "",
+    "image": "",
+    "explanation": "string",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "answers": "Vui lòng nhập các đáp án"
+    }
+  }
+}
+2025-03-16 16:19:55 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "code": 400
+}
+2025-03-16 16:19:55 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Haha 101010",
+    "video": "",
+    "image": "",
+    "answers": "{\r\n  \"text\": \"string\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"string\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "string",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-16 16:21:13 [ERROR]: ExamService.getExamById is not a function {}
+2025-03-16 16:21:13 [ERROR]: ExamService.getExamById is not a function {
+  "path": "/api/exams/67d68315cd905e2efaa93094",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-16 16:21:53 [ERROR]: exam.notFound {
+  "code": 404
+}
+2025-03-16 16:21:53 [ERROR]: exam.notFound {
+  "path": "/api/exams/67d68315cd905e2efaa93094",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-16 16:22:08 [ERROR]: exam.notFound {
+  "code": 404
+}
+2025-03-16 16:22:08 [ERROR]: exam.notFound {
+  "path": "/api/exams/67d68315cd905e2efaa93094",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-16 16:22:38 [ERROR]: Cast to ObjectId failed for value "examId" (type string) at path "_id" for model "Exam" {}
+2025-03-16 16:22:38 [ERROR]: Cast to ObjectId failed for value "examId" (type string) at path "_id" for model "Exam" {
+  "path": "/api/exams/examId/start",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "stringValue": "\"examId\"",
+    "valueType": "string",
+    "kind": "ObjectId",
+    "value": "examId",
+    "path": "_id",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"examId\" (type string) at path \"_id\" for model \"Exam\""
+  }
+}
+2025-03-16 16:26:10 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "code": 400
+}
+2025-03-16 16:26:10 [ERROR]: Định dạng JSON của answers không hợp lệ {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Haha 101010",
+    "video": "",
+    "answers": "{\r\n  \"text\": \"string\",\r\n  \"is_correct\": true\r\n},{\r\n  \"text\": \"string\",\r\n  \"is_correct\": false\r\n}",
+    "explanation": "string",
+    "points": "10"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-16 16:26:32 [ERROR]: CloudinaryService.uploadImage is not a function {}
+2025-03-16 16:26:32 [ERROR]: CloudinaryService.uploadImage is not a function {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {}
+}
+2025-03-16 16:27:12 [ERROR]: FileService is not defined {}
+2025-03-16 16:27:12 [ERROR]: FileService is not defined {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {}
+}
+2025-03-16 16:27:29 [ERROR]: CloudinaryService.uploadFile is not a function {}
+2025-03-16 16:27:29 [ERROR]: CloudinaryService.uploadFile is not a function {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {}
+}
+2025-03-16 16:30:05 [ERROR]: Missing required parameter - file {}
+2025-03-16 16:30:05 [ERROR]: Missing required parameter - file {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "message": "Missing required parameter - file",
+    "name": "Error",
+    "http_code": 400
+  }
+}
+2025-03-16 16:30:56 [ERROR]: Missing required parameter - file {}
+2025-03-16 16:30:56 [ERROR]: Missing required parameter - file {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "message": "Missing required parameter - file",
+    "name": "Error",
+    "http_code": 400
+  }
+}
+2025-03-16 16:31:13 [ERROR]: Missing required parameter - file {}
+2025-03-16 16:31:13 [ERROR]: Missing required parameter - file {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "message": "Missing required parameter - file",
+    "name": "Error",
+    "http_code": 400
+  }
+}
+2025-03-16 16:31:51 [ERROR]: Missing required parameter - file {}
+2025-03-16 16:31:51 [ERROR]: Missing required parameter - file {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "message": "Missing required parameter - file",
+    "name": "Error",
+    "http_code": 400
+  }
+}
+2025-03-16 16:32:25 [ERROR]: Missing required parameter - file {}
+2025-03-16 16:32:25 [ERROR]: Missing required parameter - file {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "message": "Missing required parameter - file",
+    "name": "Error",
+    "http_code": 400
+  }
+}
+2025-03-16 16:33:10 [ERROR]: Missing required parameter - file {}
+2025-03-16 16:33:10 [ERROR]: Missing required parameter - file {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "message": "Missing required parameter - file",
+    "name": "Error",
+    "http_code": 400
+  }
+}
+2025-03-16 16:34:40 [ERROR]: CloudinaryFile validation failed: owner_type: `ExamQuestion` is not a valid enum value for path `owner_type`. {}
+2025-03-16 16:34:40 [ERROR]: CloudinaryFile validation failed: owner_type: `ExamQuestion` is not a valid enum value for path `owner_type`. {
+  "path": "/api/exams/67d68315cd905e2efaa93094/questions",
+  "method": "POST",
+  "body": {
+    "question": "Câu lệnh nào được sử dụng để chạy ứng dụng Flutter trên thiết bị thật hoặc giả lập?",
+    "answers": [
+      {
+        "text": "flutter create my_app",
+        "is_correct": false
+      },
+      {
+        "text": "flutter run",
+        "is_correct": true
+      },
+      {
+        "text": "flutter build",
+        "is_correct": false
+      },
+      {
+        "text": "flutter install",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Flutter là một framework phát triển ứng dụng di động được phát triển bởi Google",
+    "points": "10"
+  },
+  "error": {
+    "errors": {
+      "owner_type": {
+        "name": "ValidatorError",
+        "message": "`ExamQuestion` is not a valid enum value for path `owner_type`.",
+        "properties": {
+          "message": "`ExamQuestion` is not a valid enum value for path `owner_type`.",
+          "type": "enum",
+          "enumValues": [
+            "User",
+            "Course",
+            "Exam",
+            "Lesson"
+          ],
+          "path": "owner_type",
+          "value": "ExamQuestion"
+        },
+        "kind": "enum",
+        "path": "owner_type",
+        "value": "ExamQuestion"
+      }
+    },
+    "_message": "CloudinaryFile validation failed",
+    "name": "ValidationError",
+    "message": "CloudinaryFile validation failed: owner_type: `ExamQuestion` is not a valid enum value for path `owner_type`."
+  }
+}
+2025-03-16 16:36:30 [ERROR]: Cannot populate path `image_id` because it is not in your schema. Set the `strictPopulate` option to false to override. {}
+2025-03-16 16:36:30 [ERROR]: Cannot populate path `image_id` because it is not in your schema. Set the `strictPopulate` option to false to override. {
+  "path": "/api/exams/67d68315cd905e2efaa93094/start",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "path": "image_id"
+  }
+}
+2025-03-16 17:17:25 [ERROR]: exam.notFound {
+  "code": 404
+}
+2025-03-16 17:17:25 [ERROR]: exam.notFound {
+  "path": "/api/exams/67d68315cd905e2efaa93094/submit",
+  "method": "POST",
+  "body": {
+    "answers": {}
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-18 13:04:08 [ERROR]: exam.notFound {
+  "code": 404
+}
+2025-03-18 13:04:08 [ERROR]: exam.notFound {
+  "path": "/api/exams/67d68315cd905e2efaa93094/submit",
+  "method": "POST",
+  "body": {
+    "answers": {
+      "67d6991a0bf17c15192f8a90": "67d6991a0bf17c15192f8a91",
+      "67d69b59be3fbec20a0e24f2": "67d69b59be3fbec20a0e24f6",
+      "67d696c558487b1129864862": "67d696c558487b1129864864",
+      "67d698bf0bf17c15192f8a7e": "67d698bf0bf17c15192f8a81",
+      "67d698fc0bf17c15192f8a87": "67d698fc0bf17c15192f8a88"
+    }
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-18 14:56:48 [ERROR]: Invalid token {
+  "path": "/api/progress/course/aa",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-18 15:09:33 [ERROR]: Schema hasn't been registered for model "Comment".
+Use mongoose.model(name, schema) {}
+2025-03-18 15:09:33 [ERROR]: Schema hasn't been registered for model "Comment".
+Use mongoose.model(name, schema) {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874",
+  "method": "GET",
+  "body": {},
+  "error": {}
+}
+2025-03-18 15:31:08 [ERROR]: UserProgressService.markLessonComplete is not a function {}
+2025-03-18 15:31:08 [ERROR]: UserProgressService.markLessonComplete is not a function {
+  "path": "/api/progress/lesson/67d442555ff31d1966b9e457/complete",
+  "method": "POST",
+  "body": {},
+  "error": {}
+}
+2025-03-18 15:31:34 [ERROR]: UserProgressService.markLessonComplete is not a function {}
+2025-03-18 15:31:34 [ERROR]: UserProgressService.markLessonComplete is not a function {
+  "path": "/api/progress/lesson/67d442555ff31d1966b9e457/complete",
+  "method": "POST",
+  "body": {},
+  "error": {}
+}
+2025-03-18 15:55:43 [ERROR]: Invalid token {
+  "path": "/api/progress/content/67d45259a3168588ee9b5953/complete",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-18 16:08:08 [ERROR]: Invalid token {
+  "path": "/api/progress/content/aaaaaa/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-18 16:08:48 [ERROR]: Cast to ObjectId failed for value "25" (type number) at path "enrolled_courses" because of "BSONError" {}
+2025-03-18 16:08:48 [ERROR]: Cast to ObjectId failed for value "25" (type number) at path "enrolled_courses" because of "BSONError" {
+  "path": "/api/progress/content/67d45259a3168588ee9b5953/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "stringValue": "\"25\"",
+    "valueType": "number",
+    "kind": "ObjectId",
+    "value": 25,
+    "path": "enrolled_courses",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"25\" (type number) at path \"enrolled_courses\" because of \"BSONError\""
+  }
+}
+2025-03-18 16:11:19 [ERROR]: Cast to ObjectId failed for value "25" (type number) at path "enrolled_courses" because of "BSONError" {}
+2025-03-18 16:11:19 [ERROR]: Cast to ObjectId failed for value "25" (type number) at path "enrolled_courses" because of "BSONError" {
+  "path": "/api/progress/content/67d45259a3168588ee9b5953/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "stringValue": "\"25\"",
+    "valueType": "number",
+    "kind": "ObjectId",
+    "value": 25,
+    "path": "enrolled_courses",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"25\" (type number) at path \"enrolled_courses\" because of \"BSONError\""
+  }
+}
+2025-03-18 16:13:36 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "code": 11000
+}
+2025-03-18 16:13:36 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "path": "/api/progress/content/67d4593ca3168588ee9b5962/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 11000,
+    "codeName": "DuplicateKey",
+    "keyPattern": {
+      "user_id": 1,
+      "lesson_id": 1
+    },
+    "keyValue": {
+      "user_id": "67c05fa139552b1e8f2d900d",
+      "lesson_id": "67d442555ff31d1966b9e457"
+    },
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7483075202893479941"
+      },
+      "signature": {
+        "hash": "WGpTF0Un9ZR8LModDN7gi3RNpZM=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7483075202893479941"
+    }
+  }
+}
+2025-03-18 16:14:33 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "code": 11000
+}
+2025-03-18 16:14:33 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "path": "/api/progress/content/67d4593ca3168588ee9b5962/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 11000,
+    "codeName": "DuplicateKey",
+    "keyPattern": {
+      "user_id": 1,
+      "lesson_id": 1
+    },
+    "keyValue": {
+      "user_id": "67c05fa139552b1e8f2d900d",
+      "lesson_id": "67d442555ff31d1966b9e457"
+    },
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7483075447706615835"
+      },
+      "signature": {
+        "hash": "gG5tKWM5ft/+HL6kUVbjRQVd+eQ=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7483075447706615835"
+    }
+  }
+}
+2025-03-18 16:16:33 [ERROR]: Cast to ObjectId failed for value "25" (type number) at path "enrolled_courses" because of "BSONError" {}
+2025-03-18 16:16:33 [ERROR]: Cast to ObjectId failed for value "25" (type number) at path "enrolled_courses" because of "BSONError" {
+  "path": "/api/progress/content/67d45259a3168588ee9b5953/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "stringValue": "\"25\"",
+    "valueType": "number",
+    "kind": "ObjectId",
+    "value": 25,
+    "path": "enrolled_courses",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"25\" (type number) at path \"enrolled_courses\" because of \"BSONError\""
+  }
+}
+2025-03-18 16:20:31 [ERROR]: Cast to ObjectId failed for value "25" (type number) at path "enrolled_courses" because of "BSONError" {}
+2025-03-18 16:20:31 [ERROR]: Cast to ObjectId failed for value "25" (type number) at path "enrolled_courses" because of "BSONError" {
+  "path": "/api/progress/content/67d45259a3168588ee9b5953/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "stringValue": "\"25\"",
+    "valueType": "number",
+    "kind": "ObjectId",
+    "value": 25,
+    "path": "enrolled_courses",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"25\" (type number) at path \"enrolled_courses\" because of \"BSONError\""
+  }
+}
+2025-03-18 16:23:10 [ERROR]: course.notEnrolled {
+  "code": 400
+}
+2025-03-18 16:23:10 [ERROR]: course.notEnrolled {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-18 16:23:19 [ERROR]: course.notEnrolled {
+  "code": 400
+}
+2025-03-18 16:23:19 [ERROR]: course.notEnrolled {
+  "path": "/api/progress/content/67d45259a3168588ee9b5953/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-18 16:24:50 [ERROR]: course.notEnrolled {
+  "code": 400
+}
+2025-03-18 16:24:50 [ERROR]: course.notEnrolled {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-18 16:30:44 [ERROR]: course.notEnrolled {
+  "code": 400
+}
+2025-03-18 16:30:44 [ERROR]: course.notEnrolled {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-18 16:31:37 [ERROR]: course.notEnrolled {
+  "code": 400
+}
+2025-03-18 16:31:37 [ERROR]: course.notEnrolled {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-18 16:35:36 [ERROR]: course.notEnrolled {
+  "code": 400
+}
+2025-03-18 16:35:36 [ERROR]: course.notEnrolled {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-18 16:40:44 [ERROR]: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "code": 11000
+}
+2025-03-18 16:40:44 [ERROR]: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874/content/67d4593ca3168588ee9b5962",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "user_id": 1,
+      "lesson_id": 1
+    },
+    "keyValue": {
+      "user_id": "67c05fa139552b1e8f2d900d",
+      "lesson_id": "67d442555ff31d1966b9e457"
+    }
+  }
+}
+2025-03-18 16:42:46 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "code": 11000
+}
+2025-03-18 16:42:46 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "path": "/api/progress/content/67d4593ca3168588ee9b5962/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 11000,
+    "codeName": "DuplicateKey",
+    "keyPattern": {
+      "user_id": 1,
+      "lesson_id": 1
+    },
+    "keyValue": {
+      "user_id": "67c05fa139552b1e8f2d900d",
+      "lesson_id": "67d442555ff31d1966b9e457"
+    },
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7483082719086247958"
+      },
+      "signature": {
+        "hash": "mL7UuKmBcPe55VNlFwmHuw2tv8c=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7483082719086247958"
+    }
+  }
+}
+2025-03-18 16:42:52 [ERROR]: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "code": 11000
+}
+2025-03-18 16:42:52 [ERROR]: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874/content/67d4593ca3168588ee9b5962",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "user_id": 1,
+      "lesson_id": 1
+    },
+    "keyValue": {
+      "user_id": "67c05fa139552b1e8f2d900d",
+      "lesson_id": "67d442555ff31d1966b9e457"
+    }
+  }
+}
+2025-03-18 16:46:19 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "code": 11000
+}
+2025-03-18 16:46:19 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "path": "/api/progress/content/67d4593ca3168588ee9b5962/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 11000,
+    "codeName": "DuplicateKey",
+    "keyPattern": {
+      "user_id": 1,
+      "lesson_id": 1
+    },
+    "keyValue": {
+      "user_id": "67c05fa139552b1e8f2d900d",
+      "lesson_id": "67d442555ff31d1966b9e457"
+    },
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7483083633914281993"
+      },
+      "signature": {
+        "hash": "t2O9tK83UA0rw5ue82tgUsrCxuM=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7483083633914281993"
+    }
+  }
+}
+2025-03-18 16:46:45 [ERROR]: progress.alreadyExists {
+  "code": 400
+}
+2025-03-18 16:46:45 [ERROR]: progress.alreadyExists {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874/content/67d4593ca3168588ee9b5962",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-18 16:48:47 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "code": 11000
+}
+2025-03-18 16:48:47 [ERROR]: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecourse.userprogresses index: user_id_1_lesson_id_1 dup key: { user_id: ObjectId('67c05fa139552b1e8f2d900d'), lesson_id: ObjectId('67d442555ff31d1966b9e457') } {
+  "path": "/api/progress/content/67d4593ca3168588ee9b5962/complete",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "ok": 0,
+    "code": 11000,
+    "codeName": "DuplicateKey",
+    "keyPattern": {
+      "user_id": 1,
+      "lesson_id": 1
+    },
+    "keyValue": {
+      "user_id": "67c05fa139552b1e8f2d900d",
+      "lesson_id": "67d442555ff31d1966b9e457"
+    },
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7483084269569441820"
+      },
+      "signature": {
+        "hash": "+Ow8eTBP6Y7aF7MFgsfl4pQw/Lo=",
+        "keyId": {
+          "low": 22,
+          "high": 1729796697,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7483084269569441820"
+    }
+  }
+}
+2025-03-18 16:50:11 [ERROR]: progress.alreadyExists {
+  "code": 400
+}
+2025-03-18 16:50:11 [ERROR]: progress.alreadyExists {
+  "path": "/api/progress/course/67c060782aaa9b16b68bc874/content/67d4593ca3168588ee9b5962",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-18 17:23:45 [ERROR]: Course not found {
+  "code": 404
+}
+2025-03-18 17:23:45 [ERROR]: Course not found {
+  "path": "/api/courses/67d949ae49b4535d7bd821c5",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-18 17:23:45 [ERROR]: Course not found {
+  "code": 404
+}
+2025-03-18 17:23:45 [ERROR]: Course not found {
+  "path": "/api/lessons/course/67d949ae49b4535d7bd821c5",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-18 17:23:45 [ERROR]: Course not found {
+  "code": 404
+}
+2025-03-18 17:23:45 [ERROR]: Course not found {
+  "path": "/api/progress/course/67d949ae49b4535d7bd821c5",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-18 22:17:33 [ERROR]: cart.courseAlreadyInCart {
+  "code": 400
+}
+2025-03-18 22:17:33 [ERROR]: cart.courseAlreadyInCart {
+  "path": "/api/cart/add",
+  "method": "POST",
+  "body": {
+    "course_id": "67c16bc4038b6c54ebbaf111"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-19 17:10:40 [ERROR]: Invalid token {
+  "path": "/api/users/streak/increment",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-19 22:43:59 [ERROR]: Course not found {
+  "code": 404
+}
+2025-03-19 22:43:59 [ERROR]: Course not found {
+  "path": "/api/lessons",
+  "method": "POST",
+  "body": {
+    "course_id": "67c05fa139552b1e8f2d900d",
+    "title": "Variables in Flutter",
+    "description": "Mô tả chi tiết về bài học đầu tiên của khóa học",
+    "is_free": false,
+    "status": "published"
+  },
+  "error": {
+    "code": 404,
+    "success": false
+  }
+}
+2025-03-19 22:50:32 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 11:49:14 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 11:49:27 [ERROR]: Invalid token {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 11:52:29 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "60d3b41f7c213e3ab47892b1,60d3b41f7c213e3ab47892b2"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 11:52:53 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "67c1887af24c9b367ce6dde9"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 11:53:00 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "67c1887af24c9b367ce6dde9"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 11:57:51 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": "[67c1887af24c9b367ce6dde9]"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "categories": "Danh mục không hợp lệ"
+    }
+  }
+}
+2025-03-21 12:02:27 [ERROR]: Invalid token {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 12:02:51 [ERROR]: Invalid token {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 12:02:57 [ERROR]: E11000 duplicate key error collection: ecourse.coursecategories index: slug_1 dup key: { slug: null } {
+  "code": 11000
+}
+2025-03-21 12:02:57 [ERROR]: E11000 duplicate key error collection: ecourse.coursecategories index: slug_1 dup key: { slug: null } {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Mobile",
+    "description": "Mobile Application",
+    "status": "active",
+    "order": "0"
+  },
+  "error": {
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "slug": 1
+    },
+    "keyValue": {
+      "slug": null
+    }
+  }
+}
+2025-03-21 12:05:17 [ERROR]: One or more categories are invalid {
+  "code": 400
+}
+2025-03-21 12:05:17 [ERROR]: One or more categories are invalid {
+  "path": "/api/courses/67c060782aaa9b16b68bc874",
+  "method": "PUT",
+  "body": {
+    "categories": [
+      "67c060782aaa9b16b68bc874"
+    ]
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-21 13:13:30 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 13:13:31 [ERROR]: Invalid token {
+  "path": "/api/courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 14:22:01 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {}
+2025-03-21 14:22:01 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/my-courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "stringValue": "\"my-courses\"",
+    "valueType": "string",
+    "kind": "ObjectId",
+    "value": "my-courses",
+    "path": "_id",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"my-courses\" (type string) at path \"_id\" for model \"Course\""
+  }
+}
+2025-03-21 14:22:07 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {}
+2025-03-21 14:22:07 [ERROR]: Cast to ObjectId failed for value "my-courses" (type string) at path "_id" for model "Course" {
+  "path": "/api/courses/my-courses",
+  "method": "GET",
+  "body": {},
+  "error": {
+    "stringValue": "\"my-courses\"",
+    "valueType": "string",
+    "kind": "ObjectId",
+    "value": "my-courses",
+    "path": "_id",
+    "reason": {},
+    "name": "CastError",
+    "message": "Cast to ObjectId failed for value \"my-courses\" (type string) at path \"_id\" for model \"Course\""
+  }
+}
+2025-03-21 15:46:58 [ERROR]: Invalid email or password {
+  "code": 401
+}
+2025-03-21 15:46:58 [ERROR]: Invalid email or password {
+  "path": "/api/auth/login",
+  "method": "POST",
+  "body": {
+    "email": "nguyenngoccattuong04554@gmail.com",
+    "password": "Code26102003#!@"
+  },
+  "error": {
+    "code": 401,
+    "success": false
+  }
+}
+2025-03-21 16:15:09 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Python",
+    "description": "Python",
+    "parent_id": "",
+    "status": "active",
+    "order": "0",
+    "icon": ""
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "description": "Mô tả phải có ít nhất 10 ký tự",
+      "parent_id": "ID danh mục cha không được để trống"
+    }
+  }
+}
+2025-03-21 16:15:18 [ERROR]: Dữ liệu không hợp lệ {
+  "path": "/api/categories",
+  "method": "POST",
+  "body": {
+    "name": "Python",
+    "description": "Python Programing",
+    "parent_id": "",
+    "status": "active",
+    "order": "0",
+    "icon": ""
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": {
+      "parent_id": "ID danh mục cha không được để trống"
+    }
+  }
+}
+2025-03-21 17:51:15 [ERROR]: Order.paginate is not a function {}
+2025-03-21 17:51:15 [ERROR]: Order.paginate is not a function {
+  "path": "/api/orders",
+  "method": "GET",
+  "body": {},
+  "error": {}
 }

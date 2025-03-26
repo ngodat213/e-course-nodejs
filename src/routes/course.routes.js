@@ -9,6 +9,9 @@ const {
   updateCourseSchema,
 } = require("../validators/course.validator");
 
+// Auth required routes
+router.use(verifyToken);
+
 /**
  * @route GET /api/courses
  * @desc Lấy danh sách khóa học
@@ -16,6 +19,7 @@ const {
  * @query {page, limit, search, sort}
  */
 router.get("/", (req, res, next) => {
+
   CourseController.getAll(req, res, next);
 });
 
@@ -28,9 +32,6 @@ router.get("/", (req, res, next) => {
 router.get("/:id", (req, res, next) => {
   CourseController.getById(req, res, next);
 });
-
-// Auth required routes
-router.use(verifyToken);
 
 /**
  * @route GET /api/courses/my/enrolled

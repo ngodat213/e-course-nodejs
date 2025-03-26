@@ -86,15 +86,23 @@
  *       - bearerAuth: []
  *     parameters:
  *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [pending, paid, failed, refunded, cancelled]
+ *         description: Lọc theo trạng thái đơn hàng
+ *       - in: query
  *         name: page
  *         schema:
  *           type: integer
  *           default: 1
+ *         description: Số trang
  *       - in: query
  *         name: limit
  *         schema:
  *           type: integer
  *           default: 10
+ *         description: Số lượng items mỗi trang
  *     responses:
  *       200:
  *         description: Thành công
@@ -103,6 +111,8 @@
  *             schema:
  *               type: object
  *               properties:
+ *                 success:
+ *                   type: boolean
  *                 data:
  *                   type: array
  *                   items:

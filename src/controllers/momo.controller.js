@@ -35,6 +35,14 @@ class MoMoController extends BaseController {
 
   async processIPN(req, res, next) {
     try {
+      // Kiểm tra xem có cần bỏ qua xác thực chữ ký không
+      if (process.env.MOMO_SKIP_SIGNATURE_VERIFY === 'true') {
+        // Sử dụng phương thức đơn giản nếu bỏ qua xác thực
+        const result = await MoMoService.processSimpleIPN(req.body);
+        return this.successResponse(res, result);
+      }
+      
+      // Sử dụng phương thức xác thực đầy đủ
       const result = await MoMoService.processPaymentResult(req.body);
       this.successResponse(res, result);
     } catch (error) {
@@ -51,6 +59,15 @@ class MoMoController extends BaseController {
     }
   }
   
+  async forceProcessPayment(req, res, next) {
+    try {
+      const { orderId, status } = req.body;
+      const result = await MoMoService.forceProcessPayment(orderId, status);
+      this.successResponse(res, result);
+    } catch (error) {
+      this.handleError(error, next);
+    }
+  }
 }
 
 module.exports = new MoMoController(); 

@@ -12,19 +12,17 @@ const lessonSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    description: String,
-    type: {
+    description: {
       type: String,
-      enum: ["video", "document", "exam"],
-      required: true,
+      trim: true,
+    },
+    order: {
+      type: Number,
+      default: 0,
     },
     duration: {
       type: Number,
       default: 0,
-    },
-    order: {
-      type: Number,
-      required: true,
     },
     is_free: {
       type: Boolean,
@@ -34,66 +32,84 @@ const lessonSchema = new mongoose.Schema(
       type: String,
       enum: ["draft", "published", "archived"],
       default: "draft",
-    },
-    video: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "CloudinaryFile",
-    },
-    quiz: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Quiz",
-    },
-    attachments: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "CloudinaryFile",
-      },
-    ],
-    requirements: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Lesson",
-        required: false,
-      },
-    ],
-    comments: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Comment",
-      },
-    ],
+    }
   },
   {
     timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
   }
 );
 
-// Indexes
-lessonSchema.index({ course_id: 1, order: 1 });
-lessonSchema.index({ title: "text" });
-
-// Middleware để validate lesson type với course type
-lessonSchema.pre("save", async function (next) {
-  const Course = mongoose.model("Course");
-  const course = await Course.findById(this.course_id);
-  if (course.type === "quiz" && this.type !== "exam") {
-    throw new Error("Quiz courses can only contain exam lessons");
+// Middleware để tự động set order trước khi lưu
+lessonSchema.pre('save', async function(next) {
+  if (this.isNew) { // Chỉ thực hiện khi tạo mới lesson
+    try {
+      const lastLesson = await this.constructor.findOne(
+        { course_id: this.course_id },
+        { order: 1 },
+        { sort: { order: -1 } }
+      );
+      
+      this.order = lastLesson ? lastLesson.order + 1 : 1;
+    } catch (error) {
+      return next(error);
+    }
   }
-
   next();
 });
+
+// Thêm method để cập nhật thứ tự các lesson
+lessonSchema.statics.reorderLessons = async function(courseId, lessonId, newOrder) {
+  const lessons = await this.find({ course_id: courseId }).sort({ order: 1 });
+  const lesson = lessons.find(l => l._id.toString() === lessonId);
+  const oldOrder = lesson.order;
+
+  if (newOrder === oldOrder) return;
+
+  if (newOrder > oldOrder) {
+    // Di chuyển xuống
+    await this.updateMany(
+      { 
+        course_id: courseId,
+        order: { $gt: oldOrder, $lte: newOrder }
+      },
+      { $inc: { order: -1 } }
+    );
+  } else {
+    // Di chuyển lên
+    await this.updateMany(
+      {
+        course_id: courseId,
+        order: { $gte: newOrder, $lt: oldOrder }
+      },
+      { $inc: { order: 1 } }
+    );
+  }
+
+  lesson.order = newOrder;
+  await lesson.save();
+};
+
+// Virtual populate cho contents
+lessonSchema.virtual("contents", {
+  ref: "LessonContent",
+  localField: "_id",
+  foreignField: "lesson_id",
+});
+
+// Indexes
+lessonSchema.index({ course_id: 1 });
+lessonSchema.index({ title: "text" });
+lessonSchema.index({ status: 1 });
 
 // Middleware để cập nhật course khi thêm/sửa lesson
 lessonSchema.post("save", async function () {
   const Course = mongoose.model("Course");
-
   if (this.status === "published") {
     await Course.findByIdAndUpdate(this.course_id, {
-      $inc: {
-        lesson_count: 1,
-        total_duration: this.duration || 0,
-      },
-      $push: { lessons: this._id }, 
+      $inc: { lesson_count: 1 },
+      $push: { lessons: this._id }
     });
   }
 });
@@ -103,8 +119,8 @@ lessonSchema.post("remove", async function () {
   const Course = mongoose.model("Course");
   if (this.status === "published") {
     await Course.findByIdAndUpdate(this.course_id, {
-      $inc: { lesson_count: -1, total_duration: -this.duration },
-      $pull: { lessons: this._id },
+      $inc: { lesson_count: -1 },
+      $pull: { lessons: this._id }
     });
   }
 });

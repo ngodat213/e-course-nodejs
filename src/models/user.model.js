@@ -83,7 +83,7 @@ const userSchema = new mongoose.Schema(
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Course",
-      },
+      }
     ],
     teaching_courses: [
       {
@@ -108,7 +108,18 @@ const userSchema = new mongoose.Schema(
         ref: "Course",
       },
     ],
-    
+    current_streak: {
+      type: Number,
+      default: 0
+    },
+    longest_streak: {
+      type: Number,
+      default: 0
+    },
+    last_streak_date: {
+      type: Date,
+      default: null
+    }
   },
   {
     timestamps: {

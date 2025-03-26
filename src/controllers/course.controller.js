@@ -1,7 +1,6 @@
 const BaseController = require('./base.controller');
 const CourseService = require('../services/course.service');
 const { success } = require("../utils/logger");
-const CloudinaryService = require("../services/cloudinary.service");
 
 class CourseController extends BaseController {
   constructor() {
@@ -10,7 +9,7 @@ class CourseController extends BaseController {
 
   async getAll(req, res, next) {
     try {
-      const courses = await CourseService.getAll(req.query);
+      const courses = await CourseService.getAll(req.query, req.user.id);
       this.successResponse(res, courses);
     } catch (error) {
       this.handleError(error, next);

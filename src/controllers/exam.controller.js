@@ -4,7 +4,7 @@ const ExamService = require("../services/exam.service");
 class ExamController extends BaseController {
   async createExam(req, res, next) {
     try {
-      const exam = await ExamService.createExam(req.body);
+      const exam = await ExamService.create(req.params.lessonId, req.body);
       this.createdResponse(res, exam);
     } catch (error) {
       this.handleError(error, next);
@@ -13,8 +13,8 @@ class ExamController extends BaseController {
 
   async getExam(req, res, next) {
     try {
-      const exam = await ExamService.getExamById(
-        req.params.id,
+      const exam = await ExamService.findById(
+        req.params.examId,
         req.query.include_questions === "true"
       );
       this.successResponse(res, exam);
@@ -43,7 +43,7 @@ class ExamController extends BaseController {
 
   async startExam(req, res, next) {
     try {
-      const examData = await ExamService.startExam(req.params.id, req.user.id);
+      const examData = await ExamService.startExam(req.user.id, req.params.examId);
       this.successResponse(res, examData);
     } catch (error) {
       this.handleError(error, next);
@@ -53,7 +53,7 @@ class ExamController extends BaseController {
   async submitExam(req, res, next) {
     try {
       const result = await ExamService.submitExam(
-        req.params.id,
+        req.params.examId,
         req.user.id,
         req.body.answers
       );
