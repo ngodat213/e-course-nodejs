@@ -3423,3 +3423,18 @@ Use mongoose.model(name, schema) {
   "body": {},
   "error": {}
 }
+2025-03-26 14:07:22 [ERROR]: conversation.needPurchase {
+  "code": 400
+}
+2025-03-26 14:07:22 [ERROR]: conversation.needPurchase {
+  "path": "/api/conversations/join-group",
+  "method": "POST",
+  "body": {
+    "courseId": "67c060782aaa9b16b68bc874"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}

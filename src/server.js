@@ -57,6 +57,7 @@ const cartRoutes = require("./routes/cart.routes");
 const userProgressRoutes = require('./routes/user_progress.routes');
 const lessonContentRoutes = require('./routes/lesson_content.routes');
 const examRoutes = require('./routes/exam.routes');
+const conversationRoutes = require('./routes/conversation.routes');
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/courses", courseRoutes);
@@ -69,6 +70,7 @@ app.use("/api/delete-requests", deleteRequestRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/cart", cartRoutes);
 app.use('/api/progress', userProgressRoutes);
+app.use('/api/conversations', conversationRoutes);
 
 // Swagger UI setup
 const swaggerUi = require("swagger-ui-express");
