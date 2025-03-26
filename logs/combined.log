@@ -4585,3 +4585,57 @@ Use mongoose.model(name, schema) {
 2025-03-22 00:00:08 [INFO]: User logged in {
   "email": "ngodat.it213@gmail.com"
 }
+2025-03-26 12:42:45 [INFO]: Server is running on port 3333 
+2025-03-26 12:42:45 [INFO]: Environment: development 
+2025-03-26 12:42:45 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-26 12:42:48 [INFO]: Connected to MongoDB 
+2025-03-26 12:50:57 [INFO]: MongoDB disconnected 
+2025-03-26 13:02:56 [INFO]: MongoDB disconnected 
+2025-03-26 13:07:04 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-26 13:09:17 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-26 13:09:29 [INFO]: User connected: 67c05fa139552b1e8f2d900d 
+2025-03-26 13:11:36 [INFO]: User disconnected: 67c05fa139552b1e8f2d900d 
+2025-03-26 13:11:40 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-26 13:11:43 [INFO]: User connected: 67c05fa139552b1e8f2d900d 
+2025-03-26 13:38:58 [INFO]: User disconnected: 67c05fa139552b1e8f2d900d 
+2025-03-26 13:38:58 [INFO]: MongoDB disconnected 
+2025-03-26 13:39:30 [INFO]: User connected: 67c05fa139552b1e8f2d900d 
+2025-03-26 14:05:58 [INFO]: Server is running on port 3333 
+2025-03-26 14:05:58 [INFO]: Environment: development 
+2025-03-26 14:05:58 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-26 14:06:03 [INFO]: Connected to MongoDB 
+2025-03-26 14:06:09 [INFO]: Socket connected: 3jw4FgX6TsC9ddW8AAAB for user: 67c05fa139552b1e8f2d900d 
+2025-03-26 14:06:33 [INFO]: User logged in {
+  "email": "ngodat.it213@gmail.com"
+}
+2025-03-26 14:07:22 [ERROR]: conversation.needPurchase {
+  "code": 400
+}
+2025-03-26 14:07:22 [ERROR]: conversation.needPurchase {
+  "path": "/api/conversations/join-group",
+  "method": "POST",
+  "body": {
+    "courseId": "67c060782aaa9b16b68bc874"
+  },
+  "error": {
+    "code": 400,
+    "success": false,
+    "error": null
+  }
+}
+2025-03-26 14:15:37 [INFO]: Server is running on port 3333 
+2025-03-26 14:15:37 [INFO]: Environment: development 
+2025-03-26 14:15:37 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-26 14:15:44 [INFO]: Connected to MongoDB 
+2025-03-26 14:15:48 [INFO]: Socket connected: qMzMZmlJsJefcNKdAAAB for user: 67c05fa139552b1e8f2d900d 
+2025-03-26 14:19:57 [INFO]: Server is running on port 3333 
+2025-03-26 14:19:57 [INFO]: Environment: development 
+2025-03-26 14:19:57 [INFO]: API Documentation: http://localhost:3333/api-docs 
+2025-03-26 14:20:03 [INFO]: Connected to MongoDB 
+2025-03-26 14:20:07 [INFO]: Socket connected: CJh3rFRhCddowh3TAAAB for user: 67c05fa139552b1e8f2d900d 

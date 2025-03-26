@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
-const User = require("../../models/user.model");
-const { error: logger } = require("../../utils/logger");
+const User = require("../models/user.model");
+const { error: logger } = require("../utils/logger");
 
 const verifyToken = async (socket, next) => {
   try {

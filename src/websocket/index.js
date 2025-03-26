@@ -1,5 +1,6 @@
 const { Server } = require('socket.io');
-const authMiddleware = require('./middleware/auth.middleware');
+const authMiddleware = require('../middleware/socket.middleware');
+const ChatHandler = require('./handlers/chat.handler');
 const { info, error, debug } = require('../utils/logger');
 
 function initializeWebSocket(server) {
@@ -34,6 +35,9 @@ function initializeWebSocket(server) {
     
     io.emit('users:online', Array.from(onlineUsers.keys()));
 
+    // Initialize chat handler
+    new ChatHandler(io, socket);
+
     // Add ping-pong mechanism to ensure connection is alive
     socket.on('ping', () => {
       socket.emit('pong', { timestamp: Date.now() });
@@ -46,6 +50,11 @@ function initializeWebSocket(server) {
       io.emit('users:online', Array.from(onlineUsers.keys()));
     });
   });
+
+  // Helper method để lấy socketId theo userId
+  io.getSocketIdByUserId = (userId) => {
+    return onlineUsers.get(userId);
+  };
 
   return io;
 }
