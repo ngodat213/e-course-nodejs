@@ -7,7 +7,9 @@ const i18next = require("./config/i18n");
 const errorMiddleware = require("./middleware/error.middleware");
 const responseEnhancer = require("./utils/response.helper");
 const { info, error, debug } = require("./utils/logger");
+const http = require('http');
 
+// Khởi tạo express app trước
 const app = express();
 
 // Kết nối database
@@ -97,15 +99,22 @@ debug("Swagger documentation enabled");
 // Error handling
 app.use(errorMiddleware);
 
+// Tạo HTTP server sau khi đã có app
+const server = http.createServer(app);
+
 // Khởi động server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   info(`Server is running on port ${PORT}`);
   info(`Environment: ${process.env.NODE_ENV}`);
   if (process.env.NODE_ENV === "development") {
     info(`API Documentation: http://localhost:${PORT}/api-docs`);
   }
 });
+
+// Initialize WebSocket
+const initializeWebSocket = require('./websocket');
+initializeWebSocket(server);
 
 // Xử lý lỗi không được bắt
 process.on("unhandledRejection", (err) => {
