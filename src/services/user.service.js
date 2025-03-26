@@ -746,6 +746,40 @@ class UserService {
       longest_streak: user.longest_streak
     };
   }
+
+  async updateFcmToken(userId, fcmToken, deviceInfo = null) {
+    const user = await User.findById(userId);
+    if (!user) {
+      throw new NotFoundError(i18next.t("user.notFound"));
+    }
+
+    // Kiểm tra token đã tồn tại chưa
+    const existingTokenIndex = user.fcm_tokens.findIndex(
+      item => item.token === fcmToken
+    );
+
+    if (existingTokenIndex >= 0) {
+      // Cập nhật token đã tồn tại
+      user.fcm_tokens[existingTokenIndex].last_used = new Date();
+      if (deviceInfo) {
+        user.fcm_tokens[existingTokenIndex].device_info = deviceInfo;
+      }
+    } else {
+      // Thêm token mới
+      user.fcm_tokens.push({
+        token: fcmToken,
+        device_info: deviceInfo,
+        last_used: new Date()
+      });
+    }
+
+    await user.save();
+    
+    return {
+      message: i18next.t("user.fcmTokenUpdated", { defaultValue: "FCM token updated successfully" }),
+      token_count: user.fcm_tokens.length
+    };
+  }
 }
 
 module.exports = new UserService();

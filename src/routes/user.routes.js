@@ -151,4 +151,13 @@ router.get("/streak", verifyToken, (req, res, next) => {
   UserController.getStreak(req, res, next);
 });
 
+/**
+ * @route POST /api/users/fcm-token
+ * @desc Cập nhật FCM token cho user
+ * @access Private
+ */
+router.post("/fcm-token", verifyToken, (req, res, next) => {
+  UserController.updateFcmToken(req, res, next);
+});
+
 module.exports = router;
