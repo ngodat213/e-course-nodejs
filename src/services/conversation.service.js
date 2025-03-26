@@ -6,6 +6,7 @@ const { NotFoundError, BadRequestError } = require("../utils/errors");
 const i18next = require("i18next");
 const chatCacheService = require('./chat_cache.service');
 const { debug } = require('../utils/logger');
+const FileService = require('./file.service');
 
 class ConversationService {
   async getOrCreateDirectConversation(userId1, userId2) {
@@ -241,6 +242,60 @@ class ConversationService {
     );
     
     return { success: true };
+  }
+
+  async addImageMessage(conversationId, senderId, imageFile, caption = '') {
+    const conversation = await Conversation.findById(conversationId);
+    if (!conversation) {
+      throw new NotFoundError(i18next.t('conversation.notFound'));
+    }
+    
+    const isParticipant = conversation.participants.some(
+      p => p.user.toString() === senderId.toString()
+    );
+    
+    if (!isParticipant) {
+      throw new BadRequestError(i18next.t('conversation.notMember'));
+    }
+    
+    // Upload ảnh lên Cloudinary
+    const uploadedFile = await FileService.uploadFile(
+      senderId, 
+      'User', 
+      imageFile,
+      'chat_image'
+    );
+    
+    // Tạo tin nhắn với loại nội dung là image
+    const message = await Message.create({
+      conversation: conversationId,
+      sender: senderId,
+      content: caption || 'Image', // Nếu không có caption, hiển thị "Image"
+      contentType: 'image',
+      fileInfo: {
+        fileId: uploadedFile._id,
+        url: uploadedFile.file_url,
+        publicId: uploadedFile.public_id,
+        width: uploadedFile.metadata.width,
+        height: uploadedFile.metadata.height,
+        format: uploadedFile.format,
+        size: uploadedFile.size
+      },
+      readBy: [{ user: senderId }]
+    });
+    
+    // Cập nhật tin nhắn mới nhất của conversation
+    await Conversation.findByIdAndUpdate(conversationId, {
+      lastMessage: message._id
+    });
+    
+    // Populate thông tin người gửi
+    await message.populate('sender', 'name email avatar');
+    
+    // Invalidate cache khi có tin nhắn mới
+    await chatCacheService.invalidateMessagesCache(conversationId);
+    
+    return message;
   }
 }
 
