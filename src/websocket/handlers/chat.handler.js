@@ -1,217 +1,165 @@
-const conversationService = require('../../services/conversation.service');
-const chatCacheService = require('../../services/chat_cache.service');
-const { info, error, debug } = require('../../utils/logger');
-const Conversation = require('../../models/conversation.model');
-const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
-const os = require('os');
+const ConversationService = require('../../services/conversation.service');
+const ChatNotificationHandler = require('./chat_notification.handler');
+const { debug } = require('../../utils/logger');
 
 class ChatHandler {
   constructor(io, socket) {
     this.io = io;
     this.socket = socket;
     this.userId = socket.user._id;
+    this.notificationHandler = new ChatNotificationHandler(io);
     
-    this.setupEventHandlers();
+    // Bind event handlers
+    this.socket.on('join_conversation', this.handleJoinConversation.bind(this));
+    this.socket.on('leave_conversation', this.handleLeaveConversation.bind(this));
+    this.socket.on('send_message', this.handleSendMessage.bind(this));
+    this.socket.on('typing', this.handleTyping.bind(this));
+    this.socket.on('stop_typing', this.handleStopTyping.bind(this));
+    this.socket.on('read_messages', this.handleReadMessages.bind(this));
+    this.socket.on('send_image', this.handleSendImage.bind(this));
   }
-  
-  setupEventHandlers() {
-    this.socket.on('join:conversations', this.handleJoinConversations.bind(this));
-    this.socket.on('message:send', this.handleSendMessage.bind(this));
-    this.socket.on('message:image', this.handleImageMessage.bind(this));
-    this.socket.on('typing:start', this.handleTypingStart.bind(this));
-    this.socket.on('typing:stop', this.handleTypingStop.bind(this));
-    this.socket.on('message:read', this.handleReadMessage.bind(this));
-    
-    // Thêm event listener cho disconnection để cập nhật trạng thái online
-    this.socket.on('disconnect', this.handleDisconnect.bind(this));
-  }
-  
-  async handleJoinConversations(conversationIds) {
+
+  // Join conversation room
+  async handleJoinConversation({ conversationId }) {
     try {
-      if (!Array.isArray(conversationIds)) {
-        conversationIds = [conversationIds];
+      // Verify user is a participant
+      const isParticipant = await ConversationService.checkUserInGroup(this.userId, conversationId);
+      
+      if (!isParticipant) {
+        return this.socket.emit('error', { message: 'Not authorized to join this conversation' });
       }
       
-      for (const conversationId of conversationIds) {
-        const isMember = await conversationService.checkUserInGroup(
-          this.userId,
-          conversationId
-        );
-        
-        if (isMember) {
-          this.socket.join(`conversation:${conversationId}`);
-          info(`User ${this.userId} joined conversation room: ${conversationId}`);
-          
-          // Cập nhật trạng thái online trong Redis
-          await chatCacheService.addOnlineUser(conversationId, this.userId);
-          
-          // Thông báo cho các thành viên khác
-          this.socket.to(`conversation:${conversationId}`).emit('user:online', {
-            conversationId,
-            userId: this.userId.toString()
-          });
-          
-          // Lấy danh sách người dùng online và gửi cho client
-          const onlineUsers = await chatCacheService.getOnlineUsers(conversationId);
-          this.socket.emit('users:online', {
-            conversationId,
-            users: onlineUsers
-          });
+      this.socket.join(conversationId);
+      debug(`User ${this.userId} joined conversation ${conversationId}`);
+      
+      // Thông báo cho những người khác trong room
+      this.socket.to(conversationId).emit('user_joined', { 
+        userId: this.userId.toString(), 
+        user: {
+          _id: this.socket.user._id,
+          name: `${this.socket.user.first_name} ${this.socket.user.last_name}`,
+          avatar: this.socket.user.profile_picture
         }
-      }
-    } catch (err) {
-      error(`Error joining conversations: ${err.message}`);
-      this.socket.emit('error', { message: err.message });
+      });
+      
+      // Mark messages as read
+      await ConversationService.markMessagesAsRead(conversationId, this.userId);
+      
+      // Emit read receipt to others
+      this.socket.to(conversationId).emit('messages_read', { userId: this.userId.toString() });
+    } catch (error) {
+      debug('Error joining conversation:', error);
+      this.socket.emit('error', { message: error.message });
     }
   }
-  
-  async handleSendMessage(data) {
+
+  // Leave conversation room
+  handleLeaveConversation({ conversationId }) {
+    this.socket.leave(conversationId);
+    this.socket.to(conversationId).emit('user_left', { userId: this.userId.toString() });
+    debug(`User ${this.userId} left conversation ${conversationId}`);
+  }
+
+  // Send message
+  async handleSendMessage({ conversationId, content, contentType = 'text' }) {
     try {
-      const { conversationId, content, contentType = 'text' } = data;
-      
-      const message = await conversationService.addMessage(
-        conversationId,
-        this.userId,
-        content,
+      const message = await ConversationService.addMessage(
+        conversationId, 
+        this.userId, 
+        content, 
         contentType
       );
       
-      this.io.to(`conversation:${conversationId}`).emit('message:new', message);
+      // Emit message to all in the conversation including sender
+      this.io.to(conversationId).emit('new_message', {
+        message: {
+          ...message.toObject(),
+          sender: {
+            _id: this.socket.user._id,
+            name: `${this.socket.user.first_name} ${this.socket.user.last_name}`,
+            avatar: this.socket.user.profile_picture
+          }
+        }
+      });
       
-      // Dừng typing indicator sau khi gửi message
-      await this.handleTypingStop(conversationId);
-    } catch (err) {
-      error(`Error sending message: ${err.message}`);
-      this.socket.emit('error', { message: err.message });
+      // Gửi thông báo
+      await this.notificationHandler.handleNewMessage(
+        conversationId, 
+        message, 
+        this.socket.user
+      );
+    } catch (error) {
+      debug('Error sending message:', error);
+      this.socket.emit('error', { message: error.message });
     }
   }
-  
-  async handleImageMessage(data) {
+
+  // Send typing indicator
+  handleTyping({ conversationId }) {
+    this.socket.to(conversationId).emit('typing', { 
+      userId: this.userId.toString(),
+      name: `${this.socket.user.first_name} ${this.socket.user.last_name}`
+    });
+  }
+
+  // Stop typing indicator
+  handleStopTyping({ conversationId }) {
+    this.socket.to(conversationId).emit('stop_typing', { userId: this.userId.toString() });
+  }
+
+  // Mark messages as read
+  async handleReadMessages({ conversationId }) {
     try {
-      const { conversationId, base64Image, caption, fileName, mimeType } = data;
+      await ConversationService.markMessagesAsRead(conversationId, this.userId);
+      this.socket.to(conversationId).emit('messages_read', { userId: this.userId.toString() });
+    } catch (error) {
+      debug('Error marking messages as read:', error);
+      this.socket.emit('error', { message: error.message });
+    }
+  }
+
+  // Send image message
+  async handleSendImage({ conversationId, imageData, caption }) {
+    try {
+      // Xử lý dữ liệu ảnh (base64)
+      const base64Data = imageData.replace(/^data:image\/\w+;base64,/, '');
+      const buffer = Buffer.from(base64Data, 'base64');
       
-      if (!base64Image) {
-        throw new Error('Không có dữ liệu hình ảnh');
-      }
-      
-      // Chuyển đổi base64 thành file
-      const imageBuffer = Buffer.from(
-        base64Image.replace(/^data:image\/\w+;base64,/, ''),
-        'base64'
-      );
-      
-      // Tạo file tạm
-      const tempDir = os.tmpdir();
-      const tempFilePath = path.join(tempDir, fileName || `image_${Date.now()}.jpg`);
-      
-      // Ghi file tạm
-      fs.writeFileSync(tempFilePath, imageBuffer);
-      
-      // Tạo file object giống multer để tương thích với FileService
-      const fileObject = {
-        path: tempFilePath,
-        originalname: fileName || `image_${Date.now()}.jpg`,
-        mimetype: mimeType || 'image/jpeg',
-        size: imageBuffer.length
+      // Tạo file từ buffer
+      const file = {
+        buffer,
+        mimetype: imageData.substring(5, imageData.indexOf(';base64,')),
+        originalname: `image_${Date.now()}.jpg`
       };
       
-      // Gửi tin nhắn hình ảnh
-      const message = await conversationService.addImageMessage(
+      const message = await ConversationService.addImageMessage(
         conversationId,
         this.userId,
-        fileObject,
+        file,
         caption
       );
       
-      // Gửi tin nhắn tới tất cả thành viên trong conversation
-      this.io.to(`conversation:${conversationId}`).emit('message:new', message);
-      
-      // Dừng typing indicator
-      await this.handleTypingStop(conversationId);
-      
-      // Xóa file tạm
-      fs.unlinkSync(tempFilePath);
-      
-    } catch (err) {
-      error(`Error sending image message: ${err.message}`);
-      this.socket.emit('error', { 
-        type: 'image_upload', 
-        message: `Error sending image: ${err.message}` 
+      // Emit message to all in the conversation including sender
+      this.io.to(conversationId).emit('new_message', {
+        message: {
+          ...message.toObject(),
+          sender: {
+            _id: this.socket.user._id,
+            name: `${this.socket.user.first_name} ${this.socket.user.last_name}`,
+            avatar: this.socket.user.profile_picture
+          }
+        }
       });
-    }
-  }
-  
-  async handleTypingStart(conversationId) {
-    try {
-      // Lưu trạng thái typing vào Redis
-      await chatCacheService.setUserTyping(conversationId, this.userId);
       
-      this.socket.to(`conversation:${conversationId}`).emit('typing:start', {
-        conversationId,
-        userId: this.userId
-      });
-    } catch (err) {
-      debug(`Error handling typing start: ${err}`);
-    }
-  }
-  
-  async handleTypingStop(conversationId) {
-    try {
-      // Xóa trạng thái typing từ Redis
-      await chatCacheService.stopUserTyping(conversationId, this.userId);
-      
-      this.socket.to(`conversation:${conversationId}`).emit('typing:stop', {
-        conversationId,
-        userId: this.userId
-      });
-    } catch (err) {
-      debug(`Error handling typing stop: ${err}`);
-    }
-  }
-  
-  async handleReadMessage(conversationId) {
-    try {
-      await conversationService.markMessagesAsRead(conversationId, this.userId);
-      
-      this.io.to(`conversation:${conversationId}`).emit('message:read', {
-        conversationId,
-        userId: this.userId
-      });
-    } catch (err) {
-      error(`Error marking messages as read: ${err.message}`);
-      this.socket.emit('error', { message: err.message });
-    }
-  }
-  
-  async handleDisconnect() {
-    try {
-      // Lấy tất cả conversation mà user là thành viên
-      const conversations = await Conversation.find({
-        'participants.user': this.userId
-      }, '_id');
-      
-      // Cập nhật trạng thái online trong tất cả các conversation
-      for (const conversation of conversations) {
-        const conversationId = conversation._id;
-        
-        // Xóa trạng thái online từ Redis
-        await chatCacheService.removeOnlineUser(conversationId, this.userId);
-        
-        // Xóa trạng thái typing
-        await chatCacheService.stopUserTyping(conversationId, this.userId);
-        
-        // Thông báo cho các thành viên khác
-        this.io.to(`conversation:${conversationId}`).emit('user:offline', {
-          conversationId,
-          userId: this.userId.toString()
-        });
-      }
-      
-      info(`User ${this.userId} disconnected from all conversations`);
-    } catch (err) {
-      error(`Error handling disconnect: ${err.message}`);
+      // Gửi thông báo
+      await this.notificationHandler.handleNewMessage(
+        conversationId, 
+        message, 
+        this.socket.user
+      );
+    } catch (error) {
+      debug('Error sending image message:', error);
+      this.socket.emit('error', { message: error.message });
     }
   }
 }

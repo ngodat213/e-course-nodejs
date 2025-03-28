@@ -7,6 +7,16 @@ const i18next = require("i18next");
 const chatCacheService = require('./chat_cache.service');
 const { debug } = require('../utils/logger');
 const FileService = require('./file.service');
+let ChatNotificationHandler;
+
+// Hàm để lazy load ChatNotificationHandler để tránh circular dependency
+const getChatNotificationHandler = () => {
+  if (!ChatNotificationHandler && global.io) {
+    ChatNotificationHandler = require('../websocket/handlers/chat_notification.handler');
+    return new ChatNotificationHandler(global.io);
+  }
+  return null;
+};
 
 class ConversationService {
   async getOrCreateDirectConversation(userId1, userId2) {
@@ -220,10 +230,20 @@ class ConversationService {
       lastMessage: message._id
     });
     
-    await message.populate('sender', 'name email avatar');
+    await message.populate('sender', 'first_name last_name email profile_picture');
     
     // Invalidate cache khi có tin nhắn mới
     await chatCacheService.invalidateMessagesCache(conversationId);
+    
+    // Gửi thông báo
+    const notificationHandler = getChatNotificationHandler();
+    if (notificationHandler) {
+      try {
+        await notificationHandler.handleNewMessage(conversationId, message, message.sender);
+      } catch (error) {
+        debug('Error sending message notification:', error);
+      }
+    }
     
     return message;
   }
@@ -258,13 +278,12 @@ class ConversationService {
       throw new BadRequestError(i18next.t('conversation.notMember'));
     }
     
-    // Upload ảnh lên Cloudinary
-    const uploadedFile = await FileService.uploadFile(
-      senderId, 
-      'User', 
-      imageFile,
-      'chat_image'
-    );
+    // Upload ảnh
+    const uploadedFile = await FileService.uploadFile(imageFile, {
+      owner_id: senderId,
+      owner_type: 'User',
+      purpose: 'chat_image'
+    });
     
     // Tạo tin nhắn với loại nội dung là image
     const message = await Message.create({
@@ -276,8 +295,8 @@ class ConversationService {
         fileId: uploadedFile._id,
         url: uploadedFile.file_url,
         publicId: uploadedFile.public_id,
-        width: uploadedFile.metadata.width,
-        height: uploadedFile.metadata.height,
+        width: uploadedFile.metadata?.width,
+        height: uploadedFile.metadata?.height,
         format: uploadedFile.format,
         size: uploadedFile.size
       },
@@ -290,10 +309,20 @@ class ConversationService {
     });
     
     // Populate thông tin người gửi
-    await message.populate('sender', 'name email avatar');
+    await message.populate('sender', 'first_name last_name email profile_picture');
     
     // Invalidate cache khi có tin nhắn mới
     await chatCacheService.invalidateMessagesCache(conversationId);
+    
+    // Gửi thông báo
+    const notificationHandler = getChatNotificationHandler();
+    if (notificationHandler) {
+      try {
+        await notificationHandler.handleNewMessage(conversationId, message, message.sender);
+      } catch (error) {
+        debug('Error sending image notification:', error);
+      }
+    }
     
     return message;
   }
