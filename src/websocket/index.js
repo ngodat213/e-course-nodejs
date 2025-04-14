@@ -55,6 +55,9 @@ function initializeWebSocket(server) {
   io.getSocketIdByUserId = (userId) => {
     return onlineUsers.get(userId);
   };
+  
+  // Lưu biến io vào global để các service khác có thể sử dụng
+  global.io = io;
 
   return io;
 }
